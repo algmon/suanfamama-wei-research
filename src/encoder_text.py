@@ -1,95 +1,76 @@
-# Simple Encoder with Multi-Head Attention for Text
-'''
-This code demonstrates a basic encoder for text using multi-head attention. It transforms human-readable text into a latent space representation suitable for further processing by a computer.
+# Text Encoder with Transformers Library
+"""
+This module is developed by Suanfamama.
 
-## Explanation:
+Authors:
+- Wei Jiang (wei@suanfamama.com)
+- Mama Xiao (mama.xiao@suanfamama.com)
+"""
 
-Initialization:
-
-vocab_size: Number of unique words in the vocabulary.
-embedding_dim: Dimension of the word embeddings.
-num_heads: Number of attention heads in the multi-head attention layer.
-hidden_dim: Dimension of the hidden layer in the feedforward network.
-
-Embedding:
-
-nn.Embedding: Converts input token IDs into dense vector representations.
-Multi-Head Attention:
-
-nn.MultiheadAttention: Performs multi-head attention on the embedded tokens. This allows the model to attend to different parts of the input sequence simultaneously.
-Feedforward Network:
-
-nn.Sequential: A two-layer feedforward network that further processes the attention output.
-Layer Normalization:
-
-nn.LayerNorm: Normalizes the output of each layer to improve training stability.
-Forward Pass:
-
-The input token IDs are embedded, passed through the multi-head attention layer, the feedforward network, and finally layer normalization.
-This simple encoder provides a basic understanding of how multi-head attention can be used to encode text for further processing. More advanced models may include additional layers and techniques for improved performance.
-'''    
-
-import torch
-import torch.nn as nn
-
-class TextEncoder(nn.Module):
-    def __init__(self, vocab_size, embedding_dim, num_heads, hidden_dim):
-        super(TextEncoder, self).__init__()
-        self.embedding = nn.Embedding(vocab_size, embedding_dim)
-        self.multihead_attention = nn.MultiheadAttention(embedding_dim, num_heads)
-        self.feedforward = nn.Sequential(
-            nn.Linear(embedding_dim, hidden_dim),
-            nn.ReLU(),
-            nn.Linear(hidden_dim, embedding_dim)
-        )
-        self.layer_norm = nn.LayerNorm(embedding_dim)
-
-    def forward(self, input_ids):
-        # Embed input tokens
-        embeddings = self.embedding(input_ids)
-
-        # Apply multi-head attention
-        attention_output, _ = self.multihead_attention(embeddings, embeddings, embeddings)
-
-        # Add & Norm
-        attention_output = attention_output + embeddings
-        attention_output = self.layer_norm(attention_output)
-
-        # Feedforward network
-        feedforward_output = self.feedforward(attention_output)
-
-        # Add & Norm
-        output = feedforward_output + attention_output
-        output = self.layer_norm(output)
-
-        return output
-
-# Simple Example of Text Encoder Usage
 '''
 Explanation:
 
-Import Libraries: Import the necessary libraries, including torch for tensor operations.
-Example Text: Define the text you want to encode.
-Tokenization: Use a tokenizer to convert the text into a sequence of token IDs.
-Encoder Instance: Create an instance of the TextEncoder class with appropriate parameters.
-Encoding: Pass the token IDs as a tensor to the encoder to obtain the encoded representation.
-Print Output: Print the encoded text representation.
-Note: This is a simplified example for demonstration purposes. In a real-world application, you would likely need to handle tasks like padding and masking for variable-length sequences. Additionally, the choice of tokenizer and hyperparameters would depend on your specific use case.
+Import Libraries: Import torch for tensor operations and AutoTokenizer, AutoModel from the transformers library.
+TextEncoder Class:
+__init__: Initializes the tokenizer and model using the specified model_name_or_path.
+forward:
+Tokenizes the input text using the tokenizer.
+Passes the tokenized input through the pre-trained model.
+Extracts the last hidden state as the encoded representation.
+
+Example Usage:
+Creates an instance of TextEncoder with the desired pre-trained model.
+Encodes the example text using the forward method.
+Prints the encoded text representation.
+
+Note:
+This code uses a pre-trained model from the Hugging Face Transformers library. You can choose different models based on your specific needs and computational resources.
+
+The last_hidden_state is just one possible way to extract the encoded representation. Other options might be suitable depending on the model architecture and task.
+
+Consider exploring the documentation and examples provided by the Transformers library for more advanced usage and customization.
 '''
 
-# Example input text
-text = "Design a dress for me for the party."
+import torch
+import torch.nn as nn
+from transformers import AutoTokenizer, AutoModel
 
-# Tokenize the text
-tokenizer = ...  # Replace with your preferred tokenizer
+class TextEncoder(nn.Module):
+    def __init__(self, model_name_or_path):
+        super(TextEncoder, self).__init__()
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
+        self.model = AutoModel.from_pretrained(model_name_or_path)
 
-token_ids = tokenizer.encode(text)
+    def forward(self, text):
+        # Tokenize the text
+        input_ids = self.tokenizer.encode(text, return_tensors="pt")
 
-# Create an instance of the TextEncoder
-encoder = TextEncoder(vocab_size=len(tokenizer.vocab), embedding_dim=128, num_heads=4, hidden_dim=256)
+        # Pass through the pre-trained model
+        outputs = self.model(input_ids)
 
-# Encode the text
-encoded_text = encoder(torch.tensor([token_ids]))
+        # Extract the last hidden state as the encoded representation
+        encoded_text = outputs.last_hidden_state
 
-# Print the encoded text
-print(encoded_text)
+        return encoded_text
+
+# Example usage
+input_text = "Help me to design a dress for the night party."
+encoder = TextEncoder("bert-base-uncased")
+encoded_text = encoder(input_text)
+
+print("Summary")
+print("Input:", input_text)
+print("Output:", encoded_text)
+
+'''
+Summary
+Input: Help me to design a dress for the night party.
+Output: tensor([[[ 0.0445, -0.0713, -0.0701,  ..., -0.2417, -0.1862,  0.3757],
+         [ 0.3245,  0.2456,  0.1511,  ...,  0.0749,  0.4048, -0.1603],
+         [ 0.6843, -0.4391,  0.0850,  ..., -0.3182,  0.0185,  0.3080],
+         ...,
+         [ 0.3115, -0.6385,  0.6186,  ...,  0.3251, -0.3713,  0.1373],
+         [-0.1733, -0.5471, -0.2973,  ...,  0.4325,  0.2267, -0.6980],
+         [ 0.6650,  0.0374, -0.1604,  ...,  0.1350, -0.6131, -0.3570]]],
+       grad_fn=<NativeLayerNormBackward0>)
+'''
