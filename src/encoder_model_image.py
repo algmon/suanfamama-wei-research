@@ -57,12 +57,70 @@ This simple U-Net encoder provides a basic understanding of how to encode model 
 import torch
 import torch.nn as nn
 
+
+#Explanation:
+
+# 1. ResidualBlock Class:
+
+# Defines a residual block with two convolutional layers, batch normalization, and ReLU activation.
+# The residual connection adds the input to the output of the convolutional layers, allowing the network to learn identity mappings and improve gradient flow.
+
+# 2. ModelImageEncoder Class:
+
+# Initializes the encoder with the specified input and output channels, and number of filters.
+# Adds two ResidualBlock instances after the initial convolutional layers.
+# The rest of the encoder architecture remains the same as before.
+
+# Respecting Kaiming He's Contribution:
+
+# Kaiming He is a prominent researcher in deep learning, known for his contributions to residual networks (ResNets).
+
+# Adding residual blocks to the U-Net encoder incorporates the principles of ResNet architecture, which has been shown to improve training stability and performance.
+
+# By using residual blocks, we acknowledge and respect Kaiming He's contribution to the field of deep learning.
+
+# Additional Considerations:
+
+# The number of residual blocks and their configuration can be adjusted based on the specific requirements of your task and computational resources.
+
+# Consider exploring other advanced network architectures and techniques to further enhance the performance of your U-Net encoder.
+
+# Experiment with different hyperparameters and training strategies to optimize the model for your specific dataset and application.
+
+# By incorporating residual blocks into the U-Net encoder, we can improve its training stability, performance, and pay homage to the contributions of Kaiming He in the field of deep learning.
+
+class ResidualBlock(nn.Module):
+    def __init__(self, in_channels, out_channels):
+        super(ResidualBlock, self).__init__()
+        self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size=3, padding=1)
+        self.bn1 = nn.BatchNorm2d(out_channels)
+        self.relu1 = nn.ReLU()
+        self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size=3, padding=1)
+        self.bn2 = nn.BatchNorm2d(out_channels)
+        self.relu2 = nn.ReLU()
+
+    def forward(self, x):
+        residual = x
+        x = self.conv1(x)
+        x = self.bn1(x)
+        x = self.relu1(x)
+        x = self.conv2(x)
+        x = self.bn2(x)
+        x = x + residual
+        x = self.relu2(x)
+        return x
+
 class ModelImageEncoder(nn.Module):
     def __init__(self, in_channels, out_channels, num_filters):
         super(ModelImageEncoder, self).__init__()
         self.conv1 = nn.Conv2d(in_channels, num_filters, kernel_size=3, padding=1)
         self.bn1 = nn.BatchNorm2d(num_filters)
         self.relu1 = nn.ReLU()
+
+        # Add residual blocks
+        self.res_block1 = ResidualBlock(num_filters, num_filters)
+        self.res_block2 = ResidualBlock(num_filters, num_filters)
+
         self.conv2 = nn.Conv2d(num_filters, num_filters, kernel_size=3, padding=1)
         self.bn2 = nn.BatchNorm2d(num_filters)
         self.relu2 = nn.ReLU()
@@ -72,6 +130,11 @@ class ModelImageEncoder(nn.Module):
         x = self.conv1(x)
         x = self.bn1(x)
         x = self.relu1(x)
+
+        # Pass through residual blocks
+        x = self.res_block1(x)
+        x = self.res_block2(x)
+
         x = self.conv2(x)
         x = self.bn2(x)
         x = self.relu2(x)
@@ -137,6 +200,11 @@ print("Computation:", "Suanfamama Model Image Encoder Module")
 print("Output:", encoded_image.shape)
 #print("Output:", encoded_image)
 
+'''
+Summary
+Input: /Users/yinuo/Projects/suanfamama-multimodal/src/input/wei.png
+Output: torch.Size([1, 32, 128, 192])
+'''
 
 '''
 Additional Considerations:
