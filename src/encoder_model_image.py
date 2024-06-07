@@ -1,4 +1,5 @@
 # Simple Model Image Encoder for Model Images
+## TODO: Check each number in matrix before and after adding Residual Block
 """
 This module is developed by Suanfamama.
 
