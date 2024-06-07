@@ -60,6 +60,7 @@ encoded_text = encoder(input_text)
 
 print("Summary")
 print("Input:", input_text)
+print("Computation:", "Suanfamama Text Encoder Module")
 print("Output:", encoded_text)
 
 '''
