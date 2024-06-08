@@ -1,9 +1,11 @@
-# suanfamama-multimodal
-多模态时尚生成模型
+# 算法妈妈多模态核心时尚算法
+* Suanfamama Core Fashion Multimodal Algs
 
-## Core
+## Arch
 ![](./img/core.1.png)
 
 ![](./img/core.2.png)
 
 ![](./img/core.3.png)
+
+## How to Run
