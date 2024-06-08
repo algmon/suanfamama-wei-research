@@ -9,89 +9,88 @@ Authors:
 """
 
 '''
-# TODO: Fix this
-Traceback (most recent call last):
-  File "/Users/yinuo/Projects/suanfamama-multimodal/src/design_fashion.py", line 68, in <module>
-    output = fuzz.defuzz(x_universe, aggregated, 'bisector')
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/Caskroom/miniforge/base/envs/algmon/lib/python3.11/site-packages/skfuzzy/defuzzify/defuzz.py", line 243, in defuzz
-    assert n == len(mfx), 'Length of x and fuzzy membership function must be \
-           ^^^^^^^^^^^^^
-AssertionError: Length of x and fuzzy membership function must be                           identical.
-'''
+Here's how you can adapt the provided Python code to handle fashion style input and use fuzzy logic to output parameters for controlling a downstream neural network:
 
-'''
-Explanation:
+1. Define Fashion Style Fuzzy Sets:
 
-1. Import necessary libraries: Import skfuzzy for fuzzy logic operations and numpy for numerical computations.
-2. Define the universe of discourse: Define the range of possible input values using np.arange.
-3. Define the fuzzy sets: Define the fuzzy sets "low", "medium", and "high" using the appropriate membership functions from skfuzzy.
-4. Define the input value: Set the input value x.
-5. Calculate the membership values: Calculate the membership values of the input value in each fuzzy set using fuzz.interp_membership.
-6. Define the fuzzy rules: Define the fuzzy rules using logical AND operations between the input and output fuzzy sets.
-7. Aggregate the fuzzy rules: Combine the fuzzy rules using the maximum operator.
-8. Defuzzify the output: Convert the aggregated fuzzy set to a crisp output value using the centroid defuzzification method.
-9. Print the results: Print the input value, membership values, and output value.
+Create fuzzy sets for different fashion styles, such as "Chinese", "Japanese", "European", etc. You can use appropriate membership functions like trapezoidal or triangular based on your data and desired granularity.
+
+2. Modify Input Handling:
+
+Instead of a numerical input value, accept a string representing the fashion style.
+Use fuzzy logic to calculate the membership values of the input style in each defined fuzzy set.
+
+3. Adjust Fuzzy Rules:
+
+Define fuzzy rules that map the input style membership values to output parameters for the neural network. These parameters could be weights, biases, activation functions, or any other relevant control variables. The rules should reflect the desired influence of each fashion style on the neural network's behavior.
+
+4. Implement Output Defuzzification:
+
+Use a suitable defuzzification method (e.g., centroid, bisector) to convert the aggregated fuzzy output into crisp parameter values for the neural network.
+
+5. Integrate with Neural Network:
+
+Pass the generated parameter values to the neural network as control inputs.
+Train and fine-tune the neural network with appropriate data and loss functions to achieve the desired style-specific behavior.
 
 Note:
 
-* The fuzzy sets and rules can be adjusted to represent different fuzzy logic systems.
-The defuzzification method can also be changed depending on the desired output format.
+This is a general outline, and the specific implementation details will depend on your chosen fashion styles, fuzzy sets, rules, and neural network architecture.
+
+You might need to experiment with different membership functions, rules, and defuzzification methods to achieve optimal results.
+
+Consider using visualization tools to analyze the fuzzy logic system's behavior and fine-tune it accordingly.
+
+Additional Considerations:
+
+TODO: Explore advanced fuzzy logic techniques like type-2 fuzzy sets or neuro-fuzzy systems for more complex modeling.
+
+TODO: Integrate the fuzzy logic system with other AI techniques like deep learning for enhanced performance.
+
+TODO: Ensure proper data collection and labeling for training and evaluating the neural network with style-specific control.
+
+By carefully adapting the provided code and incorporating these suggestions, you can leverage fuzzy logic to effectively control a neural network based on fashion style input.
+
+TODO: Fix this
+Traceback (most recent call last):
+  File "/Users/yinuo/Projects/suanfamama-multimodal/src/design_fashion.py", line 67, in <module>
+    chinese_membership = fuzz.interp_membership(chinese_fuzzy_set, fashion_style)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: interp_membership() missing 1 required positional argument: 'xx'
 '''
 
 import skfuzzy as fuzz
 import numpy as np
 
-# Define the universe of discourse
-x_universe = np.arange(0, 11, 1)
+# Define fashion style fuzzy sets
+chinese_fuzzy_set = fuzz.trapmf(np.arange(0, 1, 0.1), [0, 0, 0.3, 0.5])
+japanese_fuzzy_set = fuzz.trimf(np.arange(0, 1, 0.1), [0.3, 0.5, 0.7])
+european_fuzzy_set = fuzz.trapmf(np.arange(0, 1, 0.1), [0.5, 0.7, 1, 1])
 
-# Define the fuzzy sets
-low = fuzz.trapmf(x_universe, [0, 0, 3, 5])
-medium = fuzz.trimf(x_universe, [3, 5, 7])
-high = fuzz.trapmf(x_universe, [5, 7, 10, 10])
+# Define input fashion style
+fashion_style = "Chinese"
 
-# Define the input value
-x = 6
+# Calculate membership values
+chinese_membership = fuzz.interp_membership(chinese_fuzzy_set, fashion_style)
+japanese_membership = fuzz.interp_membership(japanese_fuzzy_set, fashion_style)
+european_membership = fuzz.interp_membership(european_fuzzy_set, fashion_style)
 
-# Calculate the membership values
-low_membership = fuzz.interp_membership(x_universe, low, x)
-medium_membership = fuzz.interp_membership(x_universe, medium, x)
-high_membership = fuzz.interp_membership(x_universe, high, x)
+# Define fuzzy rules
+rule1 = chinese_membership * 0.5  # Increase layer 1 weights for Chinese style
+rule2 = japanese_membership * 1.0  # Increase activation in layer 2 for Japanese style
+rule3 = european_membership * 0.8  # Adjust bias in output layer for European style
 
-# Define the fuzzy rules
-rule1 = fuzz.interp_membership(x_universe, low, low_membership) * fuzz.interp_membership(x_universe, low, low_membership)
-rule2 = fuzz.interp_membership(x_universe, low, low_membership) * fuzz.interp_membership(x_universe, medium, medium_membership)
-rule3 = fuzz.interp_membership(x_universe, low, low_membership) * fuzz.interp_membership(x_universe, high, high_membership)
-rule4 = fuzz.interp_membership(x_universe, medium, medium_membership) * fuzz.interp_membership(x_universe, low, low_membership)
-rule5 = fuzz.interp_membership(x_universe, medium, medium_membership) * fuzz.interp_membership(x_universe, medium, medium_membership)
-rule6 = fuzz.interp_membership(x_universe, medium, medium_membership) * fuzz.interp_membership(x_universe, high, high_membership)
-rule7 = fuzz.interp_membership(x_universe, high, high_membership) * fuzz.interp_membership(x_universe, low, low_membership)
-rule8 = fuzz.interp_membership(x_universe, high, high_membership) * fuzz.interp_membership(x_universe, medium, medium_membership)
-rule9 = fuzz.interp_membership(x_universe, high, high_membership) * fuzz.interp_membership(x_universe, high, high_membership)
+# Aggregate and defuzzify
+aggregated = np.fmax(rule1, rule2, rule3)
+output_parameters = fuzz.defuzz(np.arange(0, 1, 0.1), aggregated, 'centroid')
 
-# Initialize the aggregated fuzzy set
-aggregated = rule1
-
-# Loop over the remaining fuzzy rules and combine them with the aggregated set
-for rule in [rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9]:
-    aggregated = np.fmax(aggregated, rule)
-
-# Defuzzify the output using the "bisector" method
-output = fuzz.defuzz(x_universe, aggregated, 'bisector')
-
-# Print the results
-print("Input value:", x)
+# Print results
+print("Input fashion style:", fashion_style)
 print("Membership values:")
-print("Low:", low_membership)
-print("Medium:", medium_membership)
-print("High:", high_membership)
-print("Output value:", output)
+print("Chinese:", chinese_membership)
+print("Japanese:", japanese_membership)
+print("European:", european_membership)
+print("Output parameters:", output_parameters)
 
-'''
-Input value: 6
-Membership values:
-Low: 0.5
-Medium: 1.0
-High: 0.5
-Output value: 5.833333333333333
-'''
+# TODO: Use output_parameters to control the neural network
+# ... (Implement neural network integration here)
