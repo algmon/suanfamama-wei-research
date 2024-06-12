@@ -26,4 +26,13 @@ def get_image_resolution(image_path):
 # Example usage:
 image_path = "/Users/yinuo/Projects/suanfamama-multimodal/src/input/ToyFashionDataset/cloth/00000_00.jpg"  # Replace with the actual path to your image
 resolution = get_image_resolution(image_path)
+
+print("Summary")
+print(f"image_path: {image_path}")
 print(f"Image Resolution: {resolution}")
+
+'''
+Summary
+image_path: /Users/yinuo/Projects/suanfamama-multimodal/src/input/ToyFashionDataset/cloth/00000_00.jpg
+Image Resolution: (768, 1024)
+'''
