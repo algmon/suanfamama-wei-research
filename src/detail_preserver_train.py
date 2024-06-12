@@ -5,20 +5,25 @@ This module is developed by Suanfamama.
 Authors:
 - Wei Jiang (wei@suanfamama.com)
 - Mama Xiao (mama.xiao@suanfamama.com)
+
+References:
+- UNet
 """
+
 '''
-# TODO: Optimize it in order to take less time to train
-A U-Net model tailored for extracting and preserving detailed features in fashion images. U-Net is a popular architecture in image segmentation tasks, particularly known for its effectiveness in medical image analysis but also adaptable to other domains such as fashion.
+# TODO: USE Colab for optimization
+A MamaNet model tailored for extracting and preserving detailed features in fashion images.
+MamaNet is a popular architecture in image segmentation tasks, particularly known for its effectiveness in fashion domain.
 
 To break this down:
 
 Input: Fashion images.
 Task: Feature extraction and preservation.
-Model: U-Net.
+Model: MamaNet.
 
 Notes
 1. Data: Replace the DummyFashionDataset with your actual dataset class. This class should return the images and corresponding masks.
-2. Model Customization: Modify the U-Net architecture as needed to fit your specific application requirements.
+2. Model Customization: Modify the MamaNet architecture as needed to fit your specific application requirements.
 3. Training Parameters: Adjust the training parameters like learning rate, batch size, and the number of epochs according to your dataset and resources.
 4. Evaluation: Implement detailed evaluation metrics specific to your task. For segmentation tasks, metrics like Intersection over Union (IoU) or Dice Coefficient are commonly used.
 '''
@@ -33,9 +38,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-## Step 2: Define the U-Net Model
-'''We'll define the U-Net architecture using nn.Module'''
-
+## Step 2: Define the MamaNet Model
 class MamaNet(nn.Module):
     def __init__(self):
         super(MamaNet, self).__init__()
@@ -93,12 +96,7 @@ class MamaNet(nn.Module):
     def downsample(self, x):
         return nn.MaxPool2d(kernel_size=2, stride=2)(x)
 
-# Instantiate the model
-model = MamaNet()
-
-### Step 3: Load and Preprocess the Fashion Image Dataset
-'''For the sake of demonstration, we'll create a dummy dataset class and load some sample data.'''
-
+## Step 3: Load and Preprocess the Dataset
 class DummyFashionDataset(Dataset):
     def __init__(self, num_samples=100, img_size=(128, 128)):
         self.num_samples = num_samples
@@ -120,6 +118,37 @@ class DummyFashionDataset(Dataset):
         
         return image, mask
 
+def visualize_predictions(model, val_loader, num_images=5):
+    model.eval()
+    fig, axes = plt.subplots(num_images, 3, figsize=(15, 10))
+    with torch.no_grad():
+        for i, (inputs, targets) in enumerate(val_loader):
+            if i >= num_images:
+                break
+            inputs, targets = inputs.to(device), targets.to(device)
+            outputs = model(inputs)
+            
+            input_img = inputs.cpu().numpy().transpose(0, 2, 3, 1)
+            target_img = targets.cpu().numpy().transpose(0, 2, 3, 1)
+            output_img = outputs.cpu().numpy().transpose(0, 2, 3, 1)
+            
+            for j in range(inputs.size(0)):
+                axes[i, 0].imshow(input_img[j])
+                axes[i, 0].set_title('Input Image')
+                axes[i, 1].imshow(target_img[j])
+                axes[i, 1].set_title('True Mask')
+                axes[i, 2].imshow(output_img[j])
+                axes[i, 2].set_title('Predicted Mask')
+                for ax in axes[i]:
+                    ax.axis('off')
+            if i >= num_images - 1:
+                break
+    plt.tight_layout()
+    plt.show()
+
+# Instantiate the model
+model = MamaNet()
+
 # Create the dataset
 dataset = DummyFashionDataset()
 train_size = int(0.8 * len(dataset))
@@ -129,9 +158,7 @@ train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
 train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=8, shuffle=False)
 
-### Step 4: Train the U-Net Model
-'''Define the training loop:'''
-
+## Step 4: Train the MamaNet Model
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = model.to(device)
 
@@ -165,41 +192,34 @@ for epoch in range(num_epochs):
     torch.save(model.state_dict(), model_path)
     print(f"Model saved to {model_path}")
 
-# For training, if in is garbage/noise then out is garbage/noise. Cuase the model can NOT learn anything from the world.
+# From Torsten: For training, if the input is garbage/noise then the model out is garbage/noise. Cuase the model can NOT learn or generalize anything from the given data.
+'''
+Epoch 1/10, Loss: 0.6896
+Model saved to MamaNet_epoch_1.pth
+Epoch 2/10, Loss: 0.6479
+Model saved to MamaNet_epoch_2.pth
+Epoch 3/10, Loss: 0.5814
+Model saved to MamaNet_epoch_3.pth
+Epoch 4/10, Loss: 0.5510
+Model saved to MamaNet_epoch_4.pth
+Epoch 5/10, Loss: 0.5274
+Model saved to MamaNet_epoch_5.pth
+Epoch 6/10, Loss: 0.5163
+Model saved to MamaNet_epoch_6.pth
+Epoch 7/10, Loss: 0.5119
+Model saved to MamaNet_epoch_7.pth
+Epoch 8/10, Loss: 0.5099
+Model saved to MamaNet_epoch_8.pth
+Epoch 9/10, Loss: 0.5097
+Model saved to MamaNet_epoch_9.pth
+Epoch 10/10, Loss: 0.5087
+Model saved to MamaNet_epoch_10.pth
 '''
 
-'''
-
-### Step 5: Visualize the Results
-'''Create a function to visualize a few predictions:'''
-
-def visualize_predictions(model, val_loader, num_images=5):
-    model.eval()
-    fig, axes = plt.subplots(num_images, 3, figsize=(15, 10))
-    with torch.no_grad():
-        for i, (inputs, targets) in enumerate(val_loader):
-            if i >= num_images:
-                break
-            inputs, targets = inputs.to(device), targets.to(device)
-            outputs = model(inputs)
-            
-            input_img = inputs.cpu().numpy().transpose(0, 2, 3, 1)
-            target_img = targets.cpu().numpy().transpose(0, 2, 3, 1)
-            output_img = outputs.cpu().numpy().transpose(0, 2, 3, 1)
-            
-            for j in range(inputs.size(0)):
-                axes[i, 0].imshow(input_img[j])
-                axes[i, 0].set_title('Input Image')
-                axes[i, 1].imshow(target_img[j])
-                axes[i, 1].set_title('True Mask')
-                axes[i, 2].imshow(output_img[j])
-                axes[i, 2].set_title('Predicted Mask')
-                for ax in axes[i]:
-                    ax.axis('off')
-            if i >= num_images - 1:
-                break
-    plt.tight_layout()
-    plt.show()
-
-# Visualize predictions
+## Step 5: Visualize the prediction Results
 visualize_predictions(model, val_loader)
+
+'''
+For model performance eval report, SEE:
+20240612 MamaNet.performance.eval.report.20240612.png
+'''
