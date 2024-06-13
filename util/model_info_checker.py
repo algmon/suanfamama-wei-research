@@ -1,3 +1,11 @@
+# Model Info checker
+"""
+This util is developed by Suanfamama.
+
+Authors:
+- Wei Jiang (wei@suanfamama.com)
+- Mama Xiao (mama.xiao@suanfamama.com)
+"""
 import torch
 import torch.nn as nn
 
