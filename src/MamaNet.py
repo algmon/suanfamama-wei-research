@@ -46,6 +46,7 @@ class DiffusionTransformer(nn.Module):
         super(DiffusionTransformer, self).__init__()
         self.embed_size = embed_size
         self.device = device
+        self.max_length = max_length # Store it as an attribute
         self.word_embedding = nn.Embedding(max_length, embed_size)
         self.position_embedding = nn.Embedding(max_length, embed_size)
 
@@ -61,8 +62,10 @@ class DiffusionTransformer(nn.Module):
     def forward(self, x):
         N, sequence_length = x.shape
         positions = torch.arange(0, sequence_length).expand(N, sequence_length).to(self.device)
-        # Convert input data to integer tensor
-        x = x.long()  # or x = x.int()
+        
+        # Clamp pixel values to be within the vocabulary range
+        x = (x * (self.max_length - 1)).clamp(0, self.max_length - 1).long() # Clamp values to be within [0, max_length - 1]
+
         out = self.dropout(self.word_embedding(x) + self.position_embedding(positions))
 
         for layer in self.layers:
@@ -81,7 +84,7 @@ def train(model, dataloader, optimizer, criterion, device, epochs):
             loss = criterion(output, data)
             loss.backward()
             optimizer.step()
-        
+
         print(f'Epoch [{epoch+1}/{epochs}], Loss: {loss.item():.4f}')
 
 def main():
@@ -91,9 +94,9 @@ def main():
     heads = 8
     dropout = 0.1
     forward_expansion = 4
-    max_length = 32  # Adjust based on your data
+    max_length = 3072  # Adjust based on your data
     epochs = 10
-    batch_size = 64
+    batch_size = 32
     learning_rate = 3e-4
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
