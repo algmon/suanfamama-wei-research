@@ -101,6 +101,9 @@ print(dummy_labels)
 loss = loss_fn(dummy_outputs, dummy_labels)
 print('Total loss for this batch: {}'.format(loss.item()))
 
+# Optimizers specified in the torch.optim package
+optimizer = torch.optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
+
 def train_one_epoch(epoch_index, tb_writer):
     running_loss = 0.
     last_loss = 0.
@@ -191,6 +194,47 @@ model_path = os.path.join(model_save_dir, f'MamaNet1_Garment_Classification.pth'
 torch.save(model.state_dict(), model_path)
 print(f"Model saved to {model_path}")
 
+# Load the FashionMNIST test dataset
+testset = torchvision.datasets.FashionMNIST('./data', train=False, transform=transform, download=True)
+
+# Create data loader for the test set
+testloader = torch.utils.data.DataLoader(testset, batch_size=1, shuffle=False)
+
+# Load the trained model
+model = MamaNet1()
+model_path = './MamaNet1_Garment_Classification.pth'  # Replace with the actual path to your saved model
+model.load_state_dict(torch.load(model_path))
+model.eval()
+
+# Define class labels
+classes = ('T-shirt', 'Trouser裤子', 'Pullover套衫', 'Dress裙子', 'Coat大衣',
+           'Sandal拖鞋', 'Shirt衬衫', 'Sneaker运动鞋', 'Bag包', 'Ankle Boot靴子')
+
+# Helper function for inline image display
+def matplotlib_imshow(img, one_channel=False):
+    if one_channel:
+        img = img.mean(dim=0)
+    img = img / 2 + 0.5     # unnormalize
+    npimg = img.numpy()
+    if one_channel:
+        plt.imshow(npimg, cmap="Greys")
+    else:
+        plt.imshow(np.transpose(npimg, (1, 2, 0)))
+
+# Perform prediction on test data
+with torch.no_grad():
+    for i, data in enumerate(testloader, 0):
+        images, labels = data
+        outputs = model(images)
+        _, predicted = torch.max(outputs.data, 1)
+
+        # Display the image and predicted label
+        matplotlib_imshow(images[0], one_channel=True)
+        print(f'Predicted: {classes[predicted[0]]}, Actual: {classes[labels[0]]}')
+
+        if i == 5:  # Show only the first 5 predictions
+            break
+
 '''
 Code Review
 
@@ -212,7 +256,7 @@ Key Aspects:
 * TensorBoard Logging: It uses SummaryWriter to log training metrics to TensorBoard for visualization.
 * Model Saving: It saves the model's state dictionary to a file for later use.
 Areas for Improvement:
-* Optimizer: The script uses optim.Adam as the optimizer. While Adam is a popular choice, you could experiment with other optimizers like SGD with momentum or RMSprop to see if they improve performance.
+* Optimizer: The script uses SGD as the optimizer. While SGD is a popular choice, you could experiment with other optimizers like Adam with momentum or RMSprop to see if they improve performance.
 * Learning Rate: The script doesn't explicitly set a learning rate.
 * Regularization: The script doesn't include any regularization techniques like dropout or weight decay. Adding these can help prevent overfitting.
 * Early Stopping: The script doesn't implement early stopping, which can help prevent overfitting by stopping training when the validation loss starts to increase.
