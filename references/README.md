@@ -3,8 +3,8 @@
 The development of deep learning models has been significantly inspired by various neural network architectures, each contributing unique concepts and mechanisms that have advanced the field. Here are a few notable networks that have been pivotal in the evolution of deep learning:
 
 ## Authors
-* Wei Jiang, wei@suanfamama.com
-* Mama Xiao, mama.xiao@suanfamama.com
+* Wei Jiang, Suanfamama, wei@suanfamama.com
+* Mama Xiao, Suanfamama, mama.xiao@suanfamama.com
 
 ## Classic Networks
 ### 1. **LeNet (LeNet-5)**

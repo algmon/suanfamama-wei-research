@@ -10,7 +10,7 @@
 4. Optimal Configurations: Larger models (L and XL) with smaller patch sizes (2 and 4) yield the best performance in terms of FID.
 5. Practical Balance: While these strategies significantly improve generative performance, they also require more computational resources. The choice of model size and patch size should balance the available computational power with the desired quality of the generated images.
 
-## the DiT design space
+## DiT Design Space
 The Diffusion Transformer (DiT) design space encompasses a range of architectural choices and configurations for building and training diffusion models, particularly for image data. The design space includes the following key components and variations:
 
 * Patchify: This is the initial layer of DiT that converts a spatial input representation into a sequence of tokens. The number of tokens (T) is determined by the patch size hyperparameter (p), which can be 2, 4, or 8. A smaller patch size (p) results in more tokens and consequently higher computational requirements (Gflops), but does not significantly affect the downstream parameter count.
@@ -38,5 +38,5 @@ The DiT design space thus provides a variety of options to tailor the diffusion 
 
 5. **Empirical Results**: The authors present empirical results showcasing the effectiveness of their approach. The results highlight the model's ability to generate high-quality images with improved scalability compared to traditional methods.
 
-### Key Findings
+## Key Findings
 The findings in this paper suggest that transformers can significantly improve the performance and scalability of diffusion models, making them a powerful tool for various generative tasks, including image and fashion video generation. This approach opens up new possibilities for creating high-quality, realistic content with greater efficiency.
