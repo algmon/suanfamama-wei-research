@@ -14,3 +14,12 @@
 * Jian Xu, Alibaba, 34271, Computational Advertising, Machine Learning, Data Mining, Data Privacy
 * Kishore Papineni, Google, 30648, Natural Language Processing, Machine Learning, Machine Translation, Computational Advertising
 * Jun Wang, University College London, 22812, Machine Learning, Multi-agent Learning, Information Retrieval, Recommender Systems, Computational Advertising http://www0.cs.ucl.ac.uk/staff/jun.wang/
+
+## 组织追踪
+* 华南理工大学
+* 暨南大学
+* 阿里妈妈
+* 雅虎实验室
+* 秒针系统
+* Yahoo Research
+* Google AdWords

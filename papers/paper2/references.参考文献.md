@@ -1,11 +1,14 @@
 # 文献梳理
-## 教科书（按时间）
+## 教科书
 1. 段淳林.计算广告学导论[M].武汉:华中科技大学出版社,2022.
 2. 刘鹏,王超.计算广告:互联网商业变现的市场与技术[M].3版.北京:人民邮电出版社,2022.
 3. 段淳林.整合品牌传播:从IMC到IBC理论建构[M].北京:人民出版社,2020.
 4. 陈刚等.创意传播管理:数字时代的营销革命[M].北京:机械工业出版社,2012.
+5. BISHOP C M. Pattern Recognition and Machine Learning. Springer[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI), 2006, 16(4):049901.
+6. ARENSW.当代广告学[M].丁俊杰,程坪,译.北京:人民邮电出版社,2005.
 
-## 学术论文（按学者）
+## 学术论文
+### 文
 1. 段淳林,任静.智能广告的程序化创意及其RECM模式研究[J].新闻大学,2020(2):17-31 + 119-120.
 2. 段淳林,杨恒.数据、模型与决策:计算广告的发展与流变[J].新闻大学,2018(1):128-136 + 154.
 3. 段淳林,宋成.用户需求、算法推荐与场景匹配:智能广告的理论逻辑与实践思考[J].现代传播(中国传媒大学学报),2020,42(8):199-128.
@@ -48,10 +51,18 @@
 40. 迟铠等.算法需要更有温度 2022-06-27 大数据与计算广告研究中心公众号
 41. 《Soul发起与伟大灵魂对话，AI虚拟社交何以满足用户个性化需求？｜案例精选》2024-06-12 新媒体重点实验室公众号
 42. 《基于ChatGPT的“DNA模式”：与AI谈恋爱？人机之恋该情归何处？｜案例精选》子非鱼吖 新媒体重点实验室公众号
-43. 《生成式AI与跨学科融合：机遇、挑战与应对》学术研讨会 2024-06-13 华南理工大学
-44. Agarwal D. Computational Advertising: The LinkedIn Way[C]//He Qi,Iyengar A.Proceedings of the 22nd ACM International Conference on Information & Knowledge Management.New York: Association for Computing Machinery,2013.
-45. Chen Gang, Xie Peihong, Dong Jing, et al. Understanding Programmatic Creative: The Role of AI[J]. Journal of Advertising,2019,4(48):347-355.
-46. Evgeniy Gabrilovich, Vanja Josifovski, Bo Pang et al. 《Introduction to Computational Advertising》, ACL, 2008
+43. Agarwal D. Computational Advertising: The LinkedIn Way[C]//He Qi,Iyengar A.Proceedings of the 22nd ACM International Conference on Information & Knowledge Management.New York: Association for Computing Machinery,2013.
+44. Chen Gang, Xie Peihong, Dong Jing, et al. Understanding Programmatic Creative: The Role of AI[J]. Journal of Advertising,2019,4(48):347-355.
+45. Evgeniy Gabrilovich, Vanja Josifovski, Bo Pang et al. 《Introduction to Computational Advertising》, ACL, 2008
+
+### 理工
+1. ABADI M, AGARWAL A, BARHAM P, et al. TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems[J]. 2016.
+2. AKELLA R, BRODER A, JOSIFOVSKI V. Introduction to Computational Advertising[C]. Meeting of the Association for Computational Linguistics, 2011.
+3. BHARADWAJ V, CHEN P, MA W, et al. SHALE: An Efficient Algorithm for Allocation of Guaranteed Display Advertising[C]. Proceedings of KDD, 2012:1195-1203.
+4. BLEI D M, NG A Y, JORDAN M I. Latent Dirichlet Allocation[J]. Journal of Machine Learning Research, 2003, 3:993-1022.
+
+## 学术研讨会
+1. 生成式AI与跨学科融合：机遇、挑战与应对.华南理工大学.20240613.
 
 ## 行业新闻
 1. 过去一年，他们如何靠AIGC搞爆款广告？ https://36kr.com/p/2608541051172099.36kr.2024-01-17
