@@ -8,6 +8,7 @@
 * 刘鹏
 * 王超
 * 库恩
+* TODO: 沈向洋 计算机视觉
 * Andrei Broder, Google, 37371, Web ecosystems, Computational advertising, Web search, User understanding, Randomized algorithms
 * Jun Wang, University College London, 22812, Machine Learning, Multi-agent Learning, Information Retrieval, Recommender Systems, Computational Advertising
 * Paul Viola, Microsoft, 80195, Machine Learning, Computer Vision, Computational Advertising
