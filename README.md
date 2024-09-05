@@ -113,6 +113,53 @@
 * 所投期刊《新闻界》
 
 ### 子课题及论文题目（拟） - 2 - “AIGC内容创意知识库”在垂直领域的应用
+#### 摘要 Abstract
+* This paper begins by examining the traditional single modality knowledge base and then progresses to explore the development and significance of a multimodal knowledge base in the realm of AI-generated content (AIGC). As the field of AIGC expands, the need for a knowledge base that can handle multiple modalities such as text, image, video, and other objects becomes crucial. The research focuses on the construction, organization, and application of this multimodal knowledge base specifically within the context of AIGC, rather than in the areas of increasing productivity or streamlining workflows. By analyzing the transition from single modality to multimodal knowledge bases, this paper provides insights into the future directions of AIGC and its potential impact on various industries.
+#### 关键词 Keywords
+* AIGC multimodal perception generation personalization creativity application knowledgebase
+
+#### 作者 Authors
+* (related research team)
+
+#### 组织 Organization
+* South China University of Technology
+
+#### 简介 Introduction
+* 
+
+#### 相关工作 Related Work
+* The history of databases traces back to the efforts of IBM researchers who first developed relational databases[1]. These databases consist of tables with primary keys and reference keys, and support operations like join, select, and where in SQL query languages. With the growth of giant applications like web search[2] & recommendation[3], the need to handle unstructured text became more prominent in recent decades. This led to the emergence of non-relational databases like MongoDB[4] and others. These databases allow for storing strings of variable lengths, providing a certain degree of flexibility. In most of the distributed system architectures[5], Redis[6] is usually servered as a caching database. Being an in-memory database, it offers fast retrieval speed but has the known limitations such as cache miss. If a cache miss occurs, a query to the backend database is sometimes required, which can be time-consuming though more precise. The era of web search engines[7] brought about the use of data structures like inverted indexes[8], which support faster retrieval and better quality for web searches[9]. New developments in databases include vector databases[10] that find important applications[11] in large language models and other related retrieval techniques[12]. The focus of this paper is on how to orchestrate[13] those databases and provide a unified interface[14] for upper-level applications[15]. 
+
+#### 现有典型知识库及所存问题 Current Knowledge Bases and Problems
+* 
+
+#### 所提出关于“知识库”的创意设计新范式 New Design Paradigm for Knowledge Bases
+* 
+
+#### 实验原型系统及应用场景 Real-world Applications and Prototypes
+* 
+
+#### 结论 Conclusion
+* 
+
+#### 参考资料 References
+1. RMDBs
+2. Google Search
+3. Amazon Recommendations
+4. MongoDB and other NoSQL databases
+5. Distributed systems such as Hadoop and Spark
+6. Redis
+7. New York Times reporting on web search
+8. Inverted indexes tutorial from University of Melbourne
+9. Web search engines like Google, Bing, and Yahoo
+10. Vector databases such as TODO:
+11. RAG (short for retrieval augmented generation)
+12. consin similarity and bm25 ranking algorithms
+13. Orchestration of databases
+14. TODO:
+15. TODO:
+
+#### 附加信息
 * paper 2 - kb.md
 * 关键词及着眼点：知识库
 * 写作思路：从基本单一知识库到多模态AIGC创意知识库
@@ -124,6 +171,52 @@
 * 所投期刊：新闻与传播如 TODO: 未确定
 
 ### 子课题及论文题目（拟） - 3 - “AIGC内容创意垂类模型"在垂直领域的应用
+#### 摘要 Abstract
+* This paper examines the realm of created models, which have the ability to generate text, images, and videos in parallel. While these models hold great promise, they also come with limitations. One significant limitation is their limited capability in expressing creativity. However, this constraint can potentially trigger inner model training and iteration. The research delves into the architecture, functionality, and applications of these created models, analyzing both their advantages and drawbacks. It explores ways to overcome the limitations and enhance the creative expression capabilities of these models. By understanding the challenges and opportunities associated with created models, this paper aims to contribute to the development and improvement of content generation and creative expression in a multi-modal world.
+
+#### 关键词 Keywords
+* 
+
+#### 作者 Authors
+* 
+
+#### 组织 Organization
+* South China University of Technology
+
+#### 简介 Introduction
+* 
+
+#### 相关工作 Related Work
+* Ten years ago, language models took their first steps with Google's n-gram paper[1]. This approach employed a vast amount of web data to model language, considering n-grams like two-gram or three-gram. Following this, the word2vec paper[2] came into the picture. It modeled the world as a higher-dimensional vector space, where entities with similarity would exhibit a close cosine similarity score. This marked the beginning of a long journey in the field of language models[3]. The language model then entered a new era with the Transformer paper titled "Attention is All You Need"[4]. Google researchers proposed an encoder-decoder architecture or later variants for encoding and decoding text. This model demonstrated the remarkable ability to generate surprisingly coherent conversations, laying the foundation for subsequent works such as ChatGPT[5] in 2022. ChatGPT's emergence surprised and captivated the world at scale. In addition to these, leading industry models like Google's Gemini have been developed. In China, works like Doubao[6] also deserve mention. Doubao showcases advanced Chinese language processing capabilities and has made significant contributions to the field.
+* In addition to the advancements in language models, there have been remarkable developments in other generation created models. For instance, Stable Diffusion[7] has made significant contributions in the field of image generation. It employs innovative techniques to create high-quality images with great detail and realism. Another notable model is Flux[8] by the Black Forest Lab, which also excels in generating images. Moreover, in the realm of video generation, models utilizing improved architectures like diffusion-transformer(short for DiT) have emerged. These models have the potential to revolutionize the way videos are created, offering new possibilities for creative expression and content production. By combining the power of transformers and diffusion processes, they can generate videos with enhanced visual quality and coherence[9]. These developments in image and video generation models complement the progress in language models, opening up new frontiers in the field of created models and expanding the boundaries of what can be achieved in content generation.
+* Another interesting aspect of created models is the emergence of those that focus on generating music snippets or music demos[10]. These models have the potential to inspire musicians and composers, providing new musical ideas and elements. They can contribute to the creation of unique and engaging musical compositions. In addition, there are created models that generate code[11]. These models can produce code snippets or even complete programs that can be executed in environments like Python. This has significant implications for software development, as it can assist developers in generating code effectively and efficiently, leading to faster development cycles and much more.
+
+#### 现有典型垂类模型及所存问题 Current Creative Models and Problems
+* 
+
+#### 所提出关于“垂类模型”的创意设计新范式 New Design Paradigm for Creative Models
+* 
+
+#### 实验原型系统及应用场景 Real-world Applications and Prototypes
+* 
+
+#### 结论 Conclusion
+* Created models have made remarkable progress in various domains, including text generation, image and video production, code generation, and music creation. Each of these areas has seen the emergence of powerful models that offer unique capabilities and opportunities for creative expression. TODO: However, as these models focus on different domains, there is a need for a unified interface and application to use them coherently and efficiently.
+
+#### 参考资料 References
+1. n-gram
+2. word2vec
+3. classic textbook in the field of natural language processing
+4. Attention is All You Need
+5. ChatGPT official website
+6. Doubao official website
+7. Stable Diffusion official website
+8. Flux official website
+9. Sora official website
+10. Suno official website
+11. Gemini Code Assist official website
+
+#### 附加信息
 * paper 3 - model.md
 * 关键词及着眼点：垂类模型
 * 写作思路：使用RAG技术使生文通用模型足够垂类，使用微调技术使生图通用模型足够垂类。
@@ -135,10 +228,55 @@
 * 所投期刊：新闻与传播如 TODO: 未确定
 
 ### 子课题及论文题目（拟） - 4 - “AIGC内容创意智能体”在垂类场景中的应用
+#### 摘要 Abstract
+* This paper begins by clarifying the concept that an intelligent agent is distinct from large language models or large vision models. An intelligent agent can be metaphorically described as having a "brain" and "body" and it is designed to perform specific tasks. The control of an intelligent agent often relies on large language models or large visual models. The paper then presents different types of intelligent agents, including those for cost reduction and efficiency improvement and those for content creation. The focus of this paper is on content creation. An in-depth exploration of these content creation intelligent agents are provided, while specific case studies are yet to be determined.
+* TODO: Needs more details.
+
+#### 关键词 Keywords
+* 
+
+#### 作者 Authors
+* 
+
+#### 组织 Organization
+* 
+
+#### 简介 Introduction
+* 
+
+#### 相关工作 Related Work
+* TODO:
+
+#### 现有典型智能体及所存问题 Current Intelligent Agents and Problems
+* 
+
+#### 所提出关于“智能体”的创意设计新范式 New Design Paradigm for Intelligent Agents
+* 
+
+#### 实验原型系统及应用场景 Real-world Applications and Prototypes
+* 
+
+#### 结论 Conclusion
+* 
+
+#### 参考资料 References
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+
+#### 附加信息
 * paper 4 - scene.md
 * 关键词及着眼点：“创意型智能体”、“垂直落地场景”
 * 写作思路：在开篇给出智能体的定义及行动流程，即环境交互 -> 感知信息 -> 思考 -> 采取行动。由客户需求倒推如何设计落地场景及相关智能体，并且在设计与实现智能体过程中要非常重视智能体的价值对齐问题，写作过程中需强调人机协作，强调目前智能体能达到一定的智能推理能力，但尚不够。
-* 基于认知计算广告理论，进一步提出在不同垂直场景及细分需求下的技术选型，以满足客户需求。
+* 基于认知计算广告理论
+* 进一步提出在不同垂直场景及细分需求下的技术选型，以满足客户需求。
 * 创新点1：不强调 使用智能体以降本增效，强调 使用智能体以提升内容创作及灵感获取能力
 * 创新点2：强调 提示词工程、知识库、分数的“融合微调”核心技术（案例：如何在实际工程中价值对齐一个时尚买手智能体的音容相貌乃至部分时尚大脑职能）
 * 难点：多智能体如何协作与感知？如何有效从个体智能到群体智能？
@@ -149,7 +287,7 @@
 * TODO: 实验设计：如何设计一个智能体，做落地应用场景相匹配决策（决策如智能排期）。如此广告在此刻是否生成，此广告是否投放在某个用户的折扣圈中？
 * 所投会议：计算机科学如 SIGIR, CIKM et. al.
 
-## 相关工作
+## 核心相关工作
 ### 1. 计算广告
 （写作思路：根据计算广告逻辑演进框图重新表意）
 计算广告是利用计算机技术对广告投放进行优化、定制和智能化,以提高广告的精准投放和效果的一种广告模式【1】。它是互联网广告发展的重要形式,成为各大互联网公司的核心收入来源【2】。计算广告经历了以下3个主要发展阶段【6】。（1）1.0 时代: 程序化广告,基于简单数学模型,以文字广告为主,通过竞价排名等机制进行广告投放,如Google、百度的广告系统；（2）2.0 时代: 智能推荐广告,对用户画像和广告特征进行更精细的分析,在广告智能投放和效果付费方面有长足进步,如微信朋友圈、抖音等的智能广告投放；（3）3.0 时代: 认知计算广告,以AI技术为基础,以AIGC为逻辑,以认知科学为理论,重点解决广告创意生成等问题,利用多模态垂类模型生成文字、图片、视频等广告内容。
