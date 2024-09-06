@@ -3,7 +3,7 @@
 ## 当前研究课题：多模态内容感知、生成及个性化创意应用场景研究
 ## 当前理论框架依据：认知计算广告
 ## 子课题
-### 子课题及论文题目（拟） - 1 - “AIGC内容创意工作流”在垂直领域的应用
+### 子课题及论文题目（拟） - 1 - “AIGC内容创意工作流”在垂直领域的应用研究
 #### 摘要
 * 本文着重探讨 AIGC 内容创意工作流在垂直领域的应用。AIGC 工作流包含多个分步节点，各节点有明确的输入与输出。在内容创意中，从创意激发到独特内容输出及优化调整，呈现丰富流程。当前业界多为单一工作流，而本文研究分布式协同工作流问题，旨在解决不同节点间的协同难题。提出可利用先进的通信技术与智能分配机制，促进各节点高效协作。此工作流对内容创意具有深远价值，广泛应用于多模态内容感知生成及个性化创意应用场景，为推动垂直领域的内容创新提供新路径。
 
@@ -112,7 +112,7 @@
 * TODO:使用数字签名是否能有效防止工作流被篡改？
 * 所投期刊《新闻界》
 
-### 子课题及论文题目（拟） - 2 - “AIGC内容创意知识库”在垂直领域的应用
+### 子课题及论文题目（拟） - 2 - “AIGC内容创意知识库”在垂直领域的应用研究
 #### 摘要 Abstract
 * This paper begins by examining the traditional single modality knowledge base and then progresses to explore the development and significance of a multimodal knowledge base in the realm of AI-generated content (AIGC). As the field of AIGC expands, the need for a knowledge base that can handle multiple modalities such as text, image, video, and other objects becomes crucial. The research focuses on the construction, organization, and application of this multimodal knowledge base specifically within the context of AIGC, rather than in the areas of increasing productivity or streamlining workflows. By analyzing the transition from single modality to multimodal knowledge bases, this paper provides insights into the future directions of AIGC and its potential impact on various industries.
 #### 关键词 Keywords
@@ -171,7 +171,7 @@
 * 案例2：如何使用coze平台构建多模态AIGC创意知识库
 * 所投期刊：新闻与传播如 TODO: 未确定
 
-### 子课题及论文题目（拟） - 3 - “AIGC内容创意垂类模型"在垂直领域的应用
+### 子课题及论文题目（拟） - 3 - “AIGC内容创意垂类模型"在垂直领域的应用研究
 #### 摘要 Abstract
 * This paper examines the realm of created models, which have the ability to generate text, images, and videos in parallel. While these models hold great promise, they also come with limitations. One significant limitation is their limited capability in expressing creativity. However, this constraint can potentially trigger inner model training and iteration. The research delves into the architecture, functionality, and applications of these created models, analyzing both their advantages and drawbacks. It explores ways to overcome the limitations and enhance the creative expression capabilities of these models. By understanding the challenges and opportunities associated with created models, this paper aims to contribute to the development and improvement of content generation and creative expression in a multi-modal world.
 
@@ -231,7 +231,7 @@
 * 案例3：如何使用“通用生视频大模型 + 微调”做带有风格的时尚内容创作（视频）
 * 所投期刊：新闻与传播如 TODO: 未确定
 
-### 子课题及论文题目（拟） - 4 - “AIGC内容创意智能体”在垂类场景中的应用
+### 子课题及论文题目（拟） - 4 - “AIGC内容创意智能体”在垂类场景中的应用研究
 #### 摘要 Abstract
 * This paper begins by clarifying the concept that an intelligent agent is distinct from large language models or large vision models. An intelligent agent can be metaphorically described as having a "brain" and "body" and it is designed to perform specific tasks. The control of an intelligent agent often relies on large language models or large visual models. The paper then presents different types of intelligent agents, including those for cost reduction and efficiency improvement and those for content creation. The focus of this paper is on content creation. An in-depth exploration of these content creation intelligent agents are provided, while specific case studies are yet to be determined.
 * TODO: Needs more details.
@@ -342,6 +342,99 @@ TODO: 补充 阿诺德 认知-情感-意动 模型
 ### 相关学术研讨会
 1. 生成式AI与跨学科融合：机遇、挑战与应对.华南理工大学.20240613
 
+### 与生成式人工智能关系较大的文献
+* 新闻界，2024 第七期 《产业驱动下的契约设计：基于用户协议的人工智能生成物的权属分配》
+#### 框架
+一. 研究背景和意义
+二. 相关法律框架和标准
+三. 用户协议在权属分配中的作用
+四. 以某公司为例的契约设计实践分析
+五. 结论与展望
+
+* 新闻界，2024 第六期 《人工智能生成内容著作权保护的行为规则模式————以Sora文生视频为例》
+#### 摘要
+讨论的问题是可版权性，但目前仍存问题。最后提出研究团队的设想。
+
+#### 关键词
+文生视频; 行为规制模式; 确权模式; 人工智能生成内容; Sora;
+
+* 新闻界，2024 第五期 《大模型角色期望：基于X和微博语境的比较分析》
+#### 时间节点
+* 网络首发：2024.3.19
+
+#### 摘要
+大模型是人工智能技术的一项革命性突破，在极短时间内获得了海内外广泛关注。本文分析了 X 和微博两个平台对大模型的角色期望，比较了英文语境和中文语境对前沿技术的认知差异。总体上，微博平台的期望更多地倾向实用性的产业发展与应用，而 X 平台的期望更多地倾向于信息传播技术的发展。具体来看，在技术角色期望方面，X 平台的英文语境更多地关注大模型在不同领域的应用场景，以及前沿技术的交叉融合；中文语境更多地关注大模型与互联网产业发展的关联。在人类角色期望方面，微博的最大人类角色期望是创意者，也就是期望大模型在艺术、设计等领域通过思维和技能创造新事物；而 X 的最大人类角色期望是传播者，可视之为一个信息的交流和传播的媒介。最后提出了新技术发展如何理性面对社会角色期望的两点建议。
+
+#### 关键词
+大模型; 社会期望; 技术角色; 人类角色; 舆论关注; 技术认知;
+
+#### 框架
+一. 问题提出
+* 大模型作为人工智能技术的重大突破，在全球范围内迅速引发广泛关注，社交媒体平台上的相关讨论热度持续攀升。随着其概念的普及，不同平台的舆论关注和期望呈现出明显差异。比如 ChatGPT 话题在海内外主要社交媒体平台中的舆论扩散热度和趋势就有显著差别。跨平台语境的技术关注差异在大模型议题中同样突出，海内外用户群体对大模型可能存在不同的技术认知和应用期望。推特和微博作为具有代表性的平台，一个是英文语境，一个是中文语境。那么，用户对大模型技术的角色期望究竟有哪些不同？这些差异背后又隐藏着怎样的深层原因和含义？这正是我们需要深入探讨和研究的关键所在。
+二. 研究设计
+（一）大模型角色期望的操作化定义
+
+|大模型角色|组成要素|基本定义|
+|----|----|----|
+|技术角色|基础|在数据处理和传输方面的基础技术支持|
+|技术角色|功能扩展|对接口的功能进行拓展和增强|
+|技术角色|生态系统|大模型与相关技术、服务、用户等相互作用的整体环境|
+|技术角色|市场资本|投入到大模型领域的资金和相关资源|
+|人类角色|分析师|能够深入分析数据和信息，提供有价值的见解和预测|
+|人类角色|助理|协助用户高效完成任务和解决问题|
+|人类角色|传播者|负责信息的传播和交流|
+|人类角色|创意者|具有创新思维，能够创造新的想法和作品|
+|人类角色|教育者|能够传授知识和引导学习|
+|人类角色|娱乐者|为用户提供娱乐内容和带来欢乐体验|
+
+（二）数据采集与分析
+SEE ./src/data_collection_x.py
+SEE ./src/data_collection_weibo.py
+
+|采集平台|关键词|原始数据集|抽样数据集|有效样本数|
+|----|----|----|----|----|
+|X|ChatGPT GPT-4||||
+|Weibo|ChatGPT GPT-4 Chat GLM 文心一言||||
+
+三. 大模型应用的"技术角色"期望
+（一）大模型的技术角色期望分布
+表格设计
+* 纵向为：微博与X平台
+* 横向为：按技术要素划分，数据、技术基础、接口、功能扩展、公司机构、买家、卖家、生态系统、市场资本
+
+（二）技术角色之间的关系分析
+无向图及关系设计
+* 节点为：各技术要素
+* 边为：节点权重程度分布
+
+（三）中心技术角色的话题比较分析
+表格设计
+1. 微博主题分析（含主话题及子话题）
+2. X主题分析（含主话题及子话题）
+
+四、大模型应用的"人类角色"期望
+（一）大模型的人类角色期望分布
+TODO: 待设计
+
+（二）相同人类角色期望建构的差异分析
+TODO: 待设计
+
+（三）不同角色期望的社会价值取向比较
+TODO: 待设计
+
+五、总结与讨论
+* 不同技术角色关系对平台发展的综合影响
+* 关键技术角色在不同平台的重要性排序
+* 平台间技术策略的对比与启示
+* 未来发展趋势的预测
+* 研究的局限性与改进方向
+
+* 新闻界，2023《生成式人工智能与新闻传播：实务赋能、理念挑战与角色重塑》
+* 新闻界，2023《从文本构造到界面连接：生成式人工智能对数字新闻叙事的重塑》
+* 新闻界，2023《解析生成式AI下的“涌现”现象————新常人传播格局下的知识生产逻辑》
+* 新闻界，2023《乌合之众的超级节点？AI大模型使用的人机网络结构分析》
+* 新闻界，2023《内容范式的革命：生成式AI浪潮下内容生产的生态级演进》
+
 ## TODO:
 1. 迭代 文献梳理（关注（1）国际计算广告发展（2）中国认知计算广告体系构建（3）最（较）前沿AIGC创意生成技术）
 2. 设计 实验
@@ -357,6 +450,14 @@ TODO: 补充 阿诺德 认知-情感-意动 模型
 * 趋势4：AIGC+产业成为未来超级商业体的新风口
 * 趋势5：从程序化Agent到代理化Agentic是通向AGI的发展之路
 * 趋势6：构建基于中国实践的认知计算广告自主知识体系与理论创新
+
+## 研究方法
+1. 结构方程模型
+2. 因果关系模型
+3. 系统工程方法
+4. 实验设计
+5. 统计分析
+6. 阅读经典论文
 
 ## 术语
 1. 生成式AI
@@ -409,3 +510,8 @@ TODO: 补充 阿诺德 认知-情感-意动 模型
 42. 词元 = token 源：黄仁勋
 43. 注意力机制 源：谷歌
 44. 具身智能 源：
+45. 媒介
+46. 内涵
+47. 外延
+48. 治理
+49. 
