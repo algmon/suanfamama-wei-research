@@ -1,5 +1,10 @@
 # 参考期刊会议
-## Communication & Advertising
+## Computer Science Related
+### RecSys: ACM Conference On Recommender Systems
+* 
+
+## Communicaton & Advertising Related
+### Communication & Advertising
 1. Journal of Advertising 2024第1期 - 无
 2. Journal of Advertising 2024第2期
     1.  Relay activism and the flows of contentious publicness on WeChat: A case study of COVID-19 in China
@@ -77,4 +82,3 @@
 55.  
 56.  A survey on real time bidding advertising
 57.  https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NrF6pEoAAAAJ&citation_for_view=NrF6pEoAAAAJ:9yKSN-GCB0IC
-58.  
