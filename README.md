@@ -1,9 +1,10 @@
-![](./img/cover.png)
+![](./img/central.topic.png)
 
 ## 当前研究课题：多模态内容感知、生成及个性化创意应用场景研究
 ## 当前理论框架依据：认知计算广告
 ## 子课题
-### 子课题及论文题目（拟） - 1 - “AIGC内容创意工作流”在垂直领域的应用研究
+![](./img/sub.topic.1.png)
+### 子课题及论文题目（拟） - 1 - “创意工作流”在垂直领域的应用研究
 #### 摘要
 * 本文着重探讨 AIGC 内容创意工作流在垂直领域的应用。AIGC 工作流包含多个分步节点，各节点有明确的输入与输出。在内容创意中，从创意激发到独特内容输出及优化调整，呈现丰富流程。当前业界多为单一工作流，而本文研究分布式协同工作流问题，旨在解决不同节点间的协同难题。提出可利用先进的通信技术与智能分配机制，促进各节点高效协作。此工作流对内容创意具有深远价值，广泛应用于多模态内容感知生成及个性化创意应用场景，为推动垂直领域的内容创新提供新路径。
 
@@ -123,7 +124,8 @@
 * TODO:使用数字签名是否能有效防止工作流被篡改？
 * 所投期刊《新闻界》
 
-### 子课题及论文题目（拟） - 2 - “AIGC内容创意知识库”在垂直领域的应用研究
+![](./img/sub.topic.2.png)
+### 子课题及论文题目（拟） - 2 - “创意知识库”在垂直领域的应用研究
 #### 摘要 Abstract
 * This paper begins by examining the traditional single modality knowledge base and then progresses to explore the development and significance of a multimodal knowledge base in the realm of AI-generated content (AIGC). As the field of AIGC expands, the need for a knowledge base that can handle multiple modalities such as text, image, video, and other objects becomes crucial. The research focuses on the construction, organization, and application of this multimodal knowledge base specifically within the context of AIGC, rather than in the areas of increasing productivity or streamlining workflows. By analyzing the transition from single modality to multimodal knowledge bases, this paper provides insights into the future directions of AIGC and its potential impact on various industries.
 #### 关键词 Keywords
@@ -182,7 +184,8 @@
 * 案例2：如何使用coze平台构建多模态AIGC创意知识库
 * 所投期刊：新闻与传播如 TODO: 未确定
 
-### 子课题及论文题目（拟） - 3 - “AIGC内容创意垂类模型"在垂直领域的应用研究
+![](./img/sub.topic.3.png)
+### 子课题及论文题目（拟） - 3 - “创意垂类模型"在垂直领域的应用研究
 #### 摘要 Abstract
 * This paper examines the realm of created models, which have the ability to generate text, images, and videos in parallel. While these models hold great promise, they also come with limitations. One significant limitation is their limited capability in expressing creativity. However, this constraint can potentially trigger inner model training and iteration. The research delves into the architecture, functionality, and applications of these created models, analyzing both their advantages and drawbacks. It explores ways to overcome the limitations and enhance the creative expression capabilities of these models. By understanding the challenges and opportunities associated with created models, this paper aims to contribute to the development and improvement of content generation and creative expression in a multi-modal world.
 
@@ -242,7 +245,8 @@
 * 案例3：如何使用“通用生视频大模型 + 微调”做带有风格的时尚内容创作（视频）
 * 所投期刊：新闻与传播如 TODO: 未确定
 
-### 子课题及论文题目（拟） - 4 - “AIGC内容创意智能体”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - 4 - “创意智能体”在垂类场景中的应用研究
+![](./img/sub.topic.4.png)
 #### 摘要 Abstract
 * This paper begins by clarifying the concept that an intelligent agent is distinct from large language models or large vision models. An intelligent agent can be metaphorically described as having a "brain" and "body" and it is designed to perform specific tasks. The control of an intelligent agent often relies on large language models or large visual models. The paper then presents different types of intelligent agents, including those for cost reduction and efficiency improvement and those for content creation. The focus of this paper is on content creation. An in-depth exploration of these content creation intelligent agents are provided, while specific case studies are yet to be determined.
 * TODO: Needs more details.
@@ -525,4 +529,5 @@ TODO: 待设计
 46. 内涵
 47. 外延
 48. 治理
-49. 
+49. silhouette effect - The silhouette effect is a method used in various fields, such as psychology, design, marketing, and analytics, to measure or represent the distinctiveness, separation, or impact of different entities or groups. The concept varies depending on the context, but it generally relates to how well-defined or separated something is from others in its environment or dataset.
+50. advertising memory - Advertising memory refers to the ability of consumers to recall or recognize advertisements and the messages they convey after being exposed to them. It encompasses various forms of memory, including: (1) Recall: The ability of consumers to retrieve information about an advertisement from memory without external cues. This can be either unaided (e.g., "What ads do you remember seeing during the Super Bowl?") or aided (e.g., "Do you remember the Coca-Cola ad during the Super Bowl?"). (2) Recognition: The ability to identify an advertisement or brand when presented with it again. This often involves recognizing specific elements of the ad, such as the logo, tagline, or visual imagery. (3) Retention: The long-term storage and ability to remember an advertisement over time. This involves not just immediate recall but the persistence of the ad's message in memory, influencing future attitudes and behaviors. (4) Persuasive Impact: The extent to which the remembered elements of an advertisement influence consumer attitudes, preferences, and purchase decisions.
