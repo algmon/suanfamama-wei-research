@@ -1,5 +1,6 @@
 ![](./img/central.topic.png)
 
+## PI研究员：江纬
 ## 当前研究课题：多模态内容感知、生成及个性化创意应用场景研究
 ## 当前理论框架依据：认知计算广告
 ## 子课题
@@ -13,6 +14,9 @@
 
 #### 作者
 * （相关研究团队成员如段淳林、江纬及陆昊琪等）
+
+#### 同行评审
+* 陈刚（deadline: 2024 fall）
 
 #### 组织
 * 华南理工大学
@@ -134,6 +138,9 @@
 #### 作者 Authors
 * (related research team)
 
+#### 同行评审
+* 吴小坤（deadline: 2024 fall）
+
 #### 组织 Organization
 * South China University of Technology
 
@@ -200,6 +207,9 @@
 #### 作者 Authors
 * 
 
+#### 同行评审
+* 段淳林（deadline: 2024 fall）
+
 #### 组织 Organization
 * South China University of Technology
 
@@ -261,6 +271,9 @@
 
 #### 作者 Authors
 * 
+
+#### 同行评审
+* 全宇晖（deadline: 2024 fall）
 
 #### 组织 Organization
 * 
