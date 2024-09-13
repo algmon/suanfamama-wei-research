@@ -1,6 +1,6 @@
 ![](./img/central.topic.png)
 
-## PI研究员：江纬
+## PI：江纬 Wei Jiang
 ## 当前研究课题：多模态内容感知、生成及个性化创意应用场景研究
 ## 当前理论框架依据：认知计算广告
 ## 子课题
@@ -328,15 +328,17 @@ First, through careful analysis of embedded knowledge and user queries, an initi
 
 Second, this paper explores and compares to previously proposed approaches that perform pruning based on other methods.
 #### Keywords
-static large model pruning, information generation
+LLM pruning, LVM pruning, quantization, dense & sparse models
+#### Open Source Repo
+* https://github.com/algmon/mama-prune
 #### 1. Introduction
-* (General Intro) Large language models and large vision models are facing significant performance challenges due to the massive data size and query loads they need to support. These models, along with other related systems, crawl, analyze, and incorporate billions of web pages, videos, and multimodal data into their indexing architectures such as transformer. One crucial cost factor is the query processing per user, which must scale with both data size and query load. As a result, large language models devote substantial hardware and energy resources to this task. There has been extensive research on improving query processing performance, including work on various caching techniques, retrieval information systems, and high-performance knowledge representation. A large category of optimization techniques commonly referred to as static pruning or dynamic pruning has emerged in the context of query processing for large language models and large vision models. This paper aims to explore and contribute to the understanding and improvement of these pruning techniques to enhance the performance and efficiency of large language and vision models.
-* (More Specific Intro) In this paper, our attention is directed towards a particular optimization technique known as static index pruning. In essence, the approach involves conducting a suitable analysis of the knowledge representation, document collections, and query distribution. The objective is to determine those entries or neurons that are highly likely to yield top user query results for typical queries. Subsequently, any other neurons that are unlikely to contribute to user inputs are removed from the neural network. The aim is to obtain a significantly smaller neural network with a reduced amount of parameters. This pruned neural network can achieve almost the same quality of results as the unpruned one while requiring much less memory and GPU resources. Consequently, it leads to faster query processing over a shorter neural network with optimized layers.
+* (General Intro) Large language models and large vision models are facing significant performance challenges due to the massive data size and query loads they need to support. These models, along with other related systems, crawl, analyze, and incorporate billions of web pages, videos, and multimodal data into their network architectures such as transformer. One crucial cost factor is the query processing per user, which must scale with both data size and query load. As a result, large language models devote substantial hardware and energy resources to this task. There has been extensive research on improving query processing performance, including work on various caching techniques, retrieval information systems, and high-performance knowledge representation. A large category of optimization techniques commonly referred to as static pruning or dynamic pruning has emerged in the context of query processing for large language models and large vision models. This paper aims to explore and contribute to the understanding and improvement of these pruning techniques to enhance the performance and efficiency of large language and vision models.
+* (More Specific Intro) In this paper, our attention is directed towards a particular optimization technique known as static network pruning. In essence, the approach involves conducting a suitable analysis of the knowledge representation, document collections, and query distribution. The objective is to determine those entries or neurons that are highly likely to yield top user query results for typical queries. Subsequently, any other neurons that are unlikely to contribute to user inputs are removed from the neural network. The aim is to obtain a significantly smaller neural network with a reduced amount of parameters. This pruned neural network can achieve almost the same quality of results as the unpruned one while requiring much less memory and GPU resources. Consequently, it leads to faster query processing over a shorter neural network with optimized layers.
 * (Give an example) Consider a leading large language model provider today. There are 4 billion documents incorporated into its knowledge base, with an average of 300 words per document, resulting in a total of approximately 10^15 tokens. The engine receives 5 billion queries per day, with each query represented by around 10^11 terms to convey the user's intention for interaction with the large language model. This implies that nearly 117 billion tokens in the knowledge representation could potentially lead to expected output tokens. However, in reality, far fewer tokens actually result in an output within a month. Considering the repetition of queries and postings, more than 99.5% of all routing and neuronal activation and triggers do not yield a single result output from the decoder within a month. Although we cannot reliably identify the 0.5% of active neurons that contribute to the result precisely for the next month, we might hope to identify a large subset of the optimized neurons that contains most of the important information and knowledge representation as the full neural network on common measures of effectiveness.
 * (Small Set of Closed Related Previous Work) Previous work on static pruning for large language models and large vision models has primarily focused on approaches such as retaining layers above a global impact threshold or keeping high-scoring neurons in each layer. For example [][][][]. These efforts have yielded promising results, but there is room for further improvement. The goal of this paper is to build on this existing work and develop a methodology that combines different ideas to achieve a better balance between neural network size and result quality as measured by standard retrieval or information generation quality metrics. Given the feature-rich environment, pruning is considered as a prediction problem where suitable statistical techniques or deep learning methods such as language modeling and machine learning are employed to determine which neuron/sets of neurons/layers to keep.
 * (Paper Organization) The rest of this paper is structured in a systematic manner. In the following section, background information on knowledge representation, neural networks, and pruning will be provided. Additionally, related work in this field will be discussed to situate our research within the broader context. Section 3 will summarize our key contributions, highlighting the novelty and significance of our approach. Section 4 will delve into the technical details of our proposed approach, providing a comprehensive explanation of the methodology and algorithms employed. The results presented in our study will be explained in section 5, including an analysis of their implications and performance. Finally, section 6 will offer concluding remarks, summarizing the main findings of the paper and suggesting potential directions for future research.
 #### 2. Background and Related Work
-In this section, we first provide some background on neural network architectures, ranked queries, index pruning, and early termination techniques. We then discuss previous work related to static pruning in the context of large language and vision models. For additional details on general neural network architectures, we refer to [][].
+In this section, we first provide some background on neural network architectures, ranked queries, pruning, and early termination techniques. We then discuss previous work related to static pruning in the context of large language and vision models. For additional details on general neural network architectures, we refer to [][].
 ##### A. Background
 1. Nerual Network Architectures
 2. User Input/Queries & Ranking & Content Generation
@@ -345,7 +347,8 @@ In this section, we first provide some background on neural network architecture
 ##### B. Related Work
 1. Rank- and Impact- based methods
 2. Using Query Traces
-3. Comparison to our work
+3. complementary approach: quantization
+4. Comparison to our work
 #### 3. Our Contributions
 In this paper, we study LLM & LVM static pruning that attempt to achieve a good trade-off between network size and generation quality. Our main contributions are as follows:
 1. We describe an approach that ...
@@ -362,12 +365,25 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 * Figure 3
 #### 6. Conclusions
 * In this paper, we have introduced several novel algorithms for static pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in top results based on diverse neuron features, collections, and query statistics, has demonstrated measurable improvement over prior work as evidenced by our experimental results.
-* For future work, we plan several extensions. This includes conducting experiments with other language models that may potentially achieve even better pruning performances. We also aim to optimize our approach further, such as exploring hybrid methods. Additionally, we plan to study the tradeoff between index size and query cost under different cost models and for actual query processing algorithms. This research holds promise for enhancing the efficiency and performance of large language and vision models through more effective static pruning techniques.
+* For future work, we plan several extensions. This includes conducting experiments with other language models that may potentially achieve even better pruning performances. We also aim to optimize our approach further, such as exploring hybrid methods. Additionally, we plan to study the tradeoff between model size and query cost under different cost models and for actual query processing algorithms. This research holds promise for enhancing the efficiency and performance of large language and vision models through more effective static pruning techniques.
 #### References
-1. Improved Methods for Static Index Pruning. W. Jiang, J. Rodriguez, and T. Suel. IEEE International Conference on Big Data, December 2016. http://engineering.nyu.edu/~suel/papers/prune.pdf
-2. Exploring Size-Speed Trade-Offs in Static Index Pruning. J. Rodriguez and T. Suel. IEEE International Conference on Big Data, December 2018. http://engineering.nyu.edu/~suel/papers/prunetrade-bd18.pdf
-3. A Simple and Effective Pruning Approach for Large Language Models. Mingjie Sun, Zhuang Liu, Anna Bair, J. Zico Kolter. ICLR, 2024
-4. Rethinking the Value of Network Pruning. Zhuang Liu, Mingjie Sun, Tinghui Zhou, Gao Huang, Trevor Darrell. ICLR, 2019
+1. Improved Methods for Static Index Pruning. W. Jiang, J. Rodriguez, and T. Suel, IEEE International Conference on Big Data, December 2016. http://engineering.nyu.edu/~suel/papers/prune.pdf
+2. Exploring Size-Speed Trade-Offs in Static Index Pruning. J. Rodriguez and T. Suel, IEEE International Conference on Big Data, December 2018. http://engineering.nyu.edu/~suel/papers/prunetrade-bd18.pdf
+3. A Simple and Effective Pruning Approach for Large Language Models. Mingjie Sun, Zhuang Liu, Anna Bair, J. Zico Kolter, ICLR, 2024. https://openreview.net/forum?id=PxoFut3dWW
+4. Rethinking the Value of Network Pruning. Zhuang Liu, Mingjie Sun, Tinghui Zhou, Gao Huang, Trevor Darrell, ICLR, 2019.
+5. SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot. Elias Frantar, Dan Alistarh, ICML Oral, 2023.
+6. AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration. Ji Lin, Jiaming Tang, Haotian Tang, Shang Yang, Wei-Ming Chen, Wei-Chen Wang, Guangxuan Xiao, Xingyu Dang, Chuang Gan, Song Han, MLSys, 2024 (Best Paper Award).
+7. LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale. Dettmers et al, NeurIPS 2022.
+8. SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models. Xiao et al, ICML 2023.
+9. Movement pruning: Adaptive sparsity by fine-tuning. Sanh et al, 2020.
+10. Platon: Pruning large transformer models with upper confidence bound of weight importance. Zhang et al, 2022.
+11. Pruning Pre-trained Language Models with Principled Importance and Self-regularization. Ren et al, 2023.
+12. LLM-Pruner: On the Structural Pruning of Large Language Models. Ma et al, NeurIPS 2023.
+13. The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks. 2019.
+14. Rigging the Lottery: Making All Tickets Winners. Evci et al, ICML 2020.
+15. Molchanov, Pavlo, et al. "Importance estimation for neural network pruning." Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2019.
+16. LeCun, Yann, John Denker, and Sara Solla. "Optimal brain damage." Advances in neural information processing systems 2 (1989).
+17. SNIP: Single-shot Network Pruning based on Connection Sensitivity. Lee et al, ICLR 2019.
 
 ### （中阶）子课题及论文题目（拟） - 9 - Improved Methods for Dynamic Neural Network Pruning
 ![](./img/sub.topic.9.png)
@@ -421,3 +437,7 @@ TODO: 待补充
 
 ### 相关学术研讨会
 1. 生成式AI与跨学科融合：机遇、挑战与应对.华南理工大学.20240613
+
+### Cool Research Problems
+1. given a pre-trained dense LLMs, how to obtain a effective sparse LLM? For example, the sparsification of linear layers.
+2. 
