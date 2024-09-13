@@ -336,6 +336,13 @@ static large model pruning, information generation
 * (Small Set of Closed Related Previous Work) Previous work on static pruning for large language models and large vision models has primarily focused on approaches such as retaining layers above a global impact threshold or keeping high-scoring neurons in each layer. For example [][][][]. These efforts have yielded promising results, but there is room for further improvement. The goal of this paper is to build on this existing work and develop a methodology that combines different ideas to achieve a better balance between neural network size and result quality as measured by standard retrieval or information generation quality metrics. Given the feature-rich environment, pruning is considered as a prediction problem where suitable statistical techniques or deep learning methods such as language modeling and machine learning are employed to determine which neuron/sets of neurons/layers to keep.
 * (Paper Organization) The rest of this paper is structured in a systematic manner. In the following section, background information on knowledge representation, neural networks, and pruning will be provided. Additionally, related work in this field will be discussed to situate our research within the broader context. Section 3 will summarize our key contributions, highlighting the novelty and significance of our approach. Section 4 will delve into the technical details of our proposed approach, providing a comprehensive explanation of the methodology and algorithms employed. The results presented in our study will be explained in section 5, including an analysis of their implications and performance. Finally, section 6 will offer concluding remarks, summarizing the main findings of the paper and suggesting potential directions for future research.
 #### 2. Background and Related Work
+In this section, we first provide some background on neural network architectures, ranked queries, index pruning, and early termination techniques. We then discuss previous work related to static pruning in the context of large language and vision models. For additional details on general neural network architectures, we refer to [][].
+##### A. Background
+* 1. Nerual Network Architectures
+* 2. User Input/Queries & Ranking & Content Generation
+* 3. Pruning
+* 4. Early Termination & Dropout Technique
+##### B. Related Work
 #### 3. Our Contributions
 #### 4. Our Pruning Algorithms
 #### 5. Experimental Results
