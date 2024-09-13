@@ -338,14 +338,28 @@ static large model pruning, information generation
 #### 2. Background and Related Work
 In this section, we first provide some background on neural network architectures, ranked queries, index pruning, and early termination techniques. We then discuss previous work related to static pruning in the context of large language and vision models. For additional details on general neural network architectures, we refer to [][].
 ##### A. Background
-* 1. Nerual Network Architectures
-* 2. User Input/Queries & Ranking & Content Generation
-* 3. Pruning
-* 4. Early Termination & Dropout Technique
+1. Nerual Network Architectures
+2. User Input/Queries & Ranking & Content Generation
+3. Pruning
+4. Early Termination & Dropout Technique
 ##### B. Related Work
+1. Rank- and Impact- based methods
+2. Using Query Traces
+3. Comparison to our work
 #### 3. Our Contributions
+In this paper, we study LLM & LVM static pruning that attempt to achieve a good trade-off between network size and generation quality. Our main contributions are as follows:
+1. We describe an approach that ...
+2. We describe several algorithms that ...
+3. We perform an experimental evaluation on two datasets that ...
+4. We compare our methods with ...
 #### 4. Our Pruning Algorithms
+* TODO: to discuss
 #### 5. Experimental Results
+* Table 1
+* Table 2
+* Figure 1
+* Figure 2
+* Figure 3
 #### 6. Conclusions
 * In this paper, we have introduced several novel algorithms for static pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in top results based on diverse neuron features, collections, and query statistics, has demonstrated measurable improvement over prior work as evidenced by our experimental results.
 * For future work, we plan several extensions. This includes conducting experiments with other language models that may potentially achieve even better pruning performances. We also aim to optimize our approach further, such as exploring hybrid methods. Additionally, we plan to study the tradeoff between index size and query cost under different cost models and for actual query processing algorithms. This research holds promise for enhancing the efficiency and performance of large language and vision models through more effective static pruning techniques.
