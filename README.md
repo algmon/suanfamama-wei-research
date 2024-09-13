@@ -321,6 +321,12 @@
 
 ### （中阶）子课题及论文题目（拟） - 8 - Improved Methods for Static Neural Network Pruning
 ![](./img/sub.topic.8.png)
+#### Abstract
+Static neural network pruning is presented as a performance optimization technique for large language models and large vision models. The approach aims to identify and remove neurons unlikely to lead to expected results for typical user queries. The goal is to obtain a smaller large language model that can quickly return results almost as good as those of the unpruned model.
+
+First, through careful analysis of embedded knowledge and user queries, an initial mathematical model based on certain probabilities obtained from the environment is developed to improve on previous results for pruned large language model size, achieving additional improvement in some cases. A simple method for generating queries into the large language model in the absence of real-life queries is also devised, which is useful for modeling top results.
+
+Second, this paper explores and compares to previously proposed approaches that perform pruning based on other methods.
 
 ### （中阶）子课题及论文题目（拟） - 9 - Improved Methods for Dynamic Neural Network Pruning
 ![](./img/sub.topic.9.png)
