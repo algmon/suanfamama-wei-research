@@ -366,6 +366,8 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 #### References
 1. Improved Methods for Static Index Pruning. W. Jiang, J. Rodriguez, and T. Suel. IEEE International Conference on Big Data, December 2016. http://engineering.nyu.edu/~suel/papers/prune.pdf
 2. Exploring Size-Speed Trade-Offs in Static Index Pruning. J. Rodriguez and T. Suel. IEEE International Conference on Big Data, December 2018. http://engineering.nyu.edu/~suel/papers/prunetrade-bd18.pdf
+3. A Simple and Effective Pruning Approach for Large Language Models. Mingjie Sun, Zhuang Liu, Anna Bair, J. Zico Kolter. ICLR, 2024
+4. Rethinking the Value of Network Pruning. Zhuang Liu, Mingjie Sun, Tinghui Zhou, Gao Huang, Trevor Darrell. ICLR, 2019
 
 ### （中阶）子课题及论文题目（拟） - 9 - Improved Methods for Dynamic Neural Network Pruning
 ![](./img/sub.topic.9.png)
