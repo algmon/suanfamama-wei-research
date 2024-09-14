@@ -355,8 +355,28 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 2. We describe several algorithms that ...
 3. We perform an experimental evaluation on two datasets that ...
 4. We compare our methods with ...
-#### 4. Our Pruning Algorithms
-* TODO: to discuss
+#### 4. Our Proposed Pruning Algorithms
+##### Key Considerations when designing the pruning algorithms
+1. 
+##### 1. Movement Pruning
+* Core Idea: Instead of directly removing weights, movement pruning identifies unimportant weights and "moves" their values to other more significant connections. This helps preserve the overall information flow within the network.
+* Potential Benefits: Can achieve higher sparsity levels with less accuracy degradation compared to traditional pruning methods.
+* Example: The "Rigging the Lottery: Making All Tickets Winners" paper introduces a similar movement pruning technique.
+##### 2. Flow Pruning
+* Core Idea: Flow Pruning focuses on pruning connections early in the training process by analyzing the sensitivity of the loss function to weight perturbations.
+* Potential Benefits: Can be particularly effective for finding important connections and achieving high sparsity even before full training.
+* Considerations: Might require more computation during the initial pruning phase.
+##### 3. Variational Pruning
+* Core Idea: Applies Bayesian principles to pruning by treating weights as random variables and pruning connections with low signal-to-noise ratios.
+* Potential Benefits: Provides a more principled way to handle uncertainty in weight importance and can lead to more robust pruning.
+* Considerations: Often more computationally expensive than deterministic pruning methods.
+##### 4. Reinforcement Learning-Based Pruning
+* Core Idea: Treats pruning as a sequential decision-making problem and uses reinforcement learning agents to learn optimal pruning policies.
+* Potential Benefits: Can potentially discover more complex and adaptive pruning strategies.
+* Considerations: Can be challenging to design effective reward functions and training procedures.
+##### 5. Combining Pruning with Other Techniques
+* Knowledge Distillation: After pruning a large model (teacher), use it to train a smaller, sparser model (student) to recover lost accuracy.
+* Quantization: Combine pruning with weight quantization to further reduce model size and improve inference speed.
 #### 5. (Preliminary) Experimental Results
 | Pruned Level | Wanda | SparseGPT |
 |-----------|-----------------|-----------------|
