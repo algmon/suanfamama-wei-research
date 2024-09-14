@@ -357,30 +357,39 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 4. We compare our methods with ...
 #### 4. Our Pruning Algorithms
 * TODO: to discuss
-#### 5. Preliminary Experimental Results
-| Pruned Level | Perplexity |
-|-----------|-----------------|
-| 0.50      | 7.257           |
-| 0.60      | 10.691          |
-| 0.70      | 84.905          |
-| 0.80      | 5782.432        |
-| 0.90      | 19676.668       |
-| 0.95      | 28309.178       |
-| 0.99      | 108234.484      |
+#### 5. (Preliminary) Experimental Results
+| Pruned Level | Wanda | SparseGPT |
+|-----------|-----------------|-----------------|
+| 0.10      | 5.696           |5.696            |
+| 0.20      | 5.817           |5.799            |
+| 0.30      | 5.999           |5.963            |
+| 0.40      | 6.387           |6.311            |
+| 0.50      | 7.257           |7.234            |
+| 0.60      | 10.691          |10.442           |
+| 0.70      | 84.905          |27.214           |
+| 0.80      | 5782.432        |182.463          |
+| 0.90      | 19676.668       |3198.101         |
+| 0.95      | 28309.178       |4088.413         |
+| 0.99      | 108234.484      ||
 * Table 1: Perplexity on pruned llama-7B models (Updated on 20240914)
 * 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
 * 0.95 means 95% of the weights in the targeted neural network has been pruned and set to 0
-* Table 2
-* Figure 1
-* Figure 2
-* Figure 3
+* Table 2 (TODO: End-End Unpruned & Pruned Model Evaluation)
+![](./prune.fig1.png)
+* 由以上Fig1初始实验结果，我们可知：
+* 1. 随着剪枝程度的加深，从剪枝50%的神经元到剪枝95%的神经元，语言模型的内在混沌指数（Perplexity）呈现指数级别的上升。这并不是一件好事，我们的目标是希望其Perplexity指数呈现线性轻微上升（TODO: 尚需实验验证）。
+* 2. 对于7B参数级别的大语言模型，我们有理由相信，由于内部混沌指数上升，模型向外输出文本质量会呈现显著下降趋势（尽管在性能上有一定幅度的提升）。我们将在稍后整理数据并进行进一步汇报。
+* 3. 我们会陆续汇报在7B，70B及700B级别的大模型剪枝算法中经剪枝后的大模型，性能及质量trade-off，为进一步探寻MoE大模型架构做前置实验准备。
+* 4. 我们同时会汇报在不同语言大模型的混沌指数横向对比分析（如中文智谱清言、英文llama及阿拉伯文等）。
+* Figure 2 (TODO: )
+* Figure 3 (TODO: )
 #### 6. Conclusions
 * In this paper, we have introduced several novel algorithms for static pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in top results based on diverse neuron features, collections, and query statistics, has demonstrated measurable improvement over prior work as evidenced by our experimental results.
 * For future work, we plan several extensions. This includes conducting experiments with other language models that may potentially achieve even better pruning performances. We also aim to optimize our approach further, such as exploring hybrid methods. Additionally, we plan to study the tradeoff between model size and query cost under different cost models and for actual query processing algorithms. This research holds promise for enhancing the efficiency and performance of large language and vision models through more effective static pruning techniques.
 #### References
 1. Improved Methods for Static Index Pruning. W. Jiang, J. Rodriguez, and T. Suel, IEEE International Conference on Big Data, December 2016. http://engineering.nyu.edu/~suel/papers/prune.pdf
 2. Exploring Size-Speed Trade-Offs in Static Index Pruning. J. Rodriguez and T. Suel, IEEE International Conference on Big Data, December 2018. http://engineering.nyu.edu/~suel/papers/prunetrade-bd18.pdf
-3. A Simple and Effective Pruning Approach for Large Language Models. Mingjie Sun, Zhuang Liu, Anna Bair, J. Zico Kolter, ICLR, 2024. https://openreview.net/forum?id=PxoFut3dWW
+3. A Simple and Effective Pruning Approach for Large Language Models. Mingjie Sun, Zhuang Liu, Anna Bair, J. Zico Kolter, ICLR Poster, 2024. https://openreview.net/forum?id=PxoFut3dWW
 4. Rethinking the Value of Network Pruning. Zhuang Liu, Mingjie Sun, Tinghui Zhou, Gao Huang, Trevor Darrell, ICLR, 2019.
 5. SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot. Elias Frantar, Dan Alistarh, ICML Oral, 2023.
 6. AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration. Ji Lin, Jiaming Tang, Haotian Tang, Shang Yang, Wei-Ming Chen, Wei-Chen Wang, Guangxuan Xiao, Xingyu Dang, Chuang Gan, Song Han, MLSys, 2024 (Best Paper Award).
