@@ -401,9 +401,24 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.95      | 28309.178       |4088.413         |273552.281       |
 | 0.99      | 108234.484      |16869.203        |222543.047       |
 * Table 1: Perplexity on pruned llama-7B models (Updated on 20240914)
-* 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
-* 0.95 means 95% of the weights in the targeted neural network has been pruned and set to 0
-* Table 2 (TODO: End-End Unpruned & Pruned Model Evaluation)
+* Note: 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
+| Pruned Level | Magnitude | Opposite Magnitude |
+|-----------|------------------|------------------|
+| 0.01      | NA               | 24377.635        |
+| 0.05      | NA               | 25804.920        |
+| 0.10      | 5.806            | 104948.891       |
+| 0.20      | 6.020            | 352772.500       |
+| 0.30      | 6.669            | 335747.406       |
+| 0.40      | 8.601            | 260632.641       |
+| 0.50      | 17.285           | 227413.484       |
+| 0.60      | 559.987          | 185086.078       |
+| 0.70      | 48414.551        | 273153.688       |
+| 0.80      | 132175.578       | 188488.000       |
+| 0.90      | 317879.250       | 185304.016       |
+| 0.95      | 273552.281       | NA               |
+| 0.99      | 222543.047       | NA               |
+* Table 2: The effectiveness of the weights as the main pruning measure
+* Table 3 (TODO: End-End Unpruned & Pruned Model Evaluation)
 ![](./prune.fig1.v2.png)
 * 由以上Fig1初始实验结果，我们可知：
 * 1. 随着剪枝程度的加深，从剪枝50%的神经元到剪枝95%的神经元，语言模型的内在混沌指数（Perplexity）呈现指数级别的上升。这并不理想，我们的目标是希望设计一种算法，使其Perplexity指数在高百分比剪枝的情况下，混沌指数只有线性轻微上升。
