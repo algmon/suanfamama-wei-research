@@ -2,19 +2,70 @@
 
 ## 当前研究课题：多模态内容感知、生成及个性化创意应用场景研究
 ## 当前理论框架依据：认知计算广告
+## 核心相关工作
+### 1. 计算广告
+（写作思路：根据计算广告逻辑演进框图进行文字表述）
+计算广告是利用计算机技术对广告投放进行优化、定制和智能化，以提高广告精准投放和效果的一种广告模式【1】。它是互联网广告发展的重要形式，成为各大互联网公司的核心收入来源【2】。计算广告经历了以下3个主要发展阶段【6】。（1）1.0 时代: 程序化广告，基于简单数学模型，以文字广告为主，通过竞价排名等机制进行广告投放，代表系统如Google Ads、百度搜索广告系统等；（2）2.0 时代: 智能推荐广告，对用户画像和广告特征进行更精细的分析，在广告智能投放和效果付费方面有长足进步，如微信朋友圈、抖音、Meta Ads等的智能广告投放系统；（3）3.0 时代: 认知计算广告，以AI技术为基础，以AIGC为逻辑，以认知科学为理论，重点解决广告创意生成等问题，利用多模态垂类模型生成文字、图片、视频等创意广告内容。计算广告进入3.0认知时代后，业界尚未出现在此领域的杰出代表性公司。
+
+### 2. 中国认知计算广告知识体系
+认知计算广告的理论体系诞生于2024，由段淳林及其研究团队首先提出，在【10】中有对其理论体系发展脉络的系统性论述。其中，类思维，智能体社交及价值对齐是三个核心概念。类思维【】是指智能体通过分类、归纳等认知过程，对事物进行抽象和概括，从而达到对复杂环境的理解和预测。这种类概念思维是智能体社交的基础，帮助智能体快速感知外界，并做出相应的反应。智能体社交【】指智能体之间基于类思维进行信息交互和行为协调的过程。不同的智能体可以通过交流与协作，共享知识和经验，以实现目标，这种社交互动是智能系统发展的关键。价值对齐【】是指智能体间的目标价值趋同。当智能体内部价值系统和外部环境的价值目标达成基本一致时，就实现了价值对齐。这是智能体最终实现高度自主和协同的基础。阿诺德的认知-情感-异动模型在该知识体系中占据重要地位。他认为情感与认知相互作用，共同影响个体行为。在广告中，可依据此模型深入理解消费者的情感和认知反应，从而更精准地制定广告策略，提升广告效果。
+
+本知识体系的外延在众多学者的共同努力下得到较好的发展。在【7】中，团队在此核心理论下进一步率先提出基于认知计算广告知识体系下的研究范式，明确*。在【8】中，团队在此核心理论下进一步提出基于认知计算广告知识体系下的生产范式，明确*。在【9】中，团队在此核心理论指导下，通过量化实验，融合深度神经网络等AIGC等核心技术，使用领域数据训练了一个前沿认知计算广告传播力预测模型，并使用领域大数据对实验可行性及模型效果进行验证。初始实验结果表明，此广告传播力预测模型能准确预测特定多模态广告内容的传播力及影响力。
+
+### 3. 基于中国认知计算广告知识体系下的“多模态内容感知、生成及个性化创意应用研究”
+在【11】中，团队基于认知计算广告知识体系，以“工作流”为核心研究概念，进一步提出了（1）分布式协同工作流（2）基于节点的编排（3）低代码等核心技术的落地应用，并以时尚行业设计师工作流为例，加以验证。
+在【12】中，团队基于认知计算广告知识体系，以“知识库”为核心研究概念，进一步阐明在实际生产应用中，如何综合使用关系型、非关系型，对象及新型向量数据库以构筑垂类AIGC知识库。核心待解决问题是如何对知识进行收集、整理、加工及存储，以使得更好的搜索、推荐及数据挖掘。
+在【13】中，团队基于认知计算广告知识体系，以“模型”为核心研究概念，着眼于于模型的RAG、微调及长上下文等核心算法技术，系统阐明如何高效和挖掘新知识，并与所选基模型形成互补。团队进一步阐明如何在垂类行业如时尚中去灵活有效使用不同种类大模型，以满足既定评价指标。
+在【14】中，团队基于认知计算广告知识体系，以“智能体”为核心研究概念，进一步提出在不同垂直场景及细分需求下如何对智能体进行选型，精选典型案例阐明如何使用智能体去满足客户的创意应用需求。
+在【15】中，团队基于 TODO:
+在【16】中，团队基于 TODO:
+在【17】中，团队基于 TODO:
+
+## 参考文献
+### 论文
+1. 段淳林，任静等.智能广告的程序化创意及其RECM模式研究[J].新闻大学,2020(2):17-31 + 119-120
+2. 段淳林，杨恒等.数据、模型与决策:计算广告的发展与流变[J].新闻大学,2018(1):128-136 + 154
+3. 段淳林，宋成等.用户需求、算法推荐与场景匹配:智能广告的理论逻辑与实践思考[J].现代传播.2020,42(8):199-128
+4. 段淳林，崔钰婷等.计算广告学科建设持续创新能力的影响研究——组织学习与知识共享的链式中介效应分析[J].现代传播.2024年第三期
+5. 段淳林，周学琴等.虚拟主播的形象行为相似性对消费者品牌信任的影响研究——基于临场感的中介效应[J].（在这篇论文中，研究团队揭示了虚拟主播的形象和行为相似性在提升消费者品牌信任中的作用，特别是临场感在此过程中扮演的重要角色。）
+6. 段淳林等.生成式AI营销中的三个核心概念.20240628
+7. 段淳林，魏方等.（关于认知计算广告研究范式）.2024（在投中）
+8. 段淳林，陆昊琪等.（关于认知计算广告认知计算广告知识生产范式）.2024（在投中）
+9. 段淳林，蒲源等.（关于认知计算广告及使用B站数据所做的实验及模型）.2024（在投中）
+10. 段淳林等.（关于认知计算广告蓝皮书）.华南理工大学.2024（初稿修正中）
+11. TODO 段淳林，江纬等.AIGC创意工作流 workflow 基础原创学术成果
+12. TODO 段淳林，江纬等.AIGC创意知识库 kb 基础原创学术成果
+13. TODO 段淳林，江纬等.AIGC创意模型 model 基础原创学术成果
+14. TODO 段淳林，江纬等.AIGC创意智能体 agent 基础原创学术成果
+15. TODO 段淳林，江纬等.AIGC创意类思维 think 进阶原创学术成果
+16. TODO 段淳林，江纬等.AIGC创意智能体社交 collaborate 进阶原创学术成果及论文
+17. TODO 段淳林，江纬等.AIGC创意及价值对齐 alignment 进阶原创学术成果及论文 
+
+### 教科书
+1. 段淳林.计算广告学导论[M].武汉:华中科技大学出版社,2022
+2. 刘鹏,王超.计算广告:互联网商业变现的市场与技术[M].3版.北京:人民邮电出版社,2022
+3. 段淳林.整合品牌传播:从IMC到IBC理论建构[M].北京:人民出版社,2020
+4. 陈刚等.创意传播管理:数字时代的营销革命[M].北京:机械工业出版社,2012
+5. BISHOP C M. Pattern Recognition and Machine Learning. Springer[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI), 2006, 16(4):049901
+6. TODO ARENSW.当代广告学[M].丁俊杰,程坪,译.北京:人民邮电出版社,2005
+
+### 相关学术研讨会
+1. 生成式AI与跨学科融合：机遇、挑战与应对.华南理工大学.20240613
+
 ## 子课题
 ### 子课题及论文题目（拟） - 1 - “AIGC内容创意工作流”在垂直领域的应用研究
+* TODO: 写论文及PPT
 #### 摘要
 * 本文着重探讨 AIGC 内容创意工作流在垂直领域的应用。AIGC 工作流包含多个分步节点，各节点有明确的输入与输出。在内容创意中，从创意激发到独特内容输出及优化调整，呈现丰富流程。当前业界多为单一工作流，而本文研究分布式协同工作流问题，旨在解决不同节点间的协同难题。提出可利用先进的通信技术与智能分配机制，促进各节点高效协作。此工作流对内容创意具有深远价值，广泛应用于多模态内容感知生成及个性化创意应用场景，为推动垂直领域的内容创新提供新路径。
 
 #### 关键词
-* AIGC 多模态内容 感知 生成 个性化创意应用 算法 场景 工作流
+* 工作流
 
 #### 作者
-* （相关研究团队）
+* 
 
 #### 组织
-* 华南理工大学
+* 
 
 #### 简介
 * 
@@ -89,8 +140,6 @@
 25. 
 
 #### 附加信息
-* paper 1 - workflow.md
-* 关键词：工作流
 * 写作思路：从基本工作流过渡到分布式协同工作流
 * 创新点及难点：（1）如何设计分布式协同工作流及（2）分布式协同工作流在垂直领域的应用
 * 候选案例1：如何使用 linkai 构建营销工作流？
@@ -113,6 +162,7 @@
 * 所投期刊《新闻界》
 
 ### 子课题及论文题目（拟） - 2 - “AIGC内容创意知识库”在垂直领域的应用研究
+* TODO: 写论文及PPT
 #### 摘要 Abstract
 * This paper begins by examining the traditional single modality knowledge base and then progresses to explore the development and significance of a multimodal knowledge base in the realm of AI-generated content (AIGC). As the field of AIGC expands, the need for a knowledge base that can handle multiple modalities such as text, image, video, and other objects becomes crucial. The research focuses on the construction, organization, and application of this multimodal knowledge base specifically within the context of AIGC, rather than in the areas of increasing productivity or streamlining workflows. By analyzing the transition from single modality to multimodal knowledge bases, this paper provides insights into the future directions of AIGC and its potential impact on various industries.
 #### 关键词 Keywords
@@ -172,6 +222,7 @@
 * 所投期刊：新闻与传播如 TODO: 未确定
 
 ### 子课题及论文题目（拟） - 3 - “AIGC内容创意垂类模型"在垂直领域的应用研究
+* TODO: 写论文及PPT
 #### 摘要 Abstract
 * This paper examines the realm of created models, which have the ability to generate text, images, and videos in parallel. While these models hold great promise, they also come with limitations. One significant limitation is their limited capability in expressing creativity. However, this constraint can potentially trigger inner model training and iteration. The research delves into the architecture, functionality, and applications of these created models, analyzing both their advantages and drawbacks. It explores ways to overcome the limitations and enhance the creative expression capabilities of these models. By understanding the challenges and opportunities associated with created models, this paper aims to contribute to the development and improvement of content generation and creative expression in a multi-modal world.
 
@@ -232,24 +283,32 @@
 * 所投期刊：新闻与传播如 TODO: 未确定
 
 ### 子课题及论文题目（拟） - 4 - “AIGC内容创意智能体”在垂类场景中的应用研究
+* TODO: 写论文及PPT
 #### 摘要 Abstract
 * This paper begins by clarifying the concept that an intelligent agent is distinct from large language models or large vision models. An intelligent agent can be metaphorically described as having a "brain" and "body" and it is designed to perform specific tasks. The control of an intelligent agent often relies on large language models or large visual models. The paper then presents different types of intelligent agents, including those for cost reduction and efficiency improvement and those for content creation. The focus of this paper is on content creation. An in-depth exploration of these content creation intelligent agents are provided, while specific case studies are yet to be determined.
 * TODO: Needs more details.
 
 #### 关键词 Keywords
-* 
+* AI Agent; LLM; Large Vison Model; workflow; creative models; scene;
 
 #### 作者 Authors
 * 
 
 #### 组织 Organization
-* 
+* South China University of Technology
 
 #### 简介 Introduction
 * 
 
 #### 相关工作 Related Work
-* TODO:
+##### history
+* The history of AI agents traces back to early works that laid the foundation for this field. One of the most important papers is "A Logical Calculus of the Ideas Immanent in Nervous Activity" by Warren McCulloch and Walter Pitts[1], published in the 1940s. This paper introduced the concept of neural networks and their potential for computing, inspiring subsequent research in AI. In the 1950s, Alan Turing's "Computing Machinery and Intelligence"[2] proposed the Turing test, a milestone in evaluating machine intelligence. This work set the stage for the development of intelligent agents that could interact with humans. Moving forward, "Deep Reinforcement Learning from Human Preferences" by Jan Leike et al.[3] in recent years has made a significant impact. It demonstrated how agents can learn from human preferences and adapt their behavior in complex environments, advancing the capabilities of AI agents in decision-making.
+##### AI Agent: code generation & exection
+* One paper that focuses on agents that can not only output text but also execute code is "Program Synthesis with Large Language Models" by Mark Chen et al[4]. This paper explores the use of large language models for program synthesis, where the agent can generate code based on natural language descriptions. It shows how language models can be trained to understand programming tasks and generate executable code, blurring the line between text generation and code execution. Another relevant paper could be "Code Generation with Transformer Models" by Yuxin Wang et al[5]. This paper investigates the use of transformer models for code generation, enabling agents to produce code snippets or complete programs. It highlights the potential of combining natural language understanding and code generation capabilities in intelligent agents.
+##### AI Agent: RL learning & interaction with the env
+* Another aspect of related work focuses on agents that not only have a large language model as a "brain" but also possess a "body." These agents are designed to exhibit dynamic movement and motivation, and have the capability to interact with the outside world. In the realm of reinforcement learning, papers such as "Deep Reinforcement Learning for Robotic Manipulation" by Sergey Levine et al.[6] explore how agents can learn complex motor skills and interact with the physical environment through reinforcement learning. This work shows how agents can be trained to perform tasks such as grasping objects and navigating in three-dimensional spaces. Another relevant paper could be "Reinforcement Learning for Interactive Agents" by Peter Stone et al[7]. This paper examines the use of reinforcement learning for agents that interact with humans or other agents in dynamic environments. It highlights the challenges and opportunities of designing agents that can adapt and respond to changes in the environment and the actions of others.
+##### AI Agent: the creative way
+* In the domain of AI agents for creativity, there are several notable papers. For example, "Generative Adversarial Networks for Artistic Creation" by Ian Goodfellow et al. showcases how generative adversarial networks (GANs) can be used to generate artistic works[8]. These agents have demonstrated some degree of imagination in creating images that can be shared and appreciated. Another paper could be "Creativity in Neural Network Art Generation" by [Author's Name] [9]. This work explores the creative capabilities of neural networks in generating art and highlights the potential for such agents to push the boundaries of artistic expression. While these papers show great promise in the area of AI-driven creativity, it is important to note that there is still much work to be done. There are challenges in ensuring that the generated art is truly original and not simply mimicking existing styles[10]. Additionally, there is a need to further explore how these agents can collaborate with human artists and enhance the creative process rather than replace it[11].
 
 #### 现有典型智能体及所存问题 Current Intelligent Agents and Problems
 * 
@@ -264,16 +323,17 @@
 * 
 
 #### 参考资料 References
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
-7. 
-8. 
-9. 
-10. 
+1. foundation work
+2. turing test
+3. RL concept
+4. code generation protype
+5. transformer based model
+6. robotic manipulation
+7. interaction in dynamic env
+8. GAN for artistic creation
+9. Creativity in art work generation
+10. original art work or not
+11. agent collaboration
 
 #### 附加信息
 * paper 4 - scene.md
@@ -294,56 +354,10 @@
 * 论文中不会出现1：把智能体上升到具身智能，并且引出机器人。原因：目前业界机器人主要用于降本增效，和内容创意关系不大。
 * 所投会议：计算机科学如 SIGIR, CIKM et. al.
 
-## 核心相关工作
-### 1. 计算广告
-（写作思路：根据计算广告逻辑演进框图重新表意）
-计算广告是利用计算机技术对广告投放进行优化、定制和智能化,以提高广告的精准投放和效果的一种广告模式【1】。它是互联网广告发展的重要形式,成为各大互联网公司的核心收入来源【2】。计算广告经历了以下3个主要发展阶段【6】。（1）1.0 时代: 程序化广告,基于简单数学模型,以文字广告为主,通过竞价排名等机制进行广告投放,如Google、百度的广告系统；（2）2.0 时代: 智能推荐广告,对用户画像和广告特征进行更精细的分析,在广告智能投放和效果付费方面有长足进步,如微信朋友圈、抖音等的智能广告投放；（3）3.0 时代: 认知计算广告,以AI技术为基础,以AIGC为逻辑,以认知科学为理论,重点解决广告创意生成等问题,利用多模态垂类模型生成文字、图片、视频等广告内容。
-TODO: 补充 1.0 时代的 Google Ads，以搜索作为核心业务下的广告业务
-TODO: 补充 2.0 时代的 Meta Ads，以社交为核心业务下的广告业务
-TODO: 强调 在 3.0 时代，以AIGC内容创意作为核心的相关行业领导者 尚未 出现
 
-### 2. 中国认知计算广告知识体系
-认知计算广告的理论体系诞生于2024，由段淳林及其研究团队首先提出，在【10】中有对其理论体系发展脉络的系统性论述。其中，类思维，智能体社交及价值对齐是三个核心营销概念。类思维【】是指智能体通过分类、归纳等认知过程,对事物进行抽象和概括,从而达到对复杂环境的理解和预测。这种类概念思维是智能体社交的基础,帮助智能体快速感知外界,并做出相应的反应。智能体社交【】指智能体之间基于类思维进行信息交互和行为协调的过程。不同的智能体可以通过交流与协作,共享知识和经验,实现目标的达成。这种社交互动是智能系统发展的关键。价值对齐【】是指智能体内部price和reward等价值系统,以及智能体之间的目标价值趋同。当智能体内部价值系统和外部环境的价值目标达成一致时,就实现了价值对齐。这是智能体最终实现高度自主和协同的基础。
-TODO: 补充 阿诺德 认知-情感-意动 模型
 
-理论外延在众多学者的共同努力下得到较好扩展。在【7】中，段淳林及魏方等在此核心理论下进一步率先提出基于认知计算广告的研究范式。在【8】中，段淳林及陆昊琪等在此核心理论下进一步率先提出基于认知计算广告的生产范式。在【9】中，段淳林及蒲源等在此核心理论下通过量化实验方法，融合深度神经网络等AIGC技术，使用领域数据训练了一个广告传播力预测模型，并使用B站大数据进行了可行性分析及原型验证。实验表明，此广告传播力预测模型能准确预测B站上某条广告或视频的传播力和影响力。
-
-### 3. 基于认知计算广告的多模态内容感知、生成及个性化创意应用研究
-如【11】中，段淳林及江纬等基于认知计算广告理论，进一步提出了分布式协同工作流、基于节点的编排、低代码等核心技术的落地应用，并以时尚行业设计师工作流为例，加以验证。在【12】中，段淳林及江纬等基于认知计算广告理论，进一步系统阐明在实际生产应用中，如何综合使用关系型、非关系型，对象及新型向量数据库以构筑垂类AIGC知识库。核心待解决问题是如何对知识进行收集、整理、加工及存储，以使得更好的搜索、推荐及数据挖掘。在【13】中，段淳林及江纬等基于认知计算广告理论，着眼于于垂类大模型的RAG、微调等算法技术，系统阐明如何高效和挖掘新知识，并与所选基模型形成互补。作者进一步阐明了如何在垂类行业如时尚中去灵活使用不同的大模型、RAG及微调等方法，以满足既定评价指标。在【14】中，段淳林及江纬等基于认知计算广告理论，进一步提出在不同垂直场景及细分需求下的技术选型，以满足客户需求。
-
-## 参考文献
-### 论文
-1. 段淳林,任静等.智能广告的程序化创意及其RECM模式研究[J].新闻大学,2020(2):17-31 + 119-120
-2. 段淳林,杨恒等.数据、模型与决策:计算广告的发展与流变[J].新闻大学,2018(1):128-136 + 154
-3. 段淳林,宋成等.用户需求、算法推荐与场景匹配:智能广告的理论逻辑与实践思考[J].现代传播.2020,42(8):199-128
-4. 段淳林,崔钰婷等.计算广告学科建设持续创新能力的影响研究——组织学习与知识共享的链式中介效应分析[J].现代传播.2024年第三期
-5. 段淳林,周学琴等.虚拟主播的形象行为相似性对消费者品牌信任的影响研究——基于临场感的中介效应[J].（在这篇论文中，研究团队揭示了虚拟主播的形象和行为相似性在提升消费者品牌信任中的作用，特别是临场感在此过程中扮演的重要角色。）
-6. 段淳林等.生成式AI营销中的三个核心概念.20240628
-7. 段淳林,魏方等.（关于认知计算广告研究范式）.2024（在投中）
-8. 段淳林,陆昊琪等.（关于认知计算广告认知计算广告知识生产范式）.2024（在投中）
-9. 段淳林,蒲源等.（关于认知计算广告及使用B站数据所做的实验及模型）.2024（在投中）
-10. 段淳林等.（关于认知计算广告蓝皮书）.华南理工大学.2024（撰写中）
-11. TODO 段淳林,江纬等.AIGC创意工作流.workflow -
-12. TODO 段淳林,江纬等.AIGC创意知识库.kb -
-13. TODO 段淳林,江纬等.AIGC创意模型.model -
-14. TODO 段淳林,江纬等.AIGC创意场景.scene -
-15. TODO 类思维【】
-16. TODO 智能体社交【】
-17. TODO 价值对齐【】
-
-### 教科书
-1. 段淳林.计算广告学导论[M].武汉:华中科技大学出版社,2022
-2. 刘鹏,王超.计算广告:互联网商业变现的市场与技术[M].3版.北京:人民邮电出版社,2022
-3. 段淳林.整合品牌传播:从IMC到IBC理论建构[M].北京:人民出版社,2020
-4. 陈刚等.创意传播管理:数字时代的营销革命[M].北京:机械工业出版社,2012
-5. BISHOP C M. Pattern Recognition and Machine Learning. Springer[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI), 2006, 16(4):049901
-6. TODO ARENSW.当代广告学[M].丁俊杰,程坪,译.北京:人民邮电出版社,2005
-
-### 相关学术研讨会
-1. 生成式AI与跨学科融合：机遇、挑战与应对.华南理工大学.20240613
-
-### 与生成式人工智能关系较大的文献
-* 新闻界，2024 第七期 《产业驱动下的契约设计：基于用户协议的人工智能生成物的权属分配》
+### 与生成式人工智能相关文献（目前包含C刊《新闻界》23-24相关内容）
+1. 新闻界，2024 第七期 《产业驱动下的契约设计：基于用户协议的人工智能生成物的权属分配》
 #### 框架
 一. 研究背景和意义
 二. 相关法律框架和标准
@@ -358,7 +372,7 @@ TODO: 补充 阿诺德 认知-情感-意动 模型
 #### 关键词
 文生视频; 行为规制模式; 确权模式; 人工智能生成内容; Sora;
 
-* 新闻界，2024 第五期 《大模型角色期望：基于X和微博语境的比较分析》
+2. 新闻界，2024 第五期 《大模型角色期望：基于X和微博语境的比较分析》
 #### 时间节点
 * 网络首发：2024.3.19
 
@@ -429,11 +443,20 @@ TODO: 待设计
 * 未来发展趋势的预测
 * 研究的局限性与改进方向
 
-* 新闻界，2023《生成式人工智能与新闻传播：实务赋能、理念挑战与角色重塑》
-* 新闻界，2023《从文本构造到界面连接：生成式人工智能对数字新闻叙事的重塑》
-* 新闻界，2023《解析生成式AI下的“涌现”现象————新常人传播格局下的知识生产逻辑》
-* 新闻界，2023《乌合之众的超级节点？AI大模型使用的人机网络结构分析》
-* 新闻界，2023《内容范式的革命：生成式AI浪潮下内容生产的生态级演进》
+3. 新闻界，2023《生成式人工智能与新闻传播：实务赋能、理念挑战与角色重塑》
+* points NA
+
+4. 新闻界，2023《从文本构造到界面连接：生成式人工智能对数字新闻叙事的重塑》
+* 
+
+5. 新闻界，2023《解析生成式AI下的“涌现”现象————新常人传播格局下的知识生产逻辑》
+* 
+
+6. 新闻界，2023《乌合之众的超级节点？AI大模型使用的人机网络结构分析》
+* 
+
+7. 新闻界，2023《内容范式的革命：生成式AI浪潮下内容生产的生态级演进》
+* 
 
 ## TODO:
 1. 迭代 文献梳理（关注（1）国际计算广告发展（2）中国认知计算广告体系构建（3）最（较）前沿AIGC创意生成技术）
@@ -514,4 +537,5 @@ TODO: 待设计
 46. 内涵
 47. 外延
 48. 治理
-49. 
+49. 工作流 = workflow
+50. 知识库 = knowledgebase
