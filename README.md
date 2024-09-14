@@ -345,10 +345,10 @@ In this section, we first provide some background on neural network architecture
 3. Pruning
 4. Early Termination & Dropout Technique
 ##### B. Related Work
-1. Rank- and Impact- based methods
-2. Using Query Traces
-3. complementary approach: quantization
-4. Comparison to our work
+1. There are three typical network pruning algorithms. (1) The magnitude pruning algorithm[18]: Simplest approach: Prunes weights based purely on their absolute magnitude. Threshold-based: A global threshold is determined based on the desired sparsity ratio. Weights below this threshold are set to zero. Unstructured: Can prune individual weights anywhere in the matrix, potentially leading to irregular sparsity patterns that might not be hardware-friendly. Fast but less accurate: Generally the fastest method, but might remove important connections, leading to a larger accuracy drop compared to more sophisticated methods. (2) The WANDA(Weights and Activations) pruning algorithm[3]: Importance-aware: Considers both weight magnitudes and activation statistics to estimate weight importance. Calibration phase: Requires a calibration step where the model processes a small dataset to collect activation data. Row-wise scaling: Normalizes weight magnitudes within each row based on activation statistics, making the pruning less sensitive to weight scale variations across neurons. Unstructured or structured: Can be applied in an unstructured manner (pruning individual weights) or a structured manner (pruning within blocks of weights). Improved accuracy: Often achieves better accuracy-sparsity trade-offs compared to magnitude pruning. (3) The SparseGPT pruning algorithm[5]: Gradient-based: Leverages gradient information during pruning to identify less important connections. Iterative pruning: Prunes the model iteratively, gradually increasing sparsity while minimizing accuracy loss. Block-sparse structure: Encourages a block-sparse structure, which can be more hardware-efficient for some architectures and libraries. Computationally intensive: Can be more computationally expensive than magnitude or WANDA pruning due to the iterative nature and gradient calculations. State-of-the-art results: Often achieves very high sparsity levels with minimal accuracy degradation, making it suitable for compressing large language models. In summary, Magnitude pruning is the simplest and fastest but might be less accurate. WANDA improves upon magnitude pruning by considering activation information, potentially leading to better accuracy. SparseGPT is a more advanced method that uses gradient information and iterative pruning to achieve high sparsity with minimal accuracy loss, but it comes with higher computational cost.
+5. Using Query Traces
+6. complementary approach: quantization
+7. Comparison to our work
 #### 3. Our Contributions
 In this paper, we study LLM & LVM static pruning that attempt to achieve a good trade-off between network size and generation quality. Our main contributions are as follows:
 1. We describe an approach that ...
@@ -384,6 +384,7 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 15. Molchanov, Pavlo, et al. "Importance estimation for neural network pruning." Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2019.
 16. LeCun, Yann, John Denker, and Sara Solla. "Optimal brain damage." Advances in neural information processing systems 2 (1989).
 17. SNIP: Single-shot Network Pruning based on Connection Sensitivity. Lee et al, ICLR 2019.
+18. Song Han, Jeff Pool, John Tran, and William J Dally. Learning both weights and connections for efficient neural networks. In NeurIPS, 2015.
 
 ### （中阶）子课题及论文题目（拟） - 9 - Improved Methods for Dynamic Neural Network Pruning
 ![](./img/sub.topic.9.png)
