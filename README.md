@@ -387,6 +387,7 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 * Quantization: Combine pruning with weight quantization to further reduce model size and improve inference speed.
 #### 5. (Preliminary) Experimental Results
 (TODO: Thoroughly evaluate the pruned model's performance on relevant tasks and datasets to ensure it meets your accuracy and efficiency requirements.)
+
 | Pruned Level | Wanda | SparseGPT | Magnitude |
 |-----------|-----------------|-----------------|-----------------|
 | 0.10      | 5.696           |5.696            |5.806            |
@@ -401,7 +402,8 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.95      | 28309.178       |4088.413         |273552.281       |
 | 0.99      | 108234.484      |16869.203        |222543.047       |
 * Table 1: Perplexity on pruned llama-7B models (Updated on 20240914)
-* Note: 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
+Note: 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
+
 | Pruned Level | Magnitude | Opposite Magnitude |
 |-----------|------------------|------------------|
 | 0.01      | NA               | 24377.635        |
