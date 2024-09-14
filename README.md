@@ -355,22 +355,51 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 2. We describe several algorithms that ...
 3. We perform an experimental evaluation on two datasets that ...
 4. We compare our methods with ...
-#### 4. Our Pruning Algorithms
-* TODO: to discuss
+#### 4. Our Proposed Pruning Algorithms
+##### Key Considerations when designing the pruning algorithms
+1. Target Sparsity Level: What percentage of weights do we aim to prune? Higher sparsity can lead to greater compression and speedups but might sacrifice more accuracy.
+2. Quality-Size Trade-off: Finding the right balance between model size & speed and quality is crucial. Some algorithms prioritize accuracy (SparseGPT), while others are more aggressive in pursuing sparsity (magnitude).
+3. Pruning Criterion: How do you determine which connections to prune? Options may include: Magnitude (simplest), Activation statistics (WANDA), Gradient information (SparseGPT) and Sensitivity analysis
+4. Structured vs. Unstructured Pruning: Unstructured: Prune individual weights anywhere, potentially leading to irregular sparsity patterns that might not be hardware-friendly. Structured: Prune in blocks (e.g., 2:4, 4:8), which can be more efficient for some hardware and libraries.
+5. Pruning Schedule: When and how do we prune? One-shot pruning: Prune once at the beginning or after training. Gradual pruning: Incrementally prune over multiple training epochs. Iterative pruning: Prune, fine-tune, and repeat.
+6. Calibration Data: Some algorithms (like WANDA) require a small calibration dataset to collect activation statistics before pruning. The choice of this data can impact pruning effectiveness.
+7. Hardware Awareness: Consider the target hardware (CPUs, GPUs, specialized accelerators) and design pruning strategies that align with hardware constraints for optimal efficiency.
+8. (Preferred) Layer-Wise Sparsity: Allow different layers to have varying sparsity levels based on their sensitivity. Not all layers contribute equally to a model's performance.
+9. Regularization and Stability: Pruning can sometimes lead to instability during training. Techniques like weight decay or gradual pruning can help mitigate this.
+##### 1. Movement Pruning
+* Core Idea: Instead of directly removing weights, movement pruning identifies unimportant weights and "moves" their values to other more significant connections. This helps preserve the overall information flow within the network.
+* Potential Benefits: Can achieve higher sparsity levels with less accuracy degradation compared to traditional pruning methods.
+* Example: The "Rigging the Lottery: Making All Tickets Winners" paper introduces a similar movement pruning technique.
+##### 2. Flow Pruning
+* Core Idea: Flow Pruning focuses on pruning connections early in the training process by analyzing the sensitivity of the loss function to weight perturbations.
+* Potential Benefits: Can be particularly effective for finding important connections and achieving high sparsity even before full training.
+* Considerations: Might require more computation during the initial pruning phase.
+##### 3. Variational Pruning
+* Core Idea: Applies Bayesian principles to pruning by treating weights as random variables and pruning connections with low signal-to-noise ratios.
+* Potential Benefits: Provides a more principled way to handle uncertainty in weight importance and can lead to more robust pruning.
+* Considerations: Often more computationally expensive than deterministic pruning methods.
+##### 4. Reinforcement Learning-Based Pruning
+* Core Idea: Treats pruning as a sequential decision-making problem and uses reinforcement learning agents to learn optimal pruning policies.
+* Potential Benefits: Can potentially discover more complex and adaptive pruning strategies.
+* Considerations: Can be challenging to design effective reward functions and training procedures.
+##### 5. Combining Pruning with Other Techniques
+* Knowledge Distillation: After pruning a large model (teacher), use it to train a smaller, sparser model (student) to recover lost accuracy.
+* Quantization: Combine pruning with weight quantization to further reduce model size and improve inference speed.
 #### 5. (Preliminary) Experimental Results
-| Pruned Level | Wanda | SparseGPT |
-|-----------|-----------------|-----------------|
-| 0.10      | 5.696           |5.696            |
-| 0.20      | 5.817           |5.799            |
-| 0.30      | 5.999           |5.963            |
-| 0.40      | 6.387           |6.311            |
-| 0.50      | 7.257           |7.234            |
-| 0.60      | 10.691          |10.442           |
-| 0.70      | 84.905          |27.214           |
-| 0.80      | 5782.432        |182.463          |
-| 0.90      | 19676.668       |3198.101         |
-| 0.95      | 28309.178       |4088.413         |
-| 0.99      | 108234.484      ||
+(TODO: Thoroughly evaluate the pruned model's performance on relevant tasks and datasets to ensure it meets your accuracy and efficiency requirements.)
+| Pruned Level | Wanda | SparseGPT | Magnitude |
+|-----------|-----------------|-----------------|-----------------|
+| 0.10      | 5.696           |5.696            |5.806            |
+| 0.20      | 5.817           |5.799            |6.020            |
+| 0.30      | 5.999           |5.963            |6.669            |
+| 0.40      | 6.387           |6.311            |8.601            |
+| 0.50      | 7.257           |7.234            |17.285           |
+| 0.60      | 10.691          |10.442           |559.987          |
+| 0.70      | 84.905          |27.214           |48414.551        |
+| 0.80      | 5782.432        |182.463          |132175.578       |
+| 0.90      | 19676.668       |3198.101         |317879.250       |
+| 0.95      | 28309.178       |4088.413         |273552.281       |
+| 0.99      | 108234.484      |16869.203        |222543.047       |
 * Table 1: Perplexity on pruned llama-7B models (Updated on 20240914)
 * 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
 * 0.95 means 95% of the weights in the targeted neural network has been pruned and set to 0
