@@ -405,13 +405,19 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 * 0.95 means 95% of the weights in the targeted neural network has been pruned and set to 0
 * Table 2 (TODO: End-End Unpruned & Pruned Model Evaluation)
 ![](./prune.fig1.v2.png)
-* 由以上Fig1初始实验结果，我们可知：
+* 由以上Fig初始实验结果，我们可知：
 * 1. 随着剪枝程度的加深，从剪枝50%的神经元到剪枝95%的神经元，语言模型的内在混沌指数（Perplexity）呈现指数级别的上升。这并不理想，我们的目标是希望设计一种算法，使其Perplexity指数在高百分比剪枝的情况下，混沌指数只有线性轻微上升。
 * 2. 三种主流剪枝算法横向对比中，在低百分比剪枝，即当Pruned_Level<=0.5时，三种算法表现不相伯仲。在高百分比剪枝，即当Pruned_Level > 0.6时，SparseGPT算法表现比其余两种算法有明显优势。这可能因为以下原因：（1）SparseGPT's Pruning Strategy: SparseGPT likely employs a more sophisticated pruning strategy compared to Wanda and Magnitude. It might be selectively removing less important connections in the model, even at high pruning levels. (2) Wanda and Magnitude's Sensitivity: Wanda and Magnitude might be more sensitive to high pruning levels. (3) Dataset Characteristics: The dataset used for evaluation plays a crucial role. SparseGPT's advantage might be more pronounced on certain types of data. (4) Hyperparameter Tuning: The performance of pruning methods is sensitive to hyperparameters. SparseGPT might be benefiting from better hyperparameter optimization for this specific scenario.
 * 3. 对于7B参数级别的LLM，我们相信，随着其内部混沌指数上升，模型向外输出的文本质量会呈现下降趋势，性能会有一定幅度提升。我们将在未来汇报被剪枝模型向外输出文本质量的实验结果。
 * 4. 后续在有足够算力支撑下，我们会陆续汇报在十亿，百亿及千亿规模参数量下LLM经剪枝算法后的性能与质量trade-off，并为进一步探寻MoE混合专家架构(the tiering problem)做前置实验分析准备。
 * 5. 我们后续将同时汇报在不同语言大模型的混沌指数横向对比分析，如主语言为中文的智谱清言、主语言为英文的llama及阿拉伯文为主的语言模型等。
-* Figure 2 (TODO: )
+![](./prune.fig2.v1.png)
+* Here are some of our observations from the above figure:
+* 1. Y-Axis (Perplexity) Range: Perplexity measures how well a model predicts sample data, and lower values generally indicate better performance.
+* 2. X-Axis (Pruned Level): The x-axis indicates the level of pruning, ranging from 0 to 1, with 0 being no pruning and 1 being full pruning.
+* 3. Magnitude (Green): The green dashed line represents the perplexity for the "Magnitude" approach. Perplexity remains relatively low for lower levels of pruning (e.g., around 5.8 to 8.6 for pruning levels of 0.0 to 0.4). There is a significant jump in perplexity from pruning level 0.6 onwards, reaching 48,414.6 at pruning level 0.8 and further increasing to over 300,000 by pruning level 1.0, indicating that higher pruning severely worsens model performance.
+* 4. Opposite Magnitude (Blue): The solid blue line represents the perplexity for the "Opposite Magnitude" approach. Perplexity starts at a higher value compared to the "Magnitude" approach and remains consistently high across all pruning levels. The perplexity peaks at around pruning level 0.2, reaching over 350,000, but then drops slightly for higher pruning levels, fluctuating between 180,000 and 300,000 as pruning increases beyond 0.4.
+* 5. Key Takeaway: the feature weights (also called magnitude) is important.
 * Figure 3 (TODO: )
 #### 6. Conclusions
 * In this paper, we have introduced several novel algorithms for static pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in top results based on diverse neuron features, collections, and query statistics, has demonstrated measurable improvement over prior work as evidenced by our experimental results.
