@@ -375,12 +375,13 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 * 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
 * 0.95 means 95% of the weights in the targeted neural network has been pruned and set to 0
 * Table 2 (TODO: End-End Unpruned & Pruned Model Evaluation)
-![](./prune.fig1.png)
+![](./prune.fig1.v2.png)
 * 由以上Fig1初始实验结果，我们可知：
-* 1. 随着剪枝程度的加深，从剪枝50%的神经元到剪枝95%的神经元，语言模型的内在混沌指数（Perplexity）呈现指数级别的上升。这并不是一件好事，我们的目标是希望其Perplexity指数呈现线性轻微上升（TODO: 尚需实验验证）。
-* 2. 对于7B参数级别的大语言模型，我们有理由相信，由于内部混沌指数上升，模型向外输出文本质量会呈现显著下降趋势（尽管在性能上有一定幅度的提升）。我们将在稍后整理数据并进行进一步汇报。
-* 3. 我们会陆续汇报在7B，70B及700B级别的大模型剪枝算法中经剪枝后的大模型，性能及质量trade-off，为进一步探寻MoE大模型架构做前置实验准备。
-* 4. 我们同时会汇报在不同语言大模型的混沌指数横向对比分析（如中文智谱清言、英文llama及阿拉伯文等）。
+* 1. 随着剪枝程度的加深，从剪枝50%的神经元到剪枝95%的神经元，语言模型的内在混沌指数（Perplexity）呈现指数级别的上升。这并不理想，我们的目标是希望设计一种算法，使其Perplexity指数在高百分比剪枝的情况下，混沌指数只有线性轻微上升。
+* 2. 三种主流剪枝算法横向对比中，在低百分比剪枝，即当Pruned_Level<=0.5时，三种算法表现不相伯仲。在高百分比剪枝，即当Pruned_Level > 0.6时，SparseGPT算法表现比其余两种算法有明显优势。这可能因为以下原因：（1）SparseGPT's Pruning Strategy: SparseGPT likely employs a more sophisticated pruning strategy compared to Wanda and Magnitude. It might be selectively removing less important connections in the model, even at high pruning levels. (2) Wanda and Magnitude's Sensitivity: Wanda and Magnitude might be more sensitive to high pruning levels. (3) Dataset Characteristics: The dataset used for evaluation plays a crucial role. SparseGPT's advantage might be more pronounced on certain types of data. (4) Hyperparameter Tuning: The performance of pruning methods is sensitive to hyperparameters. SparseGPT might be benefiting from better hyperparameter optimization for this specific scenario.
+* 3. 对于7B参数级别的LLM，我们相信，随着其内部混沌指数上升，模型向外输出的文本质量会呈现下降趋势，性能会有一定幅度提升。我们将在未来汇报被剪枝模型向外输出文本质量的实验结果。
+* 4. 后续在有足够算力支撑下，我们会陆续汇报在十亿，百亿及千亿规模参数量下LLM经剪枝算法后的性能与质量trade-off，并为进一步探寻MoE混合专家架构(the tiering problem)做前置实验分析准备。
+* 5. 我们后续将同时汇报在不同语言大模型的混沌指数横向对比分析，如主语言为中文的智谱清言、主语言为英文的llama及阿拉伯文为主的语言模型等。
 * Figure 2 (TODO: )
 * Figure 3 (TODO: )
 #### 6. Conclusions
