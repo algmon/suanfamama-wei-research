@@ -357,8 +357,19 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 4. We compare our methods with ...
 #### 4. Our Pruning Algorithms
 * TODO: to discuss
-#### 5. Experimental Results
-* Table 1
+#### 5. Preliminary Experimental Results
+| Pruned Level | Perplexity |
+|-----------|-----------------|
+| 0.50      | 7.257           |
+| 0.60      | 10.691          |
+| 0.70      | 84.905          |
+| 0.80      | 5782.432        |
+| 0.90      | 19676.668       |
+| 0.95      | 28309.178       |
+| 0.99      | 108234.484      |
+* Table 1: Perplexity on pruned llama-7B models (Updated on 20240914)
+* 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
+* 0.95 means 95% of the weights in the targeted neural network has been pruned and set to 0
 * Table 2
 * Figure 1
 * Figure 2
@@ -440,4 +451,4 @@ TODO: 待补充
 
 ### Cool Research Problems
 1. given a pre-trained dense LLMs, how to obtain a effective sparse LLM? For example, the sparsification of linear layers.
-2. 
+2. given a pre-trained dense NOT LLMs but Large Vision Models, how to prune?
