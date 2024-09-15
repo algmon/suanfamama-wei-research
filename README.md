@@ -388,19 +388,19 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 #### 5. (Preliminary) Experimental Results
 (TODO: Thoroughly evaluate the pruned model's performance on relevant tasks and datasets to ensure it meets your accuracy and efficiency requirements.)
 
-| Pruned Level | Wanda | SparseGPT | Magnitude |
-|-----------|-----------------|-----------------|-----------------|
-| 0.10      | 5.696           |5.696            |5.806            |
-| 0.20      | 5.817           |5.799            |6.020            |
-| 0.30      | 5.999           |5.963            |6.669            |
-| 0.40      | 6.387           |6.311            |8.601            |
-| 0.50      | 7.257           |7.234            |17.285           |
-| 0.60      | 10.691          |10.442           |559.987          |
-| 0.70      | 84.905          |27.214           |48414.551        |
-| 0.80      | 5782.432        |182.463          |132175.578       |
-| 0.90      | 19676.668       |3198.101         |317879.250       |
-| 0.95      | 28309.178       |4088.413         |273552.281       |
-| 0.99      | 108234.484      |16869.203        |222543.047       |
+| Pruned Level | Wanda | SparseGPT | Magnitude | Movement |
+|-----------|-----------------|-----------------|-----------------|-----------------|
+| 0.10      | 5.696           |5.696            |5.806            | NA              |
+| 0.20      | 5.817           |5.799            |6.020            | NA              |
+| 0.30      | 5.999           |5.963            |6.669            | NA              |
+| 0.40      | 6.387           |6.311            |8.601            | NA              |
+| 0.50      | 7.257           |7.234            |17.285           | NA              |
+| 0.60      | 10.691          |10.442           |559.987          | NA              |
+| 0.70      | 84.905          |27.214           |48414.551        | NA              |
+| 0.80      | 5782.432        |182.463          |132175.578       | NA              |
+| 0.90      | 19676.668       |3198.101         |317879.250       | NA              |
+| 0.95      | 28309.178       |4088.413         |273552.281       | 273629.750      |
+| 0.99      | 108234.484      |16869.203        |222543.047       | 214966.484      |
 * Table 1: Perplexity on pruned llama-7B models (Updated on 20240914)
 Note: 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
 
