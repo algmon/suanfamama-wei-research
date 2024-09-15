@@ -458,6 +458,8 @@ Note: 0.90 means 90% of the weights in the targeted neural network has been prun
 16. LeCun, Yann, John Denker, and Sara Solla. "Optimal brain damage." Advances in neural information processing systems 2 (1989).
 17. SNIP: Single-shot Network Pruning based on Connection Sensitivity. Lee et al, ICLR 2019.
 18. Song Han, Jeff Pool, John Tran, and William J Dally. Learning both weights and connections for efficient neural networks. In NeurIPS, 2015.
+19. Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, Ruslan Salakhutdinov. A Simple Way to Prevent Neural Networks from Overfitting. JMLR, 2014.
+20. 
 
 ### （中阶）子课题及论文题目（拟） - 9 - Improved Methods for Dynamic Neural Network Pruning
 ![](./img/sub.topic.9.png)
