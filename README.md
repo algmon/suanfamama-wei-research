@@ -345,7 +345,7 @@ In this section, we first provide some background on neural network architecture
 3. Pruning
 4. Early Termination & Dropout Technique
 ##### B. Related Work
-1. There are three typical network pruning algorithms. (1) The magnitude pruning algorithm[18]: Simplest approach: Prunes weights based purely on their absolute magnitude. Threshold-based: A global threshold is determined based on the desired sparsity ratio. Weights below this threshold are set to zero. Unstructured: Can prune individual weights anywhere in the matrix, potentially leading to irregular sparsity patterns that might not be hardware-friendly. Fast but less accurate: Generally the fastest method, but might remove important connections, leading to a larger accuracy drop compared to more sophisticated methods. (2) The WANDA(Weights and Activations) pruning algorithm[3]: Importance-aware: Considers both weight magnitudes and activation statistics to estimate weight importance. Calibration phase: Requires a calibration step where the model processes a small dataset to collect activation data. Row-wise scaling: Normalizes weight magnitudes within each row based on activation statistics, making the pruning less sensitive to weight scale variations across neurons. Unstructured or structured: Can be applied in an unstructured manner (pruning individual weights) or a structured manner (pruning within blocks of weights). Improved accuracy: Often achieves better accuracy-sparsity trade-offs compared to magnitude pruning. (3) The SparseGPT pruning algorithm[5]: Gradient-based: Leverages gradient information during pruning to identify less important connections. Iterative pruning: Prunes the model iteratively, gradually increasing sparsity while minimizing accuracy loss. Block-sparse structure: Encourages a block-sparse structure, which can be more hardware-efficient for some architectures and libraries. Computationally intensive: Can be more computationally expensive than magnitude or WANDA pruning due to the iterative nature and gradient calculations. State-of-the-art results: Often achieves very high sparsity levels with minimal accuracy degradation, making it suitable for compressing large language models. In summary, Magnitude pruning is the simplest and fastest but might be less accurate. WANDA improves upon magnitude pruning by considering activation information, potentially leading to better accuracy. SparseGPT is a more advanced method that uses gradient information and iterative pruning to achieve high sparsity with minimal accuracy loss, but it comes with higher computational cost.
+1. There are three typical network pruning algorithms. (1) The magnitude pruning algorithm[18, 19]: Simplest approach: Prunes weights based purely on their absolute magnitude. Threshold-based: A global threshold is determined based on the desired sparsity ratio. Weights below this threshold are set to zero. Unstructured: Can prune individual weights anywhere in the matrix, potentially leading to irregular sparsity patterns that might not be hardware-friendly. Fast but less accurate: Generally the fastest method, but might remove important connections, leading to a larger accuracy drop compared to more sophisticated methods. (2) The WANDA(Weights and Activations) pruning algorithm[3]: Importance-aware: Considers both weight magnitudes and activation statistics to estimate weight importance. Calibration phase: Requires a calibration step where the model processes a small dataset to collect activation data. Row-wise scaling: Normalizes weight magnitudes within each row based on activation statistics, making the pruning less sensitive to weight scale variations across neurons. Unstructured or structured: Can be applied in an unstructured manner (pruning individual weights) or a structured manner (pruning within blocks of weights). Improved accuracy: Often achieves better accuracy-sparsity trade-offs compared to magnitude pruning. (3) The SparseGPT pruning algorithm[5]: Gradient-based: Leverages gradient information during pruning to identify less important connections. Iterative pruning: Prunes the model iteratively, gradually increasing sparsity while minimizing accuracy loss. Block-sparse structure: Encourages a block-sparse structure, which can be more hardware-efficient for some architectures and libraries. Computationally intensive: Can be more computationally expensive than magnitude or WANDA pruning due to the iterative nature and gradient calculations. State-of-the-art results: Often achieves very high sparsity levels with minimal accuracy degradation, making it suitable for compressing large language models. In summary, Magnitude pruning is the simplest and fastest but might be less accurate. WANDA improves upon magnitude pruning by considering activation information, potentially leading to better accuracy. SparseGPT is a more advanced method that uses gradient information and iterative pruning to achieve high sparsity with minimal accuracy loss, but it comes with higher computational cost.
 5. Using Query Traces
 6. complementary approach: quantization
 7. Comparison to our work
@@ -388,19 +388,19 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 #### 5. (Preliminary) Experimental Results
 (TODO: Thoroughly evaluate the pruned model's performance on relevant tasks and datasets to ensure it meets your accuracy and efficiency requirements.)
 
-| Pruned Level | Wanda | SparseGPT | Magnitude |
-|-----------|-----------------|-----------------|-----------------|
-| 0.10      | 5.696           |5.696            |5.806            |
-| 0.20      | 5.817           |5.799            |6.020            |
-| 0.30      | 5.999           |5.963            |6.669            |
-| 0.40      | 6.387           |6.311            |8.601            |
-| 0.50      | 7.257           |7.234            |17.285           |
-| 0.60      | 10.691          |10.442           |559.987          |
-| 0.70      | 84.905          |27.214           |48414.551        |
-| 0.80      | 5782.432        |182.463          |132175.578       |
-| 0.90      | 19676.668       |3198.101         |317879.250       |
-| 0.95      | 28309.178       |4088.413         |273552.281       |
-| 0.99      | 108234.484      |16869.203        |222543.047       |
+| Pruned Level | Wanda | SparseGPT | Magnitude | Movement |
+|-----------|-----------------|-----------------|-----------------|-----------------|
+| 0.10      | 5.696           |5.696            |5.806            | NA              |
+| 0.20      | 5.817           |5.799            |6.020            | NA              |
+| 0.30      | 5.999           |5.963            |6.669            | NA              |
+| 0.40      | 6.387           |6.311            |8.601            | NA              |
+| 0.50      | 7.257           |7.234            |17.285           | NA              |
+| 0.60      | 10.691          |10.442           |559.987          | NA              |
+| 0.70      | 84.905          |27.214           |48414.551        | NA              |
+| 0.80      | 5782.432        |182.463          |132175.578       | NA              |
+| 0.90      | 19676.668       |3198.101         |317879.250       | NA              |
+| 0.95      | 28309.178       |4088.413         |273552.281       | 273629.750      |
+| 0.99      | 108234.484      |16869.203        |222543.047       | 214966.484      |
 * Table 1: Perplexity on pruned llama-7B models (Updated on 20240914)
 Note: 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
 
@@ -459,7 +459,7 @@ Note: 0.90 means 90% of the weights in the targeted neural network has been prun
 17. SNIP: Single-shot Network Pruning based on Connection Sensitivity. Lee et al, ICLR 2019.
 18. Song Han, Jeff Pool, John Tran, and William J Dally. Learning both weights and connections for efficient neural networks. In NeurIPS, 2015.
 19. Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, Ruslan Salakhutdinov. A Simple Way to Prevent Neural Networks from Overfitting. JMLR, 2014.
-20. 
+20. Michael Zhu, Suyog Gupta. To Prune, or Not to Prune: Exploring the Efficacy of Pruning for Model Compression. ICLR (Workshop) 2018.
 
 ### （中阶）子课题及论文题目（拟） - 9 - Improved Methods for Dynamic Neural Network Pruning
 ![](./img/sub.topic.9.png)
