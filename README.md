@@ -370,35 +370,48 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 * Core Idea: Instead of directly removing weights, movement pruning identifies unimportant weights and "moves" their values to other more significant connections. This helps preserve the overall information flow within the network.
 * Potential Benefits: Can achieve higher sparsity levels with less accuracy degradation compared to traditional pruning methods.
 * Example: The "Rigging the Lottery: Making All Tickets Winners" paper introduces a similar movement pruning technique.
-##### 2. Flow Pruning
+* Prelimary Results: NOT as good as expected. For detail, see the related tables and figures.
+##### 2. Bias pruning
+* Core Idea: set all bias in neruons to 0 layer by layer, to see if it can improve the performance. Mostly for sanity check to understand more about the effectiveness of the bias.
+* Prelimary Results: TODO: Not Yet Implemented.
+##### 3. WBA pruning (weights, bias and activations)
+* Core Idea: Build upon on the Wanda alg, add one dimension 'bias' into the consideration of the algorithm.
+* Prelimary Results: TODO: Not Yet Implemented.
+##### 4. Flow Pruning
 * Core Idea: Flow Pruning focuses on pruning connections early in the training process by analyzing the sensitivity of the loss function to weight perturbations.
 * Potential Benefits: Can be particularly effective for finding important connections and achieving high sparsity even before full training.
 * Considerations: Might require more computation during the initial pruning phase.
-##### 3. Variational Pruning
+* Prelimary Results: TODO: Not Yet Implemented.
+##### 5. Variational Pruning
 * Core Idea: Applies Bayesian principles to pruning by treating weights as random variables and pruning connections with low signal-to-noise ratios.
 * Potential Benefits: Provides a more principled way to handle uncertainty in weight importance and can lead to more robust pruning.
 * Considerations: Often more computationally expensive than deterministic pruning methods.
-##### 4. Reinforcement Learning-Based Pruning
+* Prelimary Results: TODO: Not Yet Implemented.
+##### 6. Reinforcement Learning-Based Pruning
 * Core Idea: Treats pruning as a sequential decision-making problem and uses reinforcement learning agents to learn optimal pruning policies.
 * Potential Benefits: Can potentially discover more complex and adaptive pruning strategies.
 * Considerations: Can be challenging to design effective reward functions and training procedures.
-##### 5. Combining Pruning with Other Techniques
+* Prelimary Results: TODO: Not Yet Implemented.
+##### 7. Combining Pruning with Other Techniques
 * Knowledge Distillation: After pruning a large model (teacher), use it to train a smaller, sparser model (student) to recover lost accuracy.
 * Quantization: Combine pruning with weight quantization to further reduce model size and improve inference speed.
+* Prelimary Results: TODO: Not Yet Implemented.
 #### 5. (Preliminary) Experimental Results
 (TODO: Thoroughly evaluate the pruned model's performance on relevant tasks and datasets to ensure it meets your accuracy and efficiency requirements.)
 
 | Pruned Level | Wanda | SparseGPT | Magnitude | Movement |
 |-----------|-----------------|-----------------|-----------------|-----------------|
-| 0.10      | 5.696           |5.696            |5.806            | NA              |
-| 0.20      | 5.817           |5.799            |6.020            | NA              |
-| 0.30      | 5.999           |5.963            |6.669            | NA              |
-| 0.40      | 6.387           |6.311            |8.601            | NA              |
-| 0.50      | 7.257           |7.234            |17.285           | NA              |
-| 0.60      | 10.691          |10.442           |559.987          | NA              |
-| 0.70      | 84.905          |27.214           |48414.551        | NA              |
-| 0.80      | 5782.432        |182.463          |132175.578       | NA              |
-| 0.90      | 19676.668       |3198.101         |317879.250       | NA              |
+| 0.01      | NA              |NA               |NA               | 5.677           |
+| 0.05      | NA              |NA               |NA               | 5.714           |
+| 0.10      | 5.696           |5.696            |5.806            | 5.806           |
+| 0.20      | 5.817           |5.799            |6.020            | 6.020           |
+| 0.30      | 5.999           |5.963            |6.669            | 6.668           |
+| 0.40      | 6.387           |6.311            |8.601            | 8.5943          |
+| 0.50      | 7.257           |7.234            |17.285           | 17.247          |
+| 0.60      | 10.691          |10.442           |559.987          | 554.727         |
+| 0.70      | 84.905          |27.214           |48414.551        | 51841.121       |
+| 0.80      | 5782.432        |182.463          |132175.578       | 135494.797      |
+| 0.90      | 19676.668       |3198.101         |317879.250       | 301472.500      |
 | 0.95      | 28309.178       |4088.413         |273552.281       | 273629.750      |
 | 0.99      | 108234.484      |16869.203        |222543.047       | 214966.484      |
 * Table 1: Perplexity on pruned llama-7B models (Updated on 20240914)
@@ -421,13 +434,14 @@ Note: 0.90 means 90% of the weights in the targeted neural network has been prun
 | 0.99      | 222543.047       | NA               |
 * Table 2: The effectiveness of the weights as the main pruning measure
 * Table 3 (TODO: End-End Unpruned & Pruned Model Evaluation)
-![](./prune.fig1.v2.png)
+![](./prune.fig1.v3.png)
 * 由以上Fig初始实验结果，我们可知：
 * 1. 随着剪枝程度的加深，从剪枝50%的神经元到剪枝95%的神经元，语言模型的内在混沌指数（Perplexity）呈现指数级别的上升。这并不理想，我们的目标是希望设计一种算法，使其Perplexity指数在高百分比剪枝的情况下，混沌指数只有线性轻微上升。
 * 2. 三种主流剪枝算法横向对比中，在低百分比剪枝，即当Pruned_Level<=0.5时，三种算法表现不相伯仲。在高百分比剪枝，即当Pruned_Level > 0.6时，SparseGPT算法表现比其余两种算法有明显优势。这可能因为以下原因：（1）SparseGPT's Pruning Strategy: SparseGPT likely employs a more sophisticated pruning strategy compared to Wanda and Magnitude. It might be selectively removing less important connections in the model, even at high pruning levels. (2) Wanda and Magnitude's Sensitivity: Wanda and Magnitude might be more sensitive to high pruning levels. (3) Dataset Characteristics: The dataset used for evaluation plays a crucial role. SparseGPT's advantage might be more pronounced on certain types of data. (4) Hyperparameter Tuning: The performance of pruning methods is sensitive to hyperparameters. SparseGPT might be benefiting from better hyperparameter optimization for this specific scenario.
 * 3. 对于7B参数级别的LLM，我们相信，随着其内部混沌指数上升，模型向外输出的文本质量会呈现下降趋势，性能会有一定幅度提升。我们将在未来汇报被剪枝模型向外输出文本质量的实验结果。
 * 4. 后续在有足够算力支撑下，我们会陆续汇报在十亿，百亿及千亿规模参数量下LLM经剪枝算法后的性能与质量trade-off，并为进一步探寻MoE混合专家架构(the tiering problem)做前置实验分析准备。
 * 5. 我们后续将同时汇报在不同语言大模型的混沌指数横向对比分析，如主语言为中文的智谱清言、主语言为英文的llama及阿拉伯文为主的语言模型等。
+* 6. 我们尝试了Movement Pruning剪枝方法，量化实验表明和Magnitude方法在Perplexity量化评估指标上相差不大。此算法背后的核心设计思想是：为保证单个神经元保有足够信息流，需把目标权重在剪枝前移到其他同元连接上。
 ![](./prune.fig2.v1.png)
 * Here are some of our observations from the above figure:
 * 1. Y-Axis (Perplexity) Range: Perplexity measures how well a model predicts sample data, and lower values generally indicate better performance.
