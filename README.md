@@ -414,8 +414,7 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.90      | 19676.668       |3198.101         |317879.250       | 301472.500      |
 | 0.95      | 28309.178       |4088.413         |273552.281       | 273629.750      |
 | 0.99      | 108234.484      |16869.203        |222543.047       | 214966.484      |
-* Table 1: Perplexity on pruned llama-7B models (Updated on 20240914)
-Note: 0.90 means 90% of the weights in the targeted neural network has been pruned and set to 0
+* Table 1: Perplexity on pruned llama-7B models from Human Domain Experts.
 
 | Pruned Level | Magnitude(weights) | Opposite Magnitude(-weights) |
 |-----------|------------------|------------------|
@@ -451,25 +450,36 @@ Note: 0.90 means 90% of the weights in the targeted neural network has been prun
 | 0.99      | | |
 * Table 3: (TODO: The effectiveness of the bias as a major pruning measure)
 
-| 算法编号 | 核心算法&思想 | 运行状态 | 创意应用场景 | 创意灵感分数 | 降本增效分数 |
-|----------|----------|----------|----------|----------|----------|
-| 01 | 梯度敏感剪枝 | 程序运行出错（需由真人进一步定义算法逻辑） | 代码生成 | 计算中 | 计算中 |
-| 02 | L1范数剪枝 | 程序运行良好（量化指标波动 无法形成有效数据分析&趋势预测）| 代码生成 | 计算中 | 计算中 |
-| 03 | 结构化剪枝 | 程序运行良好（高百分比剪枝数据仍在收集中）| 代码生成 | 计算中 | 计算中 |
-| 04 | K-means聚类剪枝 | 程序运行出错（需运行环境提供更大GPU算力支持）| 代码生成 | 计算中 | 计算中 |
-| 05 | 随机剪枝 | 程序运行良好（效果只和基线持平 需更有效算法设计）| 代码生成 | 计算中 | 计算中 |
-| 06 | Random Pattern Pruning | 程序运行良好（效果只和基线持平 需更有效算法设计）| 代码生成 | 计算中 | 计算中 |
-| 07 | Variational Dropout Pruning | 程序运行出错（错误为无考虑不同矩阵维度不同） | 代码生成 | 计算中 | 计算中 |
-| 08 | Gradient-Based Pruning | 程序运行出错（错误为无考虑边界） | 代码生成 | 计算中 | 计算中 |
-| 09 | Elastic Weight Consolidation Pruning | 程序运行出错（错误定位中）| 代码生成 | 计算中 | 计算中 |
-| 10 | Dynamic Pruning with Reinforcement Learning | 程序运行出错（错误定位中）| 代码生成 | 计算中 | 计算中 |
+| 算法编号 | 核心算法思想 | 运行状态 | 创意应用场景 | 创意灵感分数 | 降本增效分数 | 结论及归因 |
+|----------|----------|----------|----------|----------|----------|----------|
+| 01 | 梯度敏感剪枝 | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 需由算法专家进一步参与定义算法逻辑 |
+| 02 | L1范数剪枝 | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 量化指标混沌指数高，不具实际使用价值 |
+| 03 | 结构化剪枝 | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 量化指标混沌指数高，不具实际使用价值 |
+| 04 | K-means聚类剪枝 | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 需运行环境提供更大GPU算力支持 |
+| 05 | 随机剪枝-a | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 效果仅和实验基线持平，需更有效算法设计 |
+| 06 | Random Pattern Pruning-b | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 效果仅和实验基线持平，需更有效算法设计 |
+| 07 | Variational Dropout Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：算法无考虑不同矩阵维度的不同|
+| 08 | Gradient-Based Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：算法无考虑边界 |
+| 09 | Elastic Weight Consolidation Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：定位中|
+| 10 | Dynamic Pruning with Reinforcement Learning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：定位中 |
 * Table 4: 一次性代码生成及有效性测试（o1模型）
 * 由以上表格可知
 * 1. o1模型在创意应用场景“核心算法生成”中难以做到一次生成有效算法，尽管我们已在实验中清楚明晰上下文及所涉及知识领域；
 * 2. 我们针对每一个所设计算法新增“创意灵感分数”及“降本增效分数”。由于直到截稿前算法初始数据仍在收集中，我们将稍后把此部分重要数据支撑以补充材料的形式整理并提交；
 * 3. 初步实验表明，2024年9月12日对外发布的o1模型，在宣传及传播中所强调的“慢思考”、“卓越数理逻辑推理”及“编程能力”并没有在我们的创新应用场景中展现出能被科学指标显著量化的过人之处；
 * 4. 我们的未来工作可集中于以下几部分：（1）挖掘算法无法一次生成并成功运行的原因（2）AIGC生成算法与真人算法工程师所设计算法效能横向对比（3）从评估生成式人工智能“生代码”到更全面的评估如“生文”、“生图”及“生视频”上的综合表现（4）新增gpt-4, gemini pro等模型在垂类的横向对比等；
-* Table 5: (TODO: End-End Unpruned & Pruned Model Evaluation)
+
+| Pruned Level | aigc_technique2 | aigc_technique3 | aigc_technique6 |
+|----------|----------|----------|----------|
+| 0.50 | 193740.406 | 266826.094 ||
+| 0.60 | 110879.422 | 244139.875 ||
+| 0.70 | 174815.859 | 453267.031 ||
+| 0.80 | 287734.844 | 570346.750 ||
+| 0.90 | 157028.844 | 384411.375 ||
+| 0.95 | 90220.781 | 455298.469 ||
+| 0.99 | 991519.125 | 206585.391 ||
+* Table 5: Perplexity on pruned llama-7B models from AIGC Domain Experts(model: o1).
+* Table 6: (TODO: End-End Unpruned & Pruned Model Evaluation)
 ![](./prune.fig1.v3.png)
 * 由以上Fig初始实验结果，我们可知：
 * 1. 随着剪枝程度的加深，从剪枝50%的神经元到剪枝95%的神经元，语言模型的内在混沌指数（Perplexity）呈现指数级别的上升。这并不理想，我们的目标是希望设计一种算法，使其Perplexity指数在高百分比剪枝的情况下，混沌指数只有线性轻微上升。
@@ -485,7 +495,9 @@ Note: 0.90 means 90% of the weights in the targeted neural network has been prun
 * 3. Magnitude (Green): The green dashed line represents the perplexity for the "Magnitude" approach. Perplexity remains relatively low for lower levels of pruning (e.g., around 5.8 to 8.6 for pruning levels of 0.0 to 0.4). There is a significant jump in perplexity from pruning level 0.6 onwards, reaching 48,414.6 at pruning level 0.8 and further increasing to over 300,000 by pruning level 1.0, indicating that higher pruning severely worsens model performance.
 * 4. Opposite Magnitude (Blue): The solid blue line represents the perplexity for the "Opposite Magnitude" approach. Perplexity starts at a higher value compared to the "Magnitude" approach and remains consistently high across all pruning levels. The perplexity peaks at around pruning level 0.2, reaching over 350,000, but then drops slightly for higher pruning levels, fluctuating between 180,000 and 300,000 as pruning increases beyond 0.4.
 * 5. Key Takeaway: the feature weights (also called magnitude) is important.
-* Figure 3 (TODO: )
+![](./prune.fig3.v1.png)
+* 由以上Fig初始实验结果，我们可知：
+* 
 #### 6. Conclusions
 * In this paper, we have introduced several novel algorithms for static pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in top results based on diverse neuron features, collections, and query statistics, has demonstrated measurable improvement over prior work as evidenced by our experimental results.
 * For future work, we plan several extensions. This includes conducting experiments with other language models that may potentially achieve even better pruning performances. We also aim to optimize our approach further, such as exploring hybrid methods. Additionally, we plan to study the tradeoff between model size and query cost under different cost models and for actual query processing algorithms. This research holds promise for enhancing the efficiency and performance of large language and vision models through more effective static pruning techniques.
