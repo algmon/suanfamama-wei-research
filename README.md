@@ -449,8 +449,22 @@ Note: 0.90 means 90% of the weights in the targeted neural network has been prun
 | 0.90      | | |
 | 0.95      | | |
 | 0.99      | | |
-* Table 3: The effectiveness of the bias as a major pruning measure
-* Table 4: (TODO: End-End Unpruned & Pruned Model Evaluation)
+* Table 3: (TODO: The effectiveness of the bias as a major pruning measure)
+
+| 算法编号 | 核心算法&思想 | 运行状态 | 创意应用场景 | 创意灵感分数 | 降本增效分数 |
+|----------|----------|----------|----------|----------|----------|
+| 01 | 梯度敏感剪枝 | 程序运行出错 需由人类专家进一步定义算法逻辑 | 核心算法生成 | 计算中 | 计算中 |
+| 02 | L1范数剪枝 | 程序运行良好 但量化指标波动 无法形成有效数据分析&趋势预测 | 核心算法生成 | 计算中 | 计算中 |
+| 03 | 结构化剪枝 | 程序运行良好 高百分比剪枝数据仍在收集中 | 核心算法生成 | 计算中 | 计算中 |
+| 04 | K-means聚类剪枝 | 程序运行出错 需运行环境提供更大GPU算力支持 | 核心算法生成 | 计算中 | 计算中 |
+| 05 | 随机剪枝 | 程序运行良好 但效果只和基线持平 需更有效算法设计 | 核心算法生成 | 计算中 | 计算中 |
+| 06 | Random Pattern Pruning | 程序运行良好 但效果只和基线持平 需更有效算法设计 | 核心算法生成 | 计算中 | 计算中 |
+| 07 | Variational Dropout Pruning | 程序运行出错 错误定位中 | 核心算法生成 | 计算中 | 计算中 |
+| 08 | Gradient-Based Pruning | 程序运行出错 错误定位中 | 核心算法生成 | 计算中 | 计算中 |
+| 09 | Elastic Weight Consolidation Pruning | 程序运行出错 错误定位中 | 核心算法生成 | 计算中 | 计算中 |
+| 10 | Dynamic Pruning with Reinforcement Learning | 程序运行出错 错误定位中 | 核心算法生成 | 计算中 | 计算中 |
+* Table 4: The effectiveness of one-time pruning alg. generation via OpenAI o1 model
+* Table 5: (TODO: End-End Unpruned & Pruned Model Evaluation)
 ![](./prune.fig1.v3.png)
 * 由以上Fig初始实验结果，我们可知：
 * 1. 随着剪枝程度的加深，从剪枝50%的神经元到剪枝95%的神经元，语言模型的内在混沌指数（Perplexity）呈现指数级别的上升。这并不理想，我们的目标是希望设计一种算法，使其Perplexity指数在高百分比剪枝的情况下，混沌指数只有线性轻微上升。
