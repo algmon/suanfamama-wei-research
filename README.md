@@ -471,13 +471,13 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 
 | Pruned Level | aigc_technique2 | aigc_technique3 | aigc_technique6 |
 |----------|----------|----------|----------|
-| 0.50 | 193740.406 | 266826.094 ||
-| 0.60 | 110879.422 | 244139.875 ||
-| 0.70 | 174815.859 | 453267.031 ||
-| 0.80 | 287734.844 | 570346.750 ||
-| 0.90 | 157028.844 | 384411.375 ||
-| 0.95 | 90220.781 | 455298.469 ||
-| 0.99 | 991519.125 | 206585.391 | 70452.703125 |
+| 0.50 | 193740.406 | 266826.094 | 294350.188   |
+| 0.60 | 110879.422 | 244139.875 | 138577.469   |
+| 0.70 | 174815.859 | 453267.031 | 171725.375   |
+| 0.80 | 287734.844 | 570346.750 | 186493.797   |
+| 0.90 | 157028.844 | 384411.375 | 298142.469   |
+| 0.95 | 90220.781  | 455298.469 | 187259.063   |
+| 0.99 | 991519.125 | 206585.391 | 70452.703    |
 * Table 5: Perplexity on pruned llama-7B models from AIGC Domain Experts(model: o1).
 * Table 6: (TODO: End-End Unpruned & Pruned Model Evaluation)
 ![](./prune.fig1.v3.png)
@@ -495,9 +495,13 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 * 3. Magnitude (Green): The green dashed line represents the perplexity for the "Magnitude" approach. Perplexity remains relatively low for lower levels of pruning (e.g., around 5.8 to 8.6 for pruning levels of 0.0 to 0.4). There is a significant jump in perplexity from pruning level 0.6 onwards, reaching 48,414.6 at pruning level 0.8 and further increasing to over 300,000 by pruning level 1.0, indicating that higher pruning severely worsens model performance.
 * 4. Opposite Magnitude (Blue): The solid blue line represents the perplexity for the "Opposite Magnitude" approach. Perplexity starts at a higher value compared to the "Magnitude" approach and remains consistently high across all pruning levels. The perplexity peaks at around pruning level 0.2, reaching over 350,000, but then drops slightly for higher pruning levels, fluctuating between 180,000 and 300,000 as pruning increases beyond 0.4.
 * 5. Key Takeaway: the feature weights (also called magnitude) is important.
-![](./prune.fig3.v1.png)
-* 由以上Fig初始实验结果，我们可知：
-* 
+![](./prune.fig3.v2.png)
+* 在10个由o1模型经一次性代码生成的AIGC剪枝算法集合中，我们选择其中能“一次生成通过测试并能稳定运行在实验环境”的3个AIGC算法（即算法编号为2、3及6），和人工研究者所设计的剪枝算法集作横向性能对比，并汇报其Perplexity量化指标，初始实验结果十分有趣（见上图），我们的初步洞察如下：
+* 1. 由o1模型生成的AIGC算法（图中标记为Machine）在不同百分比的剪枝中，混沌程度相对较高。我们推断的原因是：AIGC算法无法抓住在特定垂类场景如大模型剪枝下的关键逻辑影响因子及信号，如神经元权重（weight），偏置（bias）及外部激活（activations）；
+* 2. 真人算法从业者所设计的算法在中百分比剪枝中，如剪枝范围在0.5-0.9时，算法在量化指标Perplexity上优势明显；
+* 3. 无论是由o1模型生成的AIGC算法集合，还是由真人算法从业者设计的算法，在高百分比剪枝中，如剪枝范围在0.9-1.0时，无论是机器还是真人算法，混沌值都很高（尽管我们尚未定义什么是“不能在实际使用的语言模型”）。机器在这个范围内经剪枝后的语言模型混沌程度均值达到315657.624，真人设计的算法效果则稍好，但混沌程度均值也达到惊人的149544.114；
+* 4. 大模型剪枝算法研究是深远且具有重要现实研究意义，我们一方面能从代码生成的角度探寻业界通用大模型（如o1）在创意灵感、推理及代码生成上的表现；另一方面，研究剪枝算法具有普适性意义。我们相信，随着模型参数量的不断增大，能进行性能优化及剪枝的空间将变得具体，且能被社会科学及自然科学研究方法所捕捉和感知。这在一定程度上，为世界各地的研究团队及个人开启了生成式人工智能研究新篇章。
+* 我们的未来工作包含：如何在认知计算广告知识体系下对多模态内容感知、生成及个性化创意应用场景进行更细化的研究。在这里，我们设定的创意应用场景为特定垂类下的“代码生成”。
 #### 6. Conclusions
 * In this paper, we have introduced several novel algorithms for static pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in top results based on diverse neuron features, collections, and query statistics, has demonstrated measurable improvement over prior work as evidenced by our experimental results.
 * For future work, we plan several extensions. This includes conducting experiments with other language models that may potentially achieve even better pruning performances. We also aim to optimize our approach further, such as exploring hybrid methods. Additionally, we plan to study the tradeoff between model size and query cost under different cost models and for actual query processing algorithms. This research holds promise for enhancing the efficiency and performance of large language and vision models through more effective static pruning techniques.
