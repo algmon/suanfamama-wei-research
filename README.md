@@ -331,6 +331,45 @@ Second, this paper explores and compares to previously proposed approaches that 
 LLM pruning, LVM pruning, quantization, dense & sparse models
 #### Open Source Repo
 * https://github.com/algmon/mama-prune
+#### 目标投稿学术会议
+##### 候选1（已过期）
+* IEEE Big Data 2024, December 15-18, Washington DC, USA. Full Paper Submission Deadline: Sept 8, 2024.
+* https://www3.cs.stonybrook.edu/~ieeebigdata2024/ImportantDates.html
+##### 候选2（已过期）
+* COLM 2024, October 7-9. Full Paper Submission Deadline: March 29, 2024.
+* https://colmweb.org/dates.html
+##### 候选3
+* SIGIR 2025, July 13-18, Padova, Italy. Full Paper Submission Deadline: TODO: around Jan, 2025.
+* https://sigir2025.dei.unipd.it/
+* 会议调性：强调量化分析及数值方法，如量化指标设计，性能论文及质量论文均可，需要与IR有一定关联
+##### 候选4（已过期）
+* WSDM 2025, March 10-14. Full Paper Submission Deadline: Aug 14, 2024.
+* https://www.wsdm-conference.org/2025/call-for-papers/
+##### 候选5
+* IEEE Big Data 2025, IEEE
+* 会议调性：偏向于大数据，计算模型及人工智能等，会议包容性较强
+* https://dblp.uni-trier.de/db/conf/bigdataconf/
+##### 候选6（已过期）
+* AAAI 2025, AAAI Conference on Artificial Intelligence, AAAI. Full Paper Submission Deadline: August 15, 2024.
+* https://aaai.org/aaai-24-conference/save-the-date-aaai-25/
+* http://dblp.uni-trier.de/db/conf/aaai/
+##### 候选7
+* NeurIPS 2025. Full Paper Submission Deadline: TODO:
+* http://dblp.uni-trier.de/db/conf/nips/
+* NeurIPS 2024 Author notification: Sep 25, 2024
+##### 候选8
+* ACL 2025. Full Paper Submission Deadline: TODO:
+##### 候选9
+* CVPR 2025. Full Paper Submission Deadline: Nov 15, 2024.
+##### 候选10
+* ICCV 2025. Full Paper Submission Deadline: TODO:
+##### 候选11
+* ICML 2025. Full Paper Submission Deadline: TODO:
+#### 目标投稿学术期刊
+##### 候选1
+* JMLR, Journal of Machine Learning Research, MIT Press, http://dblp.uni-trier.de/db/journals/jmlr/
+* No specific deadline
+
 #### 1. Introduction
 * (General Intro) Large language models and large vision models are facing significant performance challenges due to the massive data size and query loads they need to support. These models, along with other related systems, crawl, analyze, and incorporate billions of web pages, videos, and multimodal data into their network architectures such as transformer. One crucial cost factor is the query processing per user, which must scale with both data size and query load. As a result, large language models devote substantial hardware and energy resources to this task. There has been extensive research on improving query processing performance, including work on various caching techniques, retrieval information systems, and high-performance knowledge representation. A large category of optimization techniques commonly referred to as static pruning or dynamic pruning has emerged in the context of query processing for large language models and large vision models. This paper aims to explore and contribute to the understanding and improvement of these pruning techniques to enhance the performance and efficiency of large language and vision models.
 * (More Specific Intro) In this paper, our attention is directed towards a particular optimization technique known as static network pruning. In essence, the approach involves conducting a suitable analysis of the knowledge representation, document collections, and query distribution. The objective is to determine those entries or neurons that are highly likely to yield top user query results for typical queries. Subsequently, any other neurons that are unlikely to contribute to user inputs are removed from the neural network. The aim is to obtain a significantly smaller neural network with a reduced amount of parameters. This pruned neural network can achieve almost the same quality of results as the unpruned one while requiring much less memory and GPU resources. Consequently, it leads to faster query processing over a shorter neural network with optimized layers.
