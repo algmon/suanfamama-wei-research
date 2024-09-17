@@ -333,8 +333,12 @@ LLM pruning, LVM pruning, quantization, dense & sparse models
 * https://github.com/algmon/mama-prune
 #### 目标投稿学术会议
 ##### 候选
-* ICLR 2025, Full Paper Submission Deadline: Oct 02 2024
-* Plan: Submit the Model Pruning paper for publication
+* ICLR 2025
+* Abstract Submission Deadline: Sep 27, 2024
+* Full Paper Submission Deadline: Oct 01, 2024
+* Place: Singapore EXPO
+* Time: Thu Apr 24 – Mon Apr 28th, 2025
+* Plan: Submit the paper "Improved Methods for Model Pruning" for publication
 ##### 候选
 * SIGIR 2025, July 13-18, Padova, Italy. Full Paper Submission Deadline: TODO: around Jan, 2025.
 * https://sigir2025.dei.unipd.it/
