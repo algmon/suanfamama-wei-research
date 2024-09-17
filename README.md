@@ -522,7 +522,7 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.99 | 991519.125 | 206585.391 | 70452.703    |
 * Table 5: Perplexity on pruned llama-7B models from AIGC Domain Experts(model: o1).
 
-| Pruned Level | Perplexity | "University is" | 中文翻译 | 真人评审输出是否合理 |
+| Pruned Level | Perplexity | "University is" | 中文翻译 | 真人评审生成合理性 |
 |----------|----------|----------|----------|
 | 0.00 | * | University is a great place to learn about the world. | 大学是一个向世界学习的好地方 | 是 |
 | 0.50 | 19.191 | University is a great place to start a new year. | 大学是一个开始新的一年的好地方 | 否 |
