@@ -319,14 +319,10 @@
 ### （高阶）子课题及论文题目（拟） - 7 - “创意价值对齐”在垂类场景中的应用研究
 ![](./img/sub.topic.7.png)
 
-### （中阶）子课题及论文题目（拟） - 8 - Improved Methods for Static Neural Network Pruning
+### （中阶）子课题及论文题目（拟） - 8 - Improved Methods for Static Model Pruning
 ![](./img/sub.topic.8.png)
 #### Abstract
-Static neural network pruning is presented as a performance optimization technique for large language models and large vision models. The approach aims to identify and remove neurons unlikely to lead to expected results for typical user queries. The goal is to obtain a smaller large language model that can quickly return results almost as good as those of the unpruned model.
-
-First, through careful analysis of embedded knowledge and user queries, an initial mathematical model based on certain probabilities obtained from the environment is developed to improve on previous results for pruned large language model size, achieving additional improvement in some cases. A simple method for generating queries into the large language model in the absence of real-life queries is also devised, which is useful for modeling top results.
-
-Second, this paper explores and compares to previously proposed approaches that perform pruning based on other methods.
+Static model pruning is presented as a performance optimization technique for large language and vision models. The approach aims to identify and remove neurons, connections unlikely to lead to expected generation results for typical user queries. The goal is to obtain a much smaller model that can quickly return results almost as good as those of the unpruned ones. Through careful analysis of pre-trained weights, bias, activations and user queries, an initial mathematical model based on certain probabilities obtained from the environment is developed to improve on previous results for pruned model size, achieving significant improvement in most cases. This paper explores and compares to previously proposed approaches that perform pruning based on other factors.
 #### Keywords
 LLM pruning, LVM pruning, quantization, dense & sparse models
 #### Open Source Repo
@@ -334,6 +330,7 @@ LLM pruning, LVM pruning, quantization, dense & sparse models
 #### 目标投稿学术会议
 ##### 候选
 * ICLR 2025
+* 评审形式：双盲
 * Abstract Submission Deadline: Sep 27, 2024
 * Full Paper Submission Deadline: Oct 01, 2024
 * Place: Singapore EXPO
@@ -460,9 +457,9 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.90      | 19676.668       |3198.101         |317879.250       | 301472.500      |
 | 0.95      | 28309.178       |4088.413         |273552.281       | 273629.750      |
 | 0.99      | 108234.484      |16869.203        |222543.047       | 214966.484      |
-* Table 1: Perplexity on pruned llama-7B models from Human Domain Experts.
+* Table 1: Perplexity on pruned model (Llama-7B) from human domain experts
 
-| Pruned Level | Magnitude(weights) | Opposite Magnitude(-weights) |
+| Pruned Level | Prune by Weights | Prune by -Weights |
 |-----------|------------------|------------------|
 | 0.01      | NA               | 24377.635        |
 | 0.05      | NA               | 25804.920        |
@@ -477,9 +474,9 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.90      | 317879.250       | 185304.016       |
 | 0.95      | 273552.281       | NA               |
 | 0.99      | 222543.047       | NA               |
-* Table 2: The effectiveness of the weights as a major pruning measure
+* Table 2: Effectiveness of the weights as a major pruning indicator
 
-| Pruned Level | Magnitude(bias) | Opposite Magnitude(-bias) |
+| Pruned Level | Prune by Bias | Prune by -Bias |
 |-----------|------------------|------------------|
 | 0.01      | | |
 | 0.05      | | |
@@ -494,28 +491,29 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.90      | | |
 | 0.95      | | |
 | 0.99      | | |
-* Table 3: (TODO: The effectiveness of the bias as a major pruning measure)
+* Table 3: Effectiveness of the bias as a major pruning indicator
 
-| 算法编号 | 核心算法思想 | 运行状态 | 创意应用场景 | 创意灵感分数 | 降本增效分数 | 结论及归因 | 是否进行算法性能分析 |
+| 算法编号 Number | 核心算法思想 Core Idea | 运行状态 | 创意应用场景 | 创意灵感分数 | 降本增效分数 | 结论及归因 | 是否进行算法性能分析 |
 |----------|----------|----------|----------|----------|----------|----------|----------|
-| 01 | 梯度敏感剪枝 | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 需由算法专家进一步参与定义算法逻辑 | 否 |
-| 02 | L1范数剪枝 | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 量化指标混沌指数高，不具实际使用价值 | 是 |
-| 03 | 结构化剪枝 | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 量化指标混沌指数高，不具实际使用价值 | 是 |
-| 04 | K-means聚类剪枝 | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 需运行环境提供更大GPU算力支持 | 否 |
-| 05 | 随机剪枝-a | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 效果仅和实验基线持平，需更有效算法设计 | 否 |
-| 06 | Random Pattern Pruning-b | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 效果仅和实验基线持平，需更有效算法设计 | 是 |
+| 01 | 梯度敏感剪枝 Gradient Sensitive Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 需由算法专家进一步参与定义算法逻辑 | 否 |
+| 02 | L1范数剪枝 L1 Norm Pruning | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 量化指标混沌指数高，不具实际使用价值 | 是 |
+| 03 | 结构化剪枝 Structured Pruning | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 量化指标混沌指数高，不具实际使用价值 | 是 |
+| 04 | K-means聚类剪枝 K-means Clustering Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 需运行环境提供更大GPU算力支持 | 否 |
+| 05 | 随机剪枝 Random Pruning | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 效果仅和实验基线持平，需更有效算法设计 | 否 |
+| 06 | Random Pattern Pruning | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 效果仅和实验基线持平，需更有效算法设计 | 是 |
 | 07 | Variational Dropout Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：算法无考虑不同矩阵维度的不同| 否 |
-| 08 | Gradient-Based Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：算法无考虑边界 | 否 |
+| 08 | Gradient based Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：算法无考虑边界 | 否 |
 | 09 | Elastic Weight Consolidation Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：定位中| 否 |
 | 10 | Dynamic Pruning with Reinforcement Learning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：定位中 | 否 |
-* Table 4: 一次性代码生成及有效性测试（o1模型）
+* Table 4: 一次性代码生成及有效性评估（o1）
+* Table 4: One pass code generation and effectiveness testing (o1)
 * 由以上表格可知
 * 1. o1模型在创意应用场景“核心算法生成”中难以做到一次生成有效算法，尽管我们已在实验中清楚明晰上下文及所涉及知识领域；
 * 2. 我们针对每一个所设计算法新增“创意灵感分数”及“降本增效分数”。由于直到截稿前算法初始数据仍在收集中，我们将稍后把此部分重要数据支撑以补充材料的形式整理并提交；
 * 3. 初步实验表明，2024年9月12日对外发布的o1模型，在宣传及传播中所强调的“慢思考”、“卓越数理逻辑推理”及“编程能力”并没有在我们的创新应用场景中展现出能被科学指标显著量化的过人之处；
 * 4. 我们的未来工作可集中于以下几部分：（1）挖掘算法无法一次生成并成功运行的原因（2）AIGC生成算法与真人算法工程师所设计算法效能横向对比（3）从评估生成式人工智能“生代码”到更全面的评估如“生文”、“生图”及“生视频”上的综合表现（4）新增gpt-4, gemini pro等模型在垂类的横向对比等；
 
-| Pruned Level | aigc_technique2 | aigc_technique3 | aigc_technique6 |
+| Pruned Level | aigc algorithm 2 | aigc algorithm 3 | aigc algorithm 6 |
 |----------|----------|----------|----------|
 | 0.50 | 193740.406 | 266826.094 | 294350.188   |
 | 0.60 | 110879.422 | 244139.875 | 138577.469   |
@@ -524,7 +522,7 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.90 | 157028.844 | 384411.375 | 298142.469   |
 | 0.95 | 90220.781  | 455298.469 | 187259.063   |
 | 0.99 | 991519.125 | 206585.391 | 70452.703    |
-* Table 5: Perplexity on pruned llama-7B models from AIGC Domain Experts(model: o1).
+* Table 5: Perplexity on pruned model (llama-7B) from AIGC domain expert (o1)
 
 | Pruned Level | Perplexity | "University is" | 中文翻译（非模型原始生成内容） | 与真人价值对齐 |
 |----------|----------|----------|----------|----------|
@@ -536,7 +534,7 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.90 | 3772.829 | University is. | 大学是. | 否 |
 | 0.95 | 8892.167 | University is is is is is is is is is is is is is is is is is is | 大学是.................. | 否 |
 | 0.99 | 22548.809 | University is is is is is is is is is is is is,,,,,, | 大学是是是是是是是是是是是是,,,,,, | 否 |
-* Table 6: Example 1: the effect of pruned model(OPT-1.3B) for downstream text generation application
+* Table 6: Effect of pruned model (OPT-1.3B) applying to downstream task - text generation
 * 纵然Perplexity（混沌程度）是衡量一个语言模型有序性的学术界通用量化指标之一。模型的实际输出及与真人的价值对齐在实际生产环境中十分重要，故在业界实践中，一个详细的A/B模型效果及性能测试往往是大模型基座公司如OpenAI必须完成的步骤【】。
 * 我们在这里希望给读者一个直观感受，即不同剪枝比例下此模型输出质量的明显变化趋势，以进一步探索剪枝算法在实际生产中的重要应用价值。通过结合模型下游典型应用如文本生成（text generation），我们可以直观感受语言模型经剪枝后展现出的“不合理性”（纵然这并不是我们期望当中应出现的算法效果）。
 * 以上Table是一个初始实验结果，以"University is"作为词元（Token）序列开端，顺序生成，我们可以得出如下洞察：
@@ -544,10 +542,12 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 * 2. 十亿参数量的模型参数量过小，针对百亿，千亿参数量及万亿参数量的模型剪枝效果实验是我们的未来工作之一；
 * 3. 我们需进一步把剪枝算法应用于不同体系架构的大模型中以进一步评估剪枝算法的普适性，如Transformer架构模型，Diffusion架构模型及DiT模型架构等。
 
-* Table 7: (TODO: Running Time for each pruning algs.)
+* Table 7: (TODO: Running time for each pruning algorithm)
 
-* Table 8: (TODO: End-End Unpruned & Pruned Model Evaluation)
+* Table 8: (TODO: End-to-end model evaluation)
+
 ![](./prune.fig1.v3.png)
+* Figure 1:
 * 由以上Fig初始实验结果，我们可知：
 * 1. 随着剪枝程度的加深，从剪枝50%的神经元到剪枝95%的神经元，语言模型的内在混沌指数（Perplexity）呈现指数级别的上升。这并不理想，我们的目标是希望设计一种算法，使其Perplexity指数在高百分比剪枝的情况下，混沌指数只有线性轻微上升。
 * 2. 三种主流剪枝算法横向对比中，在低百分比剪枝，即当Pruned_Level<=0.5时，三种算法表现不相伯仲。在高百分比剪枝，即当Pruned_Level > 0.6时，SparseGPT算法表现比其余两种算法有明显优势。这可能因为以下原因：（1）SparseGPT's Pruning Strategy: SparseGPT likely employs a more sophisticated pruning strategy compared to Wanda and Magnitude. It might be selectively removing less important connections in the model, even at high pruning levels. (2) Wanda and Magnitude's Sensitivity: Wanda and Magnitude might be more sensitive to high pruning levels. (3) Dataset Characteristics: The dataset used for evaluation plays a crucial role. SparseGPT's advantage might be more pronounced on certain types of data. (4) Hyperparameter Tuning: The performance of pruning methods is sensitive to hyperparameters. SparseGPT might be benefiting from better hyperparameter optimization for this specific scenario.
@@ -555,20 +555,25 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 * 4. 后续在有足够算力支撑下，我们会陆续汇报在十亿，百亿及千亿规模参数量下LLM经剪枝算法后的性能与质量trade-off，并为进一步探寻MoE混合专家架构(the tiering problem)做前置实验分析准备。
 * 5. 我们后续将同时汇报在不同语言大模型的混沌指数横向对比分析，如主语言为中文的智谱清言、主语言为英文的llama及阿拉伯文为主的语言模型等。
 * 6. 我们尝试了Movement Pruning剪枝方法，量化实验表明和Magnitude方法在Perplexity量化评估指标上相差不大。此算法背后的核心设计思想是：为保证单个神经元保有足够信息流，需把目标权重在剪枝前移到其他同元连接上。
+
 ![](./prune.fig2.v1.png)
+* Figure 2:
 * Here are some of our observations from the above figure:
 * 1. Y-Axis (Perplexity) Range: Perplexity measures how well a model predicts sample data, and lower values generally indicate better performance.
 * 2. X-Axis (Pruned Level): The x-axis indicates the level of pruning, ranging from 0 to 1, with 0 being no pruning and 1 being full pruning.
 * 3. Magnitude (Green): The green dashed line represents the perplexity for the "Magnitude" approach. Perplexity remains relatively low for lower levels of pruning (e.g., around 5.8 to 8.6 for pruning levels of 0.0 to 0.4). There is a significant jump in perplexity from pruning level 0.6 onwards, reaching 48,414.6 at pruning level 0.8 and further increasing to over 300,000 by pruning level 1.0, indicating that higher pruning severely worsens model performance.
 * 4. Opposite Magnitude (Blue): The solid blue line represents the perplexity for the "Opposite Magnitude" approach. Perplexity starts at a higher value compared to the "Magnitude" approach and remains consistently high across all pruning levels. The perplexity peaks at around pruning level 0.2, reaching over 350,000, but then drops slightly for higher pruning levels, fluctuating between 180,000 and 300,000 as pruning increases beyond 0.4.
 * 5. Key Takeaway: the feature weights (also called magnitude) is important.
+
 ![](./prune.fig3.v2.png)
+* Figure 3:
 * 在10个由o1模型经一次性代码生成的AIGC剪枝算法集合中，我们选择其中能“一次生成通过测试并能稳定运行在实验环境”的3个AIGC算法（即算法编号为2、3及6），和人工研究者所设计的剪枝算法集作横向性能对比，并汇报其Perplexity量化指标，初始实验结果十分有趣（见上图），我们的初步洞察如下：
 * 1. 由o1模型生成的AIGC算法（图中标记为Machine）在不同百分比的剪枝中，混沌程度相对较高。我们推断的原因是：AIGC算法无法抓住在特定垂类场景如大模型剪枝下的关键逻辑影响因子及信号，如神经元权重（weight），偏置（bias）及外部激活（activations）；
 * 2. 真人算法从业者所设计的算法在中百分比剪枝中，如剪枝范围在0.5-0.9时，算法在量化指标Perplexity上优势明显；
 * 3. 无论是由o1模型生成的AIGC算法集合，还是由真人算法从业者设计的算法，在高百分比剪枝中，如剪枝范围在0.9-1.0时，无论是机器还是真人算法，混沌值都很高（尽管我们尚未定义什么是“不能在实际使用的语言模型”）。机器在这个范围内经剪枝后的语言模型混沌程度均值达到315657.624，真人设计的算法效果则稍好，但混沌程度均值也达到惊人的149544.114；
 * 4. 大模型剪枝算法研究是深远且具有重要现实研究意义，我们一方面能从代码生成的角度探寻业界通用大模型（如o1）在创意灵感、推理及代码生成上的表现；另一方面，研究剪枝算法具有普适性意义。我们相信，随着模型参数量的不断增大，能进行性能优化及剪枝的空间将变得具体，且能被社会科学及自然科学研究方法所捕捉和感知。这在一定程度上，为世界各地的研究团队及个人开启了生成式人工智能研究新篇章。
 * 我们的未来工作包含：如何在认知计算广告知识体系下对多模态内容感知、生成及个性化创意应用场景进行更细化的研究。在这里，我们设定的创意应用场景为特定垂类下的“代码生成”。
+
 #### 6. Conclusions
 * In this paper, we have introduced several novel algorithms for static pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in top results based on diverse neuron features, collections, and query statistics, has demonstrated measurable improvement over prior work as evidenced by our experimental results.
 * For future work, we plan several extensions. This includes conducting experiments with other language models that may potentially achieve even better pruning performances. We also aim to optimize our approach further, such as exploring hybrid methods. Additionally, we plan to study the tradeoff between model size and query cost under different cost models and for actual query processing algorithms. This research holds promise for enhancing the efficiency and performance of large language and vision models through more effective static pruning techniques.
