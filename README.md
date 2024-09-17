@@ -522,17 +522,23 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.99 | 991519.125 | 206585.391 | 70452.703    |
 * Table 5: Perplexity on pruned llama-7B models from AIGC Domain Experts(model: o1).
 
-| Pruned Level | Perplexity | "University is" | “大学是” | 真人评审生成合理性 |
+| Pruned Level | Perplexity | "University is" | 中文翻译（非模型原始生成内容） | 与真人价值对齐 |
 |----------|----------|----------|----------|----------|
-| 0.00 | * | University is a great place to learn about the world. | 大学是一个向世界学习的好地方 | 是 |
-| 0.50 | 19.191 | University is a great place to start a new year. | 大学是一个开始新的一年的好地方 | 否 |
-| 0.60 | 23.205 | University is a great place to start. | 大学是一个开始的好地方 | 否 |
+| 0.00 | * | University is a great place to learn about the world. | 大学是一个向世界学习的好地方。 | 是 |
+| 0.50 | 19.191 | University is a great place to start a new year. | 大学是一个开始新的一年的好地方。 | 否 |
+| 0.60 | 23.205 | University is a great place to start. | 大学是一个开始的好地方。 | 否 |
 | 0.70 | 44.246 | University is a good place to get a good place to get a good place to get a good | 大学是一个好地方好地方好 | 否 |
 | 0.80 | 364.304 | University is a lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot | 大学是许多许多许多许多许多许多许多许多许多许多许多许多许多许多许多许多 | 否 |
 | 0.90 | 3772.829 | University is. | 大学是. | 否 |
 | 0.95 | 8892.167 | University is is is is is is is is is is is is is is is is is is | 大学是.................. | 否 |
 | 0.99 | 22548.809 | University is is is is is is is is is is is is,,,,,, | 大学是是是是是是是是是是是是,,,,,, | 否 |
-* Table 6: the effect of pruned model(OPT-1.3B) for downstream text generation application
+* Table 6: Example 1: the effect of pruned model(OPT-1.3B) for downstream text generation application
+* 纵然Perplexity（混沌程度）是衡量一个语言模型有序性的重要学术界通用量化指标之一。模型的实际输出及与真人价值对齐在实际生产环境中是是分重要。故一个详细的A/B模型效果测试往往是大模型基座公司如OpenAI必须完成的部署步骤。
+* 我们在这里希望给读者一个直观感受，即不同剪枝比例下模型输出质量的明显变化趋势，以彰显剪枝在实际生产中的重要应用价值。通过结合模型下游应用如文本生成（text generation），我们可以直观感受语言模型经剪枝后展现出的“不合理性”。
+* 以上Table是一个初始实验结果，以"University is"作为词元序列开端，顺序生成，我们可以观察到：
+* 1. OPT-1.3B模型在十亿参数量级时表现出一定程度的智能和价值对齐，但在剪枝程度大于0.5时生成的词元序列人类却难以理解，如“大学是是是是是是是是是是是是,,,,,,”的生成序列则另我们不知所云；
+* 2. 十亿参数量的模型参数量过小，针对百亿，千亿参数量及万亿参数量的模型剪枝效果实验是我们的未来工作；
+* 3. 我们需进一步把剪枝算法应用于不同体系架构的大模型中，如Transformer架构模型，Diffusion架构模型等。
 
 * Table 7: (TODO: Running Time for each pruning algs.)
 
