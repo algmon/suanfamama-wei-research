@@ -1,0 +1,491 @@
+ICLR 2024 Oral papers without spotlight poster
+
+OpenReview.net
+Search OpenReview...
+Notifications
+Activity
+Tasks
+Wei Jiang 
+back arrowGo to ICLR 2024 homepage
+The Twelfth International Conference on Learning Representations
+ICLR 2024
+Vienna, AustriaMay 07 2024https://iclr.cc/Conferences/2024iclr2024.programchairs@gmail.com
+Please see the venue website for more information.
+
+Submission Start: Sep 15 2023 07:00AM UTC-0, Abstract Registration: Sep 24 2023 12:59PM UTC-0, Submission Deadline: Sep 29 2023 12:59PM UTC-0
+
+Accept (oral)
+Accept (spotlight)
+Accept (poster)
+Reject
+Withdrawn Submissions
+Desk Rejected Submissions
+Recent Activity
+Search submissions by title and metadata
+Proving Test Set Contamination in Black-Box Language Modelspdf icon
+Yonatan Oren, Nicole Meister, Niladri S. Chatterji, Faisal Ladhak, Tatsunori Hashimoto
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone12 Replies
+Show details
+BooookScore: A systematic exploration of book-length summarization in the era of LLMspdf icon
+Yapei Chang, Kyle Lo, Tanya Goyal, Mohit Iyyer
+Published: 16 Jan 2024, Last Modified: 14 Apr 2024ICLR 2024 oralReaders:  Everyone12 Replies
+Show details
+Generalization in diffusion models arises from geometry-adaptive harmonic representationspdf icon
+Zahra Kadkhodaie, Florentin Guth, Eero P Simoncelli, Stéphane Mallat
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone12 Replies
+Show details
+Understanding In-Context Learning in Transformers and LLMs by Learning to Learn Discrete Functionspdf icon
+Satwik Bhattamishra, Arkil Patel, Phil Blunsom, Varun Kanade
+Published: 16 Jan 2024, Last Modified: 16 Mar 2024ICLR 2024 oralReaders:  Everyone32 Replies
+Show details
+The mechanistic basis of data dependence and abrupt learning in an in-context classification taskpdf icon
+Gautam Reddy
+Published: 16 Jan 2024, Last Modified: 13 Mar 2024ICLR 2024 oralReaders:  Everyone14 Replies
+Show details
+Improved Techniques for Training Consistency Modelspdf icon
+Yang Song, Prafulla Dhariwal
+Published: 16 Jan 2024, Last Modified: 15 Apr 2024ICLR 2024 oralReaders:  Everyone17 Replies
+Show details
+Provable Compositional Generalization for Object-Centric Learningpdf icon
+Thaddäus Wiedemer, Jack Brady, Alexander Panfilov, Attila Juhos, Matthias Bethge, Wieland Brendel
+Published: 16 Jan 2024, Last Modified: 15 Mar 2024ICLR 2024 oralReaders:  Everyone12 Replies
+Show details
+Predictive auxiliary objectives in deep RL mimic learning in the brainpdf icon
+Ching Fang, Kim Stachenfeld
+Published: 16 Jan 2024, Last Modified: 17 Apr 2024ICLR 2024 oralReaders:  Everyone14 Replies
+Show details
+Pre-Training Goal-based Models for Sample-Efficient Reinforcement Learningpdf icon
+Haoqi Yuan, Zhancun Mu, Feiyang Xie, Zongqing Lu
+Published: 16 Jan 2024, Last Modified: 06 Mar 2024ICLR 2024 oralReaders:  Everyone15 Replies
+Show details
+Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!pdf icon
+Xiangyu Qi, Yi Zeng, Tinghao Xie, Pin-Yu Chen, Ruoxi Jia, Prateek Mittal, Peter Henderson
+Published: 16 Jan 2024, Last Modified: 15 Mar 2024ICLR 2024 oralReaders:  Everyone27 Replies
+Show details
+Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priorspdf icon
+Ido Amos, Jonathan Berant, Ankit Gupta
+Published: 16 Jan 2024, Last Modified: 15 Mar 2024ICLR 2024 oralReaders:  Everyone20 Replies
+Show details
+LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Modelspdf icon
+Yixiao Li, Yifan Yu, Chen Liang, Nikos Karampatziakis, Pengcheng He, Weizhu Chen, Tuo Zhao
+Published: 16 Jan 2024, Last Modified: 16 Mar 2024ICLR 2024 oralReaders:  Everyone9 Replies
+Show details
+Graph Neural Networks for Learning Equivariant Representations of Neural Networkspdf icon
+Miltiadis Kofinas, Boris Knyazev, Yan Zhang, Yunlu Chen, Gertjan J. Burghouts, Efstratios Gavves, Cees G. M. Snoek, David W. Zhang
+Published: 16 Jan 2024, Last Modified: 18 Mar 2024ICLR 2024 oralReaders:  Everyone11 Replies
+Show details
+GNNCert: Deterministic Certification of Graph Neural Networks against Adversarial Perturbationspdf icon
+zaishuo xia, Han Yang, Binghui Wang, Jinyuan Jia
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone19 Replies
+Show details
+Efficient Episodic Memory Utilization of Cooperative Multi-Agent Reinforcement Learningpdf icon
+Hyungho Na, Yunkyeong Seo, Il-chul Moon
+Published: 16 Jan 2024, Last Modified: 07 Mar 2024ICLR 2024 oralReaders:  Everyone22 Replies
+Show details
+ClimODE: Climate and Weather Forecasting with Physics-informed Neural ODEspdf icon
+Yogesh Verma, Markus Heinonen, Vikas Garg
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone23 Replies
+Show details
+Mixed-Type Tabular Data Synthesis with Score-based Diffusion in Latent Spacepdf icon
+Hengrui Zhang, Jiani Zhang, Zhengyuan Shen, Balasubramaniam Srinivasan, Xiao Qin, Christos Faloutsos, Huzefa Rangwala, George Karypis
+Published: 16 Jan 2024, Last Modified: 06 Mar 2024ICLR 2024 oralReaders:  Everyone21 Replies
+Show details
+Phenomenal Yet Puzzling: Testing Inductive Reasoning Capabilities of Language Models with Hypothesis Refinementpdf icon
+Linlu Qiu, Liwei Jiang, Ximing Lu, Melanie Sclar, Valentina Pyatkin, Chandra Bhagavatula, Bailin Wang, Yoon Kim, Yejin Choi, Nouha Dziri, Xiang Ren
+Published: 16 Jan 2024, Last Modified: 19 Mar 2024ICLR 2024 oralReaders:  Everyone20 Replies
+Show details
+Beyond Weisfeiler-Lehman: A Quantitative Framework for GNN Expressivenesspdf icon
+Bohang Zhang, Jingchu Gai, Yiheng Du, Qiwei Ye, Di He, Liwei Wang
+Published: 16 Jan 2024, Last Modified: 15 Mar 2024ICLR 2024 oralReaders:  Everyone24 Replies
+Show details
+MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contextspdf icon
+Pan Lu, Hritik Bansal, Tony Xia, Jiacheng Liu, Chunyuan Li, Hannaneh Hajishirzi, Hao Cheng, Kai-Wei Chang, Michel Galley, Jianfeng Gao
+Published: 16 Jan 2024, Last Modified: 15 Mar 2024ICLR 2024 oralReaders:  Everyone26 Replies
+Show details
+Protein Discovery with Discrete Walk-Jump Samplingpdf icon
+Nathan C. Frey, Dan Berenberg, Karina Zadorozhny, Joseph Kleinhenz, Julien Lafrance-Vanasse, Isidro Hotzel, Yan Wu, Stephen Ra, Richard Bonneau, Kyunghyun Cho, Andreas Loukas, Vladimir Gligorijevic, Saeed Saremi
+Published: 16 Jan 2024, Last Modified: 16 Apr 2024ICLR 2024 oralReaders:  Everyone9 Replies
+Show details
+ExeDec: Execution Decomposition for Compositional Generalization in Neural Program Synthesispdf icon
+Kensen Shi, Joey Hong, Yinlin Deng, Pengcheng Yin, Manzil Zaheer, Charles Sutton
+Published: 16 Jan 2024, Last Modified: 19 Apr 2024ICLR 2024 oralReaders:  Everyone13 Replies
+Show details
+Batched Low-Rank Adaptation of Foundation Modelspdf icon
+Yeming Wen, Swarat Chaudhuri
+Published: 16 Jan 2024, Last Modified: 29 Mar 2024ICLR 2024 oralReaders:  Everyone13 Replies
+Show details
+Improved Active Learning via Dependent Leverage Score Samplingpdf icon
+Atsushi Shimizu, Xiaoou Cheng, Christopher Musco, Jonathan Weare
+Published: 16 Jan 2024, Last Modified: 10 Apr 2024ICLR 2024 oralReaders:  Everyone16 Replies
+Show details
+Model Tells You What to Discard: Adaptive KV Cache Compression for LLMspdf icon
+Suyu Ge, Yunan Zhang, Liyuan Liu, Minjia Zhang, Jiawei Han, Jianfeng Gao
+Published: 16 Jan 2024, Last Modified: 16 Mar 2024ICLR 2024 oralReaders:  Everyone26 Replies
+Show details
+«‹1234›»
+About OpenReview
+Hosting a Venue
+All Venues
+Contact
+Feedback
+Sponsors
+Frequently Asked Questions
+Terms of Use
+Privacy Policy
+OpenReview is a long-term project to advance science through improved peer review, with legal nonprofit status through Code for Science & Society. We gratefully acknowledge the support of the OpenReview Sponsors. © 2024 OpenReview
+
+ICLR 2024 Conference | OpenReview
+
+
+OpenReview.net
+Search OpenReview...
+Notifications
+Activity
+Tasks
+Wei Jiang 
+back arrowGo to ICLR 2024 homepage
+The Twelfth International Conference on Learning Representations
+ICLR 2024
+Vienna, AustriaMay 07 2024https://iclr.cc/Conferences/2024iclr2024.programchairs@gmail.com
+Please see the venue website for more information.
+
+Submission Start: Sep 15 2023 07:00AM UTC-0, Abstract Registration: Sep 24 2023 12:59PM UTC-0, Submission Deadline: Sep 29 2023 12:59PM UTC-0
+
+Accept (oral)
+Accept (spotlight)
+Accept (poster)
+Reject
+Withdrawn Submissions
+Desk Rejected Submissions
+Recent Activity
+Search submissions by title and metadata
+One-shot Empirical Privacy Estimation for Federated Learningpdf icon
+Galen Andrew, Peter Kairouz, Sewoong Oh, Alina Oprea, Hugh Brendan McMahan, Vinith Menon Suriyakumar
+Published: 16 Jan 2024, Last Modified: 17 Apr 2024ICLR 2024 oralReaders:  Everyone23 Replies
+Show details
+SWE-bench: Can Language Models Resolve Real-world Github Issues?pdf icon
+Carlos E Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, Karthik R Narasimhan
+Published: 16 Jan 2024, Last Modified: 15 Mar 2024ICLR 2024 oralReaders:  Everyone13 Replies
+Show details
+ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Modelspdf icon
+Seyed Iman Mirzadeh, Keivan Alizadeh-Vahid, Sachin Mehta, Carlo C del Mundo, Oncel Tuzel, Golnoosh Samei, Mohammad Rastegari, Mehrdad Farajtabar
+Published: 16 Jan 2024, Last Modified: 16 Mar 2024ICLR 2024 oralReaders:  Everyone15 Replies
+Show details
+On the Joint Interaction of Models, Data, and Featurespdf icon
+Yiding Jiang, Christina Baek, J Zico Kolter
+Published: 16 Jan 2024, Last Modified: 06 Apr 2024ICLR 2024 oralReaders:  Everyone18 Replies
+Show details
+Topological data analysis on noisy quantum computerspdf icon
+Ismail Yunus Akhalwaya, Shashanka Ubaru, Kenneth L. Clarkson, Mark S. Squillante, Vishnu Jejjala, Yang-Hui He, Kugendran Naidoo, Vasileios Kalantzis, Lior Horesh
+Published: 16 Jan 2024, Last Modified: 15 Apr 2024ICLR 2024 oralReaders:  Everyone14 Replies
+Show details
+Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflectionpdf icon
+Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil, Hannaneh Hajishirzi
+Published: 02 Feb 2024, Last Modified: 12 Mar 2024ICLR 2024 oralReaders:  Everyone18 Replies
+Show details
+"What Data Benefits My Classifier?" Enhancing Model Performance and Interpretability through Influence-Based Data Selectionpdf icon
+Anshuman Chhabra, Peizhao Li, Prasant Mohapatra, Hongfu Liu
+Published: 16 Jan 2024, Last Modified: 06 Mar 2024ICLR 2024 oralReaders:  Everyone32 Replies
+Show details
+Generative Modeling with Phase Stochastic Bridgepdf icon
+Tianrong Chen, Jiatao Gu, Laurent Dinh, Evangelos Theodorou, Joshua M. Susskind, Shuangfei Zhai
+Published: 16 Jan 2024, Last Modified: 16 Apr 2024ICLR 2024 oralReaders:  Everyone14 Replies
+Show details
+Zipformer: A faster and better encoder for automatic speech recognitionpdf icon
+Zengwei Yao, Liyong Guo, Xiaoyu Yang, Wei Kang, Fangjun Kuang, Yifan Yang, Zengrui Jin, Long Lin, Daniel Povey
+Published: 16 Jan 2024, Last Modified: 09 Apr 2024ICLR 2024 oralReaders:  Everyone15 Replies
+Show details
+MetaGPT: Meta Programming for A Multi-Agent Collaborative Frameworkpdf icon
+Sirui Hong, Mingchen Zhuge, Jonathan Chen, Xiawu Zheng, Yuheng Cheng, Jinlin Wang, Ceyao Zhang, Zili Wang, Steven Ka Shing Yau, Zijuan Lin, Liyang Zhou, Chenyu Ran, Lingfeng Xiao, Chenglin Wu, Jürgen Schmidhuber
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone16 Replies
+Show details
+ValUES: A Framework for Systematic Validation of Uncertainty Estimation in Semantic Segmentationpdf icon
+Kim-Celine Kahl, Carsten T. Lüth, Maximilian Zenk, Klaus Maier-Hein, Paul F Jaeger
+Published: 16 Jan 2024, Last Modified: 07 Mar 2024ICLR 2024 oralReaders:  Everyone18 Replies
+Show details
+Finetuning Text-to-Image Diffusion Models for Fairnesspdf icon
+Xudong Shen, Chao Du, Tianyu Pang, Min Lin, Yongkang Wong, Mohan Kankanhalli
+Published: 16 Jan 2024, Last Modified: 09 Apr 2024ICLR 2024 oralReaders:  Everyone17 Replies
+Show details
+Knowledge Card: Filling LLMs' Knowledge Gaps with Plug-in Specialized Language Modelspdf icon
+Shangbin Feng, Weijia Shi, Yuyang Bai, Vidhisha Balachandran, Tianxing He, Yulia Tsvetkov
+Published: 16 Jan 2024, Last Modified: 11 Mar 2024ICLR 2024 oralReaders:  Everyone14 Replies
+Show details
+METRA: Scalable Unsupervised RL with Metric-Aware Abstractionpdf icon
+Seohong Park, Oleh Rybkin, Sergey Levine
+Published: 16 Jan 2024, Last Modified: 10 Mar 2024ICLR 2024 oralReaders:  Everyone15 Replies
+Show details
+Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reductionpdf icon
+Yichen Wu, Long-Kai Huang, Renzhen Wang, Deyu Meng, Ying Wei
+Published: 16 Jan 2024, Last Modified: 17 Apr 2024ICLR 2024 oralReaders:  Everyone18 Replies
+Show details
+Improving Convergence and Generalization Using Parameter Symmetriespdf icon
+Bo Zhao, Robert M. Gower, Robin Walters, Rose Yu
+Published: 16 Jan 2024, Last Modified: 31 Mar 2024ICLR 2024 oralReaders:  Everyone19 Replies
+Show details
+Flow Matching on General Geometriespdf icon
+Ricky T. Q. Chen, Yaron Lipman
+Published: 16 Jan 2024, Last Modified: 06 Mar 2024ICLR 2024 oralReaders:  Everyone11 Replies
+Show details
+Ghost on the Shell: An Expressive Representation of General 3D Shapespdf icon
+Zhen Liu, Yao Feng, Yuliang Xiu, Weiyang Liu, Liam Paull, Michael J. Black, Bernhard Schölkopf
+Published: 16 Jan 2024, Last Modified: 14 Mar 2024ICLR 2024 oralReaders:  Everyone18 Replies
+Show details
+Würstchen: An Efficient Architecture for Large-Scale Text-to-Image Diffusion Modelspdf icon
+Pablo Pernias, Dominic Rampas, Mats Leon Richter, Christopher Pal, Marc Aubreville
+Published: 16 Jan 2024, Last Modified: 06 Mar 2024ICLR 2024 oralReaders:  Everyone18 Replies
+Show details
+Unified Generative Modeling of 3D Molecules with Bayesian Flow Networkspdf icon
+Yuxuan Song, Jingjing Gong, Hao Zhou, Mingyue Zheng, Jingjing Liu, Wei-Ying Ma
+Published: 16 Jan 2024, Last Modified: 16 Mar 2024ICLR 2024 oralReaders:  Everyone26 Replies
+Show details
+Small-scale proxies for large-scale Transformer training instabilitiespdf icon
+Mitchell Wortsman, Peter J Liu, Lechao Xiao, Katie E Everett, Alexander A Alemi, Ben Adlam, John D Co-Reyes, Izzeddin Gur, Abhishek Kumar, Roman Novak, Jeffrey Pennington, Jascha Sohl-Dickstein, Kelvin Xu, Jaehoon Lee, Justin Gilmer, Simon Kornblith
+Published: 16 Jan 2024, Last Modified: 06 Mar 2024ICLR 2024 oralReaders:  Everyone15 Replies
+Show details
+How I Warped Your Noise: a Temporally-Correlated Noise Prior for Diffusion Modelspdf icon
+Pascal Chang, Jingwei Tang, Markus Gross, Vinicius C. Azevedo
+Published: 16 Jan 2024, Last Modified: 04 Apr 2024ICLR 2024 oralReaders:  Everyone16 Replies
+Show details
+Vision Transformers Need Registerspdf icon
+Timothée Darcet, Maxime Oquab, Julien Mairal, Piotr Bojanowski
+Published: 16 Jan 2024, Last Modified: 12 Apr 2024ICLR 2024 oralReaders:  Everyone14 Replies
+Show details
+An Analytical Solution to Gauss-Newton Loss for Direct Image Alignmentpdf icon
+Sergei Solonets, Daniil Sinitsyn, Lukas Von Stumberg, Nikita Araslanov, Daniel Cremers
+Published: 16 Jan 2024, Last Modified: 15 Apr 2024ICLR 2024 oralReaders:  Everyone10 Replies
+Show details
+Learning Energy Decompositions for Partial Inference in GFlowNetspdf icon
+Hyosoon Jang, Minsu Kim, Sungsoo Ahn
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone19 Replies
+Show details
+«‹1234›»
+About OpenReview
+Hosting a Venue
+All Venues
+Contact
+Feedback
+Sponsors
+Frequently Asked Questions
+Terms of Use
+Privacy Policy
+OpenReview is a long-term project to advance science through improved peer review, with legal nonprofit status through Code for Science & Society. We gratefully acknowledge the support of the OpenReview Sponsors. © 2024 OpenReview
+
+ICLR 2024 Conference | OpenReview
+
+OpenReview.net
+Search OpenReview...
+Notifications
+Activity
+Tasks
+Wei Jiang 
+back arrowGo to ICLR 2024 homepage
+The Twelfth International Conference on Learning Representations
+ICLR 2024
+Vienna, AustriaMay 07 2024https://iclr.cc/Conferences/2024iclr2024.programchairs@gmail.com
+Please see the venue website for more information.
+
+Submission Start: Sep 15 2023 07:00AM UTC-0, Abstract Registration: Sep 24 2023 12:59PM UTC-0, Submission Deadline: Sep 29 2023 12:59PM UTC-0
+
+Accept (oral)
+Accept (spotlight)
+Accept (poster)
+Reject
+Withdrawn Submissions
+Desk Rejected Submissions
+Recent Activity
+Search submissions by title and metadata
+Approximating Nash Equilibria in Normal-Form Games via Stochastic Optimizationpdf icon
+Ian Gemp, Luke Marris, Georgios Piliouras
+Published: 16 Jan 2024, Last Modified: 12 Apr 2024ICLR 2024 oralReaders:  Everyone11 Replies
+Show details
+Multi-Source Diffusion Models for Simultaneous Music Generation and Separationpdf icon
+Giorgio Mariani, Irene Tallini, Emilian Postolache, Michele Mancusi, Luca Cosmo, Emanuele Rodolà
+Published: 16 Jan 2024, Last Modified: 15 Mar 2024ICLR 2024 oralReaders:  Everyone17 Replies
+Show details
+LEGO-Prover: Neural Theorem Proving with Growing Librariespdf icon
+Haiming Wang, Huajian Xin, Chuanyang Zheng, Zhengying Liu, Qingxing Cao, Yinya Huang, Jing Xiong, Han Shi, Enze Xie, Jian Yin, Zhenguo Li, Xiaodan Liang
+Published: 16 Jan 2024, Last Modified: 11 Mar 2024ICLR 2024 oralReaders:  Everyone33 Replies
+Show details
+ASID: Active Exploration for System Identification in Robotic Manipulationpdf icon
+Marius Memmel, Andrew Wagenmaker, Chuning Zhu, Dieter Fox, Abhishek Gupta
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone18 Replies
+Show details
+Towards a statistical theory of data selection under weak supervisionpdf icon
+Germain Kolossov, Andrea Montanari, Pulkit Tandon
+Published: 16 Jan 2024, Last Modified: 12 Apr 2024ICLR 2024 oralReaders:  Everyone16 Replies
+Show details
+Mastering Memory Tasks with World Modelspdf icon
+Mohammad Reza Samsami, Artem Zholus, Janarthanan Rajendran, Sarath Chandar
+Published: 16 Jan 2024, Last Modified: 16 Mar 2024ICLR 2024 oralReaders:  Everyone20 Replies
+Show details
+Monte Carlo guided Denoising Diffusion models for Bayesian linear inverse problems.pdf icon
+Gabriel Cardoso, Yazid Janati el idrissi, Sylvain Le Corff, Eric Moulines
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone13 Replies
+Show details
+Self-Alignment with Instruction Backtranslationpdf icon
+Xian Li, Ping Yu, Chunting Zhou, Timo Schick, Omer Levy, Luke Zettlemoyer, Jason E Weston, Mike Lewis
+Published: 16 Jan 2024, Last Modified: 12 Mar 2024ICLR 2024 oralReaders:  Everyone11 Replies
+Show details
+Learning Interactive Real-World Simulatorspdf icon
+Sherry Yang, Yilun Du, Seyed Kamyar Seyed Ghasemipour, Jonathan Tompson, Leslie Pack Kaelbling, Dale Schuurmans, Pieter Abbeel
+Published: 16 Jan 2024, Last Modified: 01 May 2024ICLR 2024 oralReaders:  Everyone17 Replies
+Show details
+Candidate Label Set Pruning: A Data-centric Perspective for Deep Partial-label Learningpdf icon
+Shuo He, Chaojie Wang, Guowu Yang, Lei Feng
+Published: 16 Jan 2024, Last Modified: 25 Mar 2024ICLR 2024 oralReaders:  Everyone17 Replies
+Show details
+Robust agents learn causal world modelspdf icon
+Jonathan Richens, Tom Everitt
+Published: 16 Jan 2024, Last Modified: 10 Apr 2024ICLR 2024 oralReaders:  Everyone14 Replies
+Show details
+On the Humanity of Conversational AI: Evaluating the Psychological Portrayal of LLMspdf icon
+Jen-tse Huang, Wenxuan Wang, Eric John Li, Man Ho LAM, Shujie Ren, Youliang Yuan, Wenxiang Jiao, Zhaopeng Tu, Michael Lyu
+Published: 16 Jan 2024, Last Modified: 06 Mar 2024ICLR 2024 oralReaders:  Everyone15 Replies
+Show details
+Diffusion Model for Dense Matchingpdf icon
+Jisu Nam, Gyuseong Lee, Sunwoo Kim, Hyeonsu Kim, Hyoungwon Cho, Seyeon Kim, Seungryong Kim
+Published: 16 Jan 2024, Last Modified: 15 Mar 2024ICLR 2024 oralReaders:  Everyone25 Replies
+Show details
+Is ImageNet worth 1 video? Learning strong image encoders from 1 long unlabelled videopdf icon
+Shashanka Venkataramanan, Mamshad Nayeem Rizve, Joao Carreira, Yuki M Asano, Yannis Avrithis
+Published: 16 Jan 2024, Last Modified: 07 Apr 2024ICLR 2024 oralReaders:  Everyone26 Replies
+Show details
+Neural Fine-Tuning Search for Few-Shot Learningpdf icon
+Panagiotis Eustratiadis, Łukasz Dudziak, Da Li, Timothy Hospedales
+Published: 16 Jan 2024, Last Modified: 09 Mar 2024ICLR 2024 oralReaders:  Everyone13 Replies
+Show details
+Latent Trajectory Learning for Limited Timestamps under Distribution Shift over Timepdf icon
+QIUHAO Zeng, Changjian Shui, Long-Kai Huang, Peng Liu, Xi Chen, Charles Ling, Boyu Wang
+Published: 16 Jan 2024, Last Modified: 18 Mar 2024ICLR 2024 oralReaders:  Everyone21 Replies
+Show details
+Less is More: Fewer Interpretable Region via Submodular Subset Selectionpdf icon
+Ruoyu Chen, Hua Zhang, Siyuan Liang, Jingzhi Li, Xiaochun Cao
+Published: 16 Jan 2024, Last Modified: 06 Mar 2024ICLR 2024 oralReaders:  Everyone26 Replies
+Show details
+Cameras as Rays: Pose Estimation via Ray Diffusionpdf icon
+Jason Y. Zhang, Amy Lin, Moneish Kumar, Tzu-Hsuan Yang, Deva Ramanan, Shubham Tulsiani
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone21 Replies
+Show details
+Accelerating Distributed Stochastic Optimization via Self-Repellent Random Walkspdf icon
+Jie Hu, Vishwaraj Doshi, Do Young Eun
+Published: 16 Jan 2024, Last Modified: 06 Mar 2024ICLR 2024 oralReaders:  Everyone16 Replies
+Show details
+Detecting, Explaining, and Mitigating Memorization in Diffusion Modelspdf icon
+Yuxin Wen, Yuchen Liu, Chen Chen, Lingjuan Lyu
+Published: 16 Jan 2024, Last Modified: 14 Mar 2024ICLR 2024 oralReaders:  Everyone12 Replies
+Show details
+Quick-Tune: Quickly Learning Which Pretrained Model to Finetune and Howpdf icon
+Sebastian Pineda Arango, Fabio Ferreira, Arlind Kadra, Frank Hutter, Josif Grabocka
+Published: 16 Jan 2024, Last Modified: 06 Mar 2024ICLR 2024 oralReaders:  Everyone12 Replies
+Show details
+LongLoRA: Efficient Fine-tuning of Long-Context Large Language Modelspdf icon
+Yukang Chen, Shengju Qian, Haotian Tang, Xin Lai, Zhijian Liu, Song Han, Jiaya Jia
+Published: 16 Jan 2024, Last Modified: 08 Mar 2024ICLR 2024 oralReaders:  Everyone14 Replies
+Show details
+Amortizing intractable inference in large language modelspdf icon
+Edward J Hu, Moksh Jain, Eric Elmoznino, Younesse Kaddar, Guillaume Lajoie, Yoshua Bengio, Nikolay Malkin
+Published: 16 Jan 2024, Last Modified: 09 Mar 2024ICLR 2024 oralReaders:  Everyone23 Replies
+Show details
+LLMCarbon: Modeling the End-to-End Carbon Footprint of Large Language Modelspdf icon
+Ahmad Faiz, Sotaro Kaneda, Ruhan Wang, Rita Chukwunyere Osi, Prateek Sharma, Fan Chen, Lei Jiang
+Published: 16 Jan 2024, Last Modified: 13 Mar 2024ICLR 2024 oralReaders:  Everyone18 Replies
+Show details
+A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesispdf icon
+Izzeddin Gur, Hiroki Furuta, Austin V Huang, Mustafa Safdari, Yutaka Matsuo, Douglas Eck, Aleksandra Faust
+Published: 16 Jan 2024, Last Modified: 14 Mar 2024ICLR 2024 oralReaders:  Everyone17 Replies
+Show details
+«‹1234›»
+About OpenReview
+Hosting a Venue
+All Venues
+Contact
+Feedback
+Sponsors
+Frequently Asked Questions
+Terms of Use
+Privacy Policy
+OpenReview is a long-term project to advance science through improved peer review, with legal nonprofit status through Code for Science & Society. We gratefully acknowledge the support of the OpenReview Sponsors. © 2024 OpenReview
+
+ICLR 2024 Conference | OpenReview
+
+OpenReview.net
+Search OpenReview...
+Notifications
+Activity
+Tasks
+Wei Jiang 
+back arrowGo to ICLR 2024 homepage
+The Twelfth International Conference on Learning Representations
+ICLR 2024
+Vienna, AustriaMay 07 2024https://iclr.cc/Conferences/2024iclr2024.programchairs@gmail.com
+Please see the venue website for more information.
+
+Submission Start: Sep 15 2023 07:00AM UTC-0, Abstract Registration: Sep 24 2023 12:59PM UTC-0, Submission Deadline: Sep 29 2023 12:59PM UTC-0
+
+Accept (oral)
+Accept (spotlight)
+Accept (poster)
+Reject
+Withdrawn Submissions
+Desk Rejected Submissions
+Recent Activity
+Search submissions by title and metadata
+Lipschitz Singularities in Diffusion Modelspdf icon
+Zhantao Yang, Ruili Feng, Han Zhang, Yujun Shen, Kai Zhu, Lianghua Huang, Yifei Zhang, Yu Liu, Deli Zhao, Jingren Zhou, Fan Cheng
+Published: 16 Jan 2024, Last Modified: 12 Mar 2024ICLR 2024 oralReaders:  Everyone20 Replies
+Show details
+Interpreting CLIP's Image Representation via Text-Based Decompositionpdf icon
+Yossi Gandelsman, Alexei A Efros, Jacob Steinhardt
+Published: 16 Jan 2024, Last Modified: 26 Mar 2024ICLR 2024 oralReaders:  Everyone16 Replies
+Show details
+Multisize Dataset Condensationpdf icon
+Yang He, Lingao Xiao, Joey Tianyi Zhou, Ivor Tsang
+Published: 16 Jan 2024, Last Modified: 14 Apr 2024ICLR 2024 oralReaders:  Everyone12 Replies
+Show details
+DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content Creationpdf icon
+Jiaxiang Tang, Jiawei Ren, Hang Zhou, Ziwei Liu, Gang Zeng
+Published: 16 Jan 2024, Last Modified: 12 Mar 2024ICLR 2024 oralReaders:  Everyone16 Replies
+Show details
+LRM: Large Reconstruction Model for Single Image to 3Dpdf icon
+Yicong Hong, Kai Zhang, Jiuxiang Gu, Sai Bi, Yang Zhou, Difan Liu, Feng Liu, Kalyan Sunkavalli, Trung Bui, Hao Tan
+Published: 16 Jan 2024, Last Modified: 09 Mar 2024ICLR 2024 oralReaders:  Everyone16 Replies
+Show details
+How Well Do Supervised 3D Models Transfer to Medical Imaging Tasks?pdf icon
+Wenxuan Li, Alan Yuille, Zongwei Zhou
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone26 Replies
+Show details
+Gene Regulatory Network Inference in the Presence of Dropouts: a Causal Viewpdf icon
+Haoyue Dai, Ignavier Ng, Gongxu Luo, Peter Spirtes, Petar Stojanov, Kun Zhang
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone12 Replies
+Show details
+Statistically Optimal 
+-means Clustering via Nonnegative Low-rank Semidefinite Programmingpdf icon
+Yubo Zhuang, Xiaohui Chen, Yun Yang, Richard Y. Zhang
+Published: 16 Jan 2024, Last Modified: 18 Apr 2024ICLR 2024 oralReaders:  Everyone13 Replies
+Show details
+Unprocessing Seven Years of Algorithmic Fairnesspdf icon
+André Cruz, Moritz Hardt
+Published: 16 Jan 2024, Last Modified: 15 Mar 2024ICLR 2024 oralReaders:  Everyone18 Replies
+Show details
+InfoBatch: Lossless Training Speed Up by Unbiased Dynamic Data Pruningpdf icon
+Ziheng Qin, Kai Wang, Zangwei Zheng, Jianyang Gu, Xiangyu Peng, xu Zhao Pan, Daquan Zhou, Lei Shang, Baigui Sun, Xuansong Xie, Yang You
+Published: 16 Jan 2024, Last Modified: 15 Mar 2024ICLR 2024 oralReaders:  Everyone30 Replies
+Show details
+Multi-granularity Correspondence Learning from Long-term Noisy Videospdf icon
+Yijie Lin, Jie Zhang, Zhenyu Huang, Jia Liu, zujie wen, Xi Peng
+Published: 16 Jan 2024, Last Modified: 21 Apr 2024ICLR 2024 oralReaders:  Everyone16 Replies
+Show details
+«‹1234›»
+About OpenReview
+Hosting a Venue
+All Venues
+Contact
+Feedback
+Sponsors
+Frequently Asked Questions
+Terms of Use
+Privacy Policy
+OpenReview is a long-term project to advance science through improved peer review, with legal nonprofit status through Code for Science & Society. We gratefully acknowledge the support of the OpenReview Sponsors. © 2024 OpenReview
+
+ICLR 2024 Conference | OpenReview

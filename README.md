@@ -332,39 +332,42 @@ LLM pruning, LVM pruning, quantization, dense & sparse models
 #### Open Source Repo
 * https://github.com/algmon/mama-prune
 #### 目标投稿学术会议
-##### 候选1（已过期）
-* IEEE Big Data 2024, December 15-18, Washington DC, USA. Full Paper Submission Deadline: Sept 8, 2024.
-* https://www3.cs.stonybrook.edu/~ieeebigdata2024/ImportantDates.html
-##### 候选2（已过期）
-* COLM 2024, October 7-9. Full Paper Submission Deadline: March 29, 2024.
-* https://colmweb.org/dates.html
-##### 候选3
+##### 候选
+* ICLR 2025, Full Paper Submission Deadline: Oct 02 2024
+* Plan: Submit the Model Pruning paper for publication
+##### 候选
 * SIGIR 2025, July 13-18, Padova, Italy. Full Paper Submission Deadline: TODO: around Jan, 2025.
 * https://sigir2025.dei.unipd.it/
 * 会议调性：强调量化分析及数值方法，如量化指标设计，性能论文及质量论文均可，需要与IR有一定关联
-##### 候选4（已过期）
-* WSDM 2025, March 10-14. Full Paper Submission Deadline: Aug 14, 2024.
-* https://www.wsdm-conference.org/2025/call-for-papers/
-##### 候选5
+##### 候选
 * IEEE Big Data 2025, IEEE
 * 会议调性：偏向于大数据，计算模型及人工智能等，会议包容性较强
 * https://dblp.uni-trier.de/db/conf/bigdataconf/
-##### 候选6（已过期）
-* AAAI 2025, AAAI Conference on Artificial Intelligence, AAAI. Full Paper Submission Deadline: August 15, 2024.
-* https://aaai.org/aaai-24-conference/save-the-date-aaai-25/
-* http://dblp.uni-trier.de/db/conf/aaai/
-##### 候选7
+##### 候选
 * NeurIPS 2025. Full Paper Submission Deadline: TODO:
 * http://dblp.uni-trier.de/db/conf/nips/
 * NeurIPS 2024 Author notification: Sep 25, 2024
-##### 候选8
+##### 候选
 * ACL 2025. Full Paper Submission Deadline: TODO:
-##### 候选9
+##### 候选
 * CVPR 2025. Full Paper Submission Deadline: Nov 15, 2024.
-##### 候选10
+##### 候选
 * ICCV 2025. Full Paper Submission Deadline: TODO:
-##### 候选11
+##### 候选
 * ICML 2025. Full Paper Submission Deadline: TODO:
+##### 候选（已过期）
+* IEEE Big Data 2024, December 15-18, Washington DC, USA. Full Paper Submission Deadline: Sept 8, 2024.
+* https://www3.cs.stonybrook.edu/~ieeebigdata2024/ImportantDates.html
+##### 候选（已过期）
+* COLM 2024, October 7-9. Full Paper Submission Deadline: March 29, 2024.
+* https://colmweb.org/dates.html
+##### 候选（已过期）
+* WSDM 2025, March 10-14. Full Paper Submission Deadline: Aug 14, 2024.
+* https://www.wsdm-conference.org/2025/call-for-papers/
+##### 候选（已过期）
+* AAAI 2025, AAAI Conference on Artificial Intelligence, AAAI. Full Paper Submission Deadline: August 15, 2024.
+* https://aaai.org/aaai-24-conference/save-the-date-aaai-25/
+* http://dblp.uni-trier.de/db/conf/aaai/
 #### 目标投稿学术期刊
 ##### 候选1
 * JMLR, Journal of Machine Learning Research, MIT Press, http://dblp.uni-trier.de/db/journals/jmlr/
