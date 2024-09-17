@@ -521,7 +521,22 @@ In this paper, we study LLM & LVM static pruning that attempt to achieve a good 
 | 0.95 | 90220.781  | 455298.469 | 187259.063   |
 | 0.99 | 991519.125 | 206585.391 | 70452.703    |
 * Table 5: Perplexity on pruned llama-7B models from AIGC Domain Experts(model: o1).
-* Table 6: (TODO: End-End Unpruned & Pruned Model Evaluation)
+
+| Pruned Level | Perplexity | "University is" | 中文翻译 | 真人评审输出是否合理 |
+|----------|----------|----------|----------|
+| 0.00 | * | University is a great place to learn about the world. | 大学是一个向世界学习的好地方 | 是 |
+| 0.50 | 19.191 | University is a great place to start a new year. | 大学是一个开始新的一年的好地方 | 否 |
+| 0.60 | 23.205 | University is a great place to start. | 大学是一个开始的好地方 | 否 |
+| 0.70 | 44.246 | University is a good place to get a good place to get a good place to get a good | 大学是一个好地方好地方好 | 否 |
+| 0.80 | 364.304 | University is a lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot | 大学是许多许多许多许多许多许多许多许多许多许多许多许多许多许多许多许多 | 否 |
+| 0.90 | 3772.829 | University is. | 大学是. | 否 |
+| 0.95 | 8892.167 | University is is is is is is is is is is is is is is is is is is | 大学是.................. | 否 |
+| 0.99 | 22548.809 | University is is is is is is is is is is is is,,,,,, | 大学是是是是是是是是是是是是,,,,,, | 否 |
+* Table 6: the effect of pruned model(OPT-1.3B) for downstream text generation application
+
+* Table 7: (TODO: Running Time for each pruning algs.)
+
+* Table 8: (TODO: End-End Unpruned & Pruned Model Evaluation)
 ![](./prune.fig1.v3.png)
 * 由以上Fig初始实验结果，我们可知：
 * 1. 随着剪枝程度的加深，从剪枝50%的神经元到剪枝95%的神经元，语言模型的内在混沌指数（Perplexity）呈现指数级别的上升。这并不理想，我们的目标是希望设计一种算法，使其Perplexity指数在高百分比剪枝的情况下，混沌指数只有线性轻微上升。
