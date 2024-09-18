@@ -56,94 +56,104 @@ Address \\
 Static model pruning is presented as a performance optimization technique for large language and vision models. The approach aims to identify and remove neurons, connections unlikely to lead to expected generation results for typical user queries. The goal is to obtain a much smaller model that can quickly return results almost as good as those of the unpruned ones. Through careful analysis of pre-trained weights, bias, activations and user queries, an initial mathematical model based on certain probabilities obtained from the environment is developed to improve on previous results for pruned model size, achieving significant improvement in most cases. This paper explores and compares to previously proposed approaches that perform pruning based on other factors.
 \end{abstract}
 
-\section{Submission of conference papers to ICLR 2025}
+\section{Introduction}
+\label{intro}
+(General Intro) Large language models and large vision models are facing significant performance challenges due to the massive data size and query loads they need to support. These models, along with other related systems, crawl, analyze, and incorporate billions of web pages, videos, and multimodal data into their network architectures such as transformer. 
+One crucial cost factor is the query processing per user, which must scale with both data size and query load. As a result, large language models devote substantial hardware and energy resources to this task. There has been extensive research on improving query processing performance, including work on various caching techniques, retrieval information systems, and high-performance knowledge representation. 
+A large category of optimization techniques commonly referred to as static or dynamic pruning has emerged in the context of query processing for large foundational models. This paper aims to explore and contribute to the understanding and improvement of these pruning techniques to enhance the performance and efficiency of those models.
 
-ICLR requires electronic submissions, processed by
-\url{https://openreview.net/}. See ICLR's website for more instructions.
+(More Specific Intro) In this paper, our attention is directed towards a particular optimization technique known as model pruning. In essence, the approach involves conducting a suitable analysis of the knowledge representation, document collections, and query distribution. The objective is to determine those entries or neurons that are highly likely to yield top user query results for typical queries. Subsequently, any other neurons that are unlikely to contribute to user inputs are "removed" from the neural network. The aim is to obtain a significantly smaller neural network with a reduced amount of parameters. This pruned network can achieve almost the same quality of results as the unpruned one while requiring much less memory and GPU footprint. Consequently, it leads to faster query processing over a shorter neural network with optimized layers.
 
-If your paper is ultimately accepted, the statement {\tt
-  {\textbackslash}iclrfinalcopy} should be inserted to adjust the
-format to the camera ready requirements.
+(Given a typical example) Consider a leading large foundation model provider today. There are around 10 billion documents incorporated into its knowledge base, with an average of 300 words per document, resulting in a total of approximately $10^{15}$ tokens. The leading engine receives around 5 billion queries per day, with each query represented by around $10^{11}$ terms to convey the user's intention for interaction with the large language model. This implies that nearly 117 billion tokens in the knowledge representation could potentially lead to expected output tokens. 
+However, in reality, far fewer tokens actually result in an output within a month. Considering the repetition of queries and postings, more than 99.5\% of all routing and neuronal activation and triggers do not yield a single result output from the decoder within a month. Although we cannot reliably identify the 0.5\% of active neurons that contribute to the result precisely for the next month, we might hope to identify a large subset of the optimized neurons that contains most of the important information and knowledge representation as the full neural network on common measures of effectiveness.
 
-The format for the submissions is a variant of the NeurIPS format.
-Please read carefully the instructions below, and follow them
-faithfully.
+(Small set of closely related previous work) Previous work on model pruning for large language models and large vision models has primarily focused on approaches such as retaining layers above a global impact threshold or keeping high-scoring neurons in each layer. For detail, we refer to [Cite Wanda paper][Cite SparseGPT paper][Cite Manitude paper]. These efforts have yielded promising results, but there is room for further improvement. The goal of this paper is to build on this existing work and develop a methodology that combines different ideas to achieve a better balance between neural network size and result quality as measured by standard retrieval or information generation quality metrics. Given the feature-rich environment, pruning is considered as a prediction problem where suitable statistical techniques or deep learning methods such as language modeling and machine learning are employed to determine which neuron, weights and layers to keep.
 
-\subsection{Style}
+(Paper Organization) The remainder of this paper is organized as follows. In Section \ref{background}, we provide background information on learning representation, neural networks, and related pruning technique. We summarize our key contributions in Section \ref{headings}, highlighting the novelty and significance of our approach. We delve into the technical details of our proposed approach in Section \ref{ours}, providing a comprehensive explanation of the methodology and algorithms developed. We present and explan our experimental results in Section \ref{res}, including some implementation detail and performance analysis. In section \ref{conclue}, we offer concluding remarks, summarizing the main findings of the paper and suggesting potential directions for future research.
 
-Papers to be submitted to ICLR 2025 must be prepared according to the
-instructions presented here.
+\section{Background and Related Work}
+\label{background}
 
-%% Please note that we have introduced automatic line number generation
-%% into the style file for \LaTeXe. This is to help reviewers
-%% refer to specific lines of the paper when they make their comments. Please do
-%% NOT refer to these line numbers in your paper as they will be removed from the
-%% style file for the final version of accepted papers.
+In this section, we first provide some background on neural network architectures, user inputs, pruning, and machine generation. We then discuss previous work related to model pruning in the context of large language and vision models. For additional details on general neural network architectures, we refer to [][].
 
-Authors are required to use the ICLR \LaTeX{} style files obtainable at the
-ICLR website. Please make sure you use the current files and
-not previous versions. Tweaking the style files may be grounds for rejection.
+\subsection{Background}
+\subsubsection{Nerual Network Architectures}
 
-\subsection{Retrieval of style files}
+(TODO:)
 
-The style files for ICLR and other conference information are available online at:
-\begin{center}
-   \url{http://www.iclr.cc/}
-\end{center}
-The file \verb+iclr2025_conference.pdf+ contains these
-instructions and illustrates the
-various formatting requirements your ICLR paper must satisfy.
-Submissions must be made using \LaTeX{} and the style files
-\verb+iclr2025_conference.sty+ and \verb+iclr2025_conference.bst+ (to be used with \LaTeX{}2e). The file
-\verb+iclr2025_conference.tex+ may be used as a ``shell'' for writing your paper. All you
-have to do is replace the author, title, abstract, and text of the paper with
-your own.
+\subsubsection{Human Input \& Machine Generation}
 
-The formatting instructions contained in these style files are summarized in
-sections \ref{gen_inst}, \ref{headings}, and \ref{others} below.
+(TODO:)
 
-\section{General formatting instructions}
-\label{gen_inst}
+\subsubsection{Model Quantization \& Compression}
 
-The text must be confined within a rectangle 5.5~inches (33~picas) wide and
-9~inches (54~picas) long. The left margin is 1.5~inch (9~picas).
-Use 10~point type with a vertical spacing of 11~points. Times New Roman is the
-preferred typeface throughout. Paragraphs are separated by 1/2~line space,
-with no indentation.
+(TODO:)
 
-Paper title is 17~point, in small caps and left-aligned.
-All pages should start at 1~inch (6~picas) from the top of the page.
+\subsubsection{Model Pruning \& Indicators Discovery}
 
-Authors' names are
-set in boldface, and each name is placed above its corresponding
-address. The lead author's name is to be listed first, and
-the co-authors' names are set to follow. Authors sharing the
-same address can be on the same line.
+(TODO:)
 
-Please pay special attention to the instructions in section \ref{others}
-regarding figures, tables, acknowledgments, and references.
+\subsection{Related Work}
+\subsubsection{Typical Pruning Algorithms}
 
+There are three typical network pruning algorithms.
+(1) The magnitude pruning algorithm[18, 19]: Simplest approach: Prunes weights based purely on their absolute magnitude. Threshold-based: A global threshold is determined based on the desired sparsity ratio. Weights below this threshold are set to zero. Unstructured: Can prune individual weights anywhere in the matrix, potentially leading to irregular sparsity patterns that might not be hardware-friendly. Fast but less accurate: Generally the fastest method, but might remove important connections, leading to a larger accuracy drop compared to more sophisticated methods.
+(2) The WANDA(Weights and Activations) pruning algorithm[3]: Importance-aware: Considers both weight magnitudes and activation statistics to estimate weight importance. Calibration phase: Requires a calibration step where the model processes a small dataset to collect activation data. Row-wise scaling: Normalizes weight magnitudes within each row based on activation statistics, making the pruning less sensitive to weight scale variations across neurons. Unstructured or structured: Can be applied in an unstructured manner (pruning individual weights) or a structured manner (pruning within blocks of weights). Improved accuracy: Often achieves better accuracy-sparsity trade-offs compared to magnitude pruning.
+(3) The SparseGPT pruning algorithm[5]: Gradient-based: Leverages gradient information during pruning to identify less important connections. Iterative pruning: Prunes the model iteratively, gradually increasing sparsity while minimizing accuracy loss. Block-sparse structure: Encourages a block-sparse structure, which can be more hardware-efficient for some architectures and libraries. Computationally intensive: Can be more computationally expensive than magnitude or WANDA pruning due to the iterative nature and gradient calculations. State-of-the-art results: Often achieves very high sparsity levels with minimal accuracy degradation, making it suitable for compressing large language models.
+In summary, Magnitude pruning is the simplest and fastest but might be less accurate. WANDA improves upon magnitude pruning by considering activation information, potentially leading to better accuracy. SparseGPT is a more advanced method that uses gradient information and iterative pruning to achieve high sparsity with minimal accuracy loss, but it comes with higher computational cost.
 
-There will be a strict upper limit of 10 pages for the main text of the initial submission, with unlimited additional pages for citations. 
+\subsubsection{Query Traces \& Model Calibration}
 
-\section{Headings: first level}
+(TODO:)
+
+\subsubsection{Model Entropy \& Perplexity Estimation}
+
+(TODO:)
+
+\subsubsection{Pruning Theory \& Mathmatical Induction}
+
+(TODO:)
+
+\subsubsection{Comparison to Our Work}
+
+(TODO:)
+
+\section{Our Contributions}
 \label{headings}
 
-First level headings are in small caps,
-flush left and in point size 12. One line space before the first level
-heading and 1/2~line space after the first level heading.
+In this paper, we study LLM \& LVM model pruning that attempt to achieve a good trade-off between network size and generation quality. Our main contributions are as follows:
 
-\subsection{Headings: second level}
+1. We describe an approach called Movement that can perform much better than previous approaches;
 
-Second level headings are in small caps,
-flush left and in point size 10. One line space before the second level
-heading and 1/2~line space after the second level heading.
+2. We describe several algorithms closely related to pruning and design a unified benchmark for model evaluation;
 
-\subsubsection{Headings: third level}
+3. We perform a comprehensive experimental evaluation via the combinations of different datasets, models and evaluation metrics;
 
-Third level headings are in small caps,
-flush left and in point size 10. One line space before the third level
-heading and 1/2~line space after the third level heading.
+4. We compare human designed algorithms with AIGC generated algorithms, demonstrating the pros and cons on both sides in specific domains such as "code generation".
+
+\section{Our Proposed Pruning Algorithms}
+\label{ours}
+Do not change any aspects of the formatting parameters in the style files.
+In particular, do not modify the width or length of the rectangle the text
+should fit into, and do not change font sizes (except perhaps in the
+\textsc{References} section; see below). Please note that pages should be
+numbered.
+
+\section{Preliminary Experimental Results}
+\label{res}
+Do not change any aspects of the formatting parameters in the style files.
+In particular, do not modify the width or length of the rectangle the text
+should fit into, and do not change font sizes (except perhaps in the
+\textsc{References} section; see below). Please note that pages should be
+numbered.
+
+\section{Conclusions}
+\label{conclue}
+Do not change any aspects of the formatting parameters in the style files.
+In particular, do not modify the width or length of the rectangle the text
+should fit into, and do not change font sizes (except perhaps in the
+\textsc{References} section; see below). Please note that pages should be
+numbered.
 
 \section{Citations, figures, tables, references}
 \label{others}
@@ -502,15 +512,6 @@ $\displaystyle \1_\mathrm{condition}$ & is 1 if the condition is true, 0 otherwi
 \end{tabular}
 \egroup
 \vspace{0.25cm}
-
-
-
-\section{Final instructions}
-Do not change any aspects of the formatting parameters in the style files.
-In particular, do not modify the width or length of the rectangle the text
-should fit into, and do not change font sizes (except perhaps in the
-\textsc{References} section; see below). Please note that pages should be
-numbered.
 
 \section{Preparing PostScript or PDF files}
 
