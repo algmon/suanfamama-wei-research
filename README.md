@@ -404,43 +404,45 @@ In this paper, we study LLM \& LVM model pruning that attempt to achieve a good 
 4. We compare human designed algorithms with AIGC generated algorithms, demonstrating the pros and cons on both sides in specific domains such as "code generation";
 
 #### 4. Our Proposed Pruning Algorithms
-##### Key Considerations when designing the pruning algorithms
+##### Algorithm Design Principles
+* When we are designing the algorithms, we take considerations into the following important aspects:
 1. Target Sparsity Level: What percentage of weights do we aim to prune? Higher sparsity can lead to greater compression and speedups but might sacrifice more accuracy.
-2. Quality-Size Trade-off: Finding the right balance between model size & speed and quality is crucial. Some algorithms prioritize accuracy (SparseGPT), while others are more aggressive in pursuing sparsity (magnitude).
-3. Pruning Criterion: How do you determine which connections to prune? Options may include: Magnitude (simplest), Activation statistics (WANDA), Gradient information (SparseGPT) and Sensitivity analysis
-4. Structured vs. Unstructured Pruning: Unstructured: Prune individual weights anywhere, potentially leading to irregular sparsity patterns that might not be hardware-friendly. Structured: Prune in blocks (e.g., 2:4, 4:8), which can be more efficient for some hardware and libraries.
-5. Pruning Schedule: When and how do we prune? One-shot pruning: Prune once at the beginning or after training. Gradual pruning: Incrementally prune over multiple training epochs. Iterative pruning: Prune, fine-tune, and repeat.
-6. Calibration Data: Some algorithms (like WANDA) require a small calibration dataset to collect activation statistics before pruning. The choice of this data can impact pruning effectiveness.
+2. Quality-Size Trade-off: Finding the right balance between model size \& speed \& quality is crucial. Some algorithms prioritize accuracy (SparseGPT), while others are more aggressive in pursuing sparsity (magnitude).
+3. Pruning Criterion: How do you determine which connections to prune? Options may include: Weights (Magnitude), Activation statistics (WANDA), Gradient (SparseGPT) et al.
+4. Structured vs. Unstructured Pruning: The formal method attempts to prune individual weights anywhere, potentially leading to irregular sparsity patterns that might not be hardware-friendly. While the latter method attempts to prune in blocks (e.g., 2:4, 4:8), which can be more efficient for some underline hardware and libs.
+5. Pruning Schedule: When and how do we prune? One-shot pruning attempts to prune once at the beginning or after training. While the others attempt to incrementally prune over multiple training epochs.
+6. Usage of Calibration Data: Some algorithms like WANDA require a small calibration dataset to collect activation statistics before pruning. The choice of this data can impact pruning effectiveness.
 7. Hardware Awareness: Consider the target hardware (CPUs, GPUs, specialized accelerators) and design pruning strategies that align with hardware constraints for optimal efficiency.
-8. (Preferred) Layer-Wise Sparsity: Allow different layers to have varying sparsity levels based on their sensitivity. Not all layers contribute equally to a model's performance.
-9. Regularization and Stability: Pruning can sometimes lead to instability during training. Techniques like weight decay or gradual pruning can help mitigate this.
-##### 1. Movement Pruning
-* Core Idea: Instead of directly removing weights, movement pruning identifies unimportant weights and "moves" their values to other more significant connections. This helps preserve the overall information flow within the network.
+8. Layer-Wise Sparsity: Allow different layers to have varying sparsity levels based on their sensitivity. It is well-known that NOT all layers contribute equally to a model's performance.
+9. Regularization and Stability: Pruning can always lead to instability during training & prediction. An end-to-end model evaluation is needed in order for final model deployment in production system.
+##### Human Proposed Algorithms
+##### 1. Movement Pruning (Current Focus)
+* The Core Idea of this alg is: Instead of directly removing weights, movement pruning identifies unimportant weights and "moves" their values to other more significant connections. This helps preserve the overall information flow within the network.
 * Potential Benefits: Can achieve higher sparsity levels with less accuracy degradation compared to traditional pruning methods.
 * Example: The "Rigging the Lottery: Making All Tickets Winners" paper introduces a similar movement pruning technique.
 * Prelimary Results: NOT as good as expected. For detail, see the related tables and figures.
-##### 2. Bias pruning
+##### 2. Bias pruning (Dropped)
 * Core Idea: set all bias in neruons to 0 layer by layer, to see if it can improve the performance. Mostly for sanity check to understand more about the effectiveness of the bias.
 * Prelimary Results: TODO: Not Yet Implemented.
-##### 3. WBA pruning (weights, bias and activations)
+##### 3. WBA pruning (Dropped)
 * Core Idea: Build upon on the Wanda alg, add one dimension 'bias' into the consideration of the algorithm.
 * Prelimary Results: TODO: Not Yet Implemented.
-##### 4. Flow Pruning
+##### 4. Flow Pruning (Dropped)
 * Core Idea: Flow Pruning focuses on pruning connections early in the training process by analyzing the sensitivity of the loss function to weight perturbations.
 * Potential Benefits: Can be particularly effective for finding important connections and achieving high sparsity even before full training.
 * Considerations: Might require more computation during the initial pruning phase.
 * Prelimary Results: TODO: Not Yet Implemented.
-##### 5. Variational Pruning
+##### 5. Variational Pruning (Dropped)
 * Core Idea: Applies Bayesian principles to pruning by treating weights as random variables and pruning connections with low signal-to-noise ratios.
 * Potential Benefits: Provides a more principled way to handle uncertainty in weight importance and can lead to more robust pruning.
 * Considerations: Often more computationally expensive than deterministic pruning methods.
 * Prelimary Results: TODO: Not Yet Implemented.
-##### 6. Reinforcement Learning-Based Pruning
+##### 6. Reinforcement Learning-Based Pruning (Dropped)
 * Core Idea: Treats pruning as a sequential decision-making problem and uses reinforcement learning agents to learn optimal pruning policies.
 * Potential Benefits: Can potentially discover more complex and adaptive pruning strategies.
 * Considerations: Can be challenging to design effective reward functions and training procedures.
 * Prelimary Results: TODO: Not Yet Implemented.
-##### 7. Combining Pruning with Other Techniques
+##### 7. Combining Pruning with Other Techniques (Dropped)
 * Knowledge Distillation: After pruning a large model (teacher), use it to train a smaller, sparser model (student) to recover lost accuracy.
 * Quantization: Combine pruning with weight quantization to further reduce model size and improve inference speed.
 * Prelimary Results: TODO: Not Yet Implemented.
