@@ -457,7 +457,7 @@ In this paper, we study LLM \& LVM model pruning that attempt to achieve a good 
 | 0.10      | 5.696           |5.696            |5.806            | 5.806           |
 | 0.20      | 5.817           |5.799            |6.020            | 6.020           |
 | 0.30      | 5.999           |5.963            |6.669            | 6.668           |
-| 0.40      | 6.387           |6.311            |8.601            | 8.5943          |
+| 0.40      | 6.387           |6.311            |8.601            | 8.594          |
 | 0.50      | 7.257           |7.234            |17.285           | 17.247          |
 | 0.60      | 10.691          |10.442           |559.987          | 554.727         |
 | 0.70      | 84.905          |27.214           |48414.551        | 51841.121       |
@@ -486,33 +486,33 @@ In this paper, we study LLM \& LVM model pruning that attempt to achieve a good 
 
 | Pruned Level | Prune by Bias | Prune by -Bias |
 |-----------|------------------|------------------|
-| 0.01      | | |
-| 0.05      | | |
-| 0.10      | | |
-| 0.20      | | |
-| 0.30      | | |
-| 0.40      | | |
-| 0.50      | | |
-| 0.60      | | |
-| 0.70      | | |
-| 0.80      | | |
-| 0.90      | | |
-| 0.95      | | |
-| 0.99      | | |
+| 0.01      | NA | NA |
+| 0.05      | NA | NA |
+| 0.10      | NA | NA |
+| 0.20      | NA | NA |
+| 0.30      | NA | NA |
+| 0.40      | NA | NA |
+| 0.50      | NA | NA |
+| 0.60      | NA | NA |
+| 0.70      | NA | NA |
+| 0.80      | NA | NA |
+| 0.90      | NA | NA |
+| 0.95      | NA | NA |
+| 0.99      | NA | NA |
 * Table 3: Effectiveness of the bias as a major pruning indicator
 
-| 算法编号 Number | 核心算法思想 Core Idea | 运行状态 | 创意应用场景 | 创意灵感分数 | 降本增效分数 | 结论及归因 | 是否进行算法性能分析 |
+| 算法编号 Number | 核心算法思想 Core Idea | 运行状态 Status | 创意应用场景 Creative Usage Scenario | 创意灵感分数 Inspiration Score | 降本增效分数 Effeciency Score | 结论及归因 Conclusion and Indicators | 是否进一步进行算法性能分析 Further Analysis |
 |----------|----------|----------|----------|----------|----------|----------|----------|
-| 01 | 梯度敏感剪枝 Gradient Sensitive Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 需由算法专家进一步参与定义算法逻辑 | 否 |
-| 02 | L1范数剪枝 L1 Norm Pruning | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 量化指标混沌指数高，不具实际使用价值 | 是 |
-| 03 | 结构化剪枝 Structured Pruning | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 量化指标混沌指数高，不具实际使用价值 | 是 |
-| 04 | K-means聚类剪枝 K-means Clustering Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 需运行环境提供更大GPU算力支持 | 否 |
-| 05 | 随机剪枝 Random Pruning | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 效果仅和实验基线持平，需更有效算法设计 | 否 |
-| 06 | Random Pattern Pruning | 程序运行良好 | 代码生成 | 计算中 | 计算中 | 效果仅和实验基线持平，需更有效算法设计 | 是 |
-| 07 | Variational Dropout Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：算法无考虑不同矩阵维度的不同| 否 |
-| 08 | Gradient based Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：算法无考虑边界 | 否 |
-| 09 | Elastic Weight Consolidation Pruning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：定位中| 否 |
-| 10 | Dynamic Pruning with Reinforcement Learning | 程序运行出错 | 代码生成 | 计算中 | 计算中 | 错误原因：定位中 | 否 |
+| 01 | 梯度敏感剪枝 Gradient Sensitive Pruning | 程序运行出错 Error | 代码生成 Code Generation | 计算中 | 计算中 | 需由算法专家进一步参与定义算法逻辑 | 否 |
+| 02 | L1范数剪枝 L1 Norm Pruning | 程序运行良好 OK | 代码生成 Code Generation | 计算中 | 计算中 | 量化指标混沌指数高，不具实际使用价值 | 是 |
+| 03 | 结构化剪枝 Structured Pruning | 程序运行良好 OK | 代码生成 Code Generation | 计算中 | 计算中 | 量化指标混沌指数高，不具实际使用价值 | 是 |
+| 04 | K-means聚类剪枝 K-means Clustering Pruning | 程序运行出错 Error | 代码生成 Code Generation | 计算中 | 计算中 | 需运行环境提供更大GPU算力支持 | 否 |
+| 05 | 随机剪枝 Random Pruning | 程序运行良好 OK | 代码生成 Code Generation | 计算中 | 计算中 | 效果仅和实验基线持平，需更有效算法设计 | 否 |
+| 06 | Random Pattern Pruning | 程序运行良好 OK | 代码生成 Code Generation | 计算中 | 计算中 | 效果仅和实验基线持平，需更有效算法设计 | 是 |
+| 07 | Variational Dropout Pruning | 程序运行出错 Error | 代码生成 Code Generation | 计算中 | 计算中 | 错误原因：算法无考虑不同矩阵维度的不同| 否 |
+| 08 | Gradient based Pruning | 程序运行出错 Error | 代码生成 Code Generation | 计算中 | 计算中 | 错误原因：算法无考虑边界 | 否 |
+| 09 | Elastic Weight Consolidation Pruning | 程序运行出错 Error | 代码生成 Code Generation | 计算中 | 计算中 | 错误原因：定位中| 否 |
+| 10 | Dynamic Pruning with Reinforcement Learning | 程序运行出错 Error | 代码生成 Code Generation | 计算中 | 计算中 | 错误原因：定位中 | 否 |
 * Table 4: 一次性代码生成及有效性评估（o1）
 * Table 4: One pass code generation and effectiveness testing (o1)
 * 由以上表格可知
