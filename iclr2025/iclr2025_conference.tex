@@ -1,6 +1,6 @@
 
 \documentclass{article} % For LaTeX2e
-\usepackage{iclr2025_conference,times}
+\usepackage{iclr2025_conference,times,graphicx}
 
 % Optional math commands from https://github.com/goodfeli/dlbook_notation.
 \input{math_commands.tex}
@@ -9,7 +9,7 @@
 \usepackage{url}
 
 
-\title{Improved Methods for Static Model Pruning}
+\title{Improved Methods for Model Pruning}
 
 % Authors must not appear in the submitted version. They should be hidden
 % as long as the \iclrfinalcopy macro remains commented out below.
@@ -158,31 +158,79 @@ When we are designing the algorithms, we take considerations into the following 
 
 1. Movement Pruning. The Core Idea of this alg is: Instead of directly removing weights, movement pruning identifies unimportant weights and "moves" their values to other more significant connections. This helps preserve the overall information flow within the network. (TODO: If the result is good, we will fill in more detail)
 
-\section{Preliminary Experimental Results}
+\section{Experimental Results}
 \label{res}
 
-\subsection{Tables}
+From Table \ref{table-1} presents perplexity results for pruned Llama-7B models using different pruning methods: \textbf{Wanda}, \textbf{SparseGPT}, \textbf{Magnitude}, and \textbf{Movement}, across various pruning levels. Below are key observations and conclusions derived from the table:
+
+\subsection*{1. General Trend with Pruning}
+As the pruning level increases, i.e., a higher fraction of the model's parameters are removed, the perplexity values generally increase for all methods. This trend is expected as a greater loss of parameters typically leads to a degradation in model performance.
+
+\subsection*{2. Low Pruning Levels (0.01 - 0.10)}
+At lower pruning levels:
+\begin{itemize}
+    \item At 0.01 and 0.05 pruning levels, several methods (\textbf{Wanda}, \textbf{SparseGPT}, \textbf{Magnitude}) show ``NA'' values, while \textbf{Movement} retains a low perplexity ($\sim$5.7).
+    \item At 0.10 pruning, all methods show similar perplexity values, ranging from 5.6 to 5.8, indicating minimal performance degradation.
+\end{itemize}
+
+\subsection*{3. Medium Pruning Levels (0.20 - 0.50)}
+At medium pruning levels:
+\begin{itemize}
+    \item Up to the 0.50 pruning level, \textbf{SparseGPT} and \textbf{Wanda} consistently show lower perplexity values compared to \textbf{Magnitude} and \textbf{Movement}.
+    \item By 0.50 pruning, there is a noticeable gap, where \textbf{SparseGPT} and \textbf{Wanda} have perplexities around 7.2, whereas \textbf{Magnitude} and \textbf{Movement} have perplexities around 17, showing poorer performance.
+\end{itemize}
+
+\subsection*{4. High Pruning Levels (0.60 - 0.90)}
+At higher pruning levels:
+\begin{itemize}
+    \item From 0.60 onward, the differences between the methods become more pronounced. \textbf{SparseGPT} and \textbf{Wanda} maintain significantly lower perplexity scores compared to \textbf{Magnitude} and \textbf{Movement}, which exhibit a rapid increase in perplexity.
+    \item At 0.70 pruning, for instance, \textbf{SparseGPT} has a perplexity of 27.214, while \textbf{Magnitude} and \textbf{Movement} reach over 48,000 and 51,000 respectively.
+\end{itemize}
+
+\subsection*{5. Extreme Pruning Levels (0.95 and 0.99)}
+At extreme pruning levels:
+\begin{itemize}
+    \item All methods show significantly higher perplexity values, yet \textbf{SparseGPT} and \textbf{Wanda} continue to outperform \textbf{Magnitude} and \textbf{Movement} by a large margin.
+    \item At 0.99 pruning, \textbf{SparseGPT} has a perplexity of $\sim$16,869, whereas \textbf{Magnitude} and \textbf{Movement} exhibit perplexities of $\sim$222,543 and $\sim$214,966 respectively.
+\end{itemize}
+
+\subsection*{Conclusions}
+\begin{itemize}
+    \item \textbf{SparseGPT} and \textbf{Wanda} consistently outperform \textbf{Magnitude} and \textbf{Movement} pruning methods, especially at medium to high pruning levels (0.60 and above).
+    \item \textbf{Magnitude} and \textbf{Movement} pruning methods exhibit significant degradation in performance (higher perplexity) at more aggressive pruning levels.
+    \item \textbf{SparseGPT} is the most resilient pruning method across varying pruning levels, maintaining the lowest perplexity even at extreme pruning levels (0.90 and 0.95).
+\end{itemize}
+
+Thus, \textbf{SparseGPT} (and \textbf{Wanda} to some extent) seem to be the preferred methods when applying aggressive pruning to large models, as they better preserve performance as indicated by perplexity.
+
+From table \ref{table-2}, we can see that
+
+From table \ref{table-3}, we can see that
+
+From table \ref{table-4}, we can see that the o1 model finds it difficult to generate effective algorithms in one go in the creative application scenario of "core algorithm generation," despite our clear understanding of the context and the knowledge domain involved during the experiment.
+Preliminary experiments show that the o1 model, released on September 12, 2024, did not demonstrate the exceptional capabilities of "slow thinking," "outstanding mathematical logic reasoning," and "programming ability" that were emphasized during its promotion and dissemination, at least in our innovation application scenario, as these traits were not significantly quantifiable by scientific metrics.
+Our future work can focus on the following aspects: (1) Investigating the reasons why the algorithm cannot be generated and successfully run in one go. (2) A horizontal comparison of the effectiveness of AIGC-generated algorithms versus those designed by human algorithm engineers. (3) Expanding the evaluation from "code generation" by generative AI to more comprehensive assessments such as "text generation," "image generation," and "video generation." (4) Adding a horizontal comparison of models such as GPT-4 and Gemini Pro in vertical domains.
 
 \begin{table}[t]
 \caption{Perplexity on pruned model (Llama-7B) from human domain experts}
 \label{table-1}
 \begin{center}
-\begin{tabular}{ll}
-\multicolumn{1}{c}{\bf Pruned Level}  &\multicolumn{1}{c}{\bf Wanda}
+\begin{tabular}{lllll}
+\multicolumn{1}{c}{\bf Pruned Level}  &\multicolumn{1}{c}{\bf Wanda} &\multicolumn{1}{c}{\bf SparseGPT} &\multicolumn{1}{c}{\bf Magnitude} &\multicolumn{1}{c}{\bf Movement}
 \\ \hline \\
-0.01         &NA \\
-0.05         &NA \\
-0.10         &5.696 \\
-0.20         &5.817 \\
-0.30         &5.999 \\
-0.40         &6.387 \\
-0.50         &7.257 \\
-0.60         &10.691 \\
-0.70         &84.905 \\
-0.80         &5782.432 \\
-0.90         &19676.668 \\
-0.95         &28309.178 \\
-0.99         &108234.484 \\
+0.01         &NA &NA & NA & 5.677 \\
+0.05         &NA &NA & NA & 5.714 \\
+0.10         &5.696 &5.696 & 5.806 & 5.806 \\
+0.20         &5.817 &5.799 & 6.020 & 6.020 \\
+0.30         &5.999 &5.963 & 6.669 & 6.668 \\
+0.40         &6.387 &6.311 & 8.601 & 8.594 \\
+0.50         &7.257 &7.234	& 17.285 & 17.247 \\
+0.60         &10.691 &10.442 & 559.987 & 554.727 \\
+0.70         &84.905 &27.214 & 48414.551 & 51841.121 \\
+0.80         &5782.432 &182.463 & 132175.578 & 135494.797 \\
+0.90         &19676.668 &3198.101 & 317879.250 & 301472.500 \\
+0.95         &28309.178 &4088.413 & 273552.281 & 273629.750 \\
+0.99         &108234.484 &16869.203 & 222543.047 & 214966.484 \\
 \end{tabular}
 \end{center}
 \end{table}
@@ -191,22 +239,22 @@ When we are designing the algorithms, we take considerations into the following 
 \caption{Effectiveness of the weights as a major pruning measure}
 \label{table-2}
 \begin{center}
-\begin{tabular}{ll}
-\multicolumn{1}{c}{\bf Pruned Level}  &\multicolumn{1}{c}{\bf Prune by Weights}
+\begin{tabular}{lll}
+\multicolumn{1}{c}{\bf Pruned Level}  &\multicolumn{1}{c}{\bf Prune by Weights} &\multicolumn{1}{c}{\bf Prune by -Weights}
 \\ \hline \\
-0.01         &NA \\
-0.05         &NA \\
-0.10         &5.806 \\
-0.20         &6.020 \\
-0.30         &6.669 \\
-0.40         &8.601 \\
-0.50         &17.285 \\
-0.60         &559.987 \\
-0.70         &48414.551 \\
-0.80         &132175.578 \\
-0.90         &317879.250 \\
-0.95         &273552.281 \\
-0.99         &222543.047 \\
+0.01         &NA &24377.635 \\
+0.05         &NA &25804.920 \\
+0.10         &5.806 &104948.891 \\
+0.20         &6.020 &352772.500 \\
+0.30         &6.669 &335747.406 \\
+0.40         &8.601 &260632.641 \\
+0.50         &17.285 &227413.484 \\
+0.60         &559.987 &185086.078 \\
+0.70         &48414.551 &273153.688 \\
+0.80         &132175.578 &188488.000 \\
+0.90         &317879.250 &185304.016 \\
+0.95         &273552.281 &NA \\
+0.99         &222543.047 &NA \\
 \end{tabular}
 \end{center}
 \end{table}
@@ -215,22 +263,22 @@ When we are designing the algorithms, we take considerations into the following 
 \caption{Effectiveness of the bias as a major pruning indicator}
 \label{table-3}
 \begin{center}
-\begin{tabular}{ll}
-\multicolumn{1}{c}{\bf Pruned Level}  &\multicolumn{1}{c}{\bf Prune by Bias}
+\begin{tabular}{lll}
+\multicolumn{1}{c}{\bf Pruned Level}  &\multicolumn{1}{c}{\bf Prune by Bias} &\multicolumn{1}{c}{\bf Prune by -Bias}
 \\ \hline \\
-0.01         &NA \\
-0.05         &NA \\
-0.10         &NA \\
-0.20         &NA \\
-0.30         &NA \\
-0.40         &NA \\
-0.50         &NA \\
-0.60         &NA \\
-0.70         &NA \\
-0.80         &NA \\
-0.90         &NA \\
-0.95         &NA \\
-0.99         &NA \\
+0.01         &NA &NA \\
+0.05         &NA &NA \\
+0.10         &NA &NA \\
+0.20         &NA &NA \\
+0.30         &NA &NA \\
+0.40         &NA &NA \\
+0.50         &NA &NA \\
+0.60         &NA &NA \\
+0.70         &NA &NA \\
+0.80         &NA &NA \\
+0.90         &NA &NA \\
+0.95         &NA &NA \\
+0.99         &NA &NA \\
 \end{tabular}
 \end{center}
 \end{table}
@@ -239,19 +287,19 @@ When we are designing the algorithms, we take considerations into the following 
 \caption{One pass code generation and effectiveness evaluation}
 \label{table-4}
 \begin{center}
-\begin{tabular}{ll}
-\multicolumn{1}{c}{\bf Number}  &\multicolumn{1}{c}{\bf Core Idea}
+\begin{tabular}{llll}
+\multicolumn{1}{c}{\bf Number}  &\multicolumn{1}{c}{\bf Core Idea} & \multicolumn{1}{c}{\bf Status} & \multicolumn{1}{c}{\bf Usage Scenario} \\
 \\ \hline \\
-01         &Gradient Sensitive Pruning \\
-02         &L1 Norm Pruning \\
-03         &Structured Pruning \\
-04         &K-means Clustering Pruning \\
-05         &Random Pruning \\
-06         &Random Pattern Pruning \\
-07         &Variational Dropout Pruning \\
-08         &Gradient based Pruning \\
-09         &Elastic Weight Consolidation Pruning \\
-10         &Dynamic Pruning with Reinforcement Learning \\
+01         &Gradient Sensitive Pruning & Error & Code Generation \\
+02         &L1 Norm Pruning & OK & Code Generation \\
+03         &Structured Pruning & OK & Code Generation \\
+04         &K-means Clustering Pruning & Error & Code Generation \\
+05         &Random Pruning & OK & Code Generation \\
+06         &Random Pattern Pruning & OK & Code Generation \\
+07         &Variational Dropout Pruning & Error & Code Generation \\
+08         &Gradient based Pruning & Error & Code Generation \\
+09         &Elastic Weight Consolidation Pruning & Error & Code Generation \\
+10         &Dynamic Pruning with Reinforcement Learning & Error & Code Generation \\
 \end{tabular}
 \end{center}
 \end{table}
@@ -260,16 +308,16 @@ When we are designing the algorithms, we take considerations into the following 
 \caption{Perplexity on pruned model (llama-7B) from AIGC domain expert (o1)}
 \label{table-5}
 \begin{center}
-\begin{tabular}{ll}
-\multicolumn{1}{c}{\bf Pruned Level}  &\multicolumn{1}{c}{\bf aigc algorithm 2}
-\\ \hline \\
-0.50         &193740.406 \\
-0.60         &110879.422 \\
-0.70         &174815.859 \\
-0.80         &287734.844 \\
-0.90         &157028.844 \\
-0.95         &90220.781 \\
-0.99         &991519.125 \\
+\begin{tabular}{llll}
+\multicolumn{1}{c}{\bf Pruned Level}  &\multicolumn{1}{c}{\bf aigc algorithm 2} & \multicolumn{1}{c}{\bf aigc algorithm 3} & \multicolumn{1}{c}{\bf aigc algorithm 6} \\
+\hline \\
+0.50         &193740.406 & 266826.094 & 294350.188 \\
+0.60         &110879.422 & 244139.875 & 138577.469 \\
+0.70         &174815.859 & 453267.031 & 171725.375 \\
+0.80         &287734.844 & 570346.750 & 186493.797 \\
+0.90         &157028.844 & 384411.375 & 298142.469 \\
+0.95         &90220.781  & 455298.469 & 187259.063 \\
+0.99         &991519.125 & 206585.391 & 70452.703 \\
 \end{tabular}
 \end{center}
 \end{table}
@@ -278,70 +326,27 @@ When we are designing the algorithms, we take considerations into the following 
 \caption{Effect of pruned model (OPT-1.3B) applying to downstream task - text generation}
 \label{table-6}
 \begin{center}
-\begin{tabular}{ll}
-\multicolumn{1}{c}{\bf Pruned Level}  &\multicolumn{1}{c}{\bf Perplexity}
-\\ \hline \\
-0.00         &NA \\
-0.50         &19.191 \\
-0.60         &23.205 \\
-0.70         &44.246 \\
-0.80         &364.304 \\
-0.90         &3772.829 \\
-0.95         &8892.167 \\
-0.99         &22548.809 \\
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}[t]
-\caption{(TODO: Running Time for each pruning algorithm)}
-\label{table-7}
-\begin{center}
-\begin{tabular}{ll}
-\multicolumn{1}{c}{\bf Number}  &\multicolumn{1}{c}{\bf Running Time}
-\\ \hline \\
-01         &TBA \\
-02         &TBA \\
-03         &TBA \\
-04         &TBA \\
-05         &TBA \\
-06         &TBA \\
-07         &TBA \\
-08         &TBA \\
-09         &TBA \\
-10         &TBA \\
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}[t]
-\caption{(TODO: End-to-end model evaluation)}
-\label{table-8}
-\begin{center}
-\begin{tabular}{ll}
-\multicolumn{1}{c}{\bf Number}  &\multicolumn{1}{c}{\bf Inspiration Score}
-\\ \hline \\
-01         &TBA \\
-02         &TBA \\
-03         &TBA \\
-04         &TBA \\
-05         &TBA \\
-06         &TBA \\
-07         &TBA \\
-08         &TBA \\
-09         &TBA \\
-10         &TBA \\
+\begin{tabular}{lll}
+\multicolumn{1}{c}{\bf Pruned Level}  &\multicolumn{1}{c}{\bf Perplexity} & \multicolumn{1}{c}{\bf University is} \\
+\hline \\
+0.00         & * & University is a great place to learn about the world. \\
+0.50         & 19.191 & University is a great place to start a new year. \\
+0.60         & 23.205 & University is a great place to start. \\
+0.70         & 44.246 & University is a good place to get a good place to get a good place to get a good \\
+0.80         & 364.304 & University is a lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot \\
+0.90         & 3772.829 & University is. \\
+0.95         & 8892.167 & University is is is is is is is is is is is is is is is is is is \\
+0.99         & 22548.809 & University is is is is is is is is is is is is,,,,,, \\
 \end{tabular}
 \end{center}
 \end{table}
 
 \section{Conclusions}
 \label{conclue}
-Do not change any aspects of the formatting parameters in the style files.
-In particular, do not modify the width or length of the rectangle the text
-should fit into, and do not change font sizes (except perhaps in the
-\textsc{References} section; see below). Please note that pages should be
-numbered.
+
+In this paper, we have introduced several novel algorithms for model pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in expected results based on diverse neuron features, collections, and query statistics, has demonstrated significant improvement over prior work as evidenced by our experimental results. For future work, we plan several extensions. This includes conducting experiments with other language models that may potentially achieve even better pruning performances. We also aim to optimize our approach further, such as exploring hybrid methods.
+
+Additionally, we plan to study the tradeoff between model size and query cost under different cost models and for actual query processing algorithms. This research holds promise for enhancing the efficiency and performance of large language and vision models through more effective pruning techniques.
 
 \section{Citations, figures, references}
 \label{others}
@@ -371,198 +376,29 @@ Precede the footnote with a horizontal rule of 2~inches
 (12~picas).\footnote{Sample of the second footnote}
 
 \subsection{Figures}
-
-You may use color figures.
-However, it is best for the
-figure captions and the paper body to make sense if the paper is printed
-either in black/white or in color.
-
 \begin{figure}[h]
 \begin{center}
-%\framebox[4.0in]{$\;$}
-\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+\includegraphics[width=0.8\linewidth]{fig1.pdf} 
 \end{center}
-\caption{Sample figure caption a.}
+\caption{Pruned Level vs. Perplexity for llama-v1-7B}
+\label{fig:fig1} 
 \end{figure}
 
 \begin{figure}[h]
 \begin{center}
-%\framebox[4.0in]{$\;$}
-\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+\includegraphics[width=0.8\linewidth]{fig2.pdf} 
 \end{center}
-\caption{Sample figure caption b.}
+\caption{Effectiveness of the weights indicator}
+\label{fig:fig2} 
 \end{figure}
 
 \begin{figure}[h]
 \begin{center}
-%\framebox[4.0in]{$\;$}
-\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+\includegraphics[width=0.8\linewidth]{fig3.pdf} 
 \end{center}
-\caption{Sample figure caption c.}
+\caption{Performance Evaluation between Machine \& Human}
+\label{fig:fig3} 
 \end{figure}
-
-
-
-\section{Default Notation}
-
-In an attempt to encourage standardized notation, we have included the
-notation file from the textbook, \textit{Deep Learning}
-\cite{goodfellow2016deep} available at
-\url{https://github.com/goodfeli/dlbook_notation/}.  Use of this style
-is not required and can be disabled by commenting out
-\texttt{math\_commands.tex}.
-
-
-\centerline{\bf Numbers and Arrays}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{p{1in}p{3.25in}}
-$\displaystyle a$ & A scalar (integer or real)\\
-$\displaystyle \va$ & A vector\\
-$\displaystyle \mA$ & A matrix\\
-$\displaystyle \tA$ & A tensor\\
-$\displaystyle \mI_n$ & Identity matrix with $n$ rows and $n$ columns\\
-$\displaystyle \mI$ & Identity matrix with dimensionality implied by context\\
-$\displaystyle \ve^{(i)}$ & Standard basis vector $[0,\dots,0,1,0,\dots,0]$ with a 1 at position $i$\\
-$\displaystyle \text{diag}(\va)$ & A square, diagonal matrix with diagonal entries given by $\va$\\
-$\displaystyle \ra$ & A scalar random variable\\
-$\displaystyle \rva$ & A vector-valued random variable\\
-$\displaystyle \rmA$ & A matrix-valued random variable\\
-\end{tabular}
-\egroup
-\vspace{0.25cm}
-
-\centerline{\bf Sets and Graphs}
-\bgroup
-\def\arraystretch{1.5}
-
-\begin{tabular}{p{1.25in}p{3.25in}}
-$\displaystyle \sA$ & A set\\
-$\displaystyle \R$ & The set of real numbers \\
-$\displaystyle \{0, 1\}$ & The set containing 0 and 1 \\
-$\displaystyle \{0, 1, \dots, n \}$ & The set of all integers between $0$ and $n$\\
-$\displaystyle [a, b]$ & The real interval including $a$ and $b$\\
-$\displaystyle (a, b]$ & The real interval excluding $a$ but including $b$\\
-$\displaystyle \sA \backslash \sB$ & Set subtraction, i.e., the set containing the elements of $\sA$ that are not in $\sB$\\
-$\displaystyle \gG$ & A graph\\
-$\displaystyle \parents_\gG(\ervx_i)$ & The parents of $\ervx_i$ in $\gG$
-\end{tabular}
-\vspace{0.25cm}
-
-
-\centerline{\bf Indexing}
-\bgroup
-\def\arraystretch{1.5}
-
-\begin{tabular}{p{1.25in}p{3.25in}}
-$\displaystyle \eva_i$ & Element $i$ of vector $\va$, with indexing starting at 1 \\
-$\displaystyle \eva_{-i}$ & All elements of vector $\va$ except for element $i$ \\
-$\displaystyle \emA_{i,j}$ & Element $i, j$ of matrix $\mA$ \\
-$\displaystyle \mA_{i, :}$ & Row $i$ of matrix $\mA$ \\
-$\displaystyle \mA_{:, i}$ & Column $i$ of matrix $\mA$ \\
-$\displaystyle \etA_{i, j, k}$ & Element $(i, j, k)$ of a 3-D tensor $\tA$\\
-$\displaystyle \tA_{:, :, i}$ & 2-D slice of a 3-D tensor\\
-$\displaystyle \erva_i$ & Element $i$ of the random vector $\rva$ \\
-\end{tabular}
-\egroup
-\vspace{0.25cm}
-
-
-\centerline{\bf Calculus}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{p{1.25in}p{3.25in}}
-% NOTE: the [2ex] on the next line adds extra height to that row of the table.
-% Without that command, the fraction on the first line is too tall and collides
-% with the fraction on the second line.
-$\displaystyle\frac{d y} {d x}$ & Derivative of $y$ with respect to $x$\\ [2ex]
-$\displaystyle \frac{\partial y} {\partial x} $ & Partial derivative of $y$ with respect to $x$ \\
-$\displaystyle \nabla_\vx y $ & Gradient of $y$ with respect to $\vx$ \\
-$\displaystyle \nabla_\mX y $ & Matrix derivatives of $y$ with respect to $\mX$ \\
-$\displaystyle \nabla_\tX y $ & Tensor containing derivatives of $y$ with respect to $\tX$ \\
-$\displaystyle \frac{\partial f}{\partial \vx} $ & Jacobian matrix $\mJ \in \R^{m\times n}$ of $f: \R^n \rightarrow \R^m$\\
-$\displaystyle \nabla_\vx^2 f(\vx)\text{ or }\mH( f)(\vx)$ & The Hessian matrix of $f$ at input point $\vx$\\
-$\displaystyle \int f(\vx) d\vx $ & Definite integral over the entire domain of $\vx$ \\
-$\displaystyle \int_\sS f(\vx) d\vx$ & Definite integral with respect to $\vx$ over the set $\sS$ \\
-\end{tabular}
-\egroup
-\vspace{0.25cm}
-
-\centerline{\bf Probability and Information Theory}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{p{1.25in}p{3.25in}}
-$\displaystyle P(\ra)$ & A probability distribution over a discrete variable\\
-$\displaystyle p(\ra)$ & A probability distribution over a continuous variable, or over
-a variable whose type has not been specified\\
-$\displaystyle \ra \sim P$ & Random variable $\ra$ has distribution $P$\\% so thing on left of \sim should always be a random variable, with name beginning with \r
-$\displaystyle  \E_{\rx\sim P} [ f(x) ]\text{ or } \E f(x)$ & Expectation of $f(x)$ with respect to $P(\rx)$ \\
-$\displaystyle \Var(f(x)) $ &  Variance of $f(x)$ under $P(\rx)$ \\
-$\displaystyle \Cov(f(x),g(x)) $ & Covariance of $f(x)$ and $g(x)$ under $P(\rx)$\\
-$\displaystyle H(\rx) $ & Shannon entropy of the random variable $\rx$\\
-$\displaystyle \KL ( P \Vert Q ) $ & Kullback-Leibler divergence of P and Q \\
-$\displaystyle \mathcal{N} ( \vx ; \vmu , \mSigma)$ & Gaussian distribution %
-over $\vx$ with mean $\vmu$ and covariance $\mSigma$ \\
-\end{tabular}
-\egroup
-\vspace{0.25cm}
-
-\centerline{\bf Functions}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{p{1.25in}p{3.25in}}
-$\displaystyle f: \sA \rightarrow \sB$ & The function $f$ with domain $\sA$ and range $\sB$\\
-$\displaystyle f \circ g $ & Composition of the functions $f$ and $g$ \\
-  $\displaystyle f(\vx ; \vtheta) $ & A function of $\vx$ parametrized by $\vtheta$.
-  (Sometimes we write $f(\vx)$ and omit the argument $\vtheta$ to lighten notation) \\
-$\displaystyle \log x$ & Natural logarithm of $x$ \\
-$\displaystyle \sigma(x)$ & Logistic sigmoid, $\displaystyle \frac{1} {1 + \exp(-x)}$ \\
-$\displaystyle \zeta(x)$ & Softplus, $\log(1 + \exp(x))$ \\
-$\displaystyle || \vx ||_p $ & $\normlp$ norm of $\vx$ \\
-$\displaystyle || \vx || $ & $\normltwo$ norm of $\vx$ \\
-$\displaystyle x^+$ & Positive part of $x$, i.e., $\max(0,x)$\\
-$\displaystyle \1_\mathrm{condition}$ & is 1 if the condition is true, 0 otherwise\\
-\end{tabular}
-\egroup
-\vspace{0.25cm}
-
-\section{Preparing PostScript or PDF files}
-
-Please prepare PostScript or PDF files with paper size ``US Letter'', and
-not, for example, ``A4''. The -t
-letter option on dvips will produce US Letter files.
-
-Consider directly generating PDF files using \verb+pdflatex+
-(especially if you are a MiKTeX user).
-PDF figures must be substituted for EPS figures, however.
-
-Otherwise, please generate your PostScript and PDF files with the following commands:
-\begin{verbatim}
-dvips mypaper.dvi -t letter -Ppdf -G0 -o mypaper.ps
-ps2pdf mypaper.ps mypaper.pdf
-\end{verbatim}
-
-\subsection{Margins in LaTeX}
-
-Most of the margin problems come from figures positioned by hand using
-\verb+\special+ or other commands. We suggest using the command
-\verb+\includegraphics+
-from the graphicx package. Always specify the figure width as a multiple of
-the line width as in the example below using .eps graphics
-\begin{verbatim}
-   \usepackage[dvips]{graphicx} ...
-   \includegraphics[width=0.8\linewidth]{myfile.eps}
-\end{verbatim}
-or % Apr 2009 addition
-\begin{verbatim}
-   \usepackage[pdftex]{graphicx} ...
-   \includegraphics[width=0.8\linewidth]{myfile.pdf}
-\end{verbatim}
-for .pdf graphics.
-See section~4.4 in the graphics bundle documentation (\url{http://www.ctan.org/tex-archive/macros/latex/required/graphics/grfguide.ps})
-
-A number of width problems arise when LaTeX cannot properly hyphenate a
-line. Please give LaTeX hyphenation hints using the \verb+\-+ command.
 
 \subsubsection*{Author Contributions}
 If you'd like to, you may include  a section for author contributions as is done
@@ -571,7 +407,6 @@ in many journals. This is optional and at the discretion of the authors.
 \subsubsection*{Acknowledgments}
 Use unnumbered third level headings for the acknowledgments. All
 acknowledgments, including those to funding agencies, go at the end of the paper.
-
 
 \bibliography{iclr2025_conference}
 \bibliographystyle{iclr2025_conference}
