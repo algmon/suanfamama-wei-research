@@ -484,19 +484,19 @@ In this paper, we study LLM \& LVM model pruning that attempt to achieve a good 
 
 | Pruned Level | Prune by Bias | Prune by -Bias |
 |-----------|------------------|------------------|
-| 0.01      | | |
-| 0.05      | | |
-| 0.10      | | |
-| 0.20      | | |
-| 0.30      | | |
-| 0.40      | | |
-| 0.50      | | |
-| 0.60      | | |
-| 0.70      | | |
-| 0.80      | | |
-| 0.90      | | |
-| 0.95      | | |
-| 0.99      | | |
+| 0.01      | NA | NA |
+| 0.05      | NA | NA |
+| 0.10      | NA | NA |
+| 0.20      | NA | NA |
+| 0.30      | NA | NA |
+| 0.40      | NA | NA |
+| 0.50      | NA | NA |
+| 0.60      | NA | NA |
+| 0.70      | NA | NA |
+| 0.80      | NA | NA |
+| 0.90      | NA | NA |
+| 0.95      | NA | NA |
+| 0.99      | NA | NA |
 * Table 3: Effectiveness of the bias as a major pruning indicator
 
 | 算法编号 Number | 核心算法思想 Core Idea | 运行状态 | 创意应用场景 | 创意灵感分数 | 降本增效分数 | 结论及归因 | 是否进行算法性能分析 |
