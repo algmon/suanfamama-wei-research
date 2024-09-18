@@ -515,11 +515,12 @@ In this paper, we study LLM \& LVM model pruning that attempt to achieve a good 
 | 10 | Dynamic Pruning with Reinforcement Learning | 程序运行出错 Error | 代码生成 Code Generation | 计算中 | 计算中 | 错误原因：定位中 | 否 |
 * Table 4: 一次性代码生成及有效性评估（o1）
 * Table 4: One pass code generation and effectiveness testing (o1)
-* 由以上表格可知
-* 1. o1模型在创意应用场景“核心算法生成”中难以做到一次生成有效算法，尽管我们已在实验中清楚明晰上下文及所涉及知识领域；
-* 2. 我们针对每一个所设计算法新增“创意灵感分数”及“降本增效分数”。由于直到截稿前算法初始数据仍在收集中，我们将稍后把此部分重要数据支撑以补充材料的形式整理并提交；
-* 3. 初步实验表明，2024年9月12日对外发布的o1模型，在宣传及传播中所强调的“慢思考”、“卓越数理逻辑推理”及“编程能力”并没有在我们的创新应用场景中展现出能被科学指标显著量化的过人之处；
-* 4. 我们的未来工作可集中于以下几部分：（1）挖掘算法无法一次生成并成功运行的原因（2）AIGC生成算法与真人算法工程师所设计算法效能横向对比（3）从评估生成式人工智能“生代码”到更全面的评估如“生文”、“生图”及“生视频”上的综合表现（4）新增gpt-4, gemini pro等模型在垂类的横向对比等；
+* 由以上表格可知：o1模型在创意应用场景“核心算法生成”中难以做到一次生成有效算法，尽管我们已在实验中清楚明晰上下文及所涉及知识领域；我们针对每一个所设计算法新增“创意灵感分数”及“降本增效分数”。由于直到截稿前算法初始数据仍在收集中，我们将稍后把此部分重要数据支撑以补充材料的形式整理并提交；
+* 初步实验表明，2024年9月12日对外发布的o1模型，在宣传及传播中所强调的“慢思考”、“卓越数理逻辑推理”及“编程能力”并没有在我们的创新应用场景中展现出能被科学指标显著量化的过人之处；
+* 我们的未来工作可集中于以下几部分：（1）挖掘算法无法一次生成并成功运行的原因（2）AIGC生成算法与真人算法工程师所设计算法效能横向对比（3）从评估生成式人工智能“生代码”到更全面的评估如“生文”、“生图”及“生视频”上的综合表现（4）新增gpt-4, gemini pro等模型在垂类的横向对比等；
+* From table \ref{table-4}, we can see that the o1 model finds it difficult to generate effective algorithms in one go in the creative application scenario of "core algorithm generation," despite our clear understanding of the context and the knowledge domain involved during the experiment.
+* Preliminary experiments show that the o1 model, released on September 12, 2024, did not demonstrate the exceptional capabilities of "slow thinking," "outstanding mathematical logic reasoning," and "programming ability" that were emphasized during its promotion and dissemination, at least in our innovation application scenario, as these traits were not significantly quantifiable by scientific metrics. 
+* Our future work can focus on the following aspects: (1) Investigating the reasons why the algorithm cannot be generated and successfully run in one go. (2) A horizontal comparison of the effectiveness of AIGC-generated algorithms versus those designed by human algorithm engineers. (3) Expanding the evaluation from "code generation" by generative AI to more comprehensive assessments such as "text generation," "image generation," and "video generation." (4) Adding a horizontal comparison of models such as GPT-4 and Gemini Pro in vertical domains.
 
 | Pruned Level | aigc algorithm 2 | aigc algorithm 3 | aigc algorithm 6 |
 |----------|----------|----------|----------|
