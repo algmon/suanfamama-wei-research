@@ -397,7 +397,7 @@ In this section, we first provide some background on neural network architecture
 ###### 2.2.5 Comparison to our work
 
 #### 3. Our Contributions
-In this paper, we study LLM & LVM model pruning that attempt to achieve a good trade-off between network size and generation quality. Our main contributions are as follows:
+In this paper, we study LLM \& LVM model pruning that attempt to achieve a good trade-off between network size and generation quality. Our main contributions are as follows:
 1. We describe an approach called Movement that can perform much better than previous approaches;
 2. We describe several algorithms closely related to pruning and design a unified benchmark for model evaluation;
 3. We perform a comprehensive experimental evaluation via the combinations of different datasets, models and evaluation metrics;
@@ -445,7 +445,7 @@ In this paper, we study LLM & LVM model pruning that attempt to achieve a good t
 * Quantization: Combine pruning with weight quantization to further reduce model size and improve inference speed.
 * Prelimary Results: TODO: Not Yet Implemented.
 
-#### 5. (Preliminary) Experimental Results
+#### 5. Preliminary Experimental Results
 (TODO: Thoroughly evaluate the pruned model's performance on relevant tasks and datasets to ensure it meets your accuracy and efficiency requirements.)
 
 | Pruned Level | Wanda | SparseGPT | Magnitude | Movement |
@@ -581,7 +581,7 @@ In this paper, we study LLM & LVM model pruning that attempt to achieve a good t
 * 我们的未来工作包含：如何在认知计算广告知识体系下对多模态内容感知、生成及个性化创意应用场景进行更细化的研究。在这里，我们设定的创意应用场景为特定垂类下的“代码生成”。
 
 #### 6. Conclusions
-* In this paper, we have introduced several novel algorithms for static pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in top results based on diverse neuron features, collections, and query statistics, has demonstrated measurable improvement over prior work as evidenced by our experimental results.
+* In this paper, we have introduced several novel algorithms for model pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in expected results based on diverse neuron features, collections, and query statistics, has demonstrated measurable improvement over prior work as evidenced by our experimental results.
 * For future work, we plan several extensions. This includes conducting experiments with other language models that may potentially achieve even better pruning performances. We also aim to optimize our approach further, such as exploring hybrid methods. Additionally, we plan to study the tradeoff between model size and query cost under different cost models and for actual query processing algorithms. This research holds promise for enhancing the efficiency and performance of large language and vision models through more effective static pruning techniques.
 
 #### References
