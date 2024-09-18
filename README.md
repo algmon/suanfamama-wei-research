@@ -398,10 +398,10 @@ In this section, we first provide some background on neural network architecture
 
 #### 3. Our Contributions
 In this paper, we study LLM & LVM model pruning that attempt to achieve a good trade-off between network size and generation quality. Our main contributions are as follows:
-1. We describe an approach called Movement that can perform significant better than previous approaches;
-2. We describe several algorithms closely related to the pruning problem and set a unified benchmark for model evaluation;
-3. We perform an experimental evaluation on * datasets, * different models and * evaluation metrics;
-4. We compare our methods with state-of-the-art techniques and show preferred results on pruning quality;
+1. We describe an approach called Movement that can perform much better than previous approaches;
+2. We describe several algorithms closely related to pruning and design a unified benchmark for model evaluation;
+3. We perform a comprehensive experimental evaluation via the combinations of different datasets, models and evaluation metrics;
+4. We compare human designed algorithms with AIGC generated algorithms, demonstrating the pros and cons on both sides in specific domains such as "code generation";
 
 #### 4. Our Proposed Pruning Algorithms
 ##### Key Considerations when designing the pruning algorithms
