@@ -397,11 +397,11 @@ In this section, we first provide some background on neural network architecture
 ###### 2.2.5 Comparison to our work
 
 #### 3. Our Contributions
-In this paper, we study LLM & LVM static pruning that attempt to achieve a good trade-off between network size and generation quality. Our main contributions are as follows:
-1. We describe an approach that ...
-2. We describe several algorithms that ...
-3. We perform an experimental evaluation on two datasets that ...
-4. We compare our methods with ...
+In this paper, we study LLM & LVM model pruning that attempt to achieve a good trade-off between network size and generation quality. Our main contributions are as follows:
+1. We describe an approach called Movement that can perform significant better than previous approaches;
+2. We describe several algorithms closely related to the pruning problem and set a unified benchmark for model evaluation;
+3. We perform an experimental evaluation on * datasets, * different models and * evaluation metrics;
+4. We compare our methods with state-of-the-art techniques and show preferred results on pruning quality;
 
 #### 4. Our Proposed Pruning Algorithms
 ##### Key Considerations when designing the pruning algorithms
