@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.8)  18 SEP 2024 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.8)  19 SEP 2024 00:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -401,100 +401,91 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+)
+Underfull \vbox (badness 1248) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2] [3]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-72.
+71.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [4]
-Overfull \hbox (53.8915pt too wide) in paragraph at lines 329--341
+Overfull \hbox (53.8915pt too wide) in paragraph at lines 328--340
  [] 
  []
 
 [5]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
-58.
+57.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
 Package natbib Warning: Citation `Hinton06' on page 6 undefined on input line 3
-62.
+61.
 
 
 Package natbib Warning: Citation `Bengio+chapter2007' on page 6 undefined on in
-put line 364.
+put line 363.
 
-[6]
-<fig1.pdf, id=162, 722.7pt x 433.62pt>
+
+Underfull \vbox (badness 1286) has occurred while \output is active []
+
+ [6]
+<fig1.pdf, id=152, 722.7pt x 433.62pt>
 File: fig1.pdf Graphic file (type pdf)
 <use fig1.pdf>
-Package pdftex.def Info: fig1.pdf  used on input line 381.
+Package pdftex.def Info: fig1.pdf  used on input line 380.
 (pdftex.def)             Requested size: 317.9892pt x 190.79338pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fig2.pdf, id=163, 722.7pt x 433.62pt>
+<fig2.pdf, id=153, 722.7pt x 433.62pt>
 File: fig2.pdf Graphic file (type pdf)
 <use fig2.pdf>
-Package pdftex.def Info: fig2.pdf  used on input line 389.
+Package pdftex.def Info: fig2.pdf  used on input line 388.
 (pdftex.def)             Requested size: 317.9892pt x 190.79338pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fig3.pdf, id=164, 722.7pt x 433.62pt>
+<fig3.pdf, id=154, 722.7pt x 433.62pt>
 File: fig3.pdf Graphic file (type pdf)
 <use fig3.pdf>
-Package pdftex.def Info: fig3.pdf  used on input line 397.
+Package pdftex.def Info: fig3.pdf  used on input line 396.
 (pdftex.def)             Requested size: 317.9892pt x 190.79338pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 No file iclr2025_conference.bbl.
-[7]
 
 Package natbib Warning: There were undefined citations.
 
-[8] [9 <./fig1.pdf> <./fig2.pdf>] [10 <./fig3.pdf>] (./iclr2025_conference.aux)
-
-Package rerunfilecheck Warning: File `iclr2025_conference.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `iclr2025_conference.out':
-(rerunfilecheck)             Before: 75715027752C68F6DE83718760E32DE3;4659
-(rerunfilecheck)             After:  B3CF12E36F769147C959130B890737BF;4294.
+[7] [8 <./fig1.pdf>] [9 <./fig2.pdf> <./fig3.pdf>] (./iclr2025_conference.aux)
+Package rerunfilecheck Info: File `iclr2025_conference.out' has not changed.
+(rerunfilecheck)             Checksum: B3CF12E36F769147C959130B890737BF;4294.
  ) 
 Here is how much of TeX's memory you used:
- 10252 strings out of 478994
- 141824 string characters out of 5858184
- 480531 words of memory out of 5000000
- 27506 multiletter control sequences out of 15000+600000
+ 10247 strings out of 478994
+ 141771 string characters out of 5858184
+ 479525 words of memory out of 5000000
+ 27504 multiletter control sequences out of 15000+600000
  431619 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,12n,78p,992b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.8.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.8} has been referenced but does not exist, 
-replaced by a fixed one
-
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
-2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2021/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
-1/urw/times/utmr8a.pfb>
-Output written on iclr2025_conference.pdf (10 pages, 147077 bytes).
+ 74i,12n,78p,921b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2021/texm
+f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/urw/times/utmr8a.pfb>
+Output written on iclr2025_conference.pdf (9 pages, 130084 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 364 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 
