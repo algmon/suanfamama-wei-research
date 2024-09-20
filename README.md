@@ -320,7 +320,7 @@
 ![](./img/sub.topic.7.png)
 
 ### （中阶）子课题及论文题目（拟） - 8 - Improved Methods for Model Pruning 改进的模型剪枝方法
-![](./img/sub.topic.8.png)
+![](./img/sub.topic.8.v2.png)
 #### Abstract
 Model pruning is presented as a performance optimization technique for large language and vision models. This technique aims to identify and remove neurons, connections unlikely to lead to the contribution during the machine generation phase. Our goal is to obtain a much smaller and faster foundational model that can quickly generate AIGC content almost as good as those of the unpruned models. Through careful analysis of the weights, bias, activations and other potential indicators, an improved algorithm based on new indicators have been proposed and evaluated. Emprical results show that our proposed algorithm achieves significant improvement in different pruning ranges over previous STOAs.
 #### 摘要
