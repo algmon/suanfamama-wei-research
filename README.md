@@ -5,7 +5,7 @@
 ## 当前理论框架依据：认知计算广告
 ## 子课题
 ![](./img/sub.topic.1.png)
-### （初阶）子课题及论文题目（拟） - 1 - “创意工作流”在垂直领域的应用研究
+### 子课题及论文题目（拟） - 1 - “创意工作流”在垂直领域的应用研究
 #### 摘要
 * 本文着重探讨 AIGC 内容创意工作流在垂直领域的应用。AIGC 工作流包含多个分步节点，各节点有明确的输入与输出。在内容创意中，从创意激发到独特内容输出及优化调整，呈现丰富流程。当前业界多为单一工作流，而本文研究分布式协同工作流问题，旨在解决不同节点间的协同难题。提出可利用先进的通信技术与智能分配机制，促进各节点高效协作。此工作流对内容创意具有深远价值，广泛应用于多模态内容感知生成及个性化创意应用场景，为推动垂直领域的内容创新提供新路径。
 
@@ -114,7 +114,7 @@
 * 所投期刊《新闻界》
 
 ![](./img/sub.topic.2.png)
-### （初阶）子课题及论文题目（拟） - 2 - “创意知识库”在垂直领域的应用研究
+### 子课题及论文题目（拟） - 2 - “创意知识库”在垂直领域的应用研究
 #### 摘要 Abstract
 * This paper begins by examining the traditional single modality knowledge base and then progresses to explore the development and significance of a multimodal knowledge base in the realm of AI-generated content (AIGC). As the field of AIGC expands, the need for a knowledge base that can handle multiple modalities such as text, image, video, and other objects becomes crucial. The research focuses on the construction, organization, and application of this multimodal knowledge base specifically within the context of AIGC, rather than in the areas of increasing productivity or streamlining workflows. By analyzing the transition from single modality to multimodal knowledge bases, this paper provides insights into the future directions of AIGC and its potential impact on various industries.
 #### 关键词 Keywords
@@ -180,7 +180,7 @@
 * 所投期刊：新闻与传播如 TODO: 未确定
 
 ![](./img/sub.topic.3.png)
-### （中阶）子课题及论文题目（拟） - 3 - “创意垂类模型"在垂直领域的应用研究
+### 子课题及论文题目（拟） - 3 - “创意垂类模型"在垂直领域的应用研究
 #### 摘要 Abstract
 * This paper examines the realm of created models, which have the ability to generate text, images, and videos in parallel. While these models hold great promise, they also come with limitations. One significant limitation is their limited capability in expressing creativity. However, this constraint can potentially trigger inner model training and iteration. The research delves into the architecture, functionality, and applications of these created models, analyzing both their advantages and drawbacks. It explores ways to overcome the limitations and enhance the creative expression capabilities of these models. By understanding the challenges and opportunities associated with created models, this paper aims to contribute to the development and improvement of content generation and creative expression in a multi-modal world.
 
@@ -243,7 +243,7 @@
 * 案例3：如何使用“通用生视频大模型 + 微调”做带有风格的时尚内容创作（视频）
 * 所投期刊：新闻与传播如 TODO: 未确定
 
-### （中阶）子课题及论文题目（拟） - 4 - “创意智能体”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - 4 - “创意智能体”在垂类场景中的应用研究
 ![](./img/sub.topic.4.png)
 #### 摘要 Abstract
 * This paper begins by clarifying the concept that an intelligent agent is distinct from large language models or large vision models. An intelligent agent can be metaphorically described as having a "brain" and "body" and it is designed to perform specific tasks. The control of an intelligent agent often relies on large language models or large visual models. The paper then presents different types of intelligent agents, including those for cost reduction and efficiency improvement and those for content creation. The focus of this paper is on content creation. An in-depth exploration of these content creation intelligent agents are provided, while specific case studies are yet to be determined.
@@ -310,29 +310,32 @@
 * 论文中不会出现1：把智能体上升到具身智能，并且引出机器人。原因：目前业界机器人主要用于降本增效，和内容创意关系不大。
 * 所投会议：计算机科学如 SIGIR, CIKM et. al.
 
-### （高阶）子课题及论文题目（拟） - 5 - “创意类思维”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - 5 - “创意类思维”在垂类场景中的应用研究
 ![](./img/sub.topic.5.png)
 
-### （高阶）子课题及论文题目（拟） - 6 - “创意智能体社交”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - 6 - “创意智能体社交”在垂类场景中的应用研究
 ![](./img/sub.topic.6.png)
 
-### （高阶）子课题及论文题目（拟） - 7 - “创意价值对齐”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - 7 - “创意价值对齐”在垂类场景中的应用研究
 ![](./img/sub.topic.7.png)
 
-### （中阶）子课题及论文题目（拟） - 8 - Improved Methods for Model Pruning 改进的模型剪枝方法
+### 子课题及论文题目（拟） - 8 - Improved Methods for Model Pruning 改进的模型剪枝方法
 ![](./img/sub.topic.8.v2.png)
 #### Abstract
 Model pruning is presented as a performance optimization technique for large language and vision models. This technique aims to identify and remove neurons, connections unlikely to lead to the contribution during the machine generation phase. Our goal is to obtain a much smaller and faster foundational model that can quickly generate AIGC content almost as good as those of the unpruned models. Through careful analysis of the weights, bias, activations and other potential indicators, an improved algorithm based on new indicators have been proposed and evaluated. Emprical results show that our proposed algorithm achieves significant improvement in different pruning ranges over previous STOAs.
 #### 摘要
 模型剪枝是一种用于大语言和视觉模型的性能优化技术。该技术旨在识别并移除在机器生成阶段不太可能产生贡献的神经元和连接。我们的目标是获得一个更小、更快速的基础模型，能够以接近未剪枝模型的水平快速生成AIGC内容，这些内容包括文本、图片、视频及代码。通过对权重、偏置、激活函数和其他潜在指标的深入分析，我们提出并评估了一种基于新指标的改进算法。实验结果表明，在不同剪枝范围内，我们提出的算法相比之前的最新技术(SOTA)取得显著改进效果。
 #### 状态
-* Under Submission to ICLR 2025
+* Under Review and will submit to ICLR 2025 main conference
 
-### （中阶）子课题及论文题目（拟） - 9 - Improved Methods for Dynamic Neural Network Pruning
-![](./img/sub.topic.9.png)
-
-### （高阶）子课题及论文题目（拟） - 10 - Improved Methods for  Neural Network Tiering
+### 子课题及论文题目（拟） - 9 - Improved Methods for Model Tiering
 ![](./img/sub.topic.10.png)
+* TODO: 结合MoE
+
+### 子课题及论文题目（拟） - 10 - AIGC创意灵感生成平台及商业闭环研究（拟）
+![](./img/sub.topic.11.png)
+![](./img/aigc.image.gen.platform.png)
+* TODO: 在上图“代表性AI生成平台”基础上提供C端用户半自主参与下的AIGC服装设计机理图。同时结合机理图提供对于用户半自主参与下的AIGC服装设计过程的英文描述及参考文献。时间节点为：10月8日。联系人：张博士后
 
 ## 核心相关工作
 ### 1. 计算广告
