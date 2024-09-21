@@ -245,9 +245,14 @@
 
 ### 子课题及论文题目（拟） - 4 - “创意智能体”在垂类场景中的应用研究
 ![](./img/sub.topic.4.png)
-#### 摘要 Abstract
+#### Abstract
 * This paper begins by clarifying the concept that an intelligent agent is distinct from large language models or large vision models. An intelligent agent can be metaphorically described as having a "brain" and "body" and it is designed to perform specific tasks. The control of an intelligent agent often relies on large language models or large visual models. The paper then presents different types of intelligent agents, including those for cost reduction and efficiency improvement and those for content creation. The focus of this paper is on content creation. An in-depth exploration of these content creation intelligent agents are provided, while specific case studies are yet to be determined.
-* TODO: Needs more details.
+#### 摘要
+* 
+
+#### 状态
+* 构思中
+* 社会科学论文
 
 #### 关键词 Keywords
 * 
@@ -259,21 +264,23 @@
 * 全宇晖（deadline: 2024 fall）
 
 #### 组织 Organization
+* 华南理工大学
+
+#### 问题与挑战
 * 
 
-#### 简介 Introduction
+#### 理论构建
+* 创新点：
+* 创意智能体人物设定：计算机科学教授帮助学生优化算法
+* 智能体间社交：真人及类人在一起协作和交流
+
+#### 技术路径（含实验原型系统及应用场景）
 * 
 
-#### 相关工作 Related Work
-* TODO:
-
-#### 现有典型智能体及所存问题 Current Intelligent Agents and Problems
+#### 发展规律
 * 
 
-#### 所提出关于“智能体”的创意设计新范式 New Design Paradigm for Intelligent Agents
-* 
-
-#### 实验原型系统及应用场景 Real-world Applications and Prototypes
+#### 规范与治理
 * 
 
 #### 结论 Conclusion
@@ -281,15 +288,6 @@
 
 #### 参考资料 References
 1. 
-2. 
-3. 
-4. 
-5. 
-6. 
-7. 
-8. 
-9. 
-10. 
 
 #### 附加信息
 * paper 4 - scene.md
@@ -327,6 +325,7 @@ Model pruning is presented as a performance optimization technique for large lan
 模型剪枝是一种用于大语言和视觉模型的性能优化技术。该技术旨在识别并移除在机器生成阶段不太可能产生贡献的神经元和连接。我们的目标是获得一个更小、更快速的基础模型，能够以接近未剪枝模型的水平快速生成AIGC内容，这些内容包括文本、图片、视频及代码。通过对权重、偏置、激活函数和其他潜在指标的深入分析，我们提出并评估了一种基于新指标的改进算法。实验结果表明，在不同剪枝范围内，我们提出的算法相比之前的最新技术(SOTA)取得显著改进效果。
 #### 状态
 * Under Review and will submit to ICLR 2025 main conference
+* 自然科学论文
 
 ### 子课题及论文题目（拟） - 9 - Improved Methods for Model Tiering
 ![](./img/sub.topic.10.png)
