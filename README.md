@@ -335,6 +335,11 @@ Model pruning is presented as a performance optimization technique for large lan
 ![](./img/sub.topic.11.png)
 ![](./img/aigc.image.gen.platform.png)
 * TODO: 在上图“代表性AI生成平台”基础上提供C端用户半自主参与下的AIGC服装设计机理图。同时结合机理图提供对于用户半自主参与下的AIGC服装设计过程的英文描述及参考文献。时间节点为：10月8日。联系人：张博士后
+* 状态：作为社会科学论文提交
+
+### 子课题及论文题目（拟） - 11 - AI Agents will significantly hurt the job market for programmers！(meaning losing jobs and being replaced quickly)
+* 中文标题：AI智能体会极大伤害程序员就业市场！（他们会没有工作且被迅速替代）
+* 状态：作为社会科学研究论文提交
 
 ## 核心相关工作
 ### 1. 计算广告
