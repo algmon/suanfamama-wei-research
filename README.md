@@ -338,7 +338,13 @@ Model pruning is presented as a performance optimization technique for large lan
 * 状态：作为社会科学论文提交
 
 ### 子课题及论文题目（拟） - 11 - AI Agents will significantly hurt the job market for programmers！(meaning losing jobs and being replaced quickly)
+* 更新日期：20240922
 * 中文标题：AI智能体会极大伤害程序员就业市场！（他们会没有工作且被迅速替代）
+* 状态：作为社会科学研究论文提交
+
+### 子课题及论文题目（拟） - 12 - Attention is All You Need, again!
+* 更新日期：20240923
+* 中文标题：注意力机制在AIGC在认知计算广告内容创意中的应用场景研究（需结合经典传播学注意力等理论）
 * 状态：作为社会科学研究论文提交
 
 ## 核心相关工作
