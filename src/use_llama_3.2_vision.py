@@ -19,7 +19,7 @@ url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/
 image = Image.open(requests.get(url, stream=True).raw)
 
 #prompt = "<|image|><|begin_of_text|>If I had to write a haiku for this one"
-prompt = "<|image|><|begin_of_text|>"
+prompt = "<|image|><|begin_of_text|>如果我需要用中文写为此画写一首五言绝句"
 inputs = processor(image, prompt, return_tensors="pt").to(model.device)
 
 output = model.generate(**inputs, max_new_tokens=30)
