@@ -7,181 +7,22 @@
 ### 2. 认知计算时尚
 
 ## 子课题
-![](./img/sub.topic.1.png)
-### 子课题及论文题目（拟） - 1 - “创意工作流”在垂直领域的应用研究
-#### 摘要
-* 本文着重探讨 AIGC 内容创意工作流在垂直领域的应用。AIGC 工作流包含多个分步节点，各节点有明确的输入与输出。在内容创意中，从创意激发到独特内容输出及优化调整，呈现丰富流程。当前业界多为单一工作流，而本文研究分布式协同工作流问题，旨在解决不同节点间的协同难题。提出可利用先进的通信技术与智能分配机制，促进各节点高效协作。此工作流对内容创意具有深远价值，广泛应用于多模态内容感知生成及个性化创意应用场景，为推动垂直领域的内容创新提供新路径。
+### 子课题及论文题目（拟） - x - Fashion Hallucination is all you need
+* 中文标题：注意力机制在AIGC在认知计算广告内容创意中的应用场景研究（需结合经典传播学注意力等理论）
+* 状态：可作为社会科学研究论文
 
-#### 关键词
-* 工作流
-
-#### 作者
-* （相关研究团队成员如段淳林、江纬及陆昊琪等）
-
-#### 同行评审
-* 陈刚（deadline: 2024 fall）
-
-#### 组织
+### 子课题及论文题目（拟） - x - Fashion Alignment is All you need
 * 
 
-#### 简介
-* 在当今数字化时代，AIGC（人工智能生成内容）正逐渐在各个垂直领域展现出巨大的潜力。其中，内容创意工作流的不断发展与变革为认知计算广告和认知计算时尚等领域带来了新的机遇。
-* 单一工作流通常是指传统的内容创作方式，由个人或小团队独立完成从创意构思到最终成品的整个过程。例如，在广告领域，一位文案撰写人员独自负责广告文案的创作，可能经过多次修改后提交给上级审核。在时尚领域，设计师凭借个人灵感和经验进行服装设计，然后制作出样品。这种工作流的优势在于创作者对整个作品有较高的掌控度，但也存在效率低下、创意局限性大等问题。
-* 分布式协同工作流则与单一工作流有着显著区别。分布式协同工作流借助 AIGC 技术，将内容创作过程分解为多个环节，并由不同的参与者在不同的地点协同完成。在认知计算广告中，AIGC 可以快速生成多个广告创意方案，然后由策划人员、设计师、营销人员等共同对这些方案进行评估和优化。在认知计算时尚领域，AIGC 可以根据时尚趋势和用户需求生成设计草图，设计师在此基础上进行进一步的创作，同时市场人员可以利用 AIGC 生成的营销内容进行推广。这种工作流能够充分发挥各参与者的专业优势，提高工作效率，同时也能激发更多的创意灵感。
-##### 现存问题与挑战
-* ![](./img/linkai-workflow.png)
-* linkai workflow【16】
-* 现有工作流通常包含基础节点和应用，能够进行流程的运行、保存以及接入等操作。在节点设置方面，可以涉及大模型，如意图分支、知识库等，其中也可能包括搜索商品知识库以及文案润色等插件的应用。同时，也存在分支节点，这些节点往往是预先由真人专家预先编排好的，用于处理不同的情况和任务。例如在商品导购等场景中，通过搜索商品知识库、利用插件进行销售数据查询等操作，实现特定的功能。然而，现有的工作流尚存一定局限性。
-![](./img/google-pathways-distributed-workflow.png)
-* google distributed workflow【17】
-* Google 的这一架构呈现出分布式的设计特点。该架构主要用于语言模型和视觉模型的训练，其中涉及 “A” 和 “B” 两个元素进行正向和反向的传递过程，采用了正向反向传播算法。同时，架构中存在调度器，能够调度不同的算法算力，可被视为分布式工作流的典型例子。然而，美中不足的是，在创意内容创作领域，这种分布式协同工作流的应用还比较少见，目前未见先例。虽然 Google 在算力方面有一定的心得，但在创意内容创作的分布式协同方面仍有很大的探索空间。
-* 创新点及难点在于（1）如何设计分布式协同工作流及（2）分布式协同工作流在垂直领域的应用。
+### 子课题及论文题目（拟） - x - Fashion Attention is all you need
+* 中文标题：注意力机制在AIGC在认知计算广告内容创意中的应用场景研究（需结合经典传播学注意力等理论）
+* 状态：可作为社会科学研究论文
 
-#### 相关工作
-* TODO: 新增 计算广告相关文献【】【】【】【】【】
-* TODO: 新增 中国认知计算广告知识体系【】【】【】【】【】
-* TODO: 新增 基于认知计算广告的多模态内容感知、生成及个性化创意应用研究【】【】【】【】【】
-* TODO: 重新组织技术逻辑推荐相关。随着人工智能技术的不断发展，AIGC 在内容创意领域展现出巨大潜力。ChatGPT【1】 以 Transformer【2】 为基础架构，开创了大模型语言智能对话的先河，为内容感知提供了新的思路。从 Google【3】 到 OpenAI 的发展历程，标志着语言模型的重大突破。内容感知从单一维度逐渐向多模态发展，Gemini 在此方面表现出色。它能够综合处理多种模态的信息，为用户提供更加丰富的体验。在生成方面，encoder-decoder 架构【】被广泛应用。不仅在文本生成中发挥重要作用，还在图片生成领域取得显著成果。例如，Stable Diffusion【4】 在图片生成方面具有很高的质量和效率。
-* 从技术推演路径来看，2013 年 AlexNet【6】 的出现将深度学习带入人工智能领域，首先在图像领域取得突破，随后在文字处理方面也获得成功。此后，不断有新的技术突破，多模态框架的整合【7】使得不同类型的数据能够更好地融合。Transformer 架构的出现更是为语言处理带来了革新，随后  Diffusion-Transformer 架构以及像 Sora【8】 这样能够生成视频的技术不断涌现。在算力方面，随着硬件设备的不断升级，计算能力得到大幅提升，为大规模模型的训练和应用【9】提供了支持。算法的创新也不断推动着 AIGC 的发展，数据的丰富和质量的提高则为模型的训练提供了坚实的基础【10】。
-* 目前业界的工作流主要有两种类型【11】，一种是以降本增效为目标的工作流【12】，另一种则是聚焦于内容创意的工作流【13】。然而，现有的工作流大多为单一工作流，在协同性和灵活性方面存在一定的局限性【14】。本文的创新点在于提出了分布式协同工作流，旨在解决传统单一工作流的问题，更好地满足垂直领域中内容创意的需求。通过节点编排和低代码等技术【15】，实现各环节的高效协同，提高内容创意的质量和效率。
-
-#### 我们提出的理论 - 创意设计工作流新范式
-1. TODO: 分布式协同
-2. TODO: 聚焦创意灵感生成
-3. TODO: 高度智能化
-4. TODO: 人机协同【18】
-5. TODO: 环保与可持续【19】
-6. TODO: 智能任务调度
-7. TODO: 智能计算资源分配
-8. TODO: 智能节点编排
-9. TODO: 低代码
-10. TODO: 新增 理论图
-
-#### 我们提出的相匹配技术
-1. TODO: 技术1 待讨论
-2. TODO: 技术2 待讨论
-3. TODO: 技术3 待讨论
-4. TODO: 新增 技术框架图
-
-#### 实验原型系统及落地应用情况
-* TODO: 待设计案例：时尚行业设计师分布式协作工作流 - 设计折扣券【20】
-##### 典型案例
-![](./img/gimc-design-workflow.png)
-* GIMC design workflow
-* 省广集团的灵犀案例为个性化创意应用场景研究提供了宝贵的实践经验【5】。该案例展示了如何利用 AIGC 技术实现个性化的创意内容，为企业带来了良好的经济效益和社会效益。此外，还有其他相关研究和实践也为 AIGC 内容创意工作流在垂直领域的应用提供了参考。这些工作共同推动了 AIGC 技术的发展和应用，为未来的创新提供了坚实的基础。其核心工作流程如下：
-1. AI文案 TODO:
-2. MJ图像 TODO:
-3. 扩图+优化 TODO:
-4. 大师图像 TODO:
-5. 高清放大 TODO:
-6. 扣除+替换 TODO:
-
-#### 结论
-* 本文深入研究了 AIGC 内容创意工作流在垂直领域的应用，创新性地提出了分布式协同工作流。该工作流基于节点编排和低代码等核心技术，充分发挥其优势，有效解决了传统单一工作流的局限性。在实际应用中，分布式协同工作流展现出了良好的落地效果。它能够提高内容创意的效率和质量，满足垂直领域多样化的需求。同时，通过各节点的协同合作，实现了多模态内容的感知生成和个性化创意的应用。未来，随着技术的不断发展，AIGC 内容创意工作流将在更多垂直领域得到广泛应用，为推动行业的创新与发展发挥更大的作用。
-* 我们同时基于认知计算广告理论内核及外延，提出在垂直领域应用下的“工作流”创意设计新范式，并以时尚行业设计师工作流为例，设计原型实验并加在实际生产系统进行小范围验证。
-
-#### 参考资料
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
-7. 
-8. 
-9. 
-10. 
-
-#### 附加信息
-* 写作思路：从基本工作流过渡到分布式协同工作流
-* 创新点及难点：（1）如何设计分布式协同工作流及（2）分布式协同工作流在垂直领域的应用
-* 候选案例1：如何使用 linkai 构建营销工作流？
-* 候选案例2：省广集团是如何有效使用工作流及协同功能以降本增效？
-* 候选案例3：在广告创意垂类中如何解决分布式协同问题？
-* 候选案例4：智能营销洞察
-  * 步骤1：对数据进行分析洞察
-  * 步骤2：获得消费者反馈，丰富顾客画像
-  * 步骤3：优化营销运营策略
-  * 步骤1-3 不断迭代
-* 候选案例5：生成式AI的多模态内容生成
-  * 线性前置步骤：创意确定
-    * 并行步骤: 文本
-    * 并行步骤: 图片
-    * 并行步骤: 声音
-    * 并行步骤: 视频
-    * 并行步骤: 代码
-  * 线性后置步骤：人工审核
-* TODO:使用数字签名是否能有效防止工作流被篡改？
-* 所投期刊《新闻界》
-
-![](./img/sub.topic.2.png)
-### 子课题及论文题目（拟） - 2 - “创意知识库”在垂直领域的应用研究
-#### 摘要 Abstract
-* This paper begins by examining the traditional single modality knowledge base and then progresses to explore the development and significance of a multimodal knowledge base in the realm of AI-generated content (AIGC). As the field of AIGC expands, the need for a knowledge base that can handle multiple modalities such as text, image, video, and other objects becomes crucial. The research focuses on the construction, organization, and application of this multimodal knowledge base specifically within the context of AIGC, rather than in the areas of increasing productivity or streamlining workflows. By analyzing the transition from single modality to multimodal knowledge bases, this paper provides insights into the future directions of AIGC and its potential impact on various industries.
-#### 关键词 Keywords
-* AIGC multimodal perception generation personalization creativity application knowledgebase
-
-#### 作者 Authors
-* (related research team)
-
-#### 同行评审
-* 吴小坤（deadline: 2024 fall）
-
-#### 组织 Organization
-* South China University of Technology
-
-#### 简介 Introduction
-* 随着信息技术的快速发展，知识库在各个垂直领域的应用日益广泛。然而，传统的知识库大多是以单一模态为主，主要依赖文本、图表等结构化或半结构化数据的形式来存储和管理知识。随着现代需求的不断变化和信息量的爆炸式增长，传统的单一模态知识库逐渐暴露出其局限性，无法全面、高效地支持复杂的创意需求。在垂直领域中，诸如广告、医疗、教育等行业对创意的要求不断提高，而这些领域不仅需要传统的文字、数据等信息，还需要利用图像、声音、视频等多模态数据来丰富知识库的表现力。因此，多模态知识库应运而生，成为解决这一问题的重要途径。
-* 单一模态知识库：单一模态知识库最早期的形态是以文本为主要存储和组织方式的知识管理系统。在这种体系中，知识以纯文本、结构化数据或简单图表的形式呈现，系统通过关键字检索和规则匹配来进行信息的管理与获取。由于其形式简单、开发相对容易，单一模态知识库被广泛应用于早期的行业知识管理，如法律、学术研究、技术文档等领域。然而，随着数据的复杂性增加，特别是随着互联网和移动设备的普及，知识获取的多样化需求日益增加，单一模态知识库的不足也逐渐显现出来。其局限性体现在以下几个方面：（1）信息表达的局限性：单一模态知识库往往只能处理文字、数据等少数形式的信息，对于包含图像、视频、声音等丰富信息的多媒体资源支持不足。（2）检索效率低下：传统的文本检索方式难以处理多维度的信息需求，用户在需要获取复杂内容时往往需要依赖手动筛选，降低了信息获取的效率。（3）创意支持不足：特别是在广告、设计等对创意要求较高的行业，单一模态的文字和数据无法充分支持创意工作者的需求，限制了创意的多元表达与激发。
-* 多模态知识库：为了解决这些问题，多模态知识库逐渐被提出和发展。多模态知识库结合了文本、图像、音频、视频等多种信息模态，通过智能化技术（如自然语言处理、计算机视觉、深度学习等）将不同类型的数据统一整合并组织起来，从而为用户提供更加丰富、全面的信息资源。在多模态知识库中，各种模态的信息相互补充。例如，在广告创意领域，文案和视觉素材的结合至关重要，多模态知识库不仅可以存储广告文案，还能提供对应的图片、音频甚至视频建议。这种综合性的信息组织方式极大提升了创意生产的效率和质量。多模态知识库的核心优势包括：（1）丰富的信息表达：多模态知识库不仅能处理文字，还能整合图像、视频、音频等多种形式的信息，使得知识的存储和检索更加多样化。（2）提高检索精准度：借助人工智能和深度学习技术，用户可以通过文字描述找到图像，或通过图像搜索相似的多模态资源，极大提高了信息检索的效率和准确性。（3）增强创意支持：通过多模态数据的结合，创意工作者可以获得更多灵感来源，从而推动创意的进一步发展。
-* 现存问题与挑战：尽管多模态知识库带来了诸多优势和创新，然而在应用过程中也面临着一系列的问题和挑战：（1）数据整合难度大：多模态数据的异质性使得不同模态的数据之间难以进行有效的整合和关联。不同模态的处理方式和存储格式各不相同，导致数据间的交互和转换成为技术上的难点。（2）计算资源要求高：处理多模态数据需要大量的计算资源，尤其是在涉及图像和视频的分析时，系统的计算和存储负担显著增加。这对系统的可扩展性和成本控制提出了更高的要求。（3）跨模态理解不完善：尽管目前有许多针对多模态数据处理的技术，但在不同模态之间进行深度关联和语义理解仍然是一大挑战。如何让系统真正理解文字与图像、视频等信息之间的关联，依然需要更多的技术突破。（4）数据隐私和安全问题：多模态知识库中可能涉及大量的个人隐私信息，特别是在医疗、广告等领域，如何确保数据的隐私和安全，是其在实际应用中的重要挑战。
-* 论文后续章节我们排列如下：我们在简介部分提出了问题与挑战，在第二部分论述相关工作，在第三部分论述理论构建，在第四部分论述技术推演，在第五部分论述典型落地案例及实验原型（跨学科优势），我们在第六部分进行总结。
-* 本论文的贡献主要体现在理论及技术创新点上。理论创新点在于构建了一个结合多模态信息的知识库理论框架，特别针对创意驱动型行业的特殊需求进行优化。技术创新点则体现在（1）多模态（2）快速存储（3）快速信息挖掘等方面的技术创新与突破。这些理论及技术创新不仅有助于提升创意工作的效率，还能够为知识库的未来发展提供新的技术方向。
-
-#### 相关工作 Related Work
-* The history of databases traces back to the efforts of IBM researchers who first developed relational databases[1]. These databases consist of tables with primary keys and reference keys, and support operations like join, select, and where in SQL query languages. With the growth of giant applications like web search[2] & recommendation[3], the need to handle unstructured text became more prominent in recent decades. This led to the emergence of non-relational databases like MongoDB[4] and others. These databases allow for storing strings of variable lengths, providing a certain degree of flexibility. In most of the distributed system architectures[5], Redis[6] is usually servered as a caching database. Being an in-memory database, it offers fast retrieval speed but has the known limitations such as cache miss. If a cache miss occurs, a query to the backend database is sometimes required, which can be time-consuming though more precise. The era of web search engines[7] brought about the use of data structures like inverted indexes[8], which support faster retrieval and better quality for web searches[9]. New developments in databases include vector databases[10] that find important applications[11] in large language models and other related retrieval techniques[12]. The focus of this paper is on how to orchestrate[13] those databases and provide a unified interface[14] for upper-level applications[15]. 
-
-#### 我们提出的理论（理论构建）
+### 子课题及论文题目（拟） - x - Fashion Bias is All you need
 * 
-
-#### 我们提出技术支撑（即技术逻辑及推演）
-* 
-
-#### 实验原型系统及落地应用情况（实际应用）
-* 
-
-#### 结论 Conclusion
-* 
-
-#### 参考资料 References
-1. RMDBs
-2. Google Search
-3. Amazon Recommendations
-4. MongoDB and other NoSQL databases
-5. Distributed systems such as Hadoop and Spark
-6. Redis
-7. New York Times reporting on web search
-8. Inverted indexes tutorial from University of Melbourne
-9. Web search engines like Google, Bing, and Yahoo
-10. Vector databases such as TODO:
-11. RAG (short for retrieval augmented generation)
-12. consin similarity and bm25 ranking algorithms
-13. Orchestration of databases
-
-#### 附加信息
-* paper 2 - kb.md
-* 关键词及着眼点：知识库
-* 写作思路：从基本单一知识库到多模态AIGC创意知识库
-* 基于认知计算广告理论，进一步系统阐明在实际生产应用中，如何综合使用关系型、非关系型，对象及新型向量数据库以构筑垂类AIGC知识库供下游应用调用。
-* 创新点1：多模态AIGC创意知识库
-* 创新点2：AIGC创意知识库是如何把 (1) 元认知知识 (2) 概念性知识 (3) 程序性知识及 (4)技能性知识整理、归纳并融合在一起的
-* 创新点3：多模态知识库半自动生成法的重要作用（保证入库数据质量）
-* 案例1：如何使用dify平台构建多模态AIGC创意知识库
-* 案例2：如何使用coze平台构建多模态AIGC创意知识库
-* 所投期刊：新闻与传播如 TODO: 未确定
 
 ![](./img/sub.topic.3.png)
-### 子课题及论文题目（拟） - 3 - “创意垂类模型"在垂直领域的应用研究
+### 子课题及论文题目（拟） - x - “创意垂类模型"在垂直领域的应用研究
 #### 摘要 Abstract
 * This paper examines the realm of created models, which have the ability to generate text, images, and videos in parallel. While these models hold great promise, they also come with limitations. One significant limitation is their limited capability in expressing creativity. However, this constraint can potentially trigger inner model training and iteration. The research delves into the architecture, functionality, and applications of these created models, analyzing both their advantages and drawbacks. It explores ways to overcome the limitations and enhance the creative expression capabilities of these models. By understanding the challenges and opportunities associated with created models, this paper aims to contribute to the development and improvement of content generation and creative expression in a multi-modal world.
 
@@ -244,7 +85,7 @@
 * 案例3：如何使用“通用生视频大模型 + 微调”做带有风格的时尚内容创作（视频）
 * 所投期刊：新闻与传播如 TODO: 未确定
 
-### 子课题及论文题目（拟） - 4 - “创意智能体”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - x - “创意智能体”在垂类场景中的应用研究
 ![](./img/sub.topic.4.png)
 #### Abstract
 * This paper begins by clarifying the concept that an intelligent agent is distinct from large language models or large vision models. An intelligent agent can be metaphorically described as having a "brain" and "body" and it is designed to perform specific tasks. The control of an intelligent agent often relies on large language models or large visual models. The paper then presents different types of intelligent agents, including those for cost reduction and efficiency improvement and those for content creation. The focus of this paper is on content creation. An in-depth exploration of these content creation intelligent agents are provided, while specific case studies are yet to be determined.
@@ -327,16 +168,7 @@
 * 论文中不会出现1：把智能体上升到具身智能，并且引出机器人。原因：目前业界机器人主要用于降本增效，和内容创意关系不大。
 * 所投会议：计算机科学如 SIGIR, CIKM et. al.
 
-### 子课题及论文题目（拟） - 5 - “创意类思维”在垂类场景中的应用研究
-![](./img/sub.topic.5.png)
-
-### 子课题及论文题目（拟） - 6 - “创意智能体社交”在垂类场景中的应用研究
-![](./img/sub.topic.6.png)
-
-### 子课题及论文题目（拟） - 7 - “创意价值对齐”在垂类场景中的应用研究
-![](./img/sub.topic.7.png)
-
-### 子课题及论文题目（拟） - 8 - Improved Methods for Model Pruning 改进的模型剪枝方法
+### 子课题及论文题目（拟） - x - Improved Methods for Model Pruning 改进的模型剪枝方法
 ![](./img/sub.topic.8.v2.png)
 #### Abstract
 Model pruning is presented as a performance optimization technique for large language and vision models. This technique aims to identify and remove neurons, connections unlikely to lead to the contribution during the machine generation phase. Our goal is to obtain a much smaller and faster foundational model that can quickly generate AIGC content almost as good as those of the unpruned models. Through careful analysis of the weights, bias, activations and other potential indicators, an improved algorithm based on new indicators have been proposed and evaluated. Emprical results show that our proposed algorithm achieves significant improvement in different pruning ranges over previous STOAs.
@@ -346,25 +178,26 @@ Model pruning is presented as a performance optimization technique for large lan
 * Under Review and will submit to ICLR 2025 main conference
 * 自然科学论文
 
-### 子课题及论文题目（拟） - 9 - Improved Methods for Model Tiering
+### 子课题及论文题目（拟） - x - Improved Methods for Model Tiering
 ![](./img/sub.topic.10.png)
 * TODO: 结合MoE
 
-### 子课题及论文题目（拟） - 10 - AIGC创意灵感生成平台及商业闭环研究（拟）
+### 子课题及论文题目（拟） - x - AIGC创意灵感生成平台及商业闭环研究（拟）
 ![](./img/sub.topic.11.png)
 ![](./img/aigc.image.gen.platform.png)
 * TODO: 在上图“代表性AI生成平台”基础上提供C端用户半自主参与下的AIGC服装设计机理图。同时结合机理图提供对于用户半自主参与下的AIGC服装设计过程的英文描述及参考文献。时间节点为：10月8日。联系人：张博士后
 * 状态：作为社会科学论文提交
 
-### 子课题及论文题目（拟） - 11 - AI Agents will significantly hurt the job market for programmers！(meaning losing jobs and being replaced quickly)
+### 子课题及论文题目（拟） - x - AI Agents will significantly hurt the job market for programmers！(meaning losing jobs and being replaced quickly)
 * 更新日期：20240922
 * 中文标题：AI智能体会极大伤害程序员就业市场！（他们会没有工作且被迅速替代）
 * 状态：作为社会科学研究论文提交
 
-### 子课题及论文题目（拟） - 12 - Attention is All You Need, again!
-* 更新日期：20240923
-* 中文标题：注意力机制在AIGC在认知计算广告内容创意中的应用场景研究（需结合经典传播学注意力等理论）
-* 状态：作为社会科学研究论文提交
+### 子课题及论文题目（拟） - x - “创意类思维”在垂类场景中的应用研究
+![](./img/sub.topic.5.png)
+
+### 子课题及论文题目（拟） - x - “创意智能体社交”在垂类场景中的应用研究
+![](./img/sub.topic.6.png)
 
 ## 核心相关工作
 ### 1. 计算广告
