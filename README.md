@@ -2,7 +2,7 @@
 
 ## PI：江纬 Wei Jiang
 ## 当前研究课题：多模态内容感知、生成及个性化创意应用场景研究
-## 当前理论框架依据：认知计算广告
+## 当前理论框架依据：认知计算广告 认知计算时尚
 ## 核心相关工作
 ### 1. 计算广告
 （写作思路：根据计算广告逻辑演进框图进行文字表述）
@@ -55,7 +55,7 @@
 
 ## 子课题
 ![](./img/sub.topic.1.png)
-### （初阶）子课题及论文题目（拟） - 1 - “创意工作流”在垂直领域的应用研究
+### 子课题及论文题目（拟） - 1 - “创意工作流”在垂直领域的应用研究
 #### 摘要
 * 本文着重探讨 AIGC 内容创意工作流在垂直领域的应用。AIGC 工作流包含多个分步节点，各节点有明确的输入与输出。在内容创意中，从创意激发到独特内容输出及优化调整，呈现丰富流程。当前业界多为单一工作流，而本文研究分布式协同工作流问题，旨在解决不同节点间的协同难题。提出可利用先进的通信技术与智能分配机制，促进各节点高效协作。此工作流对内容创意具有深远价值，广泛应用于多模态内容感知生成及个性化创意应用场景，为推动垂直领域的内容创新提供新路径。
 
@@ -162,7 +162,7 @@
 * 所投期刊《新闻界》
 
 ![](./img/sub.topic.2.png)
-### （初阶）子课题及论文题目（拟） - 2 - “创意知识库”在垂直领域的应用研究
+### 子课题及论文题目（拟） - 2 - “创意知识库”在垂直领域的应用研究
 #### 摘要 Abstract
 * This paper begins by examining the traditional single modality knowledge base and then progresses to explore the development and significance of a multimodal knowledge base in the realm of AI-generated content (AIGC). As the field of AIGC expands, the need for a knowledge base that can handle multiple modalities such as text, image, video, and other objects becomes crucial. The research focuses on the construction, organization, and application of this multimodal knowledge base specifically within the context of AIGC, rather than in the areas of increasing productivity or streamlining workflows. By analyzing the transition from single modality to multimodal knowledge bases, this paper provides insights into the future directions of AIGC and its potential impact on various industries.
 #### 关键词 Keywords
@@ -228,7 +228,7 @@
 * 所投期刊：新闻与传播如 TODO: 未确定
 
 ![](./img/sub.topic.3.png)
-### （中阶）子课题及论文题目（拟） - 3 - “创意垂类模型"在垂直领域的应用研究
+### 子课题及论文题目（拟） - 3 - “创意垂类模型"在垂直领域的应用研究
 #### 摘要 Abstract
 * This paper examines the realm of created models, which have the ability to generate text, images, and videos in parallel. While these models hold great promise, they also come with limitations. One significant limitation is their limited capability in expressing creativity. However, this constraint can potentially trigger inner model training and iteration. The research delves into the architecture, functionality, and applications of these created models, analyzing both their advantages and drawbacks. It explores ways to overcome the limitations and enhance the creative expression capabilities of these models. By understanding the challenges and opportunities associated with created models, this paper aims to contribute to the development and improvement of content generation and creative expression in a multi-modal world.
 
@@ -291,11 +291,16 @@
 * 案例3：如何使用“通用生视频大模型 + 微调”做带有风格的时尚内容创作（视频）
 * 所投期刊：新闻与传播如 TODO: 未确定
 
-### （中阶）子课题及论文题目（拟） - 4 - “创意智能体”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - 4 - “创意智能体”在垂类场景中的应用研究
 ![](./img/sub.topic.4.png)
-#### 摘要 Abstract
+#### Abstract
 * This paper begins by clarifying the concept that an intelligent agent is distinct from large language models or large vision models. An intelligent agent can be metaphorically described as having a "brain" and "body" and it is designed to perform specific tasks. The control of an intelligent agent often relies on large language models or large visual models. The paper then presents different types of intelligent agents, including those for cost reduction and efficiency improvement and those for content creation. The focus of this paper is on content creation. An in-depth exploration of these content creation intelligent agents are provided, while specific case studies are yet to be determined.
-* TODO: Needs more details.
+#### 摘要
+* 
+
+#### 状态
+* 构思中
+* 社会科学论文
 
 #### 关键词 Keywords
 * AI Agent; LLM; Large Vison Model; workflow; creative models; scene;
@@ -308,8 +313,14 @@
 
 #### 组织 Organization
 * South China University of Technology
+* 华南理工大学
 
-#### 简介 Introduction
+#### 理论构建
+* 创新点：
+* 创意智能体人物设定：计算机科学教授帮助学生优化算法
+* 智能体间社交：真人及类人在一起协作和交流
+
+#### 技术路径（含实验原型系统及应用场景）
 * 
 
 #### 相关工作 Related Work
@@ -325,10 +336,7 @@
 #### 现有典型智能体及所存问题 Current Intelligent Agents and Problems
 * 
 
-#### 所提出关于“智能体”的创意设计新范式 New Design Paradigm for Intelligent Agents
-* 
-
-#### 实验原型系统及应用场景 Real-world Applications and Prototypes
+#### 规范与治理
 * 
 
 #### 结论 Conclusion
@@ -366,86 +374,44 @@
 * 论文中不会出现1：把智能体上升到具身智能，并且引出机器人。原因：目前业界机器人主要用于降本增效，和内容创意关系不大。
 * 所投会议：计算机科学如 SIGIR, CIKM et. al.
 
-### （高阶）子课题及论文题目（拟） - 5 - “创意类思维”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - 5 - “创意类思维”在垂类场景中的应用研究
 ![](./img/sub.topic.5.png)
 
-### （高阶）子课题及论文题目（拟） - 6 - “创意智能体社交”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - 6 - “创意智能体社交”在垂类场景中的应用研究
 ![](./img/sub.topic.6.png)
 
-### （高阶）子课题及论文题目（拟） - 7 - “创意价值对齐”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - 7 - “创意价值对齐”在垂类场景中的应用研究
 ![](./img/sub.topic.7.png)
 
-### （中阶）子课题及论文题目（拟） - 8 - Improved Methods for Static Neural Network Pruning
-![](./img/sub.topic.8.png)
+### 子课题及论文题目（拟） - 8 - Improved Methods for Model Pruning 改进的模型剪枝方法
+![](./img/sub.topic.8.v2.png)
 #### Abstract
-Static neural network pruning is presented as a performance optimization technique for large language models and large vision models. The approach aims to identify and remove neurons unlikely to lead to expected results for typical user queries. The goal is to obtain a smaller large language model that can quickly return results almost as good as those of the unpruned model.
+Model pruning is presented as a performance optimization technique for large language and vision models. This technique aims to identify and remove neurons, connections unlikely to lead to the contribution during the machine generation phase. Our goal is to obtain a much smaller and faster foundational model that can quickly generate AIGC content almost as good as those of the unpruned models. Through careful analysis of the weights, bias, activations and other potential indicators, an improved algorithm based on new indicators have been proposed and evaluated. Emprical results show that our proposed algorithm achieves significant improvement in different pruning ranges over previous STOAs.
+#### 摘要
+模型剪枝是一种用于大语言和视觉模型的性能优化技术。该技术旨在识别并移除在机器生成阶段不太可能产生贡献的神经元和连接。我们的目标是获得一个更小、更快速的基础模型，能够以接近未剪枝模型的水平快速生成AIGC内容，这些内容包括文本、图片、视频及代码。通过对权重、偏置、激活函数和其他潜在指标的深入分析，我们提出并评估了一种基于新指标的改进算法。实验结果表明，在不同剪枝范围内，我们提出的算法相比之前的最新技术(SOTA)取得显著改进效果。
+#### 状态
+* Under Review and will submit to ICLR 2025 main conference
+* 自然科学论文
 
-First, through careful analysis of embedded knowledge and user queries, an initial mathematical model based on certain probabilities obtained from the environment is developed to improve on previous results for pruned large language model size, achieving additional improvement in some cases. A simple method for generating queries into the large language model in the absence of real-life queries is also devised, which is useful for modeling top results.
-
-Second, this paper explores and compares to previously proposed approaches that perform pruning based on other methods.
-#### Keywords
-LLM pruning, LVM pruning, quantization, dense & sparse models
-#### Open Source Repo
-* https://github.com/algmon/mama-prune
-#### 1. Introduction
-* (General Intro) Large language models and large vision models are facing significant performance challenges due to the massive data size and query loads they need to support. These models, along with other related systems, crawl, analyze, and incorporate billions of web pages, videos, and multimodal data into their network architectures such as transformer. One crucial cost factor is the query processing per user, which must scale with both data size and query load. As a result, large language models devote substantial hardware and energy resources to this task. There has been extensive research on improving query processing performance, including work on various caching techniques, retrieval information systems, and high-performance knowledge representation. A large category of optimization techniques commonly referred to as static pruning or dynamic pruning has emerged in the context of query processing for large language models and large vision models. This paper aims to explore and contribute to the understanding and improvement of these pruning techniques to enhance the performance and efficiency of large language and vision models.
-* (More Specific Intro) In this paper, our attention is directed towards a particular optimization technique known as static network pruning. In essence, the approach involves conducting a suitable analysis of the knowledge representation, document collections, and query distribution. The objective is to determine those entries or neurons that are highly likely to yield top user query results for typical queries. Subsequently, any other neurons that are unlikely to contribute to user inputs are removed from the neural network. The aim is to obtain a significantly smaller neural network with a reduced amount of parameters. This pruned neural network can achieve almost the same quality of results as the unpruned one while requiring much less memory and GPU resources. Consequently, it leads to faster query processing over a shorter neural network with optimized layers.
-* (Give an example) Consider a leading large language model provider today. There are 4 billion documents incorporated into its knowledge base, with an average of 300 words per document, resulting in a total of approximately 10^15 tokens. The engine receives 5 billion queries per day, with each query represented by around 10^11 terms to convey the user's intention for interaction with the large language model. This implies that nearly 117 billion tokens in the knowledge representation could potentially lead to expected output tokens. However, in reality, far fewer tokens actually result in an output within a month. Considering the repetition of queries and postings, more than 99.5% of all routing and neuronal activation and triggers do not yield a single result output from the decoder within a month. Although we cannot reliably identify the 0.5% of active neurons that contribute to the result precisely for the next month, we might hope to identify a large subset of the optimized neurons that contains most of the important information and knowledge representation as the full neural network on common measures of effectiveness.
-* (Small Set of Closed Related Previous Work) Previous work on static pruning for large language models and large vision models has primarily focused on approaches such as retaining layers above a global impact threshold or keeping high-scoring neurons in each layer. For example [][][][]. These efforts have yielded promising results, but there is room for further improvement. The goal of this paper is to build on this existing work and develop a methodology that combines different ideas to achieve a better balance between neural network size and result quality as measured by standard retrieval or information generation quality metrics. Given the feature-rich environment, pruning is considered as a prediction problem where suitable statistical techniques or deep learning methods such as language modeling and machine learning are employed to determine which neuron/sets of neurons/layers to keep.
-* (Paper Organization) The rest of this paper is structured in a systematic manner. In the following section, background information on knowledge representation, neural networks, and pruning will be provided. Additionally, related work in this field will be discussed to situate our research within the broader context. Section 3 will summarize our key contributions, highlighting the novelty and significance of our approach. Section 4 will delve into the technical details of our proposed approach, providing a comprehensive explanation of the methodology and algorithms employed. The results presented in our study will be explained in section 5, including an analysis of their implications and performance. Finally, section 6 will offer concluding remarks, summarizing the main findings of the paper and suggesting potential directions for future research.
-#### 2. Background and Related Work
-In this section, we first provide some background on neural network architectures, ranked queries, pruning, and early termination techniques. We then discuss previous work related to static pruning in the context of large language and vision models. For additional details on general neural network architectures, we refer to [][].
-##### A. Background
-1. Nerual Network Architectures
-2. User Input/Queries & Ranking & Content Generation
-3. Pruning
-4. Early Termination & Dropout Technique
-##### B. Related Work
-1. Rank- and Impact- based methods
-2. Using Query Traces
-3. complementary approach: quantization
-4. Comparison to our work
-#### 3. Our Contributions
-In this paper, we study LLM & LVM static pruning that attempt to achieve a good trade-off between network size and generation quality. Our main contributions are as follows:
-1. We describe an approach that ...
-2. We describe several algorithms that ...
-3. We perform an experimental evaluation on two datasets that ...
-4. We compare our methods with ...
-#### 4. Our Pruning Algorithms
-* TODO: to discuss
-#### 5. Experimental Results
-* Table 1
-* Table 2
-* Figure 1
-* Figure 2
-* Figure 3
-#### 6. Conclusions
-* In this paper, we have introduced several novel algorithms for static pruning in large language models and large vision models. Through comparison with query wheel and query covering approaches, our methodology, which attempts to estimate the likelihood of neurons resulting in top results based on diverse neuron features, collections, and query statistics, has demonstrated measurable improvement over prior work as evidenced by our experimental results.
-* For future work, we plan several extensions. This includes conducting experiments with other language models that may potentially achieve even better pruning performances. We also aim to optimize our approach further, such as exploring hybrid methods. Additionally, we plan to study the tradeoff between model size and query cost under different cost models and for actual query processing algorithms. This research holds promise for enhancing the efficiency and performance of large language and vision models through more effective static pruning techniques.
-#### References
-1. Improved Methods for Static Index Pruning. W. Jiang, J. Rodriguez, and T. Suel, IEEE International Conference on Big Data, December 2016. http://engineering.nyu.edu/~suel/papers/prune.pdf
-2. Exploring Size-Speed Trade-Offs in Static Index Pruning. J. Rodriguez and T. Suel, IEEE International Conference on Big Data, December 2018. http://engineering.nyu.edu/~suel/papers/prunetrade-bd18.pdf
-3. A Simple and Effective Pruning Approach for Large Language Models. Mingjie Sun, Zhuang Liu, Anna Bair, J. Zico Kolter, ICLR, 2024. https://openreview.net/forum?id=PxoFut3dWW
-4. Rethinking the Value of Network Pruning. Zhuang Liu, Mingjie Sun, Tinghui Zhou, Gao Huang, Trevor Darrell, ICLR, 2019.
-5. SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot. Elias Frantar, Dan Alistarh, ICML Oral, 2023.
-6. AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration. Ji Lin, Jiaming Tang, Haotian Tang, Shang Yang, Wei-Ming Chen, Wei-Chen Wang, Guangxuan Xiao, Xingyu Dang, Chuang Gan, Song Han, MLSys, 2024 (Best Paper Award).
-7. LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale. Dettmers et al, NeurIPS 2022.
-8. SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models. Xiao et al, ICML 2023.
-9. Movement pruning: Adaptive sparsity by fine-tuning. Sanh et al, 2020.
-10. Platon: Pruning large transformer models with upper confidence bound of weight importance. Zhang et al, 2022.
-11. Pruning Pre-trained Language Models with Principled Importance and Self-regularization. Ren et al, 2023.
-12. LLM-Pruner: On the Structural Pruning of Large Language Models. Ma et al, NeurIPS 2023.
-13. The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks. 2019.
-14. Rigging the Lottery: Making All Tickets Winners. Evci et al, ICML 2020.
-15. Molchanov, Pavlo, et al. "Importance estimation for neural network pruning." Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2019.
-16. LeCun, Yann, John Denker, and Sara Solla. "Optimal brain damage." Advances in neural information processing systems 2 (1989).
-17. SNIP: Single-shot Network Pruning based on Connection Sensitivity. Lee et al, ICLR 2019.
-
-### （中阶）子课题及论文题目（拟） - 9 - Improved Methods for Dynamic Neural Network Pruning
-![](./img/sub.topic.9.png)
-
-### （高阶）子课题及论文题目（拟） - 10 - Improved Methods for  Neural Network Tiering
+### 子课题及论文题目（拟） - 9 - Improved Methods for Model Tiering
 ![](./img/sub.topic.10.png)
+* TODO: 结合MoE
+
+### 子课题及论文题目（拟） - 10 - AIGC创意灵感生成平台及商业闭环研究（拟）
+![](./img/sub.topic.11.png)
+![](./img/aigc.image.gen.platform.png)
+* TODO: 在上图“代表性AI生成平台”基础上提供C端用户半自主参与下的AIGC服装设计机理图。同时结合机理图提供对于用户半自主参与下的AIGC服装设计过程的英文描述及参考文献。时间节点为：10月8日。联系人：张博士后
+* 状态：作为社会科学论文提交
+
+### 子课题及论文题目（拟） - 11 - AI Agents will significantly hurt the job market for programmers！(meaning losing jobs and being replaced quickly)
+* 更新日期：20240922
+* 中文标题：AI智能体会极大伤害程序员就业市场！（他们会没有工作且被迅速替代）
+* 状态：作为社会科学研究论文提交
+
+### 子课题及论文题目（拟） - 12 - Attention is All You Need, again!
+* 更新日期：20240923
+* 中文标题：注意力机制在AIGC在认知计算广告内容创意中的应用场景研究（需结合经典传播学注意力等理论）
+* 状态：作为社会科学研究论文提交
 
 ## 核心相关工作
 ### 1. 计算广告
@@ -496,4 +462,5 @@ TODO: 待补充
 
 ### Cool Research Problems
 1. given a pre-trained dense LLMs, how to obtain a effective sparse LLM? For example, the sparsification of linear layers.
-2. 
+2. given a pre-trained dense NOT LLMs but Large Vision Models, how to prune?
+3. 

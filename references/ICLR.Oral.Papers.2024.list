@@ -1,0 +1,87 @@
+|编号|论文标题|作者|
+|---|---|---|
+|1|Proving Test Set Contamination in Black-Box Language Models|Yonatan Oren, Nicole Meister, Niladri S. Chatterji, Faisal Ladhak, Tatsunori Hashimoto|
+|2|BooookScore: A systematic exploration of book-length summarization in the era of LLMs|Yapei Chang, Kyle Lo, Tanya Goyal, Mohit Iyyer|
+|3|Generalization in diffusion models arises from geometry-adaptive harmonic representations|Zahra Kadkhodaie, Florentin Guth, Eero P Simoncelli, Stéphane Mallat|
+|4|Understanding In-Context Learning in Transformers and LLMs by Learning to Learn Discrete Functions|Satwik Bhattamishra, Arkil Patel, Phil Blunsom, Varun Kanade|
+|5|The mechanistic basis of data dependence and abrupt learning in an in-context classification task|Gautam Reddy|
+|6|Improved Techniques for Training Consistency Models|Yang Song, Prafulla Dhariwal|
+|7|Provable Compositional Generalization for Object-Centric Learning|Thaddäus Wiedemer, Jack Brady, Alexander Panfilov, Attila Juhos, Matthias Bethge, Wieland Brendel|
+|8|Predictive auxiliary objectives in deep RL mimic learning in the brain|Ching Fang, Kim Stachenfeld|
+|9|Pre-Training Goal-based Models for Sample-Efficient Reinforcement Learning|Haoqi Yuan, Zhancun Mu, Feiyang Xie, Zongqing Lu|
+|10|Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!|Xiangyu Qi, Yi Zeng, Tinghao Xie, Pin-Yu Chen, Ruoxi Jia, Prateek Mittal, Peter Henderson|
+|11|Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors|Ido Amos, Jonathan Berant, Ankit Gupta|
+|12|LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Model|Yixiao Li, Yifan Yu, Chen Liang, Nikos Karampatziakis, Pengcheng He, Weizhu Chen, Tuo Zhao|
+|13|Graph Neural Networks for Learning Equivariant Representations of Neural Network|Miltiadis Kofinas, Boris Knyazev, Yan Zhang, Yunlu Chen, Gertjan J. Burghouts, Efstratios Gavves, Cees G. M. Snoek, David W. Zhang|
+|14|GNNCert: Deterministic Certification of Graph Neural Networks against Adversarial Perturbations|zaishuo xia, Han Yang, Binghui Wang, Jinyuan Jia|
+|15|Efficient Episodic Memory Utilization of Cooperative Multi-Agent Reinforcement Learning|Hyungho Na, Yunkyeong Seo, Il-chul Moon|
+|16|ClimODE: Climate and Weather Forecasting with Physics-informed Neural ODEs|Yogesh Verma, Markus Heinonen, Vikas Garg|
+|17|Mixed-Type Tabular Data Synthesis with Score-based Diffusion in Latent Space|Hengrui Zhang, Jiani Zhang, Zhengyuan Shen, Balasubramaniam Srinivasan, Xiao Qin, Christos Faloutsos, Huzefa Rangwala, George Karypis|
+|18|Phenomenal Yet Puzzling: Testing Inductive Reasoning Capabilities of Language Models with Hypothesis Refinement|Linlu Qiu, Liwei Jiang, Ximing Lu, Melanie Sclar, Valentina Pyatkin, Chandra Bhagavatula, Bailin Wang, Yoon Kim, Yejin Choi, Nouha Dziri, Xiang Ren|
+|19|Beyond Weisfeiler-Lehman: A Quantitative Framework for GNN Expressiveness|Bohang Zhang, Jingchu Gai, Yiheng Du, Qiwei Ye, Di He, Liwei Wang|
+|20|MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Context|Pan Lu, Hritik Bansal, Tony Xia, Jiacheng Liu, Chunyuan Li, Hannaneh Hajishirzi, Hao Cheng, Kai - Wei Chang, Michel Galley, Jianfeng Gao|
+|21|Protein Discovery with Discrete Walk - Jump Sampling|Nathan C. Frey, Dan Berenberg, Karina Zadorozhny, Joseph Kleinhenz, Julien Lafrance - Vanasse, Isidro Hotzel, Yan Wu, Stephen Ra, Richard Bonneau, Kyunghyun Cho, Andreas Loukas, Vladimir Gligorijevic, Saeed Saremi|
+|22|ExeDec: Execution Decomposition for Compositional Generalization in Neural Program Synthesis|Kensen Shi, Joey Hong, Yinlin Deng, Pengcheng Yin, Manzil Zaheer, Charles Sutton|
+|23|Batched Low - Rank Adaptation of Foundation Model|Yeming Wen, Swarat Chaudhuri|
+|24|Improved Active Learning via Dependent Leverage Score Sampling|Atsushi Shimizu, Xiaoou Cheng, Christopher Musco, Jonathan Weare|
+|25|Model Tells You What to Discard: Adaptive KV Cache Compression for LLM|Suyu Ge, Yunan Zhang, Liyuan Liu, Minjia Zhang, Jiawei Han, Jianfeng Gao|
+|26|One - shot Empirical Privacy Estimation for Federated Learning|Galen Andrew, Peter Kairouz, Sewoong Oh, Alina Oprea, Hugh Brendan McMahan, Vinith Menon Suriyakumar|
+|27|SWE - bench: Can Language Models Resolve Real - world Github Issues?|Carlos E Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, Karthik R Narasimhan|
+|28|ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models|Seyed Iman Mirzadeh, Keivan Alizadeh - Vahid, Sachin Mehta, Carlo C del Mundo, Oncel Tuzel, Golnoosh Samei, Mohammad Rastegari, Mehrdad Farajtabar|
+|29|On the Joint Interaction of Models, Data, and Features|Yiding Jiang, Christina Baek, J Zico Kolter|
+|30|Topological data analysis on noisy quantum computers|Ismail Yunus Akhalwaya, Shashanka Ubaru, Kenneth L. Clarkson, Mark S. Squillante, Vishnu Jejjala, Yang - Hui He, Kugendran Naidoo, Vasileios Kalantzis, Lior Horesh|
+|31|Self - RAG: Learning to Retrieve, Generate, and Critique through Self - Reflection|Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil, Hannaneh Hajishirzi|
+|32|"What Data Benefits My Classifier?" Enhancing Model Performance and Interpretability through Influence - Based Data Selection|Anshuman Chhabra, Peizhao Li, Prasant Mohapatra, Hongfu Liu|
+|33|Generative Modeling with Phase Stochastic Bridge|Tianrong Chen, Jiatao Gu, Laurent Dinh, Evangelos Theodorou, Joshua M. Susskind, Shuangfei Zhai|
+|34|Zipformer: A faster and better encoder for automatic speech recognition|Zengwei Yao, Liyong Guo, Xiaoyu Yang, Wei Kang, Fangjun Kuang, Yifan Yang, Zengrui Jin, Long Lin, Daniel Povey|
+|35|MetaGPT: Meta Programming for A Multi - Agent Collaborative Framework|Sirui Hong, Mingchen Zhuge, Jonathan Chen, Xiawu Zheng, Yuheng Cheng, Jinlin Wang, Ceyao Zhang, Zili Wang, Steven Ka Shing Yau, Zijuan Lin, Liyang Zhou, Chenyu Ran, Lingfeng Xiao, Chenglin Wu, Jürgen Schmidhuber|
+|36|ValUES: A Framework for Systematic Validation of Uncertainty Estimation in Semantic Segmentation|Kim - Celine Kahl, Carsten T. Lüth, Maximilian Zenk, Klaus Maier - Hein, Paul F Jaeger|
+|37|Finetuning Text - to - Image Diffusion Models for Fairness|Xudong Shen, Chao Du, Tianyu Pang, Min Lin, Yongkang Wong, Mohan Kankanhalli|
+|38|Knowledge Card: Filling LLMs' Knowledge Gaps with Plug - in Specialized Language Models|Shangbin Feng, Weijia Shi, Yuyang Bai, Vidhisha Balachandran, Tianxing He, Yulia Tsvetkov|
+|39|METRA: Scalable Unsupervised RL with Metric - Aware Abstraction|Seohong Park, Oleh Rybkin, Sergey Levine|
+|40|Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction|Yichen Wu, Long - Kai Huang, Renzhen Wang, Deyu Meng, Ying Wei|
+|41|Improving Convergence and Generalization Using Parameter Symmetries|Bo Zhao, Robert M. Gower, Robin Walters, Rose Yu|
+|42|Flow Matching on General Geometries|Ricky T. Q. Chen, Yaron Lipman|
+|43|Ghost on the Shell: An Expressive Representation of General 3D Shapes|Zhen Liu, Yao Feng, Yuliang Xiu, Weiyang Liu, Liam Paull, Michael J. Black, Bernhard Schölkopf|
+|44|Würstchen: An Efficient Architecture for Large - Scale Text - to - Image Diffusion Model|Pablo Pernias, Dominic Rampas, Mats Leon Richter, Christopher Pal, Marc Aubreville|
+|45|Unified Generative Modeling of 3D Molecules with Bayesian Flow Networks|Yuxuan Song, Jingjing Gong, Hao Zhou, Mingyue Zheng, Jingjing Liu, Wei - Ying Ma|
+|46|Small - scale proxies for large - scale Transformer training instabilities|Mitchell Wortsman, Peter J Liu, Lechao Xiao, Katie E Everett, Alexander A Alemi, Ben Adlam, John D Co - Reyes, Izzeddin Gur, Abhishek Kumar, Roman Novak, Jeffrey Pennington, Jascha Sohl - Dickstein, Kelvin Xu, Jaehoon Lee, Justin Gilmer, Simon Kornblith|
+|47|How I Warped Your Noise: a Temporally - Correlated Noise Prior for Diffusion Model|Pascal Chang, Jingwei Tang, Markus Gross, Vinicius C. Azevedo|
+|48|Vision Transformers Need Registers|Timothée Darcet, Maxime Oquab, Julien Mairal, Piotr Bojanowski|
+|49|An Analytical Solution to Gauss - Newton Loss for Direct Image Alignment|Sergei Solonets, Daniil Sinitsyn, Lukas Von Stumberg, Nikita Araslanov, Daniel Cremers|
+|50|Learning Energy Decompositions for Partial Inference in GFlowNet|Hyosoon Jang, Minsu Kim, Sungsoo Ahn|
+|51|Approximating Nash Equilibria in Normal - Form Games via Stochastic Optimization|Ian Gemp, Luke Marris, Georgios Piliouras|
+|52|Multi - Source Diffusion Models for Simultaneous Music Generation and Separation|Giorgio Mariani, Irene Tallini, Emilian Postolache, Michele Mancusi, Luca Cosmo, Emanuele Rodolà|
+|53|LEGO - Prover: Neural Theorem Proving with Growing Libraries|Haiming Wang, Huajian Xin, Chuanyang Zheng, Zhengying Liu, Qingxing Cao, Yinya Huang, Jing Xiong, Han Shi, Enze Xie, Jian Yin, Zhenguo Li, Xiaodan Liang|
+|54|ASID: Active Exploration for System Identification in Robotic Manipulation|Marius Memmel, Andrew Wagenmaker, Chuning Zhu, Dieter Fox, Abhishek Gupta|
+|55|Towards a statistical theory of data selection under weak supervision|Germain Kolossov, Andrea Montanari, Pulkit Tandon|
+|56|Mastering Memory Tasks with World Model|Mohammad Reza Samsami, Artem Zholus, Janarthanan Rajendran, Sarath Chandar|
+|57|Monte Carlo guided Denoising Diffusion models for Bayesian linear inverse problems.|Gabriel Cardoso, Yazid Janati el idrissi, Sylvain Le Corff, Eric Moulines|
+|58|Self - Alignment with Instruction Backtranslation|Xian Li, Ping Yu, Chunting Zhou, Timo Schick, Omer Levy, Luke Zettlemoyer, Jason E Weston, Mike Lewis|
+|59|Learning Interactive Real - World Simulator|Sherry Yang, Yilun Du, Seyed Kamyar Seyed Ghasemipour, Jonathan Tompson, Leslie Pack Kaelbling, Dale Schuurmans, Pieter Abbeel|
+|60|Candidate Label Set Pruning: A Data - centric Perspective for Deep Partial - label Learning|Shuo He, Chaojie Wang, Guowu Yang, Lei Feng|
+|61|Robust agents learn causal world model|Jonathan Richens, Tom Everitt|
+|62|On the Humanity of Conversational AI: Evaluating the Psychological Portrayal of LLMs|Jen - tse Huang, Wenxuan Wang, Eric John Li, Man Ho LAM, Shujie Ren, Youliang Yuan, Wenxiang Jiao, Zhaopeng Tu, Michael Lyu|
+|63|Diffusion Model for Dense Matching|Jisu Nam, Gyuseong Lee, Sunwoo Kim, Hyeonsu Kim, Hyoungwon Cho, Seyeon Kim, Seungryong Kim|
+|64|Is ImageNet worth 1 video? Learning strong image encoders from 1 long unlabelled video|Shashanka Venkataramanan, Mamshad Nayeem Rizve, Joao Carreira, Yuki M Asano, Yannis Avrithis|
+|65|Neural Fine - Tuning Search for Few - Shot Learning|Panagiotis Eustratiadis, Łukasz Dudziak, Da Li, Timothy Hospedales|
+|66|Latent Trajectory Learning for Limited Timestamps under Distribution Shift over Time|QIUHAO Zeng, Changjian Shui, Long - Kai Huang, Peng Liu, Xi Chen, Charles Ling, Boyu Wang|
+|67|Less is More: Fewer Interpretable Region via Submodular Subset Selection|Ruoyu Chen, Hua Zhang, Siyuan Liang, Jingzhi Li, Xiaochun Cao|
+|68|Cameras as Rays: Pose Estimation via Ray Diffusion|Jason Y. Zhang, Amy Lin, Moneish Kumar, Tzu - Hsuan Yang, Deva Ramanan, Shubham Tulsiani|
+|69|Accelerating Distributed Stochastic Optimization via Self - Repellent Random Walk|Jie Hu, Vishwaraj Doshi, Do Young Eun|
+|70|Detecting, Explaining, and Mitigating Memorization in Diffusion Model|Yuxin Wen, Yuchen Liu, Chen Chen, Lingjuan Lyu|
+|71|Quick - Tune: Quickly Learning Which Pretrained Model to Finetune and How|Sebastian Pineda Arango, Fabio Ferreira, Arlind Kadra, Frank Hutter, Josif Grabocka|
+|72|LongLoRA: Efficient Fine - tuning of Long - Context Large Language Model|Yukang Chen, Shengju Qian, Haotian Tang, Xin Lai, Zhijian Liu, Song Han, Jiaya Jia|
+|73|Amortizing intractable inference in large language model|Edward J Hu, Moksh Jain, Eric Elmoznino, Younesse Kaddar, Guillaume Lajoie, Yoshua Bengio, Nikolay Malkin|
+|74|LLMCarbon: Modeling the End - to - End Carbon Footprint of Large Language Model|Ahmad Faiz, Sotaro Kaneda, Ruhan Wang, Rita Chukwunyere Osi, Prateek Sharma, Fan Chen, Lei Jiang|
+|75|A Real - World WebAgent with Planning, Long Context Understanding, and Program Synthesis|Izzeddin Gur, Hiroki Furuta, Austin V Huang, Mustafa Safdari, Yutaka Matsuo, Douglas Eck, Aleksandra Faust|
+|76|Lipschitz Singularities in Diffusion Model|Zhantao Yang, Ruili Feng, Han Zhang, Yujun Shen, Kai Zhu, Lianghua Huang, Yifei Zhang, Yu Liu, Deli Zhao, Jingren Zhou, Fan Cheng|
+|77|Interpreting CLIP's Image Representation via Text - Based Decomposition|Yossi Gandelsman, Alexei A Efros, Jacob Steinhardt|
+|78|Multisize Dataset Condensation|Yang He, Lingao Xiao, Joey Tianyi Zhou, Ivor Tsang|
+|79|DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content Creation|Jiaxiang Tang, Jiawei Ren, Hang Zhou, Ziwei Liu, Gang Zeng|
+|80|LRM: Large Reconstruction Model for Single Image to 3D|Yicong Hong, Kai Zhang, Jiuxiang Gu, Sai Bi, Yang Zhou, Difan Liu, Feng Liu, Kalyan Sunkavalli, Trung Bui, Hao Tan|
+|81|How Well Do Supervised 3D Models Transfer to Medical Imaging Tasks?|Wenxuan Li, Alan Yuille, Zongwei Zhou|
+|82|Gene Regulatory Network Inference in the Presence of Dropouts: a Causal View|Haoyue Dai, Ignavier Ng, Gongxu Luo, Peter Spirtes, Petar Stojanov, Kun Zhang|
+|83|Statistically Optimal  - means Clustering via Nonnegative Low - rank Semidefinite Programming|Yubo Zhuang, Xiaohui Chen, Yun Yang, Richard Y. Zhang|
+|84|Unprocessing Seven Years of Algorithmic Fairness|André Cruz, Moritz Hardt|
+|85|InfoBatch: Lossless Training Speed Up by Unbiased Dynamic Data Pruning|Ziheng Qin, Kai Wang, Zangwei Zheng, Jianyang Gu, Xiangyu

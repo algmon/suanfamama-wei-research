@@ -1,0 +1,51 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert{-}Voss, Krueger, Henighan, Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin, Gray, Chess, Clark, Berner, McCandlish, Radford, Sutskever, and Amodei]{llm20}
+Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert{-}Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel~M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei.
+\newblock Language models are few-shot learners.
+\newblock In Hugo Larochelle, Marc'Aurelio Ranzato, Raia Hadsell, Maria{-}Florina Balcan, and Hsuan{-}Tien Lin (eds.), \emph{Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, NeurIPS 2020, December 6-12, 2020, virtual}, 2020.
+\newblock URL \url{https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html}.
+
+\bibitem[Frantar \& Alistarh(2023)Frantar and Alistarh]{sparsegpt23}
+Elias Frantar and Dan Alistarh.
+\newblock Sparsegpt: Massive language models can be accurately pruned in one-shot.
+\newblock In Andreas Krause, Emma Brunskill, Kyunghyun Cho, Barbara Engelhardt, Sivan Sabato, and Jonathan Scarlett (eds.), \emph{International Conference on Machine Learning, {ICML} 2023, 23-29 July 2023, Honolulu, Hawaii, {USA}}, volume 202 of \emph{Proceedings of Machine Learning Research}, pp.\  10323--10337. {PMLR}, 2023.
+\newblock URL \url{https://proceedings.mlr.press/v202/frantar23a.html}.
+
+\bibitem[Goodfellow et~al.(2016)Goodfellow, Bengio, Courville, and Bengio]{goodfellow16}
+Ian Goodfellow, Yoshua Bengio, Aaron Courville, and Yoshua Bengio.
+\newblock \emph{Deep learning}, volume~1.
+\newblock MIT Press, 2016.
+
+\bibitem[Han et~al.(2015)Han, Pool, Tran, and Dally]{magnitude15}
+Song Han, Jeff Pool, John Tran, and William~J. Dally.
+\newblock Learning both weights and connections for efficient neural networks.
+\newblock \emph{CoRR}, abs/1506.02626, 2015.
+\newblock URL \url{http://arxiv.org/abs/1506.02626}.
+
+\bibitem[OpenAI(2023)]{gpt4-23}
+OpenAI.
+\newblock {GPT-4} technical report.
+\newblock \emph{CoRR}, abs/2303.08774, 2023.
+\newblock \doi{10.48550/ARXIV.2303.08774}.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2303.08774}.
+
+\bibitem[Russell \& Norvig(2020)Russell and Norvig]{aitextbook20}
+Stuart Russell and Peter Norvig.
+\newblock \emph{Artificial Intelligence: {A} Modern Approach (4th Edition)}.
+\newblock Pearson, 2020.
+\newblock ISBN 9780134610993.
+\newblock URL \url{http://aima.cs.berkeley.edu/}.
+
+\bibitem[Sun et~al.(2024)Sun, Liu, Bair, and Kolter]{wanda24}
+Mingjie Sun, Zhuang Liu, Anna Bair, and J.~Zico Kolter.
+\newblock A simple and effective pruning approach for large language models.
+\newblock In \emph{The Twelfth International Conference on Learning Representations, {ICLR} 2024, Vienna, Austria, May 7-11, 2024}. OpenReview.net, 2024.
+\newblock URL \url{https://openreview.net/forum?id=PxoFut3dWW}.
+
+\end{thebibliography}
