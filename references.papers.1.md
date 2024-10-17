@@ -1,5 +1,9 @@
 ## Papers to READ from JA
-* 做时尚广告垂类
+### TODO: 初步汇报你的毕业论文选题
+* 主课题：生成式人工智能对时尚产业广告设计的影响研究与应用
+* 子课题1：基于主流社媒平台的时尚品牌多模态AI及非AI广告传播研究与应用
+* 子课题2：基于主流社媒平台的时尚博主多模态AI及非AI广告传播研究与应用
+* 子课题3：基于主流社媒平台的腰部时尚博主多模态时尚广告传播研究与应用
 
 ### 理论部分
 * 认知计算广告理论
@@ -38,7 +42,7 @@ Tae Hyun Baeka, Jungkeun Kimb, Jeong Hyun Kimc
 #### 3. score 8
 The MADE Framework: Best Practices for Creating Effective Experimental Stimuli Using Generative AI
 Zeph M. C. van Berlo, Colin Campbell & Hilde A. M. Voorveld
-公益广告 商业广告 理论依据MADE 实验设计 新发现：AI广告可行
+* 公益广告 商业广告 方法论依据MADE 实验设计 新发现：AI广告可行
 
 ##### Abstract
 This paper introduces the MADE (Mapping, Assembling, Demonstrating, Executing) framework, a comprehensive set of best practices for the ethical and effective use of generative 
@@ -52,6 +56,14 @@ advertising research.
 
 Zeph M. C. van Berlo, Colin Campbell & Hilde A. M. Voorveld
 
+#### 4. score 8
+Improved Theory Framework for computational advertising: an cognitive science way
+
+##### Abstract
+* 认知计算广告理论 从中国到世界
+
+Chunlin Duan et al.
+
 #### 4. score 7
 ChatGPT, AI Advertising, and Advertising Research and Education (eeditorial)
 
@@ -59,6 +71,16 @@ ChatGPT, AI Advertising, and Advertising Research and Education (eeditorial)
 Illustration of AI advertising research areas. (1) consumers (2) data (3) society and (4) industry
 
 Jisu Huh, Michelle R. Nelson and Cristel Antonia Russell
+
+#### 5. score 7
+Journal of Advertising Research Quality and Ethics Guidelines (editorial)
+https://www.tandfonline.com/doi/epdf/10.1080/00913367.2023.2227015
+Journal of Advertising
+
+##### Abstract
+Principles for all empirical research. (1) Research Design (2) Data Collection (3) Data Cleaning & Analysis (4) Research Dissemination
+
+Jisu Huh
 
 #### 5. score 6
 Chatbot Advertising As a Double-Edged Sword: The Roles of Regulatory Focus and Privacy Concerns
@@ -68,47 +90,15 @@ Journal of Advertising
 Abstract
 In this article, the authors examine the effect of regulatory focus and privacy concerns on consumers’ responses to highly personalized chatbot advertising. Findings from two experimental studies indicate that predominantly promotion-focused consumers are more receptive and respond more favorably to highly personalized chatbot advertising because they attend more to benefits they may gain from disclosing personal information. In contrast, consumers who are predominantly prevention focused are more attentive to the risks involved and feel unfavorably toward highly personalized chatbot advertising. In addition, consumers who are highly concerned about privacy disdain highly personalized ads, regardless of regulatory focus. Risk-benefit perceptions are shown to mediate interactions of ad personalization, regulatory focus, and privacy concerns.
 
-Disclosure
-No potential conflicts of interest were reported by the author(s).
-
-Funding
-This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
-
-Notes
-1 Participants answered two questions related to a short story we provided: (1) What is the dog’s name? (2) Why did the family love the dog? Participants who failed to answer one or more questions correctly (n = 15) were directed to the end page and excluded from the data, leaving 178 participants. The power of our samples is .806, which is above the general cutoff line (.8), suggesting that our sample sizes are sufficient based on focal effects (interaction), desired precision (5%), and experimental design (Faul et al. Citation2007).
-
-2 Participants with higher product involvement indicated higher rent intentions, even when product involvement was excluded from the analysis.
-
-3 J-N values represent units of standard deviation (SD) of the moderator measured as a continuous variable. To convert J-N values to benchmark scores on a 7-point scale, we use the following formula: [1SD * (J-N values * 100) / 100] + mean scores
-
-4 Before the regulatory focus manipulation, we administrated attention checks as recommended for ensuring good respondent data (Smith et al. Citation2016). Specifically, consistent with Study 1, participants answered two questions related to a short story we provided: (1) What is the dog’s name? (2) Why did the family love the dog? Participants who failed to answer one or more questions correctly (n = 20) were directed to the end page and excluded from the data, leaving 430 participants.
-
-5 Study 2 results remained the same even when we excluded product involvement and ad believability from the model.
-
-Additional information
-Notes on contributors
-WooJin Kim
-WooJin Kim (MA, University of Texas at Austin) is a doctoral student, Charles H. Sandage Department of Advertising, College of Media, University of Illinois at Urbana–Champaign.
-
-Yuhosua Ryoo
-Yuhosua Ryoo (PhD, University of Texas at Austin) is an assistant professor, School of Journalism and Advertising, College of Arts and Media, Southern Illinois University.
-
-SoYoung Lee
-SoYoung Lee (PhD, University of Texas at Austin) is an assistant professor, The Ric Edelman College of Communication and Creative Arts, Rowan University.
-
-Jung Ah Lee
-Jung Ah Lee (PhD, University of Texas at Austin) is a senior researcher, Institute of Communication Research, Seoul National University.
+WooJin Kim， Yuhosua Ryoo， SoYoung Lee， Jung Ah Lee
 
 #### 6. score 6
 Examining the interplay of chatbot interactivity and anthropomorphic design for enhancing brand relationships in service businesses
-Jhih-Syuan (Elaine) LinORCID Icon
-Received 26 Oct 2023, Accepted 24 Sep 2024, Published online: 10 Oct 2024
-Cite this article https://doi.org/10.1080/02650487.2024.2410559 CrossMark LogoCrossMark
- 
-Sample our Economics, Finance,Business & Industry journals, sign in here to start your access, latest two full volumes FREE to you for 14 days
- Full Article  Figures & data  References  Citations  Metrics  Reprints & Permissions Read this article
+
 Abstract
 The current research examines how elements of chatbot design influence not only consumers’ perceptions and responses but also the processes by which they promote online-to-offline behavioral intention toward service brands. Focusing on the coffee service business, a study following a 2 × 2 between-subjects experimental design was conducted. Among the findings, the impact of interactivity on chatbot- and brand-related outcomes depended on the anthropomorphic conversational style employed; interactions with the warm, high-interactivity (vs. low-interactivity) chatbot enhanced the sense of social presence, whereas interactions with the competent, low-interactivity (vs. high-interactivity) chatbot promoted brand-related behavioral intention. Moreover, as the moderated serial mediation model demonstrated, although increased social presence shaped components of brand relationship quality (i.e. brand partner quality and brand attachment), only brand partner quality bolstered the intention to patronize the brand. The significant moderated indirect effect suggests that a warm, highly interactive chatbot design can strengthen social presence and thereby improve brand partner quality and raise the likelihood of offline patronage. Theoretical and managerial implications of the findings are discussed.
+
+Jhih-Syuan
 
 #### 7. score 6
 Data Quality Measures for Computational Research: Ensuring Informed Decisions with Emerging Data Sources
@@ -120,15 +110,7 @@ The proliferation of computational advertising (CA) and other technological deve
 
 Edward C. Malthousea Ewa Maslowskab Joanna Strycharzc Martin Blocka Theo Araujoc
 
-#### 8. score 6
-Journal of Advertising Research Quality and Ethics Guidelines
-https://www.tandfonline.com/doi/epdf/10.1080/00913367.2023.2227015
-Journal of Advertising
 
-##### Abstract
-Principles for all empirical research. (1) Research Design (2) Data Collection (3) Data Cleaning & Analysis (4) Research Dissemination
-
-Jisu Huh
 
 #### 9. score 6
 Hypergraph
