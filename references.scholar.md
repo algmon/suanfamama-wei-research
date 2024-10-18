@@ -38,7 +38,9 @@
 * Hairong Li, Proferssor, Advertising + Public Relations, https://scholar.google.com/citations?hl=en&user=IrS7nMcAAAAJ&view_op=list_works
 * 刘鹏
   * 偏向工业界的《计算广告》教科书
-
+* Shelly Rodgers
+* Charles H. Sandage
+* 
 ## 相关组织
 * 华南理工大学
 * 省广集团

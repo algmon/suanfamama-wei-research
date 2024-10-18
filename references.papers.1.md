@@ -1,5 +1,5 @@
 ## Papers to READ from JA
-### TODO: 初步汇报你的毕业论文选题
+### TODO: 初步汇报毕业论文选题
 * 主课题：生成式人工智能对时尚产业广告设计的影响研究与应用
 * 子课题1：基于主流社媒平台的时尚品牌多模态AI及非AI广告传播研究与应用
 * 子课题2：基于主流社媒平台的时尚博主多模态AI及非AI广告传播研究与应用
@@ -110,8 +110,6 @@ The proliferation of computational advertising (CA) and other technological deve
 
 Edward C. Malthousea Ewa Maslowskab Joanna Strycharzc Martin Blocka Theo Araujoc
 
-
-
 #### 9. score 6
 Hypergraph
 
@@ -121,8 +119,93 @@ Understanding of video creativity and content often varies among individuals, wi
 ACM MM 2024 Oral
 Minghui Wu et al. 
 
+### Latest from Journal of Current Issues & Research in Advertising
+#### 1 score 8
+Adopting AI Advertising Creative Technology in China: A Mixed Method Study Through the Technology-Organization-Environment (TOE) Framework, Perceived Value and Ethical Concerns
+
+Abstract
+Artificial Intelligence (AI) is a powerful force that is reshaping and challenging the ad industry by increasing its efficiency and accountability. The industry must invent new ways to work with AI technologies. This study takes the perspective of professionals in the advertising industry and explores the key factors influencing their adoption of AI ad creative technology through quantitative survey and computational textual analysis. The findings reveal that perceived usefulness, perceived control, corporate innovativeness, and competitive pressure all have a direct impact on the adoption of AI ad creative technology, with perceived value acting as a crucial intermediary. Moreover, adoption may be tempered by industry professionals’ ethical concerns about the technology. The findings reveal nuanced views of professionals on AI in advertising, providing valuable theoretical and practical insights.
+
+Jing Yang et al.
+TODO: get the original paper
+https://www.tandfonline.com/doi/full/10.1080/10641734.2024.2403485
+
+#### 2 score 5
+Viral Dynamics on Social Media: Enhancing Brand Engagement through Meme Marketing Strategies
+
+Abstract
+This research delves into the transformative power of meme marketing in shaping brand engagement and consumer perception within digital ecosystems. By conducting a nuanced examination of meme-centric marketing strategies, this study elucidates how brands leverage viral content to foster a sense of community and enhance customer loyalty. It employs a methodological approach that combines qualitative analysis and digital analytics to assess the impact of memes on audience engagement metrics and brand sentiment. The findings underscore the importance of authenticity and the strategic alignment of meme content with brand identity and audience values. The study also highlights the role of omni-channel distribution strategies in amplifying reach and engagement, offering actionable insights for marketers aiming to capitalize on the dynamic nature of digital culture. Additionally, it points to the growing significance of user-generated content in meme marketing, advocating for brands to foster participatory cultures that encourage audience creativity. The research sets the stage for future investigations into the evolving landscape of digital marketing, suggesting further exploration into the intersection of technology, culture, and consumer behavior in the age of memes.
+
+Jihye Kim et al.
+TODO: get the original paper
+https://www.tandfonline.com/doi/full/10.1080/10641734.2024.2390850
+
+#### 3 score 6
+Causes and Effects of Social Media Engagement in Luxury Fashion Marketing: A Comparative Study Over the COVID Pandemic
+
+Abstract
+This paper examines cross-country heterogeneities and over-time changes of the role of social media marketing (SMM) in the luxury fashion industry. A comprehensive literature review is conducted on customer value, purchase intention, and engagement motivation to understand the causes and effects of SMM. Based on the survey data in China and the United Kingdom, probit and oprobit regressions are employed to estimate the models of SMM. Results show that affectional and cognitive motives are the two primary drivers of SMM engagement in both countries. Chinese customers are more susceptible to SMM than their British counterparts, suggesting significant potential benefits of developing SMM strategies in China. Over time, SMM has become an irreversible trend of luxury brand management after the coronavirus disease 2019 pandemic. Identified heterogeneities and changes call for differentiated international marketing strategies in different countries at different times.
+
+Jiayi Huang, Peng Zhou
+TODO: get the original paper
+https://www.tandfonline.com/doi/full/10.1080/10641734.2024.2377547
+
+#### 4 score 7
+Better Stick to the Status Quo? Eco-Friendly Product Endorsements by (Large) Lifestyle Instagram Influencers as a Curiosity-Inducing Trigger for Young Women
+
+Abstract
+Influencer advertising on Instagram effectively brings products to the attention of young, engaged audiences. Though brands often select Instagram influencers with green expertise for eco-friendly product endorsements, this study argues that generic lifestyle influencers are also suitable endorsers, expanding the reach to wider, more diverse young audiences. Advertising outcomes of a lifestyle influencer’s sponsored Instagram post were compared in three online scenario-based experiments using a 2 (eco-friendly vs. regular lifestyle product) × 2 (small vs. large influencer) between-subjects design. Building on schema incongruity theory, the first two experiments among female Instagram users between 18 and 25 years old confirmed our hypothesis that posts in which female lifestyle influencers promote eco-friendly (vs. regular) lifestyle products evoke more curiosity, which positively affects ad attitude and purchase intention. Conditional indirect effects consistently suggest that the relationship between product type and both ad attitude and purchase intention is only mediated through curiosity for large (vs. small) lifestyle influencers. The findings did not replicate in a third study featuring a male lifestyle influencer among male Instagram users between 18 and 34 years old. Hence, the proposed effects manifested only in the specific demographic of female emerging adults. Potential explanations and implications of these results are discussed.
+
+Roseline van Gogh, Karolien Poels and Michel Walrave
+TODO: get the original paper
+https://www.tandfonline.com/doi/full/10.1080/10641734.2024.2367616
+
+#### 5 score 5
+The Role of Perceived Surveillance and Privacy Cynicism in Effects of Multiple Synced Advertising Exposures on Brand Attitude
+
+Abstract
+Technological advancements have made it possible to personalize advertising messages across media in real time based on consumers’ offline media behavior (i.e., synced advertising). This is thought to positively influence consumers’ brand attitudes. However, consumers encountering multiple synced advertising exposures could decrease the strategy’s effectiveness by increasing the perceptions of surveillance among consumers. Moreover, these effects may differ depending on privacy cynicism; consumers may decrease their privacy protection behaviors as a result of feeling hopeless and frustrated by the high demands and lack of control of their data being used for personalized advertising purposes. An online experiment (N = 527) showed the more that ads were synchronized, the higher the perceived surveillance, which led to less positive brand attitudes for participants with the lowest levels of privacy cynicism and positive brand attitudes only for participants with intermediate to high levels of privacy cynicism. The results advance theory on the direct effects, underlying mechanisms, and consumer-related factors that play a role in synced advertising effects. It shows that synced advertising could be a promising advertising strategy but that considerations around privacy and ethics are essential.
+
+Claire Segijn et al.
+https://www.tandfonline.com/doi/full/10.1080/10641734.2024.2318711
+
+#### 6 score 4
+Is Consumer Generated Branding the Way Forward for Digital Advertising: Examining the Effects of Message Source, Presentation Format and Involvement on Consumer Decisions on X (Formerly Twitter)
+
+Abstract
+This empirical study compares the effects of consumer generated brand-related content versus brand generated advertising on X (formerly Twitter). Guided by the theory of planned behavior, elaboration likelihood model of persuasion, and media richness theory, this study utilized a 2 (source: user generated content vs. advertising) × 3 (format: video vs. image vs. text) × 2 (involvement: high vs. low) between-subjects research design (N = 493). Results revealed that consumer generated branding in richer media format has significantly greater influence on consumer decisions than brand generated ads. Findings lay the foundation for interdisciplinary research into the impacts of consumer-generated branding. These results challenge online marketers to rethink their advertising strategies on X and other social networks.
+
+Vaibhav et al.
+
+#### 7 score 4
+Visual Metaphorical Advertising: The Moderating Role of Creativity and the Mediating Role of Informativeness
+
+Abstract
+The use of visual metaphor is a creative and prevalent practice in the advertising industry, but it poses a significant challenge in terms of understanding the intended advertising message. This study suggests the importance of determining the appropriate level of creativity in designing effective advertising campaigns. It also emphasizes the significance of incorporating informativeness into advertising messages, as visuals alone may not suffice in creating a successful advertising campaign. To address these aspects, a combination of research methods was employed, including the analysis of 3,000 conceptual advertisements. Existential-phenomenological interviews were conducted with eight domain experts, and responses were collected from 305 participants, which were analyzed using Smart PLS. This extensive research effort unravels latent dimensions and provides valuable guidelines for advertising and creative agencies’ design teams. The findings underscore that dependence on visual metaphor alone is inadequate to capture the audience’s attention and elicit their emotions without the addition of informativeness and/or creativity. These findings have profound implications for advertising and creative agencies, offering valuable insights for the design of visual metaphorical advertising campaigns.
+
+Muhammad Babar Khan et al.
+https://www.tandfonline.com/doi/full/10.1080/10641734.2024.2323992
+
+#### 8 score 5
+Expertise and Playfulness of Social Media Influencers
+
+abstract
+This study aims to empirically investigate the factors that influence the perceived uniqueness and authenticity of social media influencers to predict viewers’ social media engagement with video content. Data for this study were collected from YouTube users in the United States through a survey methodology. The empirical findings indicate that influencers’ production expertise and playfulness significantly affect their perceived uniqueness, resulting in viewers’ sense of attachment toward them. Furthermore, the results demonstrate that influencers’ content expertise and playfulness significantly impact their perceived authenticity, leading to viewer attachment and continued social media engagement. The theoretical and managerial implications of social media marketing are also discussed.
+
+Kim et al.
+
+#### 9 score 6
+Why Do People Generate Toxic Speech Toward Woke Advertising? The Role of Persuasion Knowledge and Cognitive Dissonance
+
+abstract
+Brands are embracing sociopolitical issues in their advertising campaigns, a strategy termed “woke advertising,” to tailor to contemporary social movements. To create social impact, brands upload the woke campaigns on social media platforms, such as YouTube, to arouse discussion. However, the conversation among consumers regarding a woke campaign may move from level-headed debate to emotionally fueled fighting. Thus, research is needed to understand why consumers generate hate/toxic speech in the context of woke advertising. Based on previous research, we adopted machine learning algorithms to classify the comments on two woke campaigns into toxic and nontoxic comments, analyzed the topics of each comment type, examined the engagement performance of each comment type, and tracked the growth of each type of comments over time. Empirical findings shed light on two main sources of cognitive dissonance in the context of woke advertising (i.e., the stance of the woke campaign and others’ comments on the woke campaign) and indicate that both supporters and opposers of a woke campaign may use hate/toxic speech to attack the source of cognitive dissonance. Moreover, given the source of cognitive dissonance, consumers may or may not leverage their persuasion knowledge to cope with a woke campaign.
+
+Feng et al.
+https://www.tandfonline.com/doi/full/10.1080/10641734.2024.2328576
+
 ### Latest from International JA
 TODO: More research
+
 
 ### Latest from JA
 
