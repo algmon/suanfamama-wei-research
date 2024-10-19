@@ -13,27 +13,27 @@
 ## 2. Measurement of Advertising Effectiveness: Some Theoretical Considerations
 * Jagdish N. Sheth
 * 1974
-* 主要贡献：广告效果测量 消费者行为 及相关理论构建 如构建广告效果多维度理论框架
+* 主要贡献：广告效果测量 消费者行为 及相关理论构建 如构建广告效果多维度理论框架（1）理论层面（2）方法层面及（3）实践层面
 
 ## 3. The Impact of Family Group Interaction on Children’s Understanding of Television Advertising
 * Leonard N. Reid
 * 1979
-* 主要贡献：开创性研究 儿童之于电视广告 以及父母在其中的影响
+* 主要贡献：开创性研究 儿童之于电视广告 以及父母在其中的影响（1）理论拓展：儿童及加入群体互动对儿童理解电视广告的重要性（2）研究方法：对儿童进行访谈，观察家庭在看广告时的互动等（3）实践应用：对家庭教育的启示，对广告行业的建议，为政策制定提供依据
 
 ## 4. Attitude toward the Ad as a Mediator of Consumer Brand Choice
 * Terence A. Shimp
 * 1981
-* 主要贡献：确立广告在品牌与消费者之间的中介作用，通过使用广告来影响消费者的新思路。当时的产品可能同质化严重
+* 主要贡献：确立广告在品牌与消费者之间的中介作用，通过使用广告来影响消费者的新思路。当时的产品可能同质化严重。（1）理论贡献：消费者对广告的态度是一个中介变量（2）研究方法贡献：实证 变量测量（3）实践贡献：指导广告策略制定，优化品牌营销决策及提升消费者体验
 
 ## 5. The Association Model of the Advertising Communication Process
 * Ivan L. Preston
 * 1982
-* 主要贡献：与AIDA模型（attention, interest, desire and action）不同 本文提出the association model 如火腿肠与泡面的关联 巧克力与咖啡的关联
+* 主要贡献：（1）理论模型创新：从AIDA模型（attention, interest, desire and action）the association model（2）研究方法拓展：（3）学术交流推动：（4）应用例子：如火腿肠与泡面的关联 巧克力与咖啡的关联
 
 ## 6. Conceptualizing Involvement
 * Judith L. Zaichkowsky
 * 1986
-* 主要贡献：the involvement construct for consumer. Advertising is a key tool in influencing consumer involvement.
+* 主要贡献：the involvement construct for consumer. Advertising is a key tool in influencing consumer involvement.(1)理论贡献：提出重要概念 involvement（卷入度）并构建理论框架，将卷入度与消费者的决策过程、信息处理、态度形成等方面紧密联系起来（2）研究方法贡献：实证研究（3）实践贡献：指导广告策略制定，优化产品定位和营销沟通，提升消费者体验
 
 ## 7. Construction and Validation of a Scale to Measure Celebrity Endorsers’ Perceived Expertise, Trustworthiness, and Attractiveness
 * Roobina Ohanian
