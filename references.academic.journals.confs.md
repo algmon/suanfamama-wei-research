@@ -1,4 +1,35 @@
 # 参考期刊会议
+## Intro
+### top journals
+#### Journal of Interactive Advertising (JIA)
+* 聚焦数字广告等新兴领域
+* Journal of Interactive Advertising is an esteemed international, peer-reviewed journal dedicated to advancing knowledge and understanding in the field of interactive advertising, marketing, and communication in our ever-expanding networked world. JIA distinguishes itself as the sole advertising journal of its kind due to its exclusive focus on interactivity. Through the exploration of both theoretical and empirical implications related to interactive advertising, JIA contributes to a more comprehensive understanding of the role of advertising in this dynamic process. JIA recognizes the vital role of technological advancements in driving interactivity and seeks to incorporate new technologies, emerging theories, and cutting-edge interactive media into advertising research methodologies and approaches. To this end, we encourage submissions covering a broad range of topics related to interactive advertising, including the role of interactivity in advertising effectiveness, media interactivity, global and multicultural perspectives, research methodologies, and the economic and social impact of interactive advertising.
+* Peer Review Policy: Manuscripts submitted to this journal undergo editorial screening and peer review by anonymous reviewers.
+##### Journal metrics
+* usage: 232K annual downloads/views
+* 7.4 (2023) CiteScore (Scopus)
+* Q1 CiteScore Best Quartile
+* 1.211 (2023) SNIP
+* 1.476 (2023) SJR
+
+#### Journal of Advertising
+* 是整个广告领域的顶刊 侧重理论
+
+#### Journal of Advertising Research
+* 面向学界与业界 对业界动向敏感
+
+#### International Journal of Advertising
+* 综合性广告期刊 关注国际问题
+
+#### Journal of Current Issues and Research in Advertising (JCIRA)
+* 专题较有特色
+
+#### American Academy of Advertising
+* AAA年会 广告学主要国际学术会议
+
+#### EAA 欧洲广告学会
+* EAA 欧洲广告学会
+
 ## Computer Science Related
 ### RecSys: ACM Conference On Recommender Systems
 * 
