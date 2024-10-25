@@ -16,7 +16,10 @@
 * Fashion Value Alignment 时尚价值对齐
 * Fashion Attention 时尚注意力
 * Fashion Bias 时尚偏见
-* Fashion Detection & Computation & Generation Model
+* Fashion Detection & Computation & Generation Model 时尚检测、计算、生成模型
+* Fashion Thinking 时尚类思维
+* Fashion Agent 时尚智能体
+* Fashion Agent Collaboration 时尚智能体间协作
 
 #### 相关工作 Related Work
 ##### domain models
@@ -96,11 +99,7 @@
 * 论文中不会出现1：把智能体上升到具身智能，并且引出机器人。原因：目前业界机器人主要用于降本增效，和内容创意关系不大。
 * 所投会议：计算机科学如 SIGIR, CIKM et. al.
 
-### 子课题及论文题目（拟） - 5 - “创意类思维”在垂类场景中的应用研究
-![](./img/sub.topic.5.png)
 
-### 子课题及论文题目（拟） - 6 - “创意智能体社交”在垂类场景中的应用研究
-![](./img/sub.topic.6.png)
 
 ### 子课题及论文题目（拟） - 7 - “创意价值对齐”在垂类场景中的应用研究
 ![](./img/sub.topic.7.png)
@@ -140,12 +139,6 @@ Model pruning is presented as a performance optimization technique for large lan
 * 中文标题：注意力机制在AIGC在认知计算广告内容创意中的应用场景研究（需结合经典传播学注意力等理论）
 * 状态：作为社会科学研究论文提交
 * 9月30日分享主题：20分钟（注意力机制）
-
-### 子课题及论文题目（拟） - x - “创意类思维”在垂类场景中的应用研究
-![](./img/sub.topic.5.png)
-
-### 子课题及论文题目（拟） - x - “创意智能体社交”在垂类场景中的应用研究
-![](./img/sub.topic.6.png)
 
 ## 核心相关工作
 ### 1. 计算广告
