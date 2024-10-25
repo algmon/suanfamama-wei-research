@@ -13,7 +13,7 @@
 * AIGC 多模态内容 感知 生成 个性化创意应用 算法 场景 工作流
 
 #### 作者
-* （相关研究团队成员如段淳林、江纬及陆昊琪等）
+* 
 
 #### 同行评审
 * 陈刚（deadline: 2024 fall）
@@ -316,6 +316,10 @@
 
 ### 子课题及论文题目（拟） - 7 - “创意价值对齐”在垂类场景中的应用研究
 ![](./img/sub.topic.7.png)
+* value alignment 价值对齐
+* 理论基础1：https://openai.com/index/instruction-following/ OpenAI RLHF 对齐算法
+* 理论基础2：https://www.msra.cn/zh-cn/news/features/value-compass 微软 BaseAlign 对齐算法
+* 9月30日分享主题：20分钟（价值对齐）
 
 ### 子课题及论文题目（拟） - 8 - Improved Methods for Model Pruning 改进的模型剪枝方法
 ![](./img/sub.topic.8.v2.png)
@@ -346,6 +350,7 @@ Model pruning is presented as a performance optimization technique for large lan
 * 更新日期：20240923
 * 中文标题：注意力机制在AIGC在认知计算广告内容创意中的应用场景研究（需结合经典传播学注意力等理论）
 * 状态：作为社会科学研究论文提交
+* 9月30日分享主题：20分钟（注意力机制）
 
 ## 核心相关工作
 ### 1. 计算广告
