@@ -11,23 +11,22 @@
 ## 通用计算时尚设计平台 - 系统技术架构图
 ![](./img/system.arch.computational.fashion.png)
 
-## 关键词
-* Fashion Hallucination 时尚幻觉
-* Fashion Value Alignment 时尚价值对齐
-* Fashion Attention 时尚注意力
-* Fashion Bias 时尚偏见
-* Fashion Detection & Computation & Generation Model 时尚检测、计算、生成模型
+## 时尚质量论文
+### 关键词
+* Fashion Domain Agent 时尚垂类智能体
 * Fashion Thinking 时尚类思维
-* Fashion Agent 时尚智能体
-* Fashion Agent Collaboration 时尚智能体间协作
+* Fashion Domain Models 时尚垂类模型
+* Fashion Value Alignment 时尚价值对齐
+* Fashion Bias 时尚偏见
+* Fashion Attention 时尚注意力
+* Fashion Hallucination 时尚幻觉
+* Fashion Agent Collaboration 时尚智能体间协作 (质量评估, 设计师, 平台, 消费者)
 
 #### 相关工作 Related Work
 ##### domain models
 * Ten years ago, language models took their first steps with Google's n-gram paper[1]. This approach employed a vast amount of web data to model language, considering n-grams like two-gram or three-gram. Following this, the word2vec paper[2] came into the picture. It modeled the world as a higher-dimensional vector space, where entities with similarity would exhibit a close cosine similarity score. This marked the beginning of a long journey in the field of language models[3]. The language model then entered a new era with the Transformer paper titled "Attention is All You Need"[4]. Google researchers proposed an encoder-decoder architecture or later variants for encoding and decoding text. This model demonstrated the remarkable ability to generate surprisingly coherent conversations, laying the foundation for subsequent works such as ChatGPT[5] in 2022. ChatGPT's emergence surprised and captivated the world at scale. In addition to these, leading industry models like Google's Gemini have been developed. In China, works like Doubao[6] also deserve mention. Doubao showcases advanced Chinese language processing capabilities and has made significant contributions to the field.
 * In addition to the advancements in language models, there have been remarkable developments in other generation created models. For instance, Stable Diffusion[7] has made significant contributions in the field of image generation. It employs innovative techniques to create high-quality images with great detail and realism. Another notable model is Flux[8] by the Black Forest Lab, which also excels in generating images. Moreover, in the realm of video generation, models utilizing improved architectures like diffusion-transformer(short for DiT) have emerged. These models have the potential to revolutionize the way videos are created, offering new possibilities for creative expression and content production. By combining the power of transformers and diffusion processes, they can generate videos with enhanced visual quality and coherence[9]. These developments in image and video generation models complement the progress in language models, opening up new frontiers in the field of created models and expanding the boundaries of what can be achieved in content generation.
 * Another interesting aspect of created models is the emergence of those that focus on generating music snippets or music demos[10]. These models have the potential to inspire musicians and composers, providing new musical ideas and elements. They can contribute to the creation of unique and engaging musical compositions. In addition, there are created models that generate code[11]. These models can produce code snippets or even complete programs that can be executed in environments like Python. This has significant implications for software development, as it can assist developers in generating code effectively and efficiently, leading to faster development cycles and much more.
-
-* gen code, music and videos
 
 #### 参考资料 References
 1. n-gram
@@ -41,6 +40,7 @@
 9. Sora official website
 10. Suno official website
 11. Gemini Code Assist official website
+12. How to gen code, music and videos together effectively and efficiently?
 
 #### 附加信息
 * paper 3 - model.md
@@ -99,40 +99,24 @@
 * 论文中不会出现1：把智能体上升到具身智能，并且引出机器人。原因：目前业界机器人主要用于降本增效，和内容创意关系不大。
 * 所投会议：计算机科学如 SIGIR, CIKM et. al.
 
-
-
-### 子课题及论文题目（拟） - 7 - “创意价值对齐”在垂类场景中的应用研究
+### 子课题及论文题目（拟） - x - “创意价值对齐”在垂类场景中的应用研究
 ![](./img/sub.topic.7.png)
 * value alignment 价值对齐
 * 理论基础1：https://openai.com/index/instruction-following/ OpenAI RLHF 对齐算法
 * 理论基础2：https://www.msra.cn/zh-cn/news/features/value-compass 微软 BaseAlign 对齐算法
-* 9月30日分享主题：20分钟（价值对齐）
 
-### 子课题及论文题目（拟） - 8 - Improved Methods for Model Pruning 改进的模型剪枝方法
-
+### 子课题及论文题目（拟） - x - Improved Methods for Model Pruning 改进的模型剪枝方法
 ![](./img/sub.topic.8.v2.png)
-#### Abstract
-Model pruning is presented as a performance optimization technique for large language and vision models. This technique aims to identify and remove neurons, connections unlikely to lead to the contribution during the machine generation phase. Our goal is to obtain a much smaller and faster foundational model that can quickly generate AIGC content almost as good as those of the unpruned models. Through careful analysis of the weights, bias, activations and other potential indicators, an improved algorithm based on new indicators have been proposed and evaluated. Emprical results show that our proposed algorithm achieves significant improvement in different pruning ranges over previous STOAs.
-#### 摘要
-模型剪枝是一种用于大语言和视觉模型的性能优化技术。该技术旨在识别并移除在机器生成阶段不太可能产生贡献的神经元和连接。我们的目标是获得一个更小、更快速的基础模型，能够以接近未剪枝模型的水平快速生成AIGC内容，这些内容包括文本、图片、视频及代码。通过对权重、偏置、激活函数和其他潜在指标的深入分析，我们提出并评估了一种基于新指标的改进算法。实验结果表明，在不同剪枝范围内，我们提出的算法相比之前的最新技术(SOTA)取得显著改进效果。
 #### 状态
-* Under Review and will submit to ICLR 2025 main conference
+* resubmit to CVPR 2025
 * 自然科学论文
 
-### 子课题及论文题目（拟） - x - Improved Methods for Model Tiering
+### 子课题及论文题目（拟） - x - Improved Methods for Model Tiering 专家与模型分层
 ![](./img/sub.topic.10.png)
 * TODO: 结合MoE
 
 ### 子课题及论文题目（拟） - x - AIGC创意灵感生成平台及商业闭环研究（拟）
 ![](./img/sub.topic.11.png)
-
-### 子课题及论文题目（拟） - x - AI Agents will significantly hurt the job market for programmers！(meaning losing jobs and being replaced quickly)
-* 更新日期：20240922
-* 中文标题：AI智能体会极大伤害程序员就业市场！（他们会没有工作且被迅速替代）
-* 状态：作为社会科学研究论文提交
-
-### 子课题及论文题目（拟） - x - Attention is All You Need, again!
-* 中文标题：注意力机制在AIGC在认知计算广告内容创意中的应用场景研究（需结合经典传播学注意力等理论）
 
 ## 核心相关工作
 ### 1. 计算广告
@@ -158,14 +142,14 @@ Model pruning is presented as a performance optimization technique for large lan
 6. 段淳林,魏方等.（关于认知计算广告研究范式）.2024【在投中 领域：认知计算广告】
 7. 段淳林.AI智能体与知识库生成：计算广告知识生产的演进逻辑.2024【在投中 领域：认知计算广告】
 8. 段淳林,蒲源等.（关于认知计算广告及使用B站数据所做的实验及模型）.2024【在投中 领域：认知计算广告】
-9.  段淳林等.（关于认知计算广告蓝皮书）.华南理工大学.2024【撰写中 领域：认知计算广告】
-10. TODO: 段淳林,江纬等.AIGC创意工作流.workflow【撰写中 领域：认知计算广告】
-11. TODO: 段淳林,江纬等.AIGC创意知识库.kb【撰写中 领域：认知计算广告】
-12. TODO: 段淳林,江纬等.AIGC创意模型.model【撰写中 领域：认知计算广告】
-13. TODO: 段淳林,江纬等.AIGC创意智能体.agent【撰写中 领域：认知计算广告】
-14. TODO: 段淳林,江纬等.AIGC创意类思维.think【撰写中 领域：认知计算广告】
-15. TODO: 段淳林,江纬等.AIGC创意智能体社交.communicate【撰写中 领域：认知计算广告】
-16. TODO: 段淳林,江纬等.AIGC创意价值对齐.alignment【撰写中 领域：认知计算广告】
+9.  段淳林等.认知计算广告蓝皮书.华南理工大学.省广.秒针.2024【领域：认知计算广告】
+10. (dropped) 段淳林,江纬等.AIGC创意工作流.workflow【领域：认知计算广告】
+11. (dropped) 段淳林,江纬等.AIGC创意知识库.kb【领域：认知计算广告】
+12. (dropped) 段淳林,江纬等.AIGC创意模型.model【领域：认知计算广告】
+13. (dropped) 段淳林,江纬等.AIGC创意智能体.agent【领域：认知计算广告】
+14. (dropped) 段淳林,江纬等.AIGC创意类思维.think【领域：认知计算广告】
+15. (dropped) 段淳林,江纬等.AIGC创意智能体社交.communicate【领域：认知计算广告】
+16. (dropped) 段淳林,江纬等.AIGC创意价值对齐.alignment【领域：认知计算广告】
 
 ### 教科书
 1. 段淳林.计算广告学导论[M].武汉:华中科技大学出版社,2022
